@@ -3,11 +3,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .shadow{
-  -webkit-box-shadow: 0px 0px 10px 1px $po-muted;
-  -moz-box-shadow: 0px 0px 10px 1px $po-muted;
-  box-shadow: 0px 0px 10px 1px $po-muted;
-}
-
-.border-circle{
-  border-radius:20px;
+  border-radius: 25px;
 }

@@ -57,7 +57,6 @@ export class MenuComponent implements OnInit {
         url: '',
       }
     ]
-    console.log(this.menuList);
   }
 
 }

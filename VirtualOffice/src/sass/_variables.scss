@@ -43,6 +43,8 @@ $po-lima:           #6ea100;
 $po-maiz:           #ffce00;
 $verde-cemento:     #b4beba;
 $po-negro-mate:     #000009;
+$po-limon:          #d7df23;
+$po-cereza:         #ed3d8f;
 
 $green-app:#00b9b1;
 $pink-app: #ff3993;
@@ -82,7 +84,9 @@ $custom-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
-  "po-negro-mate":$po-negro-mate
+  "po-negro-mate":$po-negro-mate,
+  "po-limon":$po-limon,
+  "po-cereza":$po-cereza,
 );
 
 @each $color, $value in $custom-colors {
@@ -92,6 +96,10 @@ $custom-colors: (
   }
 
   .text-#{$color} {
+    color: $value !important;
+  }
+
+  .table-#{$color} {
     color: $value !important;
   }
 

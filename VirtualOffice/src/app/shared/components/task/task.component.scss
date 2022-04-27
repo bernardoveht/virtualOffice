@@ -1,0 +1,21 @@
+@import "/src/sass/variables";
+:host{
+  font-family: 'Encode Sans',Arial ,sans-serif;
+  font-size: 13px;
+    .shadow{
+      margin:7vh;
+    }
+    .theader,.icon-action {
+      color: $po-cielo;
+    }
+    .icon-file{
+      color: $po-limon;
+    }
+    .icon-money{
+      color: $po-cereza;
+    }
+    .table thead th {
+      border-bottom: 2px solid $verde-cemento;
+
+    }
+  }
