@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
+import { TaskComponent } from './components/task/task.component';
 
 /**
  * List of modules to export
@@ -15,7 +16,8 @@ import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.componen
   * List of components to export
   */
  const COMPONENTS_EXPORTED = [
-  BreadcrumbComponent
+  BreadcrumbComponent,
+  TaskComponent
  ];
 
  @NgModule({
