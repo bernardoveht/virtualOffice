@@ -23,37 +23,37 @@ export class MenuComponent implements OnInit {
       {
         name: 'Inicio',
         classColor: 'menu-blue',
-        icon: '',
+        icon: 'house',
         url: '',
       },
       {
         name: 'Mis obras',
         classColor: 'menu-green',
-        icon: '',
+        icon: 'truck',
         url: '',
       },
       {
         name: 'Mis Desembolsos',
         classColor: 'menu-pink',
-        icon: '',
+        icon: 'hand-holding-dollar',
         url: '',
       },
       {
         name: 'Mis Rendiciones',
         classColor: 'menu-green-light',
-        icon: '',
+        icon: 'file-invoice-dollar',
         url: '',
       },
       {
         name: 'Mis Convenios',
         classColor: 'menu-violet',
-        icon: '',
+        icon: 'file-contract',
         url: '',
       },
       {
         name: 'Mi Gestión',
         classColor: 'menu-blue-light',
-        icon: '',
+        icon: 'chart-column',
         url: '',
       }
     ]
