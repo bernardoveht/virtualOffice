@@ -1,5 +1,7 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
+import { MenuComponent } from "./components/menu/menu.component";
 
 /**
  * List of modules to export
@@ -15,12 +17,13 @@ import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.componen
   * List of components to export
   */
  const COMPONENTS_EXPORTED = [
-  BreadcrumbComponent
+  BreadcrumbComponent,
+  MenuComponent
  ];
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [],
+   imports: [CommonModule],
    exports: [COMPONENTS_EXPORTED],
    providers: []
  })
