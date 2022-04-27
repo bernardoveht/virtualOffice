@@ -19,6 +19,12 @@ $colors: (
   "gray-dark":  $gray-800
 );
 
+$menu:(
+  "green" : #00b9b1,
+  "pink" : #ff3993,
+);
+
+
 $primary:           #0072bb;
 $success:           #2e7d33;
 $info:              #2897d4;
@@ -39,6 +45,13 @@ $verde-cemento:     #b4beba;
 $po-negro-mate:     #000009;
 $po-limon:          #d7df23;
 $po-cereza:         #ed3d8f;
+
+$green-app:#00b9b1;
+$pink-app: #ff3993;
+$green-light-app: #d2e000;
+$violet-app: #9984c0;
+$blue-app:#38b9eb;
+$blue-light-app:#38b9ec;
 
 // scss-docs-end theme-color-variables
 

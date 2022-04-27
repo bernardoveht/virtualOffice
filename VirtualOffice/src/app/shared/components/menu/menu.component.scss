@@ -1,0 +1,28 @@
+@import '../../../../styles.scss';
+
+
+.menu{
+  max-width:250px;
+  li{
+    &.menu-blue{
+      color:$blue-app;
+    }
+    &.menu-green{
+      color:$green-app;
+    }
+    &.menu-pink{
+      color:$pink-app;
+    }
+    &.menu-green-light{
+      color:$green-light-app;
+    }
+    &.menu-violet{
+      color:$violet-app;
+    }
+    &.menu-blue-light{
+      color:$blue-light-app;
+    }
+  }
+}
+
+

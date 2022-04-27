@@ -1,1 +1,6 @@
-<p>menu works!</p>
+
+<div class="shadow menu">
+  <ul>
+    <li *ngFor="let item of menuList" [class]="item.classColor">{{item.name}}</li>
+  </ul>
+</div>

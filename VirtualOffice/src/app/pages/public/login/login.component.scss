@@ -4,7 +4,6 @@
   font-size: 16px;
     .shadow{
       margin-top: 7vh;
-      border-radius: 25px;
     }
     .restore-pass {
       a {
@@ -58,7 +57,7 @@
       background-color: $celeste-argentina;
       padding: 20px 0 40px 0;
         .container {
-          margin-left:20vw;
+          padding-left:20vw;
         }
         .row {
           margin-right: -15px;

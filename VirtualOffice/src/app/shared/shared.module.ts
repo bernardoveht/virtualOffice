@@ -1,5 +1,7 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
+import { MenuComponent } from "./components/menu/menu.component";
 import { TaskComponent } from './components/task/task.component';
 
 /**
@@ -17,12 +19,13 @@ import { TaskComponent } from './components/task/task.component';
   */
  const COMPONENTS_EXPORTED = [
   BreadcrumbComponent,
+  MenuComponent,
   TaskComponent
  ];
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [],
+   imports: [CommonModule],
    exports: [COMPONENTS_EXPORTED],
    providers: []
  })
