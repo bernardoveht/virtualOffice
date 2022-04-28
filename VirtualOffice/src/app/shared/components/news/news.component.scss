@@ -2,21 +2,18 @@
 :host{
   font-family: 'Encode Sans',Arial ,sans-serif;
   font-size: 15px;
-
   .shadow{
     border-radius: 20px;
   }
-
   .list-group{
     margin-right: 20px;
   }
   .content-list{
     overflow: scroll;
     overflow-x: hidden;
-    max-height: 50vh;
+    max-height: 66vh;
     max-width: 22vw;
   }
-
   .h-misobras{
     font-size: 13px;
     color: $green-app;
