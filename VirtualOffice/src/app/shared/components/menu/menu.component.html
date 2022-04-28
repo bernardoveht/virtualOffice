@@ -1,6 +1,17 @@
 
 <div class="shadow menu">
   <ul>
-    <li *ngFor="let item of menuList" [class]="item.classColor">{{item.name}}</li>
+    <li class="menu-blue">
+      <a class="menu-item">
+        <i class="menu-icon fa-solid fa-bars"></i>
+        <span>Menu</span>
+      </a>
+    </li>
+    <li *ngFor="let item of menuList;let i = index" [class]="item.classColor" [ngClass]="{'active':i === 0}">
+      <a class="menu-item" [title]="item.name" [href]="item.url" [ngClass]="{'link-active':i === 0}">
+        <i class="menu-icon"[class]="'fa-solid ' + 'fa-' + item.icon"></i>
+        <span>{{item.name}}</span>
+      </a>
+    </li>
   </ul>
 </div>

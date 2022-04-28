@@ -2,6 +2,10 @@
 @import "sass/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
+body{
+  font-size:16px;
+}
 .shadow{
   border-radius: 25px;
 }

@@ -2,25 +2,100 @@
 
 
 .menu{
-  max-width:250px;
-  li{
-    &.menu-blue{
-      color:$blue-app;
-    }
-    &.menu-green{
-      color:$green-app;
-    }
-    &.menu-pink{
-      color:$pink-app;
-    }
-    &.menu-green-light{
-      color:$green-light-app;
-    }
-    &.menu-violet{
-      color:$violet-app;
-    }
-    &.menu-blue-light{
-      color:$blue-light-app;
+  shadow{
+    overflow: hidden;
+  }
+  ul{
+    padding:0;
+    margin:0;
+    li{
+      list-style: none;
+      font-size:1.2em;
+      font-weight: 600;
+      &.active{
+        background:$classic-gray;
+      }
+      .menu-item{
+        padding:30px 0 30px 50px;
+        text-decoration: none;
+        color:inherit;
+        width: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: start;
+        span{
+          margin-left:10px;
+        }
+      }
+      &:first-child{
+        &::after{
+          display: none !important;
+        }
+      }
+      &:nth-child(2){
+        &::before{
+          content: "";
+          width: 80%;
+          left:10%;
+          background:$strong-gray;
+          height: 1px;
+          display: block;
+          position: relative;
+        }
+      }
+      &:not(&:last-child){
+        &::after{
+          content: "";
+          width: 80%;
+          left:10%;
+          background:$strong-gray;
+          height: 1px;
+          display: block;
+          position: relative;
+        }
+        &.active::before{
+          display:none;
+        }
+        &.active::after{
+          display: none;
+        }
+      }
+
+      &.menu-blue{
+        color:$blue-app;
+        .link-active{
+          border-left:3px $blue-app solid;
+        }
+      }
+      &.menu-green{
+        color:$green-app;
+        .link-active{
+        }
+      }
+      &.menu-pink{
+        color:$pink-app;
+        .link-active{
+          border-left:2px $pink-app solid;
+        }
+      }
+      &.menu-green-light{
+        color:$green-light-app;
+        .link-active{
+          border-left:2px $green-light-app solid;
+        }
+      }
+      &.menu-violet{
+        color:$violet-app;
+        .link-active{
+          border-left:2px $violet-app solid;
+        }
+      }
+      &.menu-blue-light{
+        color:$blue-light-app;
+        .link-active{
+          border-left:2px $blue-light-app solid;
+        }
+      }
     }
   }
 }
