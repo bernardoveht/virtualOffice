@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { TaskComponent } from './components/task/task.component';
+import { NewsComponent } from './components/news/news.component';
 
 /**
  * List of modules to export
@@ -20,7 +21,8 @@ import { TaskComponent } from './components/task/task.component';
  const COMPONENTS_EXPORTED = [
   BreadcrumbComponent,
   MenuComponent,
-  TaskComponent
+  TaskComponent,
+  NewsComponent
  ];
 
  @NgModule({

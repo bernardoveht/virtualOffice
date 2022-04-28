@@ -1,0 +1,71 @@
+@import"/src/sass/variables";
+:host{
+  font-family: 'Encode Sans',Arial ,sans-serif;
+  font-size: 15px;
+
+  .shadow{
+    border-radius: 20px;
+  }
+
+  .list-group{
+    margin-right: 20px;
+  }
+  .content-list{
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 50vh;
+    max-width: 22vw;
+  }
+
+  .h-misobras{
+    font-size: 13px;
+    color: $green-app;
+  }
+  .c-misobras{
+    color:$green-app;
+    font-size: 20px;
+  }
+  .b-misobras{
+    border-left: 4px solid $green-app;
+    line-height: 25px;
+  }
+  .h-misdesem{
+    font-size: 13px;
+    color: $po-fucsia;
+  }
+  .c-misdesem{
+    color:$po-fucsia;
+    font-size: 20px;
+  }
+  .b-misdesem{
+    border-left: 4px solid $po-fucsia;
+    line-height: 25px;
+  }
+  .h-misconve{
+    font-size: 13px;
+    color: $po-uva;
+  }
+  .c-misconve{
+    color:$po-uva;
+    font-size: 20px;
+  }
+  .b-misconve{
+    border-left: 4px solid $po-uva;
+    line-height: 25px;
+  }
+  .h-misrendi{
+    font-size: 13px;
+    color: $po-maiz;
+  }
+  .c-misrendi{
+    color:$po-maiz;
+    font-size: 20px;
+  }
+  .b-misrendi{
+    border-left: 4px solid $po-maiz;
+    line-height: 25px;
+  }
+
+
+
+}

@@ -87,6 +87,12 @@ $custom-colors: (
   "po-negro-mate":$po-negro-mate,
   "po-limon":$po-limon,
   "po-cereza":$po-cereza,
+  "green-app":$green-app,
+  "pink-app":$pink-app,
+  "green-light-app":$green-light-app,
+  "violet-app":$violet-app,
+  "blue-app":$blue-app,
+  "blue-light-app":$blue-light-app,
 );
 
 @each $color, $value in $custom-colors {
