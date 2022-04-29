@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu.model';
 
 @Component({
@@ -8,6 +8,9 @@ import { MenuItem } from 'src/app/models/menu.model';
 })
 export class MenuComponent implements OnInit {
 
+  @Output() collapseEvent: EventEmitter<any> = new EventEmitter();
+  collapse: boolean = false;
+
   public menuList: MenuItem[] = [];
 
   constructor() {
@@ -15,6 +18,18 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.setItemsMenu();
+  }
+
+  public collapseMenu() {
+    this.collapseEvent.emit();
+    if (this.collapse) {
+      setTimeout(() => {
+        this.collapse = !this.collapse;
+      }, 100);
+    } else {
+      this.collapse = !this.collapse;
+    }
+
   }
 
 

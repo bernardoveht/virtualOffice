@@ -7,12 +7,22 @@
   }
   .list-group{
     margin-right: 20px;
+    .list-group-item{
+      overflow: hidden;
+      &::before{
+        content:'';
+        position:absolute;
+        left:0;
+        top:0;
+        width:3px;
+        height:100%;
+      }
+    }
   }
   .content-list{
     overflow: scroll;
     overflow-x: hidden;
-    max-height: 66vh;
-    max-width: 22vw;
+    max-height: 90vh;
   }
   .h-misobras{
     font-size: 13px;
@@ -23,7 +33,11 @@
     font-size: 20px;
   }
   .b-misobras{
-    border-left: 4px solid $green-app;
+    position:relative;
+    overflow: hidden;
+    &::before{
+      background:$green-app;
+    }
     line-height: 25px;
   }
   .h-misdesem{
@@ -35,7 +49,9 @@
     font-size: 20px;
   }
   .b-misdesem{
-    border-left: 4px solid $po-fucsia;
+    &::before{
+      background:$po-fucsia;
+    }
     line-height: 25px;
   }
   .h-misconve{
@@ -47,7 +63,9 @@
     font-size: 20px;
   }
   .b-misconve{
-    border-left: 4px solid $po-uva;
+    &::before{
+      background:$po-uva;
+    }
     line-height: 25px;
   }
   .h-misrendi{
@@ -59,7 +77,9 @@
     font-size: 20px;
   }
   .b-misrendi{
-    border-left: 4px solid $po-maiz;
+    &::before{
+      background:$po-maiz;
+    }
     line-height: 25px;
   }
 

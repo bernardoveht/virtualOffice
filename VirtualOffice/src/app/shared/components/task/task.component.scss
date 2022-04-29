@@ -2,6 +2,9 @@
 :host{
   font-family: 'Encode Sans',Arial ,sans-serif;
   font-size: 13px;
+    .shadow{
+      margin: 0 20px !important;
+    }
     thead,tbody{
       text-align: center;
     }

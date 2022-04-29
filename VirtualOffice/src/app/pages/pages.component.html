@@ -1,6 +1,6 @@
 <app-breadcrumb></app-breadcrumb>
 <div class="container-fluid content-container row">
-  <app-menu class="col-2 me-5"></app-menu>
-  <app-task class="col-6"></app-task>
-  <app-news class="col-3 ms-5"></app-news>
+  <app-menu [ngClass]="{'col-2':!collapseMenu,'col-1':collapseMenu}" (collapseEvent)="collapseEvent()"></app-menu>
+  <app-task [ngClass]="{'col-7':!collapseMenu,'col-8':collapseMenu}"></app-task>
+  <app-news class="col-3"></app-news>
 </div>

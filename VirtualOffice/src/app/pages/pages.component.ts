@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
+  collapseMenu:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  collapseEvent(){
+    this.collapseMenu = !this.collapseMenu;
   }
 
 }

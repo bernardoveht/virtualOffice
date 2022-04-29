@@ -2,9 +2,7 @@
 
 
 .menu{
-  shadow{
-    overflow: hidden;
-  }
+  overflow: hidden;
   ul{
     padding:0;
     margin:0;
@@ -15,16 +13,34 @@
       &.active{
         background:$classic-gray;
       }
+      .burger{
+        cursor:pointer;
+      }
       .menu-item{
-        padding:30px 0 30px 50px;
+        justify-content: space-around;
+        padding:30px 30px 30px 50px;
         text-decoration: none;
         color:inherit;
         width: 100%;
         display:flex;
         align-items: center;
-        justify-content: start;
+        justify-content: space-between;
+        &:not(.link-active):hover{
+          background:$light-gray;
+          transition:all 300ms;
+        }
         span{
-          margin-left:10px;
+          display:inline;
+          margin-left:20px;
+          visibility: visible;
+          transition:visibility 0.2s;
+          &.hide{
+            display:none;
+            visibility: hidden;
+          }
+        }
+        .collapse-icon{
+          font-size: 30px;
         }
       }
       &:first-child{
@@ -60,7 +76,6 @@
           display: none;
         }
       }
-
       &.menu-blue{
         color:$blue-app;
         .link-active{
