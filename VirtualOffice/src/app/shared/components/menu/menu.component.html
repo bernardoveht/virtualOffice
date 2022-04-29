@@ -1,12 +1,13 @@
 <div class="shadow menu">
-  <ul>
+  <ul [class.collapse-menu]="collapse">
     <li class="menu-blue">
       <a (click)="collapseMenu()" class="menu-item burger">
         <div>
           <i class="menu-icon fa-solid fa-bars"></i>
           <span [class.hide]="collapse">Menu</span>
         </div>
-        <i class="collapse-icon fa-solid fa-angle-left"></i>
+        <div *ngIf="collapse"><i class="collapse-icon fa-solid fa-angle-right" ></i></div>
+        <div *ngIf="!collapse"><i class="collapse-icon fa-solid fa-angle-left" ></i></div>
       </a>
     </li>
     <li *ngFor="let item of menuList;let i = index" [class]="item.classColor" [ngClass]="{'active':i === 0}">

@@ -15,9 +15,9 @@
       }
       .burger{
         cursor:pointer;
+        justify-content: space-between !important;
       }
       .menu-item{
-        justify-content: space-around;
         padding:30px 30px 30px 50px;
         text-decoration: none;
         color:inherit;
@@ -27,7 +27,7 @@
         justify-content: space-between;
         &:not(.link-active):hover{
           background:$light-gray;
-          transition:all 300ms;
+          transition:width 300ms;
         }
         span{
           display:inline;
@@ -111,6 +111,12 @@
           border-left:2px $blue-light-app solid;
         }
       }
+    }
+  }
+  ul.collapse-menu{
+    .menu-item{
+      justify-content: center !important;
+      padding:30px !important;
     }
   }
 }
