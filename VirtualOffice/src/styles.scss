@@ -10,3 +10,15 @@ body{
   border-radius: 25px;
 }
 
+*{
+  &::-webkit-scrollbar {
+    background-color: $classic-gray!important;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $blue-app;
+    border-radius: 10px;
+  }
+}
+
+
