@@ -4,6 +4,7 @@ import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.componen
 import { MenuComponent } from "./components/menu/menu.component";
 import { TaskComponent } from './components/task/task.component';
 import { NewsComponent } from './components/news/news.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 /**
  * List of modules to export
@@ -22,7 +23,8 @@ import { NewsComponent } from './components/news/news.component';
   BreadcrumbComponent,
   MenuComponent,
   TaskComponent,
-  NewsComponent
+  NewsComponent,
+  CalendarComponent
  ];
 
  @NgModule({

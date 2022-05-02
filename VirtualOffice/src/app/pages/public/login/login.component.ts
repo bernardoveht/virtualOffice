@@ -13,6 +13,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(){
-    this.router.navigate(['./pages']);
+    this.router.navigate(['./pages/oficina-virtual']);
   }
 }

@@ -9,8 +9,15 @@ const routes: Routes = [
   {
     path: '',
     component: PagesComponent,
-    // children: [],
-  },
+    children: [
+      { path: '', redirectTo: 'oficina-virtual', pathMatch: 'full' },
+      {
+        path: 'oficina-virtual',
+        loadChildren: () => import('./virtual-office/virtual-office.module').then((m) => m.VirtualOfficeModule),
+        canActivate: [],
+      },
+    ]
+  }
 ];
 
 @NgModule({
