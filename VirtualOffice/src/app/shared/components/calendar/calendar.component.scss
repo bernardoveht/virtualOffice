@@ -1,0 +1,25 @@
+@import"/src/sass/variables";
+
+.calendar-button{
+  position:relative;
+  width:60px;
+  height:50px;
+  label{
+    width:100%;
+    height:100%;
+    color:$blue-app;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+  }
+  &:hover{
+    background:$light-gray;
+  }
+}
+
+
+::ng-deep ngb-datepicker{
+  left: 70px !important;
+  top: -210px !important;
+}

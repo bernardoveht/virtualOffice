@@ -5,6 +5,7 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { TaskComponent } from './components/task/task.component';
 import { NewsComponent } from './components/news/news.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
 
 /**
  * List of modules to export
@@ -29,7 +30,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [CommonModule],
+   imports: [CommonModule,NgbDatepickerModule],
    exports: [COMPONENTS_EXPORTED],
    providers: []
  })
