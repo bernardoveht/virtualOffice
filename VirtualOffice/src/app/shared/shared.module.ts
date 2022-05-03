@@ -6,6 +6,7 @@ import { TaskComponent } from './components/task/task.component';
 import { NewsComponent } from './components/news/news.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 /**
  * List of modules to export
@@ -25,7 +26,8 @@ import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
   MenuComponent,
   TaskComponent,
   NewsComponent,
-  CalendarComponent
+  CalendarComponent,
+  NavbarComponent
  ];
 
  @NgModule({
