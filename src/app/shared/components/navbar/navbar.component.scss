@@ -1,0 +1,10 @@
+@import "/src/sass/variables";
+:host{
+  .bell-icon{
+    color: $po-cielo;
+  }
+  .title-bar{
+    font-family: 'Encode Sans',Arial ,sans-serif;
+    font-size: 25px;
+  }
+}
