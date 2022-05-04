@@ -9,7 +9,7 @@
     margin:0;
     li{
       list-style: none;
-      font-size:1.2em;
+      font-size:1em;
       font-weight: 600;
       &.active{
         background:$classic-gray;
@@ -19,7 +19,7 @@
         justify-content: space-between !important;
       }
       .menu-item{
-        padding:30px 30px 30px 50px;
+        padding:25px 25px 25px 30px;
         text-decoration: none;
         color:inherit;
         width: 100%;
@@ -28,7 +28,7 @@
         justify-content: space-between;
         &:not(.link-active):hover{
           background:$light-gray;
-          transition:width 300ms;
+          transition:width 0.1s;
         }
         span{
           display:inline;
@@ -117,7 +117,7 @@
   ul.collapse-menu{
     .menu-item{
       justify-content: center !important;
-      padding:30px !important;
+      padding:25px !important;
     }
   }
 }

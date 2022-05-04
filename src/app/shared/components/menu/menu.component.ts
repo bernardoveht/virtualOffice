@@ -22,14 +22,7 @@ export class MenuComponent implements OnInit {
 
   public collapseMenu() {
     this.collapseEvent.emit();
-    if (this.collapse) {
-      setTimeout(() => {
-        this.collapse = !this.collapse;
-      }, 100);
-    } else {
-      this.collapse = !this.collapse;
-    }
-
+    this.collapse = !this.collapse;
   }
 
 
