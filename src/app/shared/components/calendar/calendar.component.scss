@@ -22,4 +22,14 @@
 ::ng-deep ngb-datepicker{
   left: 70px !important;
   top: -210px !important;
+  .bg-primary{
+    background-color:$pink-app !important;
+    border-radius: 50%;
+  }
+  .ngb-dp-month-name{
+    color:$blue-app;
+  }
+  .ngb-dp-arrow-btn{
+    color:$blue-app;
+  }
 }
