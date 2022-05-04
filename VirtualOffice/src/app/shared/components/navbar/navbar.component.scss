@@ -1,5 +1,10 @@
+@import "/src/sass/variables";
 :host{
-  .navbar-brand{
-    padding-left: 40px;
+  .bell-icon{
+    color: $po-cielo;
+  }
+  .title-bar{
+    font-family: 'Encode Sans',Arial ,sans-serif;
+    font-size: 25px;
   }
 }
