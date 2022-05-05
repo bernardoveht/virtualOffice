@@ -1,0 +1,24 @@
+:host{
+    .card{
+        border: none;
+        min-height: 180px;
+    }
+    .counts-items{
+        min-width: 280px;
+    }
+    .header-card{
+        padding-left: 35px;
+    }
+    .container-content{
+        max-width: 45%;
+    }
+    .mapa{
+        max-height: 100%;
+        max-width: 100%;
+        width: 35vw;
+        height: 47vh;        
+        min-height: 0; 
+        min-width: 0;
+
+    }
+}

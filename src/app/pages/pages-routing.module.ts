@@ -16,6 +16,11 @@ const routes: Routes = [
         loadChildren: () => import('./virtual-office/virtual-office.module').then((m) => m.VirtualOfficeModule),
         canActivate: [],
       },
+      {
+        path: 'mi-gestion',
+        loadChildren: () => import('./mi-gestion/mi-gestion.module').then((m) => m.MiGestionModule),
+        canActivate: [],
+      },
     ]
   }
 ];

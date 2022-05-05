@@ -5,10 +5,11 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { VirtualOfficeComponent } from './virtual-office/virtual-office.component';
+import { MiGestionComponent } from './mi-gestion/mi-gestion.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, VirtualOfficeComponent],
+  declarations: [PagesComponent, VirtualOfficeComponent, MiGestionComponent],
   imports: [CommonModule, PagesRoutingModule, SharedModule]
 })
 export class PagesModule {}

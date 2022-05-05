@@ -69,7 +69,7 @@ export class MenuComponent implements OnInit {
         name: 'Mi Gestión',
         classColor: 'menu-blue-light',
         icon: 'chart-column',
-        url: '',
+        url: '/pages/mi-gestion',
       }
     ]
   }
