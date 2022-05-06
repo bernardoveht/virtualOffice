@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <div class="title-icon">
+        <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        <h4 class="modal-title">Agregar Comentario</h4>
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label>Comentario</label>
+        <textarea rows="2" class="form-control simple-control">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</textarea>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel" (click)="activeModal.close()">Cancelar</button>
+    <button type="button" class="btn btn-success" (click)="sendComment()">Agregar</button>
+</div>

@@ -8,6 +8,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LineTitleComponent } from './components/line-title/line-title.component';
+import { DescriptionModalComponent } from './components/task/modals/description-modal/description-modal.component';
+import { CommentModalComponent } from './components/task/modals/comment-modal/comment-modal.component';
 
 /**
  * List of modules to export
@@ -28,11 +30,14 @@ import { LineTitleComponent } from './components/line-title/line-title.component
   TaskComponent,
   NewsComponent,
   CalendarComponent,
-  NavbarComponent
+  NavbarComponent,
+  CommentModalComponent,
+  DescriptionModalComponent,
+  LineTitleComponent,
  ];
 
  @NgModule({
-   declarations: [COMPONENTS_EXPORTED, LineTitleComponent],
+   declarations: [COMPONENTS_EXPORTED],
    imports: [CommonModule,NgbDatepickerModule],
    exports: [COMPONENTS_EXPORTED],
    providers: []

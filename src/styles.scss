@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "sass/variables";
+@import "sass/toast";
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
@@ -10,14 +11,4 @@ body{
   border-radius: 25px;
 }
 
-*{
-  &::-webkit-scrollbar {
-    background-color: $classic-gray!important;
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: $blue-app;
-    border-radius: 10px;
-  }
-}
 

@@ -20,9 +20,17 @@
     }
   }
   .content-list{
+    &::-webkit-scrollbar {
+      background-color: $classic-gray!important;
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $blue-app;
+      border-radius: 10px;
+    }
     overflow: scroll;
     overflow-x: hidden;
-    max-height: 75vh;
+    max-height: calc(100vh - 300px);
   }
   .h-misobras{
     font-size: 13px;
@@ -86,3 +94,4 @@
 
 
 }
+

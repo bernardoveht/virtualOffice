@@ -1,0 +1,32 @@
+@import "/src/sass/modal";
+
+.left-data,.right-data{
+    width:50%;
+}
+.left-data{padding-right:15px}
+.right-data{padding-left:15px}
+
+.form-group{
+    margin-bottom:20px;
+    .form-control.line-control{
+        border-bottom:1px solid $green-light-app;
+    }
+    label{
+        color:$green-light-app;
+    }
+}
+
+.title-item{
+    color:$green-light-app;
+}
+
+.comments{
+    max-height:250px;
+    overflow-y: scroll;
+    padding-left: 5px;
+    p{
+        padding:10px 0;
+        margin-bottom:0;
+    }
+}
+
