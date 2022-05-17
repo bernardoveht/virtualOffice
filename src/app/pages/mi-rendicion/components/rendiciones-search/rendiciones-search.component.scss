@@ -1,0 +1,16 @@
+@import "/src/sass/variables";
+
+.searcher{
+    display:flex;
+    justify-content: space-between;
+    background-color: $green-light-app;
+    color:white;
+    position:absolute;
+    align-items: center;
+    width:100%;
+    padding:0 20px;
+    top: 0;
+    &.closed{
+        min-height:50px;
+    }
+}
