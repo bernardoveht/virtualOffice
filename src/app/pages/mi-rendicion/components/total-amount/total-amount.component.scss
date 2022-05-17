@@ -1,0 +1,46 @@
+@import"/src/sass/variables";
+
+
+.btn-new-rendition{
+    background-color:$green-light-app;
+    color:white;
+    margin-bottom:15px;
+    width:100%;
+}
+
+.total-amount-container{
+    padding:15px;
+    .total-data{
+        display:flex;
+        div{
+            &:first-of-type{
+                color:$green-light-app;
+                border-right: 1px solid $green-light-app;
+                padding:15px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                margin-right:15px;
+            }
+            &:last-of-type{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                h5{
+                    font-size:1em;
+                    line-height: 0;
+                    font-weight: 400;
+                }
+                span{
+                    color:$green-light-app;
+                    font-weight: bold;
+                    font-size:1.3em;
+                }
+
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom:20px;
+        }
+    }
+}
