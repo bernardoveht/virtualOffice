@@ -1,11 +1,14 @@
-@import"/src/sass/variables";
+@import "/src/sass/variables";
+@import"/src/sass/buttons";
 
 
 .btn-new-rendition{
     background-color:$green-light-app;
     color:white;
-    margin-bottom:15px;
+    margin-bottom:20px;
     width:100%;
+    border-radius:20px;
+    
 }
 
 .total-amount-container{
@@ -16,11 +19,12 @@
             &:first-of-type{
                 color:$green-light-app;
                 border-right: 1px solid $green-light-app;
-                padding:15px;
+                padding:8px;
                 display:flex;
                 justify-content: center;
                 align-items: center;
                 margin-right:15px;
+                min-width:65px;
             }
             &:last-of-type{
                 display:flex;
@@ -28,13 +32,13 @@
                 justify-content: center;
                 h5{
                     font-size:1em;
-                    line-height: 0;
+                    line-height: 1;
                     font-weight: 400;
                 }
                 span{
                     color:$green-light-app;
                     font-weight: bold;
-                    font-size:1.3em;
+                    font-size:1.1em;
                 }
 
             }
