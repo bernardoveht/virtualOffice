@@ -21,6 +21,11 @@ const routes: Routes = [
         loadChildren: () => import('./mi-gestion/mi-gestion.module').then((m) => m.MiGestionModule),
         // canActivate: [],
       },
+      {
+        path: 'mi-rendicion',
+        loadChildren: () => import('./mi-rendicion/mi-rendicion.module').then((m) => m.MiRendicionModule),
+        // canActivate: [],
+      },
     ]
   }
 ];

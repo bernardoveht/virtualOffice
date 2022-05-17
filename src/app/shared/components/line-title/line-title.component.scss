@@ -15,4 +15,9 @@
         margin-right:10px;
         font-size:2.2em;
     }
+    &.color-green-light{ // param green-light
+        color:$green-light-app;
+        border-bottom:1px solid $green-light-app;
+    }
 }
+

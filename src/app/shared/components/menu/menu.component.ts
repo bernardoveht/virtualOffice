@@ -50,7 +50,7 @@ export class MenuComponent implements OnInit {
         name: 'Mis Rendiciones',
         classColor: 'menu-green-light',
         icon: 'file-invoice-dollar',
-        url: '',
+        url: '#/pages/mi-rendicion',
       },
       {
         name: 'Mis Convenios',

@@ -9,7 +9,9 @@ export class LineTitleComponent implements OnInit {
 
   @Input() title:string = '';
   @Input() icon:string = '';
+  @Input() color:string = 'blue';
   @Input() margin:number = 0;
+
 
   constructor() { }
 
