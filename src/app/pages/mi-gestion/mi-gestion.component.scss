@@ -1,7 +1,11 @@
 :host{
-    .card{
+    .card-xl{
         border: none;
         min-height: 180px;
+    }
+    .card-md{
+        border: none;
+        min-height: 70px;
     }
     .counts-items{
         min-width: 280px;
