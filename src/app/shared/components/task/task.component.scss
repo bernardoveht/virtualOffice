@@ -1,7 +1,7 @@
 @import "/src/sass/variables";
 :host{
   font-family: 'Encode Sans',Arial ,sans-serif;
-  font-size: 13px;
+  font-size: 0.8em;
     .shadow{
       margin: 0 20px !important;
     }
@@ -15,7 +15,7 @@
       cursor: pointer;
     }
     .icon-file{
-      color: $po-limon;
+      color: $green-light-app;
     }
     .icon-money{
       color: $po-cereza;

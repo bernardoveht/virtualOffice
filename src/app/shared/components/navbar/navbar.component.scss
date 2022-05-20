@@ -1,5 +1,11 @@
 @import "/src/sass/variables";
 :host{
+  .navbar{
+    margin:0 24px;
+    &>div{
+      padding:5px 20px;
+    }
+  }
   .bell-icon{
     color: $po-cielo;
   }

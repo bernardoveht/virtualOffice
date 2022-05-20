@@ -15,10 +15,28 @@
     margin-top:10px;
     border: 1px solid $blue-app;
     border-radius: 20px;
-    background-color: transparent;
+    background-color: white;
+    resize:none;
+    padding:8px 8px 8px 15px;
+    font-size:0.8em;
+    width:100%;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &.green-light{
+        border: 1px solid $green-light-app;
+    }
+}
+
+.form-control.simple-area-control{
+    margin-top:10px;
+    border: 1px solid $blue-app;
+    border-radius: 20px;
+    background-color: white;
     resize:none;
     min-height:250px;
-    padding:10px;
+    padding:8px 8px 8px 15px;
     &:focus{
         outline: none;
         box-shadow: none;

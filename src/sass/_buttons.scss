@@ -1,0 +1,24 @@
+
+.rounded-btn{
+    border:1px solid $blue-app;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+    background-color: $blue-app;
+    transition:all 0.2s;
+    padding:5px 10px;
+    &:hover{
+        border:2px solid $blue-app;
+        background-color: white;
+        color:$blue-app;
+    }
+    &.green-light{
+        border:2px solid $green-light-app;
+        background-color: $green-light-app;
+        &:hover{
+            color:$green-light-app;
+            background-color: white;
+        }
+    }
+}
+

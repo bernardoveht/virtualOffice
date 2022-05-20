@@ -1,0 +1,16 @@
+
+.custom-table{
+    font-size: 0.8em;
+    th,td{
+        text-align: center;
+        vertical-align: middle;
+    }
+    &.green-light{
+        th{
+            color:$green-light-app;
+        }
+        .icon-action{
+            color:$green-light-app;
+        }
+    }
+}

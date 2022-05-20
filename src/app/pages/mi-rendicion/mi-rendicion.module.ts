@@ -5,12 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MiRendicionRoutingModule } from './mi-rendicion.routing.module';
 import { TotalAmountComponent } from './components/total-amount/total-amount.component';
 import { MiRendicionComponent } from './mi-rendicion.component';
+import { RendicionesGridComponent } from './components/rendiciones-grid/rendiciones-grid.component';
+import { RendicionesSearchComponent } from './components/rendiciones-search/rendiciones-search.component';
 
 
 @NgModule({
   declarations:[
     MiRendicionComponent,
-    TotalAmountComponent
+    TotalAmountComponent,
+    RendicionesGridComponent,
+    RendicionesSearchComponent
   ],
   imports: [
     CommonModule,

@@ -1,9 +1,38 @@
-<div class="shadow searcher closed">
-    <div>
-        <i class="fa-solid fa-circle-plus"></i>
-        <span>Buscar rendiciones</span>
+<div class="shadow searcher green-light" [ngClass]="{'closed':!openSearch,'opened':openSearch}">
+    <div class="searcher-header" (click)="openSearcher()">
+        <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span class="p-2">Buscar rendiciones</span>
+        </div>
+        <div>
+            <div *ngIf="openSearch"><i class="fa-solid fa-angle-down"></i></div>
+            <div *ngIf="!openSearch"><i class="fa-solid fa-angle-up"></i></div>
+        </div>
     </div>
-    <div>
-        <i class="fa-solid fa-circle-plus"></i>
+    <div class="searcher-body">
+        <div class="form-group">
+            <label>Código de Obra</label>
+            <input class="form-control simple-control green-light" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Código identific. Interna</label>
+            <input class="form-control simple-control green-light" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Nombre de la obra</label>
+            <input class="form-control simple-control green-light" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Cantidad de rendiciones</label>
+            <input class="form-control simple-control green-light" type="text" />
+        </div>
+    </div>
+    <div class="searcher-footer">
+        <button class="clean-btn btn rounded-btn green-light">Limpiar</button>
+        <button class="search-btn btn rounded-btn green-light">Buscar</button>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Mantener filtros</label>
+          </div>
     </div>
 </div>

@@ -1,15 +1,21 @@
-<app-line-title 
-    [title]="title"
-    [icon]="icon"
-    [color]="titleColor"
-    [margin]="20"
-></app-line-title>
+<div id="mi-rendicion">
+    <app-rendiciones-search></app-rendiciones-search>
 
-<div class="rendiciones-container row mt-2 pl-2">
+    <app-line-title 
+        [title]="title"
+        [icon]="icon"
+        [color]="titleColor"
+        [margin]="20"
+    ></app-line-title>
 
-    <div class="col-3">
-        <app-total-amount></app-total-amount>
+    <div class="rendiciones-container row mt-2">
+
+        <div class="col-3">
+            <app-total-amount></app-total-amount>
+        </div>
+        <div class="col-9">
+            <app-rendiciones-grid></app-rendiciones-grid>
+        </div>
+
     </div>
-    <div class="col-9"></div>
-
 </div>

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RendicionesSearchComponent implements OnInit {
 
+  openSearch = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openSearcher(){
+    this.openSearch = !this.openSearch;
   }
 
 }
