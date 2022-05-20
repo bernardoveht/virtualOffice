@@ -9,6 +9,8 @@ import * as  Mapboxgl from 'mapbox-gl';
 export class MiGestionComponent implements OnInit {
 
   private mapa!: Mapboxgl.Map;
+  public title:string = "Mi gestión";
+  public subTitle:string = "Estadistica de proyecto";
   constructor() { }
 
   ngOnInit(): void {
