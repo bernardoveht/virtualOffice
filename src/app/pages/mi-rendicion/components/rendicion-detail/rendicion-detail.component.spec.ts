@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TotalAmountComponent } from './total-amount.component';
+import { RendicionDetailComponent } from './rendicion-detail.component';
 
-describe('TotalAmountComponent', () => {
-  let component: TotalAmountComponent;
-  let fixture: ComponentFixture<TotalAmountComponent>;
+describe('RendicionDetailComponent', () => {
+  let component: RendicionDetailComponent;
+  let fixture: ComponentFixture<RendicionDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TotalAmountComponent ]
+      declarations: [ RendicionDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TotalAmountComponent);
+    fixture = TestBed.createComponent(RendicionDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
