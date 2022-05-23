@@ -1,4 +1,5 @@
 import { createAction, props } from '@ngrx/store';
+import { User } from 'src/app/models/users.model';
 
 enum AuthType {
     login = '[Auth] Login User',
@@ -7,7 +8,12 @@ enum AuthType {
 }
 
 export const login = createAction(
-    AuthType.loginError
+    AuthType.loginError,
+    props<{ username: string;password:string}>()
+);
+export const loginSuccess = createAction(
+    AuthType.loginSuccess,
+    props<{ user:User}>()
 );
 export const loginError = createAction(
     AuthType.loginError, 

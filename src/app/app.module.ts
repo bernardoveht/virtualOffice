@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { appReducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { effectsArray } from './store/effects/index';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { effectsArray } from './store/effects/index';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     ToastrModule.forRoot(),
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
