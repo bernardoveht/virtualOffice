@@ -17,7 +17,6 @@ export class LoginInterceptor implements HttpInterceptor {
 
   constructor(
     private readonly messageSv:MessagesService,
-    private readonly toast:ToastrService 
     ) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

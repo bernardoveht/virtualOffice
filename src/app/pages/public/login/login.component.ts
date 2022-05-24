@@ -16,7 +16,6 @@ export class LoginComponent implements  OnInit,OnDestroy  {
 
   private loginSus! :Subscription;
   public loginFrom!: FormGroup;
-  public showError = false;
   
 
   constructor(
@@ -31,7 +30,7 @@ export class LoginComponent implements  OnInit,OnDestroy  {
     })
     this.loginSus = this.store.select('auth').subscribe((state) =>  {
       if(state.error){
-        this.showError = true;
+        //
       }
       if(state.user) {
         console.log(state.user);
