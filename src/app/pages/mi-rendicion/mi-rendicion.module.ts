@@ -7,8 +7,7 @@ import { MiRendicionComponent } from './mi-rendicion.component';
 import { RendicionesGridComponent } from './components/rendiciones-grid/rendiciones-grid.component';
 import { RendicionesSearchComponent } from './components/rendiciones-search/rendiciones-search.component';
 import { RendicionDetailComponent } from './components/rendicion-detail/rendicion-detail.component';
-import { ExpedienteComponent } from './components/expediente/expediente.component';
-import { DesembolsoComponent } from './components/desembolso/desembolso.component';
+import { RendicionDesembolsoComponent } from './components/rendicion-desembolso/rendicion-desembolso.component';
 
 
 
@@ -18,8 +17,7 @@ import { DesembolsoComponent } from './components/desembolso/desembolso.componen
     RendicionesGridComponent,
     RendicionesSearchComponent,
     RendicionDetailComponent,
-    ExpedienteComponent,
-    DesembolsoComponent
+    RendicionDesembolsoComponent
   ],
   imports: [
     CommonModule,

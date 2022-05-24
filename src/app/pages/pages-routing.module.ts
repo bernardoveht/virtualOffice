@@ -22,8 +22,13 @@ const routes: Routes = [
         // canActivate: [],
       },
       {
-        path: 'mi-rendicion',
+        path: 'mis-rendiciones',
         loadChildren: () => import('./mi-rendicion/mi-rendicion.module').then((m) => m.MiRendicionModule),
+        // canActivate: [],
+      },
+      {
+        path: 'mis-proyectos',
+        loadChildren: () => import('./mi-proyecto/mi-proyecto.module').then((m) => m.MiProyectoModule),
         // canActivate: [],
       },
     ]
