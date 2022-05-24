@@ -13,4 +13,13 @@
     font-family: 'Encode Sans',Arial ,sans-serif;
     font-size: 25px;
   }
+  .username{
+    border-left:1px solid $blue-app;
+    color:$blue-app;
+    font-size:1.1em;
+    padding-left:10px;
+    span{
+      padding-right:10px;
+    }
+  }
 }
