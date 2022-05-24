@@ -45,16 +45,22 @@
         <form [formGroup]="loginFrom" (ngSubmit)="login()">
           <div class="mb-3 text-celeste-argentina">
             <div class="form-group">
-              <label for="email" class="form-label">Usuario</label>
-              <input type="email" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              formControlName="email"  name="email" aria-describedby="emailHelp">
+              <label for="username" class="form-label">Usuario</label>
+              <input type="text" class="form-control rounded-pill border border-2 border-celeste-argentina"
+              formControlName="username"  name="username" aria-describedby="emailHelp">
             </div>
           </div>
-          <div class="mb-3 text-celeste-argentina">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" class="form-control rounded-pill border border-2 border-celeste-argentina"
-            formControlName="password"  name="password">
+          <div class="form-group">
+            <div class="mb-3 text-celeste-argentina">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control rounded-pill border border-2 border-celeste-argentina"
+              formControlName="password"  name="password">
+            </div>
           </div>
+          <div *ngIf="showError" class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Error !!</h4>
+            <p>Error desconosido del sistema.</p>
+           </div>
           <div class="mt-5">
             <div class="m-2">
               <div class="row">

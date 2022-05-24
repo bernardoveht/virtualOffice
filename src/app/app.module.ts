@@ -12,8 +12,9 @@ import { environment } from 'src/environments/environment';
 import { appReducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { effectsArray } from './store/effects/index';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoginInterceptor } from './core/login/login.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
     ToastrModule.forRoot(),
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     }),
     EffectsModule.forRoot(effectsArray)
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
