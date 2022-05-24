@@ -16,6 +16,7 @@ export class LoginComponent implements  OnInit,OnDestroy  {
 
   private loginSus! :Subscription;
   public loginFrom!: FormGroup;
+  public showError = false;
   
 
   constructor(
@@ -25,22 +26,28 @@ export class LoginComponent implements  OnInit,OnDestroy  {
   ) { }
   ngOnInit(): void {
     this.loginFrom = this.fb.group({
-      email:['',Validators.required],
+      username:['',Validators.required],
       password:['',Validators.required]
     })
     this.loginSus = this.store.select('auth').subscribe((state) =>  {
-      
-      console.log(state);
+      if(state.error){
+        this.showError = true;
+      }
+      if(state.user) {
+        console.log(state.user);
+        this.router.navigate(['./pages/oficina-virtual']);
+      }
     });
   }
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    this.loginSus.unsubscribe();
   }
-
 
   login(){
     console.log(this.loginFrom.invalid);
-    this.store.dispatch(loginAction.login({username:'20278789773',password:'Cocostest2022'}));
-    // this.router.navigate(['./pages/oficina-virtual']);
+
+    const {username,password} = this.loginFrom.value;
+    this.store.dispatch(loginAction.login({username,password}));
+   
   }
 }

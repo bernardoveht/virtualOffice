@@ -36,7 +36,18 @@
     }
 }
 .toast-error {
-  background-color: #BD362F;
+
+  border:2px solid $po-arandano;
+  &:before {
+      content: "\f058";
+      color: $po-arandano;
+   }
+  .toast-title{
+      color: $po-arandano !important;
+  }
+  .toast-message{
+      color: $po-arandano !important;
+  }
 }
 .toast-info {
   background-color: #2F96B4;
