@@ -1,5 +1,8 @@
-.breadcrumb {
-  min-height: 50px;
-  padding:0 12vh;
-  margin-bottom: 0;
+:host{
+  .breadcrumb {
+    min-height: 50px;
+    padding:0 12vh;
+    margin-bottom: 0;
+    z-index: 999999;
+  }
 }

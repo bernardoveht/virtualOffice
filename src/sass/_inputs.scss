@@ -1,0 +1,53 @@
+.form-control.line-control{
+    border: none;
+    border-bottom: 1px solid $blue-app;
+    border-radius: initial;
+    background-color: transparent;
+    padding-left: 5px;
+    resize:none;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &.green-light{
+        border-bottom: 1px solid $green-light-app;
+    }
+    &.orange{
+        border-bottom: 1px solid $orange;
+    }
+}
+
+.form-control.simple-control{
+    margin-top:10px;
+    border: 1px solid $blue-app;
+    border-radius: 20px;
+    background-color: white;
+    resize:none;
+    padding:8px 8px 8px 15px;
+    font-size:0.8em;
+    width:100%;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    &.green-light{
+        border: 1px solid $green-light-app;
+    }
+    &.orange{
+        border: 1px solid $orange;
+    }
+}
+
+.form-control.simple-area-control{
+    margin-top:10px;
+    border: 1px solid $blue-app;
+    border-radius: 20px;
+    background-color: white;
+    resize:none;
+    min-height:250px;
+    padding:8px 8px 8px 15px;
+    &:focus{
+        outline: none;
+        box-shadow: none;
+    }
+}

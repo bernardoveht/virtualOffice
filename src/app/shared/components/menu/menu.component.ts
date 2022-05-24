@@ -22,14 +22,7 @@ export class MenuComponent implements OnInit {
 
   public collapseMenu() {
     this.collapseEvent.emit();
-    if (this.collapse) {
-      setTimeout(() => {
-        this.collapse = !this.collapse;
-      }, 100);
-    } else {
-      this.collapse = !this.collapse;
-    }
-
+    this.collapse = !this.collapse;
   }
 
 
@@ -54,10 +47,16 @@ export class MenuComponent implements OnInit {
         url: '',
       },
       {
+        name: 'Mis Proyectos',
+        classColor: 'menu-orange',
+        icon: 'people-group',
+        url: '#/pages/mis-proyectos',
+      },
+      {
         name: 'Mis Rendiciones',
         classColor: 'menu-green-light',
         icon: 'file-invoice-dollar',
-        url: '',
+        url: '#/pages/mis-rendiciones',
       },
       {
         name: 'Mis Convenios',
@@ -69,7 +68,7 @@ export class MenuComponent implements OnInit {
         name: 'Mi Gestión',
         classColor: 'menu-blue-light',
         icon: 'chart-column',
-        url: '',
+        url: '#/pages/mi-gestion',
       }
     ]
   }

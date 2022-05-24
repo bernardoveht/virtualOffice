@@ -30,7 +30,6 @@
       padding-right: 15vw;
     }
     .main-footer{
-      margin-top: 6vh;
       padding-top: 10px;
       border-top: solid 1px #ddd;
       background-color: #F3FAFF;
@@ -69,4 +68,24 @@
         display: block;
       }
   }
+  .back-image{
+    background-image: url("/assets/images/trama.png");  
+    padding-bottom: 2rem;
+    background-size: cover;
+  }
+  .wrapper-header{
+    width: 100%; 
+    height: 35vh;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url('/assets/images/banner.jpg');
+    background-size: cover;
+  }
+  .text-hearder {
+    color: white;
+  }
+  .text-pa{
+    width: 31vw;
+  }
+  
 }

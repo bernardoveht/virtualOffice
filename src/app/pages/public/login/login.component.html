@@ -23,30 +23,44 @@
       </form>
     </div>
   </div>
-  <app-breadcrumb></app-breadcrumb>
 </div>
-<div class="main-content">
+<div class="container-fluid wrapper-header">
+  <app-breadcrumb></app-breadcrumb> 
+  <div class="text-center">
+      <div class="mt-5 text-hearder">  
+        <h3>Oficina Virtual</h3>
+        <div class="text-par"> 
+          <p class="m-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+          <p>ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>
+        </div>
+      </div>
+  </div>
+</div>  
+<div class="main-content back-image">
   <div class="d-flex justify-content-center">
     <div class="col-10 col-sm-5 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
       <div class="shadow p-3 mb-5 bg-body">
         <span>Ingresá a tu cuenta</span>
         <hr>
-        <form>
+        <form [formGroup]="loginFrom" (ngSubmit)="login()">
           <div class="mb-3 text-celeste-argentina">
-            <label for="exampleInputEmail1" class="form-label">Usuario</label>
-            <input type="email" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div class="form-group">
+              <label for="username" class="form-label">Usuario</label>
+              <input type="text" class="form-control rounded-pill border border-2 border-celeste-argentina"
+              formControlName="username"  name="username" aria-describedby="emailHelp">
+            </div>
           </div>
-          <div class="mb-3 text-celeste-argentina">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              id="exampleInputPassword1">
+          <div class="form-group">
+            <div class="mb-3 text-celeste-argentina">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control rounded-pill border border-2 border-celeste-argentina"
+              formControlName="password"  name="password">
+            </div>
           </div>
           <div class="mt-5">
             <div class="m-2">
               <div class="row">
-                <button type="button" class="btn btn-po-fucsia text-white rounded-pill mb-3"
-                  (click)="login()">Ingresar</button>
+                <button type="submit" [disabled]="loginFrom.invalid" class="btn btn-po-fucsia text-white rounded-pill mb-3">Ingresar</button>
               </div>
             </div>
             <div class="m-2">
@@ -57,7 +71,6 @@
             <div class="restore-pass">
               <a href="">olvidé mi contraseña</a>
             </div>
-
           </div>
         </form>
       </div>
@@ -110,7 +123,7 @@
     <div class="row sub-footer">
       <div class="container">
         <div class="col-sm-6 m-y-1 p-x-0">
-          <img class="image-responsive" width="288" height="40" src="/assets/images/logo_argentina_unida-blanco.svg"
+          <img class="image-responsive" width="288" height="40" src="./assets/images/logo_argentina_unida-blanco.svg"
             alt="Argentina Unida">
         </div>
       </div>

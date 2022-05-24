@@ -1,0 +1,25 @@
+
+@import "/src/sass/variables";
+@import "/src/sass/buttons";
+
+.rendiciones-container{
+    padding:20px;
+}
+
+#mi-rendicion{
+    position:relative;
+    padding-top:70px;
+    
+    .btn-new-rendition{
+        background-color:$green-light-app;
+        color:white;
+        margin-bottom:20px;
+        width:100%;
+        border-radius:20px;
+    }
+    .btn-back{
+        margin-right:10px;
+    }
+    
+}
+

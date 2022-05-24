@@ -1,201 +1,206 @@
+<app-line-title [title]="title" [margin]="20" [icon]="'list-check'"></app-line-title>
 <div class="shadow p-3 mb-5 bg-body">
-<table class="table table-responsive table-bordered table-striped">
-  <thead>
-    <tr class="theader">
-      <th scope="col">Fecha</th>
-      <th scope="col">Tipo</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">15/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">14/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+  <table class="table table-responsive table-bordered table-striped">
+    <thead>
+      <tr class="theader">
+        <th scope="col">Fecha</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">15/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <span (click)="viewModal()">
+                  <i class="fa-solid fa-eye fa-2x icon-action"></i>
+                </span>
+              </div>
+              <div class="col">
+                <span (click)="commentsModal()">
+                  <i class="fa-regular fa-comments fa-2x icon-action" ></i>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">13/11/2020</th>
-      <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">14/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">14/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">13/11/2020</th>
-      <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">14/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">13/11/2020</th>
+        <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">13/11/2020</th>
-      <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">14/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">14/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">13/11/2020</th>
-      <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
-            </div>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">14/11/2020</th>
-      <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">13/11/2020</th>
+        <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">13/11/2020</th>
-      <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
-      <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
-      <td>
-        <div class="container px-2">
-          <div class="row gx-2">
-            <div class="col">
-              <i class="fa-solid fa-eye fa-2x icon-action"></i>
-            </div>
-            <div class="col">
-              <i class="fa-regular fa-comments fa-2x icon-action"></i>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">14/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
             </div>
           </div>
-        </div>
-      </td>
-    </tr>
-  </tbody>
-</table>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">13/11/2020</th>
+        <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">14/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">13/11/2020</th>
+        <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">14/11/2020</th>
+        <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">13/11/2020</th>
+        <td><i class="fa-solid fa-file-invoice-dollar fa-2x icon-file"></i></td>
+        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</td>
+        <td>
+          <div class="container px-2">
+            <div class="row gx-2">
+              <div class="col">
+                <i class="fa-solid fa-eye fa-2x icon-action"></i>
+              </div>
+              <div class="col">
+                <i class="fa-regular fa-comments fa-2x icon-action"></i>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

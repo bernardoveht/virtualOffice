@@ -1,0 +1,42 @@
+
+@import "/src/sass/variables";
+
+.desembolsos-btns{
+    display:flex;
+    .desembolso-btn{
+        cursor: pointer;
+        width:150px;
+        -webkit-border-top-left-radius: 10px;
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        -moz-border-radius-topright: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        height: 35px;
+        position: relative;
+        z-index: 999;
+        top: 0px;
+        text-align:center;
+        color:$green-light-app;
+        font-size:1em;
+        font-weight: 600;
+        padding:5px;
+        &.active{
+            box-shadow: 9px -4px 11px -7px rgba(0,0,0,0.22);
+            -webkit-box-shadow: 9px -4px 11px -7px rgba(0,0,0,0.22);
+            -moz-box-shadow: 9px -4px 11px -7px rgba(0,0,0,0.22);
+            background:white;
+        }
+        &.disabled{
+            color:$strong-gray;
+        }
+    }
+}
+.desembolso-table{
+    -webkit-border-radius: 25px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 25px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 25px;
+    border-top-left-radius: 0;
+}

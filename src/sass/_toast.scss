@@ -1,0 +1,56 @@
+
+.toast-container .ngx-toastr{
+    border-radius:10px;
+    background-color:white;
+    background-image: none;
+    padding:30px 15px 30px 60px;
+    min-width:500px;
+    &:before {
+        font-family: FontAwesome;
+        left: 10px;
+        position: absolute;
+        top: 50%;
+        font-size: 36px;
+        margin-top: -26px;
+     }
+    .toast-title{
+        font-weight: bold;
+        font-size:18px;
+    }
+    .toast-message{
+        
+    }
+}
+
+.toast-success {
+    border:2px solid $blue-app;
+    &:before {
+        content: "\f058";
+        color: $blue-app;
+     }
+    .toast-title{
+        color: $blue-app !important;
+    }
+    .toast-message{
+        color: $blue-app !important;
+    }
+}
+.toast-error {
+  border:2px solid $po-arandano;
+  &:before {
+      content: "\f06a";
+      color: $po-arandano;
+   }
+  .toast-title{
+      color: $po-arandano !important;
+  }
+  .toast-message{
+      color: $po-arandano !important;
+  }
+}
+.toast-info {
+  background-color: #2F96B4;
+}
+.toast-warning {
+  background-color: #F89406;
+}
