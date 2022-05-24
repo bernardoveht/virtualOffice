@@ -17,7 +17,7 @@
           <span class="badge rounded-pill badge-notification bg-po-fucsia">1</span>
         </a>
         <div class="username">
-          <span>Hola {{userName}}</span>
+          <span>{{userName ? 'Hola ' + userName : ''}}</span>
           <i class="fa-solid fa-user"></i>
         </div>
       </div>
