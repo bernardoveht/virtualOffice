@@ -17,11 +17,9 @@ export class MessagesService {
 
   }
   public  createToastError(message:string){
-
     this.ngZone.run(() => {
       this.toast.error(message);
-    });
-    
+    });    
   }
 
 
