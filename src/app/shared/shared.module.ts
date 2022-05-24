@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LineTitleComponent } from './components/line-title/line-title.component';
 import { DescriptionModalComponent } from './components/task/modals/description-modal/description-modal.component';
 import { CommentModalComponent } from './components/task/modals/comment-modal/comment-modal.component';
+import { TotalRendicionComponent } from "./components/total-rendicion/total-rendicion.component";
+import { ExpedienteComponent } from "./components/expediente/expediente.component";
 
 /**
  * List of modules to export
@@ -34,6 +36,8 @@ import { CommentModalComponent } from './components/task/modals/comment-modal/co
   CommentModalComponent,
   DescriptionModalComponent,
   LineTitleComponent,
+  TotalRendicionComponent,
+  ExpedienteComponent
  ];
 
  @NgModule({

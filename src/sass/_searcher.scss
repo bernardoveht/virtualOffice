@@ -64,5 +64,13 @@
         }
     }
    }
+   &.orange{
+    background-color: $orange-app;
+    .searcher-footer{
+        button{
+         color:$orange-app;
+        }
+    }
+   }
 
 }

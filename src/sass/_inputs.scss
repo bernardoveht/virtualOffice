@@ -9,6 +9,12 @@
         outline: none;
         box-shadow: none;
     }
+    &.green-light{
+        border-bottom: 1px solid $green-light-app;
+    }
+    &.orange{
+        border-bottom: 1px solid $orange;
+    }
 }
 
 .form-control.simple-control{
@@ -26,6 +32,9 @@
     }
     &.green-light{
         border: 1px solid $green-light-app;
+    }
+    &.orange{
+        border: 1px solid $orange;
     }
 }
 

@@ -5,12 +5,27 @@
         text-align: center;
         vertical-align: middle;
     }
+    .icon-action{
+        color:$strong-gray;
+        margin:0 10px;
+        cursor:pointer;
+    }
     &.green-light{
         th{
             color:$green-light-app;
         }
-        .icon-action{
+        .view-icon{
             color:$green-light-app;
         }
+
+    }
+    &.orange{
+        th{
+            color:$orange-app;
+        }
+        .view-icon{
+            color:$orange-app;
+        }
+
     }
 }

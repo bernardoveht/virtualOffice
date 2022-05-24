@@ -106,6 +106,12 @@
           border-left:2px $violet-app solid;
         }
       }
+      &.menu-orange{
+        color:$orange-app;
+        .link-active{
+          border-left:2px $orange-app solid;
+        }
+      }
       &.menu-blue-light{
         color:$blue-light-app;
         .link-active{

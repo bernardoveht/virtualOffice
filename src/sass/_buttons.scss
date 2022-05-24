@@ -6,7 +6,7 @@
     color:white;
     background-color: $blue-app;
     transition:all 0.2s;
-    padding:5px 10px;
+    padding:6px 10px;
     &:hover{
         border:2px solid $blue-app;
         background-color: white;
@@ -20,5 +20,19 @@
             background-color: white;
         }
     }
+    &.orange{
+        border:2px solid $orange-app;
+        background-color: $orange-app;
+        &:hover{
+            color:$orange-app;
+            background-color: white;
+        }
+    }
+}
+
+.btn-back{
+    width:40px;
+    height:40px;
+    background:$blue-app;
 }
 

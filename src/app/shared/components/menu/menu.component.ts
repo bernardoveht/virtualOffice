@@ -47,10 +47,16 @@ export class MenuComponent implements OnInit {
         url: '',
       },
       {
+        name: 'Mis Proyectos',
+        classColor: 'menu-orange',
+        icon: 'people-group',
+        url: '#/pages/mis-proyectos',
+      },
+      {
         name: 'Mis Rendiciones',
         classColor: 'menu-green-light',
         icon: 'file-invoice-dollar',
-        url: '#/pages/mi-rendicion',
+        url: '#/pages/mis-rendiciones',
       },
       {
         name: 'Mis Convenios',
