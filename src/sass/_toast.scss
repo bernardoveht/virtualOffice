@@ -6,7 +6,8 @@
     padding:30px 15px 30px 60px;
     min-width:500px;
     &:before {
-        font-family: FontAwesome;
+        // font-family: FontAwesome;
+        font: var(--fa-font-solid);
         left: 10px;
         position: absolute;
         top: 50%;
