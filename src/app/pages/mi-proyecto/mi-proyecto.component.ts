@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.reducers';
+import * as projectActions from 'src/app/store/actions/projects/projects.actions'
 
 @Component({
   selector: 'app-mi-proyecto',
@@ -11,9 +14,10 @@ export class MiProyectoComponent implements OnInit {
   public titleColor:string = "orange";
   public detailModeId:number = 0;
 
-  constructor() { }
+  constructor(private readonly store:Store<AppState>,) { }
 
   ngOnInit(): void {
+    this.store.dispatch(projectActions.getAllProjects());
   }
 
   public changeDetailMode(id:number){

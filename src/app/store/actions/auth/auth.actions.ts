@@ -8,7 +8,7 @@ enum AuthType {
 }
 
 export const login = createAction(
-    AuthType.loginError,
+    AuthType.login,
     props<{ username: string;password:string}>()
 );
 export const loginSuccess = createAction(

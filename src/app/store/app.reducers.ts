@@ -3,10 +3,10 @@ import * as reducers from './reducers';
 
 export interface AppState {
   auth: reducers.AuthState;
-//   salesStructure: reducers.SalesStructureState;
+  projects:reducers.ProjectsState;
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
-auth: reducers.authReducer
-//   salesStructure:reducers.salesStructureReducer
+  auth: reducers.authReducer,
+  projects:reducers.projectsReducer
 };

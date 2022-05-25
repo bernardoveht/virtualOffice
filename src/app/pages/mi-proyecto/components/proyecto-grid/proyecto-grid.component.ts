@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/store/app.reducers';
 
 @Component({
   selector: 'app-proyecto-grid',
@@ -8,9 +10,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class ProyectoGridComponent implements OnInit {
   
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
-  constructor() { }
+  constructor(private readonly store:Store<AppState>,) { }
 
   ngOnInit(): void {
+
+    this.store.select('projects').subscribe((state)=>{
+      console.log(state.projects);
+    });
+
   }
 
   public setDetail(id:number){
