@@ -14,7 +14,12 @@ export class ProjectsService {
 
   public getProjectsAll() :  Observable<Projects[]>{
     const token = sessionStorage.getItem('token');
-    return this.http.get<Projects[]>( apiUri.projects + '/projects/all',{headers: new HttpHeaders({'Authorization':'Bearer '+ token,'x-api-key':'abcdefg'})});
+
+    const header = {
+      'Authorization':'Bearer '+ token,
+      'x-api-key':'abcdefg',
+    };
+    return this.http.get<Projects[]>( apiUri.projects + '/projects/all',{headers: new HttpHeaders(header)});
   } 
 
 }
