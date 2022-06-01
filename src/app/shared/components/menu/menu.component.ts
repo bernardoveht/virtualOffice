@@ -32,7 +32,7 @@ export class MenuComponent implements OnInit {
         name: 'Inicio',
         classColor: 'menu-blue',
         icon: 'house',
-        url: '',
+        url: '/pages/oficina-virtual',
       },
       {
         name: 'Mis obras',
@@ -50,13 +50,13 @@ export class MenuComponent implements OnInit {
         name: 'Mis Proyectos',
         classColor: 'menu-orange',
         icon: 'people-group',
-        url: '#/pages/mis-proyectos',
+        url: '/pages/mis-proyectos',
       },
       {
         name: 'Mis Rendiciones',
         classColor: 'menu-green-light',
         icon: 'file-invoice-dollar',
-        url: '#/pages/mis-rendiciones',
+        url: '/pages/mis-rendiciones',
       },
       {
         name: 'Mis Convenios',
@@ -68,7 +68,7 @@ export class MenuComponent implements OnInit {
         name: 'Mi Gestión',
         classColor: 'menu-blue-light',
         icon: 'chart-column',
-        url: '#/pages/mi-gestion',
+        url: '/pages/mi-gestion',
       }
     ]
   }

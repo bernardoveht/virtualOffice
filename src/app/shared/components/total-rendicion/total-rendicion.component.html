@@ -1,30 +1,12 @@
 
 <div class="shadow total-amount-container">
-    <div [class]="'total-data ' + color ">
+    <div [class]="'total-data ' + color " *ngFor="let item of items">
         <div>
-            <i class="fa-solid fa-sack-dollar fa-2x"></i>
+            <i [class]="'fa-solid fa-' + item.icon + ' fa-2x'"></i>
         </div>
         <div>
-            <h5>Desembolso acumulado</h5>
-            <span>{{ 7500 | currency:'$':'symbol'}}</span>
-        </div>
-    </div>
-    <div [class]="'total-data ' + color ">
-        <div>
-            <i class="fa-solid fa-file-invoice-dollar fa-2x"></i>
-        </div>
-        <div>
-            <h5>Monto rendido acumulado</h5>
-            <span>{{ 3525 | currency:'$':'symbol'}}</span>
-        </div>
-    </div>
-    <div [class]="'total-data ' + color ">
-        <div>
-            <i class="fa-solid fa-file-invoice-dollar fa-2x"></i>
-        </div>
-        <div>
-            <h5>Porcentaje rendido acumulado</h5>
-            <span>{{ 469 | percent}}</span>
+            <h5>{{item.title}}</h5>
+            <span>{{ item.amount| currency:'$':'symbol'}}</span>
         </div>
     </div>
 </div>

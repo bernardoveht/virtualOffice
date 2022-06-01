@@ -10,8 +10,8 @@
         <div *ngIf="!collapse"><i class="collapse-icon fa-solid fa-angle-left" ></i></div>
       </a>
     </li>
-    <li *ngFor="let item of menuList;let i = index" [class]="item.classColor" [ngClass]="{'active':i === 0}">
-      <a class="menu-item" [title]="item.name" [href]="item.url" [ngClass]="{'link-active':i === 0}">
+    <li *ngFor="let item of menuList;let i = index" [class]="item.classColor">
+      <a class="menu-item" [title]="item.name" [routerLinkActive]="['link-active']" [routerLink]="[item.url]" [routerLinkActiveOptions]="{ exact: true }">
         <div>
           <i class="menu-icon" [class]="'fa-solid ' + 'fa-' + item.icon"></i>
           <span [class.hide]="collapse">{{item.name}}</span>

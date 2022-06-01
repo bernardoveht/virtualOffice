@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
 
 @Component({
   selector: 'app-total-rendicion',
@@ -8,7 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TotalRendicionComponent implements OnInit {
 
   @Input() color:string = '';
-
+  @Input() items:TotalRendicionItem[] = [];
+  
   constructor() { }
 
   ngOnInit(): void {

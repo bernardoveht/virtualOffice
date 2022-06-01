@@ -1,5 +1,4 @@
-@import '../../../../styles.scss';
-
+@import "/src/sass/variables";
 
 .menu{
   overflow: hidden;
@@ -11,9 +10,6 @@
       list-style: none;
       font-size:1em;
       font-weight: 600;
-      &.active{
-        background:$classic-gray;
-      }
       .burger{
         cursor:pointer;
         justify-content: space-between !important;
@@ -26,6 +22,9 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
+        &.link-active{
+          background:$classic-gray;
+        }
         &:not(.link-active):hover{
           background:$light-gray;
           transition:width 0.1s;
@@ -69,12 +68,6 @@
           height: 1px;
           display: block;
           position: relative;
-        }
-        &.active::before{
-          display:none;
-        }
-        &.active::after{
-          display: none;
         }
       }
       &.menu-blue{
