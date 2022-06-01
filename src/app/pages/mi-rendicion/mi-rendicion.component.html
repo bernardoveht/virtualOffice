@@ -14,7 +14,7 @@
                 </button>
             </div>
             <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <app-total-rendicion [color]="titleColor"></app-total-rendicion>
+            <app-total-rendicion [color]="titleColor" [items]="itemsTotal"></app-total-rendicion>
         </div>
         <div class="col-9">
             <app-rendiciones-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)"></app-rendiciones-grid>

@@ -12,7 +12,9 @@ import { DescriptionModalComponent } from './components/task/modals/description-
 import { CommentModalComponent } from './components/task/modals/comment-modal/comment-modal.component';
 import { TotalRendicionComponent } from "./components/total-rendicion/total-rendicion.component";
 import { ExpedienteComponent } from "./components/expediente/expediente.component";
-
+import { GraphicDataComponent } from './components/graphic-data/graphic-data.component';
+import { RouterModule } from "@angular/router";
+import { NgChartsModule } from 'ng2-charts';
 /**
  * List of modules to export
  */
@@ -37,12 +39,13 @@ import { ExpedienteComponent } from "./components/expediente/expediente.componen
   DescriptionModalComponent,
   LineTitleComponent,
   TotalRendicionComponent,
-  ExpedienteComponent
+  ExpedienteComponent,
+  GraphicDataComponent,
  ];
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [CommonModule,NgbDatepickerModule],
+   imports: [CommonModule,NgbDatepickerModule,RouterModule,NgChartsModule],
    exports: [COMPONENTS_EXPORTED],
    providers: []
  })

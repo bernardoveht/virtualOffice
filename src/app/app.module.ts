@@ -15,6 +15,7 @@ import { effectsArray } from './store/effects/index';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginInterceptor } from './core/login/login.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
