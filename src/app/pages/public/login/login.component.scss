@@ -55,13 +55,8 @@
     .sub-footer {
       background-color: $celeste-argentina;
       padding: 20px 0 40px 0;
-        .container {
-          padding-left:20vw;
-        }
-        .row {
-          margin-right: -15px;
-          margin-left: -15px;
-        }
+      display:flex;
+      align-items: center;
       .image-responsive{
         margin-bottom: 20px;
         max-width: 300px;
