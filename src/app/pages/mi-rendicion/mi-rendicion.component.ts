@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChartData } from 'chart.js';
 import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
 
 @Component({
@@ -12,24 +13,40 @@ export class MiRendicionComponent implements OnInit {
   public icon:string = "file-invoice-dollar";
   public titleColor:string = "green-light";
   public detailModeId:number = 0;
+  
+  public doughnutChartLabels: string[] = ['Iniciadas', 'En Observación', 'Adjudicada', 'Rechazadas', 'Contratadas'];
+  public doughnutChartData: ChartData<'doughnut'> = {
+    labels: this.doughnutChartLabels,
+    datasets: [
+      {
+        data: [5, 8, 7, 10, 16],
+        backgroundColor: [
+          'rgb(219, 220, 200)',
+          'rgb(217, 220, 168)',
+          'rgb(215, 220, 139)',
+          'rgb(227, 230, 74)',
+          'rgb(210, 224, 0)'
+        ],
+        hoverBackgroundColor: [
+          'rgba(219, 220, 200,0.8)',
+          'rgba(217, 220, 168,0.8)',
+          'rgba(215, 220, 139,0.8)',
+          'rgba(227, 230, 74,0.8)',
+          'rgba(210, 224, 0,0.8)'
+        ]
+      },
+    ],
 
+
+  };
   public itemsTotal:TotalRendicionItem[] = [
     {
       icon:'sack-dollar',
-      title:'Desembolso acumulado',
+      title:'Monto Total',
       amount:7500
     },
-    {
-      icon:'file-invoice-dollar',
-      title:'Monto rendido acumulado',
-      amount:3525
-    },
-    {
-      icon:'file-invoice-dollar',
-      title:'Porcentaje rendido acumulado',
-      amount:469
-    }
   ]
+
 
   constructor() { }
 
