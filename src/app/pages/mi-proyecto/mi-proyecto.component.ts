@@ -21,7 +21,7 @@ export class MiProyectoComponent implements OnInit {
     labels: this.doughnutChartLabels,
     datasets: [
       {
-        data: [350, 450, 100, 200, 180],
+        data: [5, 8, 7, 10, 16],
         backgroundColor: [
           'rgb(253, 234, 211)',
           'rgb(255, 211, 159)',

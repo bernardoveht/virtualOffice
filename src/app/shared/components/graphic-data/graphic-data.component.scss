@@ -1,0 +1,35 @@
+@import"/src/sass/variables";
+
+.graphic-total{
+    padding:20px;
+    canvas{
+        max-height:180px;
+    }
+    h3{
+        color:$blue-app;
+    }
+    .total-amount{
+        strong{
+            color:$blue-app;
+            font-size:40px;
+            text-align: right;
+            display:block;
+            line-height: 1;
+        }
+        
+    }
+    &.green-light{
+        h3,.total-amount strong{
+            color:$green-light-app;
+        }
+
+    }
+    &.orange{
+        h3,.total-amount strong{
+            color:$orange-app;
+        }
+    }
+
+ 
+}
+

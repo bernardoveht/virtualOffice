@@ -1,15 +1,17 @@
-<div class="shadow total-amount-container">
-    <div>
-        <div>
-          <div>
-            <canvas baseChart
-              [data]="graphicItems"
-              [type]="'doughnut'"
-              [options]="doughnutChartOptions"
-              [legend]="true"
-              >
-            </canvas>
-          </div>
-        </div>
+<div [class]="'shadow graphic-total ' + color">
+  <div>
+    <div class="d-flex justify-content-between">
+      <h3>{{title}}</h3>
+      <div class="total-amount">
+          <strong>{{totalAmount}}</strong>
+          <p>Cantidad total</p>
       </div>
+    </div>
+    <div>
+      <div>
+        <canvas baseChart [data]="graphicItems" [type]="'doughnut'" [options]="doughnutChartOptions" [legend]="true">
+        </canvas>
+      </div>
+    </div>
+  </div>
 </div>

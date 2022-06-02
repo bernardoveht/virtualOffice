@@ -14,7 +14,12 @@
                 </button> -->
             </div>
             <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <div class="mb-2"><app-graphic-data [graphicItems]="doughnutChartData"></app-graphic-data></div>
+            <div class="mb-2"><app-graphic-data 
+                [color]="titleColor" 
+                [graphicItems]="doughnutChartData"
+                [title]="'Proyectos'"
+                [totalAmount]="36"
+            ></app-graphic-data></div>
             <div><app-total-rendicion [color]="titleColor" [items]="itemsTotal"></app-total-rendicion></div>
         </div>
         <div class="col-9">

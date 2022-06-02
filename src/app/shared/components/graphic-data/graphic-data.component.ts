@@ -8,14 +8,17 @@ import { ChartData, ChartOptions } from 'chart.js';
 })
 export class GraphicDataComponent implements OnInit {
 
-  @Input() graphicItems!:ChartData<'doughnut'>;
+  @Input() color!: string;
+  @Input() totalAmount!: number;
+  @Input() title!: string;
+  @Input() graphicItems!: ChartData<'doughnut'>;
 
-  public doughnutChartOptions:ChartOptions<'doughnut'> = {
+  public doughnutChartOptions: ChartOptions<'doughnut'> = {
     rotation: -90,
-    circumference:180,
-    plugins:{
-      legend:{
-        position:'left'
+    circumference: 180,
+    plugins: {
+      legend: {
+        position: 'left'
       }
     }
   };
@@ -24,7 +27,7 @@ export class GraphicDataComponent implements OnInit {
 
   ngOnInit(): void {
   }
- 
+
 
 
 }
