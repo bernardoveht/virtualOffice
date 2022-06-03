@@ -15,10 +15,14 @@ import { effectsArray } from './store/effects/index';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginInterceptor } from './core/login/login.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderInterceptor } from './core/interceptors/loader/loader.interceptor';
+import { LoaderComponent } from './core/loader/loader.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
