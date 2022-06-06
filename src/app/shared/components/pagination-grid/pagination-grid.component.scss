@@ -1,0 +1,52 @@
+@import"/src/sass/variables";
+
+.pagination-container{
+    display:flex;
+    align-items: center;
+    width:100%;
+    ul{
+        display:flex;
+        align-items: center;
+        list-style: none;
+        width:100%;
+        margin:0;
+        padding: 0;
+        li{
+            .item{
+                color:$blue-app;
+                cursor: pointer;
+                text-decoration: underline;
+                padding:5px;
+                font-size:1.3em;
+            }
+            .active{
+                cursor: default;
+                text-decoration: none;
+            }
+        }
+    }
+    .next-btn{
+        margin-left:10px;
+    }
+    .back-btn{
+        margin-right:10px;
+    }
+    .next-btn,.back-btn{
+        font-size: 0.5em;
+        cursor:pointer;
+    }
+
+    //colors
+
+    &.green-light{
+        .item{
+            color:$green-light-app !important;
+        }
+    }
+    &.orange{
+        .item{
+            color:$orange-app !important;
+        }
+    }
+
+}

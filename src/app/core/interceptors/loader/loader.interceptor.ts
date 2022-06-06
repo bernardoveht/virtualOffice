@@ -12,7 +12,6 @@ export class LoaderInterceptor implements HttpInterceptor {
   constructor(private loaderSv: LoaderService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    debugger
     // count new request
     this.requestCounter++;
     if (!this.loaderSv.isLoading.value) {
@@ -21,7 +20,7 @@ export class LoaderInterceptor implements HttpInterceptor {
     }
 
     return next.handle(req).pipe(
-      finalize(() => {debugger
+      finalize(() => {
         this.requestCounter--;
         if (this.requestCounter === 0) {
           // all request finalize

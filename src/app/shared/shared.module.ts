@@ -15,6 +15,7 @@ import { ExpedienteComponent } from "./components/expediente/expediente.componen
 import { GraphicDataComponent } from './components/graphic-data/graphic-data.component';
 import { RouterModule } from "@angular/router";
 import { NgChartsModule } from 'ng2-charts';
+import { PaginationGridComponent } from './components/pagination-grid/pagination-grid.component';
 /**
  * List of modules to export
  */
@@ -41,6 +42,7 @@ import { NgChartsModule } from 'ng2-charts';
   TotalRendicionComponent,
   ExpedienteComponent,
   GraphicDataComponent,
+  PaginationGridComponent
  ];
 
  @NgModule({

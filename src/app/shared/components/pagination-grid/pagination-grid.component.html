@@ -1,0 +1,20 @@
+<div [class]="'pagination-container ' + color">
+    <div (click)="changePage(currentPage - 1)" [class]="'back-btn rounded-btn ' + color" *ngIf="currentPage !== pagesArray[0]">
+        <i class="fa-solid fa-angle-left"></i>
+    </div>
+    <ul>
+        <li *ngFor="let page of pagesArray">
+            <span *ngIf="
+            page === currentPage ||
+            page === currentPage + 1 || 
+            page === currentPage - 1 
+            " 
+            (click)="changePage(page)" class="item" [ngClass]="{'active': page === currentPage}">
+                {{page}}
+            </span>
+        </li>
+    </ul>
+    <div (click)="changePage(currentPage + 1)" [class]="'next-btn rounded-btn ' + color" *ngIf="currentPage !== pagesArray.at(-1) && pagesArray.length > 1">
+        <i class="fa-solid fa-angle-right"></i>
+    </div>
+</div>
