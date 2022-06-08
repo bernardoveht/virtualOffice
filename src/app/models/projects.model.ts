@@ -56,6 +56,7 @@ export interface Projects {
     blockReason:                null;
     archiveReason:              null;
     gedoDocuments:              any[];
+    
 }
 
 export interface Cost {
@@ -95,7 +96,7 @@ export interface ProjectsFilter{
     page:                     number;
     pageSize:                 number;
     orderBy:                  string;
-    orderDescendin:          boolean;
+    orderDescending:          boolean;
     id:                       string;
     bapinCode:                string;
     name:                     string;
@@ -121,7 +122,10 @@ export interface ProjectsFilter{
     workflowStepStatuses:     any[];
     haveLocations:            boolean;
     isEmergency:              boolean;
+    includeArchived:          boolean;
+    lastUpdateFrom:           string;
     lastUpdateTo:             string;
     geoJsonLayerId:           string;
     geoJsonFeatureCollection: string;
+
 }

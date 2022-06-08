@@ -31,7 +31,7 @@ const _projectsReducer = createReducer(
   })),
   on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
     ...state,
-    projects,
+    projects:projects.result,
     currentPage:1
   })),
   on(actions.projectsPageChange, (state, { page }) => ({

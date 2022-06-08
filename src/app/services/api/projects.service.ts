@@ -21,7 +21,7 @@ export class ProjectsService {
     };
     return this.http.get<Projects[]>( apiUri.projects + '/projects/all',{headers: new HttpHeaders(header)});
   } 
-  public getProjectsSearch(filter:ProjectsFilter) :  Observable<Projects[]>{
+  public getProjectsSearch(filter:ProjectsFilter) :  Observable<any>{
 
     const token = sessionStorage.getItem('token');
 
@@ -29,7 +29,7 @@ export class ProjectsService {
       'Authorization':'Bearer '+ token,
       'x-api-key':'abcdefg',
     };
-    return this.http.post<Projects[]>(apiUri.projects + '/projects/search',
+    return this.http.post(apiUri.projects + '/projects/search',
       filter,
       {headers : new HttpHeaders(header)});    
   } 

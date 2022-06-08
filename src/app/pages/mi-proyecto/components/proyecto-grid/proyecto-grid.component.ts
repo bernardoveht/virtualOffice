@@ -18,13 +18,13 @@ export class ProyectoGridComponent implements OnInit {
   public start:number = 0;
   public end:number = 50;
   public headelements:string [] = [
-    'Código de la obra',
-    'Obra',
-    'Cantidad de rendiciones',
-    'Acumulado desembolsos',
-    'Acumulado Rendiciones',
-    'Monto de obra',
-    'Acciones'
+    'Código SIPPE ',
+    'Nombre',
+    'Estado Nivel',
+    'Estado',
+    'Monto',
+    'Plazo(dias)',
+    'Accion'
   ];
  
 

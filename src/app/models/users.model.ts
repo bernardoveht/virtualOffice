@@ -12,7 +12,7 @@ export interface User {
     username:           string;
     governmentLevel:    string;
     userType:           TipoUsuario;
-    provinceId:         string[];
+    provinceId:         string;
     municipalityId:     string;
     organismId:         string;
     organizationalRole: string;

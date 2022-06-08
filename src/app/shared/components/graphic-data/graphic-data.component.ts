@@ -11,7 +11,7 @@ export class GraphicDataComponent implements OnInit {
   @Input() color!: string;
   @Input() totalAmount!: number;
   @Input() title!: string;
-  @Input() graphicItems!: ChartData<'doughnut'>;
+  @Input() graphicItems!: ChartData<'doughnut'> | undefined;
 
   public doughnutChartOptions: ChartOptions<'doughnut'> = {
     rotation: -90,
