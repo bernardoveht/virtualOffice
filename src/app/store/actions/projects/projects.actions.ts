@@ -1,9 +1,11 @@
 import { createAction, props } from '@ngrx/store';
-import { Projects } from 'src/app/models/projects.model';
+import { Projects, ProjectsFilter } from 'src/app/models/projects.model';
 
 enum ProjectsType {
     getAllProjects = '[Projects] Get all projects',
     getAllProjectsSuccess = '[Projects] Get all projects Success',
+    getSearchProjects='[Projects] Get search by filter projects',
+    getSearchProjectsSuccess='[Projects] Get search by filter projects Success',
     projectsPageChange = '[Projects] Get new currentPage',
     projectsError = '[Projects] Projects Error',
 }
@@ -13,6 +15,14 @@ export const getAllProjects = createAction(
 );
 export const getAllProjectsSuccess = createAction(
     ProjectsType.getAllProjectsSuccess,
+    props<{ projects:Projects[]}>()
+);
+export const getSearchProjects = createAction(
+    ProjectsType.getSearchProjects,
+    props<{ filters:ProjectsFilter}>()
+);
+export const getSearchProjectsSuccess = createAction(
+    ProjectsType.getSearchProjectsSuccess,
     props<{ projects:Projects[]}>()
 );
 

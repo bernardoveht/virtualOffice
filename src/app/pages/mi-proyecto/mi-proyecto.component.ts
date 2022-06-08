@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
 import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
 import { ChartData } from 'chart.js';
+import { Observable, Subscription } from 'rxjs';
+import { getUser } from 'src/app/store/selectors/auth/auth.selector';
+import { ProjectsFilter } from 'src/app/models/projects.model';
+import { TipoUsuario } from 'src/app/constants/users/users';
 
 @Component({
   selector: 'app-mi-proyecto',
   templateUrl: './mi-proyecto.component.html',
   styleUrls: ['./mi-proyecto.component.scss']
 })
-export class MiProyectoComponent implements OnInit {
+export class MiProyectoComponent implements OnInit,OnDestroy {
   public title: string = "Mis Proyectos";
   public icon: string = "file-invoice-dollar";
   public titleColor: string = "orange";
   public detailModeId: number = 0;
-
   public doughnutChartLabels: string[] = ['Iniciadas', 'En Observación', 'Adjudicada', 'Rechazadas', 'Contratadas'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -41,7 +44,6 @@ export class MiProyectoComponent implements OnInit {
 
 
   };
-
   public itemsTotal: TotalRendicionItem[] = [
     {
       icon: 'sack-dollar',
@@ -49,13 +51,66 @@ export class MiProyectoComponent implements OnInit {
       amount: 7500
     },
   ]
+  
+  private auth$:Subscription | undefined;
 
   constructor(
     private readonly store: Store<AppState>,
   ) { }
 
-  ngOnInit(): void {
-    this.store.dispatch(projectActions.getAllProjects());
+  ngOnInit(): void {    
+
+    this.auth$ = this.store.select(getUser).subscribe((user) =>{
+      if(user?.userType === TipoUsuario.Governmental){
+        console.log('usuario Guvermental');
+      } else {
+        console.log('usuario privado');
+      }
+      if(user){
+        const filto:ProjectsFilter = {
+          provinces: [user?.provinceId[0]!],
+          page: 0,
+          pageSize: 1000,
+          orderBy: '',
+          orderDescendin: false,
+          id: '',
+          bapinCode: '',
+          name: '',
+          portfolioId: null,
+          departments: [],
+          municipalities: [],
+          localities: [],
+          workTypeGroupId: null,
+          workTypeSubgroupId: null,
+          workTypeId: null,
+          workflowSteps: [],
+          budgetaryProgramId: '',
+          tematicAreaId: null,
+          planIds: [],
+          tagValues: [],
+          managerUserId: '',
+          organismInChargeId: '',
+          beneficiaryOrganismId: '',
+          externalCreditOrganisms: [],
+          loanId: '',
+          developmentState: null,
+          workflowStepStatuses: [],
+          haveLocations: false,
+          isEmergency: false,
+          lastUpdateTo: '',
+          geoJsonLayerId: '',
+          geoJsonFeatureCollection: ''
+        };
+        console.log('..........fil',filto);
+        this.store.dispatch(projectActions.getSearchProjects({filters:filto}));
+        // this.store.dispatch(projectActions.getAllProjects());      
+      }
+   
+    });
+    
+  }
+  ngOnDestroy(): void {
+    this.auth$?.unsubscribe();
   }
 
   public changeDetailMode(id: number) {

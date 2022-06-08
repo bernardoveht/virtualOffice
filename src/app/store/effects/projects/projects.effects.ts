@@ -24,6 +24,17 @@ export class ProjectsEffects {
         )   
     )
   );
+  getProjectsSearch$ = createEffect(() =>
+    this.actions$.pipe(
+        ofType(projectsActions.getSearchProjects),
+        exhaustMap((action) => 
+        this.projectsService.getProjectsSearch(action.filters).pipe(
+            map(projects => projectsActions.getSearchProjectsSuccess({projects})),
+            catchError(error => of(projectsActions.projectsError({payload:error})))   
+            )
+        )   
+    )
+  );
 
   
 }

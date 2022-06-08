@@ -25,6 +25,15 @@ const _projectsReducer = createReducer(
     projects,
     currentPage:1
   })),
+  on(actions.getSearchProjects, (state,filter) => ({ 
+    ...state,
+    filter
+  })),
+  on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
+    ...state,
+    projects,
+    currentPage:1
+  })),
   on(actions.projectsPageChange, (state, { page }) => ({
     ...state,
     currentPage:page

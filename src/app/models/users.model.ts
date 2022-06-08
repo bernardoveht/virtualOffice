@@ -1,3 +1,5 @@
+import { TipoUsuario } from "../constants/users/users";
+
 export interface UserAuth {
     access_token:  string;
     token_type:    string;
@@ -9,6 +11,9 @@ export interface User {
     sub:                string;
     username:           string;
     governmentLevel:    string;
+    userType:           TipoUsuario;
+    provinceId:         string[];
+    municipalityId:     string;
     organismId:         string;
     organizationalRole: string;
     firstName:          string;
