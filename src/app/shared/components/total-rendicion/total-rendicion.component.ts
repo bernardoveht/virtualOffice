@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
+import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 
 @Component({
   selector: 'app-total-rendicion',

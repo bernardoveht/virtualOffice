@@ -6,7 +6,8 @@
         </div>
         <div>
             <h5>{{item.title}}</h5>
-            <span>{{ item.amount| currency:'$':'symbol'}}</span>
+            <span *ngIf="item.type === 'money'">{{ item.amount | currency:'$':'symbol' }}</span>
+            <span *ngIf="item.type === 'percentage'">{{ item.amount + '%' }}</span>
         </div>
     </div>
 </div>

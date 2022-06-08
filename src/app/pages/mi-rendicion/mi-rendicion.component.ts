@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartData } from 'chart.js';
-import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
+import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 
 @Component({
   selector: 'app-mi-rendicion',
@@ -43,7 +43,8 @@ export class MiRendicionComponent implements OnInit {
     {
       icon:'sack-dollar',
       title:'Monto Total',
-      amount:7500
+      amount:7500,
+      type:'money'
     },
   ]
 

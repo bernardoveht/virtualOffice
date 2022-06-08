@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
-import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
+import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 import { ChartData } from 'chart.js';
 
 @Component({
@@ -46,7 +46,8 @@ export class MiProyectoComponent implements OnInit {
     {
       icon: 'sack-dollar',
       title: 'Monto Total',
-      amount: 7500
+      amount: 7500,
+      type:'money'
     },
   ]
 

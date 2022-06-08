@@ -28,6 +28,23 @@
             background-color: white;
         }
     }
+    &.violet{
+        border:2px solid $violet-app;
+        background-color: $violet-app;
+        &:hover{
+            color:$violet-app;
+            background-color: white;
+        }
+    }
+    &.green{
+        border:2px solid $green-app;
+        background-color: $green-app;
+        &:hover{
+            color:$green-app;
+            background-color: white;
+        }
+
+    }
 }
 
 .btn-back{

@@ -28,4 +28,23 @@
         }
 
     }
+
+    &.violet{
+        th{
+            color:$violet-app;
+        }
+        .view-icon{
+            color:$violet-app;
+        }
+
+    }
+    &.green{
+        th{
+            color:$green-app;
+        }
+        .view-icon{
+            color:$green-app;
+        }
+
+    }
 }

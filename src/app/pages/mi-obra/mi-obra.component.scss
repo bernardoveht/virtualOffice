@@ -1,12 +1,11 @@
-
 @import "/src/sass/variables";
 @import "/src/sass/buttons";
 
-.rendiciones-container{
+.convenio-container{
     padding:20px;
 }
 
-#mi-rendicion{
+#mi-convenio{
     position:relative;
     padding-top:70px;
     
@@ -18,7 +17,7 @@
         border-radius:20px;
     }
     .btn-back{
-        margin-right:10px;
+        margin-bottom:10px;
     }
     
 }

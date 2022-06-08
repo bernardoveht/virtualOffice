@@ -48,5 +48,15 @@
             color:$orange-app !important;
         }
     }
+    &.violet{
+        .item{
+            color:$violet-app !important;
+        }
+    }
+    &.green{
+        .item{
+            color:$green-app !important;
+        }
+    }
 
 }
