@@ -38,7 +38,7 @@ export class MenuComponent implements OnInit {
         name: 'Mis obras',
         classColor: 'menu-green',
         icon: 'truck',
-        url: '',
+        url: '/pages/mis-obras',
       },
       {
         name: 'Mis Desembolsos',
@@ -62,7 +62,7 @@ export class MenuComponent implements OnInit {
         name: 'Mis Convenios',
         classColor: 'menu-violet',
         icon: 'file-contract',
-        url: '',
+        url: '/pages/mis-convenios',
       },
       {
         name: 'Mi Gestión',

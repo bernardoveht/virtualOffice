@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
-import { TotalRendicionItem } from 'src/app/models/total-dendicion.model';
+import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 import { ChartData } from 'chart.js';
 import { Observable, Subscription } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
@@ -48,7 +48,8 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     {
       icon: 'sack-dollar',
       title: 'Monto Total',
-      amount: 7500
+      amount: 7500,
+      type:'money'
     },
   ]
   

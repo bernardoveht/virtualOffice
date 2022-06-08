@@ -23,5 +23,14 @@
         color:$orange-app;
         border-bottom:1px solid $orange-app;
     }
+
+    &.color-violet{
+        color:$violet-app;
+        border-bottom:1px solid $violet-app;
+    }
+    &.color-green{
+        color:$green-app;
+        border-bottom:1px solid $green-app;
+    }
 }
 

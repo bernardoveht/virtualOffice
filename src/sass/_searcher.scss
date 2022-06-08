@@ -2,6 +2,7 @@
     background-color: $blue-app;
     color:white;
     position:absolute;
+    z-index: 999999;
     align-items: center;
     width:100%;
     padding:0 20px;
@@ -69,6 +70,22 @@
     .searcher-footer{
         button{
          color:$orange-app;
+        }
+    }
+   }
+   &.violet{
+    background-color: $violet-app;
+    .searcher-footer{
+        button{
+         color:$violet-app;
+        }
+    }
+   }
+   &.green{
+    background-color: $green-app;
+    .searcher-footer{
+        button{
+         color:$green-app;
         }
     }
    }

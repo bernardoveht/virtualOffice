@@ -31,6 +31,16 @@ const routes: Routes = [
         loadChildren: () => import('./mi-proyecto/mi-proyecto.module').then((m) => m.MiProyectoModule),
         // canActivate: [],
       },
+      {
+        path: 'mis-convenios',
+        loadChildren: () => import('./mi-convenio/mi-convenio.module').then((m) => m.MiConvenioModule),
+        // canActivate: [],
+      },
+      {
+        path: 'mis-obras',
+        loadChildren: () => import('./mi-obra/mi-obra.module').then((m) => m.MiObraModule),
+        // canActivate: [],
+      },
     ]
   }
 ];

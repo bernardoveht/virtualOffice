@@ -1,17 +1,13 @@
-<div id="mi-rendicion">
+<div id="mi-proyecto">
     <app-proyecto-search></app-proyecto-search>
     <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
 
-    <div class="rendiciones-container row mt-2">
+    <div class="proyectos-container row mt-2">
         <div class="col-3">
             <div class="d-flex">
-                <button type="button" class="btn rounded-btn btn-back" (click)="backStep()" *ngIf="detailModeId">
+                <button type="button" class="btn rounded-btn btn-back orange" (click)="backStep()" *ngIf="detailModeId">
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
-                <!-- <button type="button" class="btn rounded-btn orange btn-new-rendition">
-                    <i class="fa-solid fa-circle-plus"></i>
-                    Cargar nueva rendicíon
-                </button> -->
             </div>
             <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
             <div class="mb-2"><app-graphic-data 
