@@ -1,5 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { ProjectAllPaginator, Projects } from 'src/app/models/projects.model';
+import { ProjectAllPaginator, Projects, ProjectsFilter } from 'src/app/models/projects.model';
 import * as actions from '../../actions/index';
 
 
@@ -7,14 +7,14 @@ export interface ProjectsState {
   projects: Projects[];
   projectPaginator: ProjectAllPaginator | null
   error: any;
-  currentPage:number,
+  filters:ProjectsFilter | null;
 }
 
 export const projectsInitialState: ProjectsState = {
   projects: [],
   error: null,
-  currentPage:1,
-  projectPaginator:null
+  projectPaginator:null,
+  filters:null
 };
 
 const _projectsReducer = createReducer(
@@ -25,20 +25,14 @@ const _projectsReducer = createReducer(
   on(actions.getAllProjectsSuccess, (state, { projects }) => ({
     ...state,
     projects,
-    currentPage:1
   })),
   on(actions.getSearchProjects, (state,filter) => ({ 
     ...state,
-    filter
+    filters:filter.filters
   })),
   on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
     ...state,
     projectPaginator:projects,
-    currentPage:1
-  })),
-  on(actions.projectsPageChange, (state, { page }) => ({
-    ...state,
-    currentPage:page
   })),
   on(actions.projectsError, (state, { payload }) => ({
     ...state,

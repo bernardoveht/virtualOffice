@@ -21,6 +21,9 @@ export class MiConvenioComponent implements OnInit {
     },
   ]
 
+  // hay que recibir informacion del endpoint correspondiente para saber si mostrar o no la parte de la izquierda de la grilla
+  dataSourceTotal:any[] = [1,2,3,4,5,6];
+
   constructor() { }
 
   ngOnInit(): void {

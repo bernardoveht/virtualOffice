@@ -4,7 +4,7 @@ import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
 import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 import { ChartData } from 'chart.js';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, take } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 import { ProjectsFilter } from 'src/app/models/projects.model';
 import { TipoUsuario } from 'src/app/constants/users/users';
@@ -24,6 +24,42 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: TotalRendicionItem[] = [];
   public totalProjects = 0;
+  public filter:ProjectsFilter = {
+    provinces: [],
+    page: 0,
+    pageSize: 50,
+    orderBy: '',
+    orderDescending: false,
+    id: '',
+    bapinCode: '',
+    name: '',
+    portfolioId: null,
+    departments: [],
+    municipalities: [],
+    localities: [],
+    workTypeGroupId: null,
+    workTypeSubgroupId: null,
+    workTypeId: null,
+    workflowSteps: [],
+    budgetaryProgramId: '',
+    tematicAreaId: null,
+    planIds: [],
+    tagValues: [],
+    managerUserId: '',
+    organismInChargeId: '',
+    beneficiaryOrganismId: '',
+    externalCreditOrganisms: [],
+    loanId: '',
+    developmentState: null,
+    workflowStepStatuses: [],
+    haveLocations: true,
+    isEmergency: false,
+    lastUpdateTo: '',
+    geoJsonLayerId: '',
+    geoJsonFeatureCollection: '',
+    includeArchived: false,
+    lastUpdateFrom: ''
+  };
   
   private auth$:Subscription | undefined;
   private projects$:Subscription | undefined;
@@ -58,52 +94,16 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
         console.log('usuario privado');
       }
       if(user){
-
-        const filto:ProjectsFilter = {
-          provinces: user.provinceId ?[user.provinceId]: [],
-          page: 0,
-          pageSize: 100000,
-          orderBy: '',
-          orderDescending: false,
-          id: '',
-          bapinCode: '',
-          name: '',
-          portfolioId: null,
-          departments: [],
-          municipalities: user.municipalityId ?[user.municipalityId] : [],
-          localities: [],
-          workTypeGroupId: null,
-          workTypeSubgroupId: null,
-          workTypeId: null,
-          workflowSteps: [],
-          budgetaryProgramId: '',
-          tematicAreaId: null,
-          planIds: [],
-          tagValues: [],
-          managerUserId: '',
-          organismInChargeId: '',
-          beneficiaryOrganismId: '',
-          externalCreditOrganisms: [],
-          loanId: '',
-          developmentState: null,
-          workflowStepStatuses: [],
-          haveLocations: true,
-          isEmergency: false,
-          lastUpdateTo: '',
-          geoJsonLayerId: '',
-          geoJsonFeatureCollection: '',
-          includeArchived: false,
-          lastUpdateFrom: ''
-        };
-        this.store.dispatch(projectActions.getSearchProjects({filters:filto}));
+        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
+        this.filter.provinces = user.municipalityId ?[user.municipalityId] : [];
+        this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
         // this.store.dispatch(projectActions.getAllProjects());      
       }
    
     });
   }
   private FetchProjects(){
-    this.projects$ = this.store.select(getProjectDataResume).subscribe((result)=>{
-    
+    this.projects$ = this.store.select(getProjectDataResume).pipe(take(1)).subscribe((result)=>{  
       this.doughnutChartData = {
         labels: this.doughnutChartLabels,
         datasets: [

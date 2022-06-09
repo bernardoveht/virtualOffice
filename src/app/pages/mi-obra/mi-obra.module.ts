@@ -17,7 +17,7 @@ import { MiObraRoutingModule } from './mi-obra.routing.module';
     ObraDesembolsoComponent,
     ObraDetailComponent,
     ObraGridComponent,
-    ObraSearchComponent
+    ObraSearchComponent,
   ],
   imports: [
     CommonModule,

@@ -8,6 +8,7 @@ import { ConvenioDetailComponent } from './components/convenio-detail/convenio-d
 import { ConvenioGridComponent } from './components/convenio-grid/convenio-grid.component';
 import { ConvenioSearchComponent } from './components/convenio-search/convenio-search.component';
 import { MiConvenioComponent } from './mi-convenio.component';
+import { ConvenioCardComponent } from './components/convenio-card/convenio-card.component';
 
 
 
@@ -19,7 +20,8 @@ import { MiConvenioComponent } from './mi-convenio.component';
     ConvenioDesembolsoComponent,
     ConvenioDetailComponent,
     ConvenioGridComponent,
-    ConvenioSearchComponent
+    ConvenioSearchComponent,
+    ConvenioCardComponent
   ],
   imports: [
     CommonModule,

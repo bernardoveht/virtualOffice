@@ -22,6 +22,11 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
+        &> div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         &.link-active{
           background:$classic-gray;
         }
@@ -30,7 +35,7 @@
           transition:width 0.1s;
         }
         span{
-          display:inline;
+          display:inline-block;
           margin-left:20px;
           visibility: visible;
           transition:visibility 0.2s;

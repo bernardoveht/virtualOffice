@@ -26,11 +26,6 @@ export const getSearchProjectsSuccess = createAction(
     props<{ projects:ProjectAllPaginator}>()
 );
 
-export const projectsPageChange = createAction(
-    ProjectsType.projectsError, 
-    props<{ page: number }>()
-);
-
 export const projectsError = createAction(
     ProjectsType.projectsError, 
     props<{ payload: any }>()

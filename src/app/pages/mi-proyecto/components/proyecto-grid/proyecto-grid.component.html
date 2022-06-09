@@ -1,4 +1,4 @@
-<div class="shadow p-3 mb-5 bg-body table-container">
+<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource && datasource.length">
   <div id="table-proyect" class="table-scroll">
     <table class="table table-responsive table-bordered table-striped custom-table orange" *ngIf="datasource">
       <thead>
@@ -7,7 +7,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let el of datasource | slice:start:end;">
+        <tr *ngFor="let el of datasource">
           <td scope="row">{{el.id}}</td>
           <td>{{el.name}}</td>
           <td>{{el.workflowStepStatus}}</td>
@@ -30,7 +30,7 @@
     </table>
   </div>
   <div class="pagination">
-    <app-pagination-grid (changePageEvent)="changeGridPage($event)" [color]="'orange'" [totalCount]="datasource.length">
+    <app-pagination-grid (changePageEvent)="changeGridPage($event)" [color]="'orange'" [totalCount]="totalCount">
     </app-pagination-grid>
   </div>
 </div>

@@ -10,7 +10,7 @@ export class ObraGridComponent implements OnInit {
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
   constructor() { }
 
-  public datasource: any[] = [1,2,3,4,5,6];
+  public datasource: any[] = [];
 
   ngOnInit(): void {
   }

@@ -41,7 +41,7 @@ export class MenuComponent implements OnInit {
         url: '/pages/mis-obras',
       },
       {
-        name: 'Mis Desembolsos',
+        name: 'Orden de pago/Transferencia',
         classColor: 'menu-pink',
         icon: 'hand-holding-dollar',
         url: '',

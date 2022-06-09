@@ -4,13 +4,14 @@
     </div>
     <ul>
         <li *ngFor="let page of pagesArray">
-            <span *ngIf="
-            page === currentPage ||
+            <span  *ngIf="page === currentPage ||
             page === currentPage + 1 || 
-            page === currentPage - 1 
-            " 
+            page === currentPage - 1 ||
+            page === currentPage + 2 || 
+            page === currentPage - 2 
+            "
             (click)="changePage(page)" class="item" [ngClass]="{'active': page === currentPage}">
-                {{page}}
+                {{page + 1}}
             </span>
         </li>
     </ul>

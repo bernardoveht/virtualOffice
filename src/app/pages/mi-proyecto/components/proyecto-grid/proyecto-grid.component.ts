@@ -1,8 +1,9 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Projects } from 'src/app/models/projects.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions';
+import { ProjectsFilter } from '../../../../models/projects.model';
 
 @Component({
   selector: 'app-proyecto-grid',
@@ -10,11 +11,12 @@ import * as projectActions from 'src/app/store/actions/projects/projects.actions
   styleUrls: ['./proyecto-grid.component.scss']
 })
 export class ProyectoGridComponent implements OnInit {
-  
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
   constructor(private readonly store:Store<AppState>,) { }
-  
+ 
+  public filters:ProjectsFilter | any;
   public datasource!: Projects[];
+  public totalCount:number = 0;
   public start:number = 0;
   public end:number = 50;
   public headelements:string [] = [
@@ -30,11 +32,10 @@ export class ProyectoGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.select('projects').subscribe((state)=>{
-
       if(state.projectPaginator?.result && state.projectPaginator?.result.length){
+        this.filters = {...state.filters};;
         this.datasource = state.projectPaginator?.result;
-        this.start = (state.currentPage - 1) * 50;
-        this.end = this.start + 50;
+        this.totalCount = state.projectPaginator?.totalCount;
         var table:any = document.getElementById('table-proyect');
         table.scrollTop = 0;
       }
@@ -46,7 +47,8 @@ export class ProyectoGridComponent implements OnInit {
   }
 
   public changeGridPage(pageNumber:number){
-    this.store.dispatch(projectActions.projectsPageChange({page:pageNumber}));
+    this.filters.page = pageNumber;
+    this.store.dispatch(projectActions.getSearchProjects({filters:this.filters}));
   }
 
 }
