@@ -5,7 +5,7 @@ export const getProjectState = createFeatureSelector<projectReducer.ProjectsStat
 
 export const getPojects = createSelector(getProjectState,(state:projectReducer.ProjectsState) => state.projects);
 export const getProjectDataResume = createSelector(getProjectState, (state: projectReducer.ProjectsState) => {
-    let levels:number[]=[10,10,10,10,10,10,10];
+    let levels:number[]=[0,0,0,0,0,0,0];
     let totalAmount = 0 ;
 
     state.projects.forEach(element=>{

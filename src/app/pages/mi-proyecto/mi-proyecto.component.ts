@@ -58,8 +58,9 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
         console.log('usuario privado');
       }
       if(user){
+
         const filto:ProjectsFilter = {
-          provinces: [user?.provinceId],
+          provinces: user.provinceId ?[user.provinceId]: [],
           page: 0,
           pageSize: 100000,
           orderBy: '',
@@ -69,12 +70,12 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
           name: '',
           portfolioId: null,
           departments: [],
-          municipalities: [],
+          municipalities: user.municipalityId ?[user.municipalityId] : [],
           localities: [],
           workTypeGroupId: null,
           workTypeSubgroupId: null,
           workTypeId: null,
-          workflowSteps: [0, 0],
+          workflowSteps: [],
           budgetaryProgramId: '',
           tematicAreaId: null,
           planIds: [],
