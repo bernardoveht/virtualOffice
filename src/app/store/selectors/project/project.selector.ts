@@ -8,12 +8,12 @@ export const getProjectDataResume = createSelector(getProjectState, (state: proj
     let levels:number[]=[0,0,0,0,0,0,0];
     let totalAmount = 0 ;
 
-    state.projects.forEach(element=>{
+    state.projectPaginator?.result.forEach(element=>{
         levels[element.workflowStepStatus] ++;
         totalAmount += element.totalCost;
     });
 
-    const totalProject = state.projects.length; 
+    const totalProject = state.projectPaginator?.totalCount ?state.projectPaginator.totalCount : 0; 
     const result = {
         totalAmount,
         totalProject,

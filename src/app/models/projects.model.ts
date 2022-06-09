@@ -1,3 +1,7 @@
+export interface ProjectAllPaginator{
+    result:Projects[];
+    totalCount:number;
+}
 export interface Projects {
     id:                         number;
     dossierState:               number;

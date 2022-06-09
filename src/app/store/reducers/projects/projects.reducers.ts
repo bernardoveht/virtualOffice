@@ -1,10 +1,11 @@
 import { Action, createReducer, on } from '@ngrx/store';
-import { Projects } from 'src/app/models/projects.model';
+import { ProjectAllPaginator, Projects } from 'src/app/models/projects.model';
 import * as actions from '../../actions/index';
 
 
 export interface ProjectsState {
   projects: Projects[];
+  projectPaginator: ProjectAllPaginator | null
   error: any;
   currentPage:number,
 }
@@ -13,6 +14,7 @@ export const projectsInitialState: ProjectsState = {
   projects: [],
   error: null,
   currentPage:1,
+  projectPaginator:null
 };
 
 const _projectsReducer = createReducer(
@@ -31,7 +33,7 @@ const _projectsReducer = createReducer(
   })),
   on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
     ...state,
-    projects:projects.result,
+    projectPaginator:projects,
     currentPage:1
   })),
   on(actions.projectsPageChange, (state, { page }) => ({

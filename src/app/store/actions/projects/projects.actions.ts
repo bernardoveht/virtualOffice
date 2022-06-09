@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Projects, ProjectsFilter } from 'src/app/models/projects.model';
+import { ProjectAllPaginator, Projects, ProjectsFilter } from 'src/app/models/projects.model';
 
 enum ProjectsType {
     getAllProjects = '[Projects] Get all projects',
@@ -23,7 +23,7 @@ export const getSearchProjects = createAction(
 );
 export const getSearchProjectsSuccess = createAction(
     ProjectsType.getSearchProjectsSuccess,
-    props<{ projects:any}>()
+    props<{ projects:ProjectAllPaginator}>()
 );
 
 export const projectsPageChange = createAction(

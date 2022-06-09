@@ -30,8 +30,9 @@ export class ProyectoGridComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.select('projects').subscribe((state)=>{
-      if(state.projects && state.projects.length){
-        this.datasource = state.projects;
+
+      if(state.projectPaginator?.result && state.projectPaginator?.result.length){
+        this.datasource = state.projectPaginator?.result;
         this.start = (state.currentPage - 1) * 50;
         this.end = this.start + 50;
         var table:any = document.getElementById('table-proyect');
