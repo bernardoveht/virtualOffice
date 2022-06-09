@@ -9,6 +9,13 @@
     max-height:45vh;
 }
 
+.convenio-cards-container{
+    & > div{
+        width:30%;
+        margin-bottom:30px;
+    }
+}
+
 .pagination{
     width:100%;
     display: flex;
@@ -16,3 +23,4 @@
     align-items: center;
     padding-top:10px;
 }
+

@@ -1,0 +1,55 @@
+
+@import "/src/sass/variables";
+
+.card-box{
+    overflow: hidden;
+    .card-box-title{
+        color:$violet-app;
+        padding: 10px 5px;
+        margin:0 10px;
+        border-bottom:1px solid $classic-gray;
+    }
+    .card-box-body{
+        display:flex;
+        justify-content: space-between;
+        align-items: stretch;
+        .card-box-content{
+            padding:5px 15px;
+            .item{
+                margin-bottom:5px;
+                .data-box{
+                    color:$text-gray;
+                    display: block;
+                    font-size:0.8em;
+                }
+                .content-box{
+                    color:$violet-app;
+                    display: block;
+                    font-weight: 500;
+                }
+            }
+        }
+        .card-box-detail{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            background-color:$violet-app;
+            width:50px;
+            color:$white;
+            position:relative;
+            &:hover{
+                opacity:0.9;
+                cursor:pointer;
+            }
+            &:before{
+                content:'';
+                position:absolute;
+                height:96%;
+                top:2%;
+                width:1px;
+                background-color:$white;;
+                left:10px;
+            }
+        }
+    }
+}

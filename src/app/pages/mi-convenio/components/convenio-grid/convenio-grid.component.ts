@@ -10,6 +10,8 @@ export class ConvenioGridComponent implements OnInit {
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
   constructor() { }
 
+  dataSource:any[] = [1,2,3,4,5,6]
+
   ngOnInit(): void {
   }
 
