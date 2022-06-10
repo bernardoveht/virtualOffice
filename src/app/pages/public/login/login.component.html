@@ -25,17 +25,17 @@
   </div>
 </div>
 <div class="container-fluid wrapper-header">
-  <app-breadcrumb></app-breadcrumb> 
+  <app-breadcrumb></app-breadcrumb>
   <div class="text-center">
-      <div class="text-hearder">  
-        <h3>Oficina Virtual</h3>
-        <div class="text-par"> 
-          <p class="m-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
-          <p>ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>
-        </div>
+    <div class="text-hearder">
+      <h3>Oficina Virtual</h3>
+      <div class="text-par">
+        <p class="m-0">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+        <p>ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis</p>
       </div>
+    </div>
   </div>
-</div>  
+</div>
 <div class="main-content back-image">
   <div class="d-flex justify-content-center">
     <div class="col-10 col-sm-5 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
@@ -47,26 +47,28 @@
             <div class="form-group">
               <label for="username" class="form-label">Usuario</label>
               <input type="text" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              formControlName="username"  name="username" aria-describedby="emailHelp">
+                formControlName="username" name="username" aria-describedby="emailHelp">
             </div>
           </div>
           <div class="form-group">
             <div class="mb-3 text-celeste-argentina psw-input">
               <label for="password" class="form-label">Contraseña</label>
-              <input [type]="hidePass ? 'password' : 'text'" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              formControlName="password"  name="password" />
+              <input [type]="hidePass ? 'password' : 'text'"
+                class="form-control rounded-pill border border-2 border-celeste-argentina" formControlName="password"
+                name="password" />
               <span class="hide-pass hide" (click)="this.hidePass = !this.hidePass" *ngIf="hidePass">
-                <i  class="fa-solid fa-eye-slash icon-action view-icon" ></i>
+                <i class="fa-solid fa-eye icon-action view-icon"></i>
               </span>
               <span class="hide-pass view" (click)="this.hidePass = !this.hidePass" *ngIf="!hidePass">
-                <i  class="fa-solid fa-eye icon-action view-icon" ></i>
+                <i class="fa-solid fa-eye-slash icon-action view-icon"></i>
               </span>
             </div>
           </div>
           <div class="mt-5">
             <div class="m-2">
               <div class="row">
-                <button type="submit" [disabled]="loginFrom.invalid" class="btn btn-po-fucsia text-white rounded-pill mb-3">Ingresar</button>
+                <button type="submit" [disabled]="loginFrom.invalid"
+                  class="btn btn-po-fucsia text-white rounded-pill mb-3">Ingresar</button>
               </div>
             </div>
             <div class="m-2">
@@ -125,10 +127,10 @@
       </div>
     </div>
   </div>
-    <div class="sub-footer">
-      <div class="container">
-          <img class="image-responsive" width="288" height="40" src="./assets/images/logo_argentina_unida-blanco.svg"
-            alt="Argentina Unida">
-      </div>
+  <div class="sub-footer">
+    <div class="container">
+      <img class="image-responsive" width="288" height="40" src="./assets/images/logo_argentina_unida-blanco.svg"
+        alt="Argentina Unida">
     </div>
+  </div>
 </footer>
