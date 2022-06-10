@@ -89,5 +89,29 @@
   .text-pa{
     width: 31vw;
   }
+  .psw-input{
+    position:relative;
+    input{
+      padding-right: 45px;
+    }
+    .hide-pass{
+      position: absolute;
+      right: 10px;
+      top: 37px;
+      font-size: 22px;
+      cursor: pointer;
+      &:hover{
+        opacity:0.8;
+      }
+      &.hide{
+        right: 10px;
+      }
+      &.view{
+        right: 11px;
+      }
+    }
+  }
+
+
   
 }

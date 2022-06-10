@@ -51,10 +51,16 @@
             </div>
           </div>
           <div class="form-group">
-            <div class="mb-3 text-celeste-argentina">
+            <div class="mb-3 text-celeste-argentina psw-input">
               <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control rounded-pill border border-2 border-celeste-argentina"
-              formControlName="password"  name="password">
+              <input [type]="hidePass ? 'password' : 'text'" class="form-control rounded-pill border border-2 border-celeste-argentina"
+              formControlName="password"  name="password" />
+              <span class="hide-pass hide" (click)="this.hidePass = !this.hidePass" *ngIf="hidePass">
+                <i  class="fa-solid fa-eye-slash icon-action view-icon" ></i>
+              </span>
+              <span class="hide-pass view" (click)="this.hidePass = !this.hidePass" *ngIf="!hidePass">
+                <i  class="fa-solid fa-eye icon-action view-icon" ></i>
+              </span>
             </div>
           </div>
           <div class="mt-5">

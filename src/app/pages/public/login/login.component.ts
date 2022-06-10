@@ -16,6 +16,7 @@ export class LoginComponent implements  OnInit,OnDestroy  {
 
   private loginSus! :Subscription;
   public loginFrom!: FormGroup;
+  public hidePass:boolean = true;
   
 
   constructor(
@@ -47,6 +48,6 @@ export class LoginComponent implements  OnInit,OnDestroy  {
 
     const {username,password} = this.loginFrom.value;
     this.store.dispatch(loginAction.login({username,password}));
-   
   }
+
 }
