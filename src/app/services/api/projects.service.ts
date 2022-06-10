@@ -33,12 +33,4 @@ export class ProjectsService {
       filter,
       {headers : new HttpHeaders(header)});    
   } 
-
-
-
-
 }
-function body<T>(arg0: string, body: any, filter: ProjectsFilter, arg3: { headers: HttpHeaders; }): Observable<Projects[]> {
-  throw new Error('Function not implemented.');
-}
-

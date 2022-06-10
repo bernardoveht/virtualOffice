@@ -95,7 +95,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
       }
       if(user){
         this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.provinces = user.municipalityId ?[user.municipalityId] : [];
+        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
         this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
         // this.store.dispatch(projectActions.getAllProjects());      
       }
@@ -103,7 +103,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     });
   }
   private FetchProjects(){
-    this.projects$ = this.store.select(getProjectDataResume).pipe(take(1)).subscribe((result)=>{  
+    this.projects$ = this.store.select(getProjectDataResume).subscribe((result)=>{ 
       this.doughnutChartData = {
         labels: this.doughnutChartLabels,
         datasets: [

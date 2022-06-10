@@ -6,14 +6,14 @@ export const getProjectState = createFeatureSelector<projectReducer.ProjectsStat
 export const getPojects = createSelector(getProjectState,(state:projectReducer.ProjectsState) => state.projects);
 export const getProjectDataResume = createSelector(getProjectState, (state: projectReducer.ProjectsState) => {
     let levels:number[]=[0,0,0,0,0,0,0];
-    let totalAmount = 0 ;
-
-    state.projectPaginator?.result.forEach(element=>{
+    let totalAmount = 0 ;   
+   
+    state.projects.forEach(element=>{
         levels[element.workflowStepStatus] ++;
         totalAmount += element.totalCost;
     });
 
-    const totalProject = state.projectPaginator?.totalCount ?state.projectPaginator.totalCount : 0; 
+    const totalProject = state.projects.length; 
     const result = {
         totalAmount,
         totalProject,

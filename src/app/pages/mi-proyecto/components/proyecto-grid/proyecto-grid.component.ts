@@ -37,7 +37,7 @@ export class ProyectoGridComponent implements OnInit {
         this.datasource = state.projectPaginator?.result;
         this.totalCount = state.projectPaginator?.totalCount;
         var table:any = document.getElementById('table-proyect');
-        table.scrollTop = 0;
+        // table.scrollTop = 0;
       }
     });
   }

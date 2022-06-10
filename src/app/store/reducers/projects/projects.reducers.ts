@@ -33,6 +33,7 @@ const _projectsReducer = createReducer(
   on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
     ...state,
     projectPaginator:projects,
+    projects:projects.result
   })),
   on(actions.projectsError, (state, { payload }) => ({
     ...state,
