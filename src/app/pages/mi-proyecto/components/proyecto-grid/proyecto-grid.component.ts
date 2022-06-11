@@ -11,8 +11,7 @@ import { ProjectsFilter } from '../../../../models/projects.model';
   styleUrls: ['./proyecto-grid.component.scss']
 })
 export class ProyectoGridComponent implements OnInit {
-  @Output() public readonly changeDetailMode = new EventEmitter<any>();
-  constructor(private readonly store:Store<AppState>,) { }
+  @Output() public readonly changeDetailMode = new EventEmitter<any>();  
  
   public filters:ProjectsFilter | any;
   public datasource!: Projects[];
@@ -28,6 +27,7 @@ export class ProyectoGridComponent implements OnInit {
     'Plazo(dias)',
     'Accion'
   ];
+  constructor(private readonly store:Store<AppState>,) { }
  
 
   ngOnInit(): void {
