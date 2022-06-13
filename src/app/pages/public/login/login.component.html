@@ -56,10 +56,10 @@
               <input [type]="hidePass ? 'password' : 'text'"
                 class="form-control rounded-pill border border-2 border-celeste-argentina" formControlName="password"
                 name="password" />
-              <span class="hide-pass hide" (click)="this.hidePass = !this.hidePass" *ngIf="hidePass">
+              <span class="hide-pass hide" (click)="this.hidePass = !this.hidePass" *ngIf="!hidePass">
                 <i class="fa-solid fa-eye icon-action view-icon"></i>
               </span>
-              <span class="hide-pass view" (click)="this.hidePass = !this.hidePass" *ngIf="!hidePass">
+              <span class="hide-pass view" (click)="this.hidePass = !this.hidePass" *ngIf="hidePass">
                 <i class="fa-solid fa-eye-slash icon-action view-icon"></i>
               </span>
             </div>
