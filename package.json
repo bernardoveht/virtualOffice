@@ -31,6 +31,7 @@
     "chart.js": "^3.8.0",
     "jquery": "^3.6.0",
     "mapbox-gl": "^2.8.2",
+    "ng-multiselect-dropdown": "^0.3.8",
     "ng2-charts": "^3.0.11",
     "ngx-toastr": "^14.3.0",
     "rxjs": "~7.5.0",

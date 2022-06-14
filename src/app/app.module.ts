@@ -19,6 +19,8 @@ import { LoaderInterceptor } from './core/interceptors/loader/loader.interceptor
 import { LoaderComponent } from './core/loader/loader.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { LoaderComponent } from './core/loader/loader.component';
       maxAge: 25,
       logOnly: environment.production,
     }),
-    EffectsModule.forRoot(effectsArray)
+    EffectsModule.forRoot(effectsArray),
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },

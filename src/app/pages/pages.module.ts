@@ -8,6 +8,9 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [PagesComponent],
-  imports: [CommonModule, PagesRoutingModule, SharedModule]
+  imports: [CommonModule
+    ,PagesRoutingModule
+    ,SharedModule,
+  ]
 })
-export class PagesModule {}
+export class PagesModule { }

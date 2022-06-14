@@ -1,53 +1,80 @@
-.form-control.line-control{
-    border: none;
-    border-bottom: 1px solid $blue-app;
-    border-radius: initial;
-    background-color: transparent;
-    padding-left: 5px;
-    resize:none;
-    &:focus{
-        outline: none;
-        box-shadow: none;
-    }
-    &.green-light{
-        border-bottom: 1px solid $green-light-app;
-    }
-    &.orange{
-        border-bottom: 1px solid $orange;
-    }
+.form-control.line-control {
+  border: none;
+  border-bottom: 1px solid $blue-app;
+  border-radius: initial;
+  background-color: transparent;
+  padding-left: 5px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &.green-light {
+    border-bottom: 1px solid $green-light-app;
+  }
+  &.orange {
+    border-bottom: 1px solid $orange;
+  }
 }
 
-.form-control.simple-control{
-    margin-top:10px;
-    border: 1px solid $blue-app;
-    border-radius: 20px;
-    background-color: white;
-    resize:none;
-    padding:8px 8px 8px 15px;
-    font-size:0.8em;
-    width:100%;
-    &:focus{
-        outline: none;
-        box-shadow: none;
-    }
-    &.green-light{
-        border: 1px solid $green-light-app;
-    }
-    &.orange{
-        border: 1px solid $orange;
-    }
+.form-control.simple-control,
+.multiselect-dropdown {
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid $blue-app;
+  border-radius: 20px;
+  background-color: white;
+  resize: none;
+  padding: 8px 8px 8px 15px;
+  font-size: 0.9em;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &.green-light {
+    border: 1px solid $green-light-app;
+  }
+  &.orange {
+    border: 1px solid $orange;
+  }
 }
 
-.form-control.simple-area-control{
-    margin-top:10px;
-    border: 1px solid $blue-app;
-    border-radius: 20px;
-    background-color: white;
-    resize:none;
-    min-height:250px;
-    padding:8px 8px 8px 15px;
-    &:focus{
-        outline: none;
-        box-shadow: none;
-    }
+.multiselect-dropdown {
+  padding-right: 25px;
+  .dropdown-list {
+    left: 0;
+  }
+  height: 37px;
+  border: none !important;
+  .dropdown-btn {
+    border: none !important;
+    padding: 0 !important;
+  }
+}
+
+.form-control.simple-area-control {
+  margin-top: 10px;
+  border: 1px solid $blue-app;
+  border-radius: 20px;
+  background-color: white;
+  resize: none;
+  min-height: 250px;
+  padding: 8px 8px 8px 15px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.form-group.date-picker-group {
+  .form-control.simple-control {
+    cursor: pointer;
+    pointer-events: none;
+  }
+  .dropdown-menu {
+    top: 0 !important;
+    left: 0 !important;
+  }
 }

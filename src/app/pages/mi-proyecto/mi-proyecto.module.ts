@@ -8,6 +8,8 @@ import { ProyectoSearchComponent } from './components/proyecto-search/proyecto-s
 import { ProyectoGridComponent } from './components/proyecto-grid/proyecto-grid.component';
 import { ProyectoDetailComponent } from './components/proyecto-detail/proyecto-detail.component';
 import { ProyectoDesembolsoComponent } from './components/proyecto-desembolso/proyectodesembolso.component';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
@@ -26,6 +28,8 @@ import { ProyectoDesembolsoComponent } from './components/proyecto-desembolso/pr
     ReactiveFormsModule, 
     FormsModule,
     MiProyectoRoutingModule,
+    NgbDatepickerModule,
+    NgMultiSelectDropDownModule.forRoot(),
   ]
 })
 export class MiProyectoModule { }

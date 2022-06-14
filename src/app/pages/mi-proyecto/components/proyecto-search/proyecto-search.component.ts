@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { ProjectsFilter } from 'src/app/models/projects.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
   selector: 'app-proyecto-search',
@@ -11,7 +12,6 @@ import * as projectActions from 'src/app/store/actions/projects/projects.actions
   styleUrls: ['./proyecto-search.component.scss']
 })
 export class ProyectoSearchComponent implements OnInit {
-
   public filter:ProjectsFilter = {
     provinces: [],
     page: 0,
@@ -49,6 +49,10 @@ export class ProyectoSearchComponent implements OnInit {
     lastUpdateFrom: ''
   };
 
+  dropdownList:any = [];
+  dropdownSettings:IDropdownSettings={};
+
+
   public openSearch = false;
   public searchForm: FormGroup;
 
@@ -67,6 +71,20 @@ export class ProyectoSearchComponent implements OnInit {
      }
 
   ngOnInit(): void {
+    this.dropdownList = [
+      { item_id: 1, item_text: 'Item1' },
+      { item_id: 2, item_text: 'Item2' },
+      { item_id: 3, item_text: 'Item3' },
+      { item_id: 4, item_text: 'Item4' },
+      { item_id: 5, item_text: 'Item5' }
+    ];
+    this.dropdownSettings = {
+      idField: 'item_id',
+      textField: 'item_text',
+      enableCheckAll: false,
+      allowSearchFilter: true,
+      searchPlaceholderText:'Buscar'
+  };
   }
 
   openSearcher(){
