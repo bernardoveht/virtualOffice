@@ -52,7 +52,23 @@
     border: none !important;
     padding: 0 !important;
   }
+
 }
+
+
+ .multiselect-custom{
+  position:relative;
+  .selected-item-container{
+    display:none !important; 
+   }
+   .multiselect-dropdown-count{
+      position:absolute;
+      bottom: 5px;
+      left: 13px;
+      z-index:1;
+      color: black;
+   }
+ }
 
 .form-control.simple-area-control {
   margin-top: 10px;
