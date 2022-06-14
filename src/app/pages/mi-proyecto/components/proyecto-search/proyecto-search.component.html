@@ -13,19 +13,19 @@
         <div class="searcher-body">
             <div class="form-group">
                 <label>SIPPE</label>
-                <div class="multiselect-custom">
-                    <span class="multiselect-dropdown-count" *ngIf="searchForm.get('sippe')?.value.length">
-                        Nº de Items seleccionados: {{searchForm.get('sippe')?.value.length}}
-                    </span>
-                    <ng-multiselect-dropdown [settings]="dropdownSettings" [data]="dropdownList"
-                        formControlName="sippe">
-                    </ng-multiselect-dropdown>
-                </div>
+                <input class="form-control simple-control green-light" formControlName="sippe" type="text" />
 
             </div>
             <div class="form-group">
                 <label>Organismo</label>
-                <input class="form-control simple-control green-light" formControlName="organismo" type="text" />
+                <div class="multiselect-custom">
+                    <span class="multiselect-dropdown-count" *ngIf="searchForm.get('organismo')?.value.length">
+                        Seleccionados: {{searchForm.get('organismo')?.value.length}}
+                    </span>
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" [data]="dropdownList"
+                        formControlName="organismo">
+                    </ng-multiselect-dropdown>
+                </div>
             </div>
             <div class="form-group">
                 <label>Nombre del Proyecto</label>
