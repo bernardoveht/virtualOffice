@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,6 +7,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./proyecto-modal-detail.component.scss']
 })
 export class ProyectoModalDetailComponent implements OnInit {
+
+  @Input() data:any;
   
   constructor(public activeModal: NgbActiveModal) { }
 

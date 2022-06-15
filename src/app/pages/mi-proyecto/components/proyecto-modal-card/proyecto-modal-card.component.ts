@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,8 +8,11 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ProyectoModalCardComponent implements OnInit {
 
+  @Input() data:any;
+  
   constructor(public activeModal: NgbActiveModal) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
 }

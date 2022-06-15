@@ -137,20 +137,19 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   }
 
   public cardModal(id:number){
-    this.modalService.open(ProyectoModalCardComponent,{
+    const modalRef = this.modalService.open(ProyectoModalCardComponent,{
       windowClass: 'modal-orange with-border', 
-      centered:true
-    })
+      centered:true,
+    });
+    modalRef.componentInstance.data = "aca le pasas data";
   }
 
   public detailModal(id:number){
-    this.modalService.open(ProyectoModalDetailComponent,{
+    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
       windowClass: 'modal-orange with-border', 
-      size:'lg',
-      centered:true
-    })
+      centered:true,
+    });
+    modalRef.componentInstance.data = "aca le pasas data";
   }
-
-
 
 }
