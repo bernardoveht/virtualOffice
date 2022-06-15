@@ -11,13 +11,15 @@ import { getUserName } from 'src/app/store/selectors/auth/auth.selector';
 export class NavbarComponent implements OnInit {
 
   public userName: string = '';
+  public orgName: string ='';
 
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.store.pipe(select(getUserName)).subscribe(userName => {
-      if (userName) {
-        this.userName = userName;
+    this.store.pipe(select(getUserName)).subscribe(user => {
+      if (user) {
+        this.userName = user.name;
+        this.orgName = user.orgname;
       }
     })
   }

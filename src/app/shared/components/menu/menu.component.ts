@@ -41,12 +41,6 @@ export class MenuComponent implements OnInit {
         url: '/pages/mis-obras',
       },
       {
-        name: 'Orden de pago/Transferencia',
-        classColor: 'menu-pink',
-        icon: 'hand-holding-dollar',
-        url: '',
-      },
-      {
         name: 'Mis Proyectos',
         classColor: 'menu-orange',
         icon: 'people-group',
@@ -59,17 +53,29 @@ export class MenuComponent implements OnInit {
         url: '/pages/mis-rendiciones',
       },
       {
+        name: 'Ordenes de pago',
+        classColor: 'menu-pink',
+        icon: 'hand-holding-dollar',
+        url: '',
+      },
+      {
         name: 'Mis Convenios',
         classColor: 'menu-violet',
         icon: 'file-contract',
         url: '/pages/mis-convenios',
       },
       {
-        name: 'Mi Gestión',
+        name: 'Mis Certificados',
         classColor: 'menu-blue-light',
         icon: 'chart-column',
-        url: '/pages/mi-gestion',
-      }
+        url: '',
+      },
+      {
+        name: 'Mis Redeterminaciones',
+        classColor: 'menu-blue-light',
+        icon: 'chart-column',
+        url: '',
+      },
     ]
   }
 

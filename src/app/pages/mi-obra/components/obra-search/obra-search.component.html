@@ -2,7 +2,7 @@
     <div class="searcher-header" (click)="openSearcher()">
         <div>
             <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="p-2">Buscar rendiciones</span>
+            <span class="p-2">Buscar obras</span>
         </div>
         <div>
             <div *ngIf="openSearch"><i class="fa-solid fa-angle-down"></i></div>
@@ -11,11 +11,11 @@
     </div>
     <div class="searcher-body">
         <div class="form-group">
-            <label>Código de Obra</label>
+            <label>SIPPE</label>
             <input class="form-control simple-control green" type="text" />
         </div>
         <div class="form-group">
-            <label>Código identific. Interna</label>
+            <label>Organismo</label>
             <input class="form-control simple-control green" type="text" />
         </div>
         <div class="form-group">
@@ -23,7 +23,11 @@
             <input class="form-control simple-control green" type="text" />
         </div>
         <div class="form-group">
-            <label>Cantidad de rendiciones</label>
+            <label>Plan</label>
+            <input class="form-control simple-control green" type="text" />
+        </div>
+        <div class="form-group">
+            <label>Fecha (Desde/Hasta)</label>
             <input class="form-control simple-control green" type="text" />
         </div>
     </div>
