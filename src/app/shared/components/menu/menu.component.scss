@@ -7,6 +7,12 @@
     padding:0;
     margin:0;
     li{
+      &:first-child{
+        @media (max-width: 1200px){
+          display:none;
+          visibility: hidden;
+        }
+      }
       list-style: none;
       font-size:1em;
       font-weight: 600;
@@ -15,6 +21,10 @@
         justify-content: space-between !important;
       }
       .menu-item{
+        @media (max-width: 1200px){
+          justify-content: center !important;
+          padding:25px !important;
+        }
         padding:25px 25px 25px 30px;
         text-decoration: none;
         color:inherit;
@@ -43,10 +53,15 @@
             display:none;
             visibility: hidden;
           }
+          @media (max-width: 1200px){
+            display:none;
+            visibility: hidden;
+          }
         }
         .collapse-icon{
           font-size: 30px;
         }
+ 
       }
       &:first-child{
         &::after{

@@ -22,6 +22,7 @@
 ::ng-deep ngb-datepicker{
   left: 70px !important;
   top: -210px !important;
+  transform: translate(0px, 0px) !important;
   .bg-primary{
     background-color:$pink-app !important;
     border-radius: 50%;

@@ -3,6 +3,9 @@
 
 .total-amount-container{
     padding:15px;
+    @media (max-width: 1200px){
+        margin-bottom:15px;
+    }
     .total-data{
         display:flex;
         div{
@@ -25,10 +28,11 @@
                     line-height: 1;
                     font-weight: 400;
                 }
-                span{
+                p{
                     color:$blue-app;
                     font-weight: bold;
-                    font-size:1.5em;
+                    font-size:1.4em;
+                    word-break: break-word;
                 }
 
             }
@@ -44,7 +48,7 @@
                     border-right: 1px solid $green-light-app;
                 }  
                 &:last-of-type{
-                    span{
+                    p{
                         color:$green-light-app;
                     }
                 }
@@ -59,7 +63,7 @@
                     border-right: 1px solid $orange-app;
                 } 
                 &:last-of-type{
-                    span{
+                    p{
                         color:$orange-app;
                     }
                 } 
@@ -74,7 +78,7 @@
                     border-right: 1px solid $violet-app;
                 } 
                 &:last-of-type{
-                    span{
+                    p{
                         color:$violet-app;
                     }
                 } 
@@ -89,7 +93,7 @@
                     border-right: 1px solid $green-app;
                 } 
                 &:last-of-type{
-                    span{
+                    p{
                         color:$green-app;
                     }
                 } 

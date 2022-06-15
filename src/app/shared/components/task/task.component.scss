@@ -23,4 +23,8 @@
     .table thead th {
       border-bottom: 2px solid $verde-cemento;
     }
+    .table-scroll {
+      overflow-y: scroll;
+      max-height:65vh;
+  }
 }
