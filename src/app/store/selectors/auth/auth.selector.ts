@@ -8,11 +8,17 @@ export const getUser = createSelector(getUserState,(state:authReducer.AuthState)
 
 export const getUserName = createSelector(getUserNameState, (state: authReducer.AuthState) => {
     let name = 'Admin';
+    let organisms ='';
     if(state?.user?.firstName){
         name = state.user.firstName
         if(state?.user?.lastName){
             name = name + ' ' + state?.user?.lastName
         }
     }
-    return name;
+    const org = state?.organisms[0]?.name;
+    
+    return {
+        name,
+        orgname:org
+    }
 });

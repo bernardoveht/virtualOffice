@@ -339,6 +339,9 @@ terms above.
 mapbox-gl
 SEE LICENSE IN LICENSE.txt
 
+ng-multiselect-dropdown
+MIT
+
 ng2-charts
 ISC
 

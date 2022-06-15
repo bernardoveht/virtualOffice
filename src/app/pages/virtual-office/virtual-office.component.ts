@@ -12,6 +12,7 @@ export class VirtualOfficeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   collapseEvent(){
