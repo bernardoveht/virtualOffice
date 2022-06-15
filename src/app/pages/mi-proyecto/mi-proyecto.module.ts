@@ -10,6 +10,7 @@ import { ProyectoDetailComponent } from './components/proyecto-detail/proyecto-d
 import { ProyectoDesembolsoComponent } from './components/proyecto-desembolso/proyectodesembolso.component';
 import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
 
 
 
@@ -20,7 +21,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     ProyectoSearchComponent,
     ProyectoGridComponent,
     ProyectoDetailComponent,
-    ProyectoDesembolsoComponent
+    ProyectoDesembolsoComponent,
+    ProyectoModalCardComponent
   ],
   imports: [
     CommonModule,

@@ -1,94 +1,134 @@
-@import './inputs';
+@import "./inputs";
 
-::ng-deep .modal-content  {
-    border-radius:25px;
-    padding: 15px 30px;
-    .modal-header{
-        margin-bottom:20px;
-        color:$blue-app;
-        border-bottom:1px solid $blue-app;    
-        padding:0;
-        .title-icon{
-            display:flex;
-            align-items: center;
-            svg{
-                font-size:30px;
-                margin-right:10px;
-            }
-        }
-        .close{
-            color:$blue-app;
-            background: none !important;
-            border: none !important;
-            font-size: 40px;
-        
-            &:focus { 
-                outline: none !important; 
-            }
-        }
+::ng-deep .modal-content {
+  border-radius: 25px;
+  padding: 15px 30px;
+  .modal-header {
+    margin-bottom: 20px;
+    color: $blue-app;
+    border-bottom: 1px solid $blue-app;
+    padding: 0;
+    .title-icon {
+      display: flex;
+      align-items: center;
+      svg {
+        font-size: 30px;
+        margin-right: 10px;
+      }
     }
-    .modal-body{
-        padding:0;
-        .title-item{
-            border-bottom:1px solid $classic-gray;
-            padding-bottom:10px;
-            display:block;
-            width:100%;
-        }
-        
-    }
+    .close {
+      color: $blue-app;
+      background: none !important;
+      border: none !important;
+      font-size: 40px;
 
-    .modal-footer{
-        padding:0;
-        padding-top:10px;
-        border-top:none;
-        .btn-success{
-            border-radius:25px;
-            background-color:$blue-app;
-            border:2px solid $blue-app;
-            &:hover{
-                opacity:0.8;
-            }
-        }
-        .btn-cancel{
-            border-radius:25px;
-            border:2px solid $blue-app;
-            color:$blue-app;
-            &:hover{
-                background-color:$blue-app;
-                color:white;
-            }
-        }
+      &:focus {
+        outline: none !important;
+      }
     }
+  }
+  .modal-body {
+    padding: 0;
+    .title-item {
+      border-bottom: 1px solid $classic-gray;
+      padding-bottom: 10px;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .modal-footer {
+    padding: 0;
+    padding-top: 10px;
+    border-top: none;
+    .btn-success {
+      border-radius: 25px;
+      background-color: $blue-app;
+      border: 2px solid $blue-app;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .btn-cancel {
+      border-radius: 25px;
+      border: 2px solid $blue-app;
+      color: $blue-app;
+      &:hover {
+        background-color: $blue-app;
+        color: white;
+      }
+    }
+  }
 }
 
-::ng-deep .modal-green-light{
-    .modal-header{
-        border-bottom:1px solid $green-light-app;
-        color:$green-light-app;
-        .close{
-            color:$green-light-app;
-        }
+// colores
+
+::ng-deep .modal-green-light {
+  &.with-border {
+    .modal-content {
+      border: 2px solid $green-light-app;
     }
-    .modal-footer{
-        .btn{
-            &:focus { 
-                outline: none !important; 
-            }
-        }
-        .btn-success{
-            background-color:$green-light-app;
-            border:2px solid $green-light-app;
-        }
-        .btn-cancel{
-            border:2px solid $green-light-app;
-            color: $green-light-app;
-            &:hover{
-                background-color:$green-light-app;
-                color:white;
-            }
-        }
+  }
+  .modal-header {
+    border-bottom: 1px solid $green-light-app;
+    color: $green-light-app;
+    .close {
+      color: $green-light-app;
     }
+  }
+  .modal-footer {
+    .btn {
+      &:focus {
+        outline: none !important;
+      }
+    }
+    .btn-success {
+      background-color: $green-light-app;
+      border: 2px solid $green-light-app;
+    }
+    .btn-cancel {
+      border: 2px solid $green-light-app;
+      color: $green-light-app;
+      &:hover {
+        background-color: $green-light-app;
+        color: white;
+      }
+    }
+  }
 }
+
+::ng-deep .modal-orange {
+    &.with-border {
+      .modal-content {
+        border: 2px solid $orange-app;
+      }
+    }
+    .modal-header {
+      border-bottom: 1px solid $orange-app;
+      color: $orange-app;
+      .close {
+        color: $orange-app;
+      }
+    }
+    .modal-footer {
+      .btn {
+        &:focus {
+          outline: none !important;
+        }
+      }
+      .btn-success {
+        background-color: $orange-app;
+        border: 2px solid $orange-app;
+      }
+      .btn-cancel {
+        border: 2px solid $orange-app;
+        color: $orange-app;
+        &:hover {
+          background-color: $orange-app;
+          color: white;
+        }
+      }
+    }
+  }
 
 

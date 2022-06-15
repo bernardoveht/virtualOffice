@@ -9,6 +9,9 @@ import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 import { ProjectsFilter } from 'src/app/models/projects.model';
 import { TipoUsuario } from 'src/app/constants/users/users';
 import { getProjectDataResume } from 'src/app/store/selectors/project/project.selector';
+import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
 
 @Component({
   selector: 'app-mi-proyecto',
@@ -19,7 +22,6 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   public title: string = "Mis Proyectos";
   public icon: string = "file-invoice-dollar";
   public titleColor: string = "orange";
-  public detailModeId: number = 0;
   public doughnutChartLabels: string[] = ['Borrador', 'Nivel 1', 'Nivel 2', 'Nivel 3', 'Nivel 4','Nivel 5','Aprobado'];
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: TotalRendicionItem[] = [];
@@ -66,6 +68,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
 
   constructor(
     private readonly store: Store<AppState>,
+    private modalService: NgbModal
   ) { }
 
   ngOnInit(): void {    
@@ -79,13 +82,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     this.projects$?.unsubscribe();
   }
 
-  public changeDetailMode(id: number) {
-    this.detailModeId = id;
-  }
 
-  public backStep() {
-    this.detailModeId = 0;
-  }
   private FetchUsers(){
     this.auth$ = this.store.select(getUser).subscribe((user) =>{
       if(user?.userType === TipoUsuario.Governmental){
@@ -138,6 +135,22 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
 
     });
   }
+
+  public cardModal(id:number){
+    this.modalService.open(ProyectoModalCardComponent,{
+      windowClass: 'modal-orange with-border', 
+      centered:true
+    })
+  }
+
+  public detailModal(id:number){
+    this.modalService.open(ProyectoModalDetailComponent,{
+      windowClass: 'modal-orange with-border', 
+      size:'lg',
+      centered:true
+    })
+  }
+
 
 
 }

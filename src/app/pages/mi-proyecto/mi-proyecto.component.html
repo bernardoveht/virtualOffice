@@ -1,26 +1,20 @@
 <div id="mi-proyecto">
     <app-proyecto-search></app-proyecto-search>
     <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
-
     <div class="proyectos-container row mt-2">
         <div class="col-sm-12 col-lg-3">
-            <div class="d-flex">
-                <button type="button" class="btn rounded-btn btn-back orange" (click)="backStep()" *ngIf="detailModeId">
-                    <i class="fa-solid fa-angle-left"></i>
-                </button>
+            <app-expediente [color]="titleColor"></app-expediente>
+            <div class="mb-2">
+                <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Proyectos'"
+                    [totalAmount]="totalProjects"></app-graphic-data>
             </div>
-            <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <div class="mb-2"><app-graphic-data 
-                [color]="titleColor" 
-                [graphicItems]="doughnutChartData"
-                [title]="'Proyectos'"
-                [totalAmount]="totalProjects"
-            ></app-graphic-data></div>
-            <div><app-total-rendicion [color]="titleColor" [items]="itemsTotal"></app-total-rendicion></div>
+            <div>
+                <app-total-rendicion [color]="titleColor" [items]="itemsTotal"></app-total-rendicion>
+            </div>
         </div>
         <div class="col-sm-12 col-lg-9">
-            <app-proyecto-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)"></app-proyecto-grid>
-            <app-proyecto-detail *ngIf="detailModeId"></app-proyecto-detail>
+            <app-proyecto-grid (changeCardDetailMode)="cardModal($event)" (changeDetailMode)="detailModal($event)">
+            </app-proyecto-grid>
         </div>
 
     </div>

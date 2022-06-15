@@ -1,0 +1,26 @@
+@import "/src/sass/variables";
+@import "/src/sass/modal";
+
+@import "/src/sass/variables";
+@import "/src/sass/modal";
+
+.container-block{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .data-block{
+        width:31%;
+        span{
+            color:$orange-app;
+        }
+        p{
+            color:$text-gray;
+        }
+    }
+}
+
+.title-item{
+    color:$orange;
+}
+

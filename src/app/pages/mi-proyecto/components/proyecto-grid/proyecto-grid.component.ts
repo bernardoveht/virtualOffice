@@ -12,6 +12,7 @@ import { ProjectsFilter } from '../../../../models/projects.model';
 })
 export class ProyectoGridComponent implements OnInit {
   @Output() public readonly changeDetailMode = new EventEmitter<any>();  
+  @Output() public readonly changeCardDetailMode = new EventEmitter<any>();  
  
   public filters:ProjectsFilter | any;
   public datasource!: Projects[];
@@ -44,6 +45,10 @@ export class ProyectoGridComponent implements OnInit {
 
   public setDetail(id:number){
     this.changeDetailMode.emit(id);
+  }
+
+  public setCardDetail(id:number){
+    this.changeCardDetailMode.emit(id);
   }
 
   public changeGridPage(pageNumber:number){

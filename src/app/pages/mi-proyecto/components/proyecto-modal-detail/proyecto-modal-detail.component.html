@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <div class="title-icon">
+        <i class="fa-solid fa-file-lines"></i>
+        <h4 class="modal-title">Proyecto</h4>
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="form-container d-flex">
+            <div class="left-data">
+                <div class="form-group">
+                    <label>Fecha de inicio</label>
+                    <input class="form-control line-control" type="text" readonly value="15/10/2020" />
+                </div>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea rows="2" resize class="form-control line-control"
+                        readonly>Cargar rendición al Desembolso Nº1 de la obra Nº123456</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <input class="form-control line-control" type="text" readonly value="Iniciado" />
+                </div>
+            </div>
+            <div class="right-data">
+                <label class="title-item">Comentarios</label>
+                <div class="comments">
+                    <p><span>17/10/2020:</span> Descargar factura Nº134</p>
+                    <p><span>16/10/2020:</span> Agregar ticket Nº134</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel" (click)="activeModal.close('Close click')">Cancelar</button>
+    <button type="button" class="btn btn-success" (click)="activeModal.close('Close click')">Ir a Proyectos</button>
+</div>
