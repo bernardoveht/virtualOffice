@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Actions, ofType, createEffect } from '@ngrx/effects';
 import { of } from 'rxjs';
-import { catchError, map,exhaustMap} from 'rxjs/operators';
+import { catchError, map,exhaustMap, switchMap, concatMap, mergeMap} from 'rxjs/operators';
+import { ProjectAllPaginator, ProjectsFilter } from 'src/app/models/projects.model';
 import { ProjectsService } from 'src/app/services/api/projects.service';
 import * as projectsActions from '../../actions/index'
 
@@ -27,14 +28,22 @@ export class ProjectsEffects {
   getProjectsSearch$ = createEffect(() =>
     this.actions$.pipe(
         ofType(projectsActions.getSearchProjects),
-        exhaustMap((action) => 
-        this.projectsService.getProjectsSearch(action.filters).pipe(
-            map(projects => projectsActions.getSearchProjectsSuccess({projects})),
-            catchError(error => of(projectsActions.projectsError({payload:error})))   
+        concatMap( actions => {
+          return this.projectsService.getProjectsSearch(actions.filters).pipe(            
+            mergeMap((paginators) => {
+              return this.projectsService.getProjectsSearchAll(actions.filters).pipe(
+                map((all) => ({ ...paginators,projectsAll:all}))
+              );
+            }),
+            map(results =>
+              projectsActions.getSearchProjectsSuccess({projects:results,projectAll:results.projectsAll})
+            ),
+            catchError(error =>
+              of(projectsActions.projectsError({ payload:error}))
             )
-        )   
+          );
+        })
     )
   );
-
   
 }

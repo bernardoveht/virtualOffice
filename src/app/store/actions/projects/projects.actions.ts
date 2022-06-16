@@ -23,7 +23,7 @@ export const getSearchProjects = createAction(
 );
 export const getSearchProjectsSuccess = createAction(
     ProjectsType.getSearchProjectsSuccess,
-    props<{ projects:ProjectAllPaginator}>()
+    props<{ projects:ProjectAllPaginator;projectAll:ProjectAllPaginator}>()
 );
 
 export const projectsError = createAction(

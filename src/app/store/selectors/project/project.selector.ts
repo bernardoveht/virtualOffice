@@ -7,13 +7,17 @@ export const getPojects = createSelector(getProjectState,(state:projectReducer.P
 export const getProjectDataResume = createSelector(getProjectState, (state: projectReducer.ProjectsState) => {
     let levels:number[]=[0,0,0,0,0,0,0];
     let totalAmount = 0 ;   
-   
-    state.projects.forEach(element=>{
-        levels[element.workflowStepStatus] ++;
-        totalAmount += element.totalCost;
-    });
+    let totalProject = 0;
 
-    const totalProject = state.projects.length; 
+    if(state.projects.length> 0) {
+        state.projects.forEach(element=>{    
+        levels[element.workflowStepStatus] ++;
+            totalAmount += element.totalCost;
+        });
+        totalProject = state.projects.length;
+    }
+   
+
     const result = {
         totalAmount,
         totalProject,

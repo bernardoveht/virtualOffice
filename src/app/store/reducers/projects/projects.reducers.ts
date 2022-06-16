@@ -30,10 +30,10 @@ const _projectsReducer = createReducer(
     ...state,
     filters:filter.filters
   })),
-  on(actions.getSearchProjectsSuccess, (state, { projects }) => ({
+  on(actions.getSearchProjectsSuccess, (state, { projects,projectAll }) => ({
     ...state,
     projectPaginator:projects,
-    projects:projects.result
+    projects:projectAll.result
   })),
   on(actions.projectsError, (state, { payload }) => ({
     ...state,
