@@ -1,7 +1,8 @@
-<div class="shadow calendar-button">
+<div #buttonDatepicker class="shadow calendar-button">
   <label (click)="datePicker.toggle()">
     <i class="fa-solid fa-calendar-days"></i>
   </label>
-  <input placement="bottom" [weekdays]="true" type="hidden" ngbDatepicker #datePicker="ngbDatepicker"
-    [navigation]="navigation" />
+  <input datepickerClass="button-datepicker" positionTarget="buttonDatepicker" placement="right-top" [weekdays]="true" type="hidden" ngbDatepicker #datePicker="ngbDatepicker" />
 </div>
+
+
