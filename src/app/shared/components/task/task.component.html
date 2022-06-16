@@ -1,5 +1,5 @@
 <app-line-title [title]="title" [margin]="20" [icon]="'list-check'"></app-line-title>
-<div class="shadow p-3 mb-5 bg-body">
+<div class="shadow p-3 mb-5 bg-body custom-table">
   <div id="table-task" class="table-scroll">
     <table class="table table-responsive table-bordered table-striped">
       <thead>
@@ -14,7 +14,18 @@
       <tbody>
         <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
           <th scope="row">15/11/2020</th>
-          <td>Su trámite vence el 15/06/2022</td>
+          <td class="state valido">
+            <div>
+              <span class="state-icon">
+                <!-- valido o proximo a vencer-->
+                <i class="fa-solid fa-clock"></i>
+                <!-- vencido 
+                <i class="fa-solid fa-circle-exclamation"></i>
+                -->
+              </span>
+              <span class="state-text">Su trámite vence el 15/06/2022</span>
+            </div>
+          </td>
           <td><i class="fa-solid fa-hand-holding-dollar fa-2x icon-money"></i></td>
           <td>El proyecto N° 1239 fue rechazado.</td>
           <td>

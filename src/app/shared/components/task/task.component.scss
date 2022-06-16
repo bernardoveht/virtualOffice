@@ -1,30 +1,74 @@
 @import "/src/sass/variables";
-:host{
-  font-family: 'Encode Sans',Arial ,sans-serif;
-  font-size: 0.8em;
-    .shadow{
-      margin: 0 20px !important;
+@import "/src/sass/table";
+:host {
+  font-family: "Encode Sans", Arial, sans-serif;
+  .shadow {
+    margin: 0 20px !important;
+  }
+  thead,
+  tbody {
+    text-align: center;
+  }
+  .theader,
+  .icon-action {
+    color: $po-cielo;
+  }
+  .icon-action {
+    cursor: pointer;
+  }
+  .icon-file {
+    color: $green-light-app;
+  }
+  .icon-money {
+    color: $po-cereza;
+  }
+  .table td {
+    vertical-align: middle;
+  }
+  .table thead th {
+    border-bottom: 2px solid $verde-cemento;
+  }
+  .table-scroll {
+    overflow-y: scroll;
+    max-height: 65vh;
+  }
+
+  .state {
+    // estados
+    &.vencido {
+      & > div {
+        border-left: 3px $defered-app solid;
+        .state-icon{
+          color:$defered-app;
+        }
+      }
     }
-    thead,tbody{
-      text-align: center;
+    &.valido {
+      & > div {
+        border-left: 3px $valid-app solid;
+        .state-icon{
+          color:$valid-app;
+        }
+      }
     }
-    .theader,.icon-action {
-      color: $po-cielo;
+    &.proximo {
+      & > div {
+        border-left: 3px $next-app solid;
+        .state-icon{
+          color:$next-app;
+        }
+      }
     }
-    .icon-action{
-      cursor: pointer;
+    & > div {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .icon-file{
-      color: $green-light-app;
+    .state-icon {
+      margin-left:10px;
     }
-    .icon-money{
-      color: $po-cereza;
+    .state-text {
+      flex: 2;
     }
-    .table thead th {
-      border-bottom: 2px solid $verde-cemento;
-    }
-    .table-scroll {
-      overflow-y: scroll;
-      max-height:65vh;
   }
 }
