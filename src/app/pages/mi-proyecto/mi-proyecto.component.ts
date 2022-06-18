@@ -22,7 +22,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   public title: string = "Mis Proyectos";
   public icon: string = "file-invoice-dollar";
   public titleColor: string = "orange";
-  public doughnutChartLabels: string[] = ['Borrador', 'Nivel 1', 'Nivel 2', 'Nivel 3', 'Nivel 4','Nivel 5','Aprobado'];
+  public doughnutChartLabels: string[] = ['Borrador','Observado','En gestion','Aprobado'];
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: TotalRendicionItem[] = [];
   public totalProjects = 0;
