@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { ProjectsFilter } from 'src/app/models/projects.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { Subscription } from 'rxjs';
+import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 
 @Component({
   selector: 'app-proyecto-search',
   templateUrl: './proyecto-search.component.html',
   styleUrls: ['./proyecto-search.component.scss']
 })
-export class ProyectoSearchComponent implements OnInit {
+export class ProyectoSearchComponent implements OnInit ,OnDestroy{
   public filter:ProjectsFilter = {
     provinces: [],
     page: 0,
@@ -51,6 +53,7 @@ export class ProyectoSearchComponent implements OnInit {
 
   dropdownList:any = [];
   dropdownSettings:IDropdownSettings={};
+  private auth$:Subscription | undefined;
 
 
   public openSearch = false;
@@ -62,15 +65,25 @@ export class ProyectoSearchComponent implements OnInit {
     ) {
       this.searchForm = this.fb.group({
         sippe:[''],
-        organismo:[''],
+        // organismo:[''],
         name:[''],
         plan:[''],
         fechaPresentacion:[''],
   
       })
      }
+  ngOnDestroy(): void {
+   this.auth$?.unsubscribe();
+  }
 
   ngOnInit(): void {
+    this.auth$ = this.store.select(getUser).subscribe(user =>{
+      if(user){
+        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
+        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+      }
+    });
+
     this.dropdownList = [
       { item_id: 1, item_text: 'Item1' },
       { item_id: 2, item_text: 'Item2' },

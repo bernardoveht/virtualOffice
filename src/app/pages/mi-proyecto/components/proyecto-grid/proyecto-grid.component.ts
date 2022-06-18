@@ -22,10 +22,9 @@ export class ProyectoGridComponent implements OnInit {
   public headelements:string [] = [
     'Código SIPPE ',
     'Nombre',
-    'Estado Nivel',
     'Estado',
     'Monto',
-    'Plazo(dias)',
+    'Ultimo estado',
     'Accion'
   ];
   constructor(private readonly store:Store<AppState>,) { }

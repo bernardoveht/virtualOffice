@@ -9,8 +9,8 @@ export enum  ProjectWorkflowSteps {
 }
 export enum ProjectWorkflowStatuses {
     "Pendiente de Análisis"=1,
-     "En Análisis" = 2,
-     "Observado"= 3,
+    "En Análisis" = 2,
+    "Observado"= 3,
     "Análisis Finalizado" = 4,
     "En Banco de Proyectos"= 5
 }
