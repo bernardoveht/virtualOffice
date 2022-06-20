@@ -141,15 +141,12 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
       windowClass: 'modal-orange with-border', 
       centered:true,
     });
-    modalRef.componentInstance.data = "aca le pasas data";
+    modalRef.componentInstance.data = {
+      id
+    };
+   
   }
 
-  public detailModal(id:number){
-    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
-      windowClass: 'modal-orange with-border', 
-      centered:true,
-    });
-    modalRef.componentInstance.data = "aca le pasas data";
-  }
+
 
 }

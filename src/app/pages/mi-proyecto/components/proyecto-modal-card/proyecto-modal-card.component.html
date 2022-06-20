@@ -39,3 +39,7 @@
         </div>
     </form>
 </div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel" (click)="activeModal.close('Close click')">Cerrar</button>
+    <button  *ngIf="showObservations" type="button" class="btn btn-success" (click)="detailModal(1)">Ir a Observaciones</button>
+</div>

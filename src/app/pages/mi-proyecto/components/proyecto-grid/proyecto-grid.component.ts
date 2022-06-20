@@ -10,8 +10,7 @@ import { ProjectsFilter } from '../../../../models/projects.model';
   templateUrl: './proyecto-grid.component.html',
   styleUrls: ['./proyecto-grid.component.scss']
 })
-export class ProyectoGridComponent implements OnInit {
-  @Output() public readonly changeDetailMode = new EventEmitter<any>();  
+export class ProyectoGridComponent implements OnInit { 
   @Output() public readonly changeCardDetailMode = new EventEmitter<any>();  
  
   public filters:ProjectsFilter | any;
@@ -43,11 +42,8 @@ export class ProyectoGridComponent implements OnInit {
   }
 
   public setDetail(id:number){
-    this.changeDetailMode.emit(id);
-  }
-
-  public setCardDetail(id:number){
-    this.changeCardDetailMode.emit(id);
+    const value = id == 3 ? id : 4;
+    this.changeCardDetailMode.emit(id);  
   }
 
   public changeGridPage(pageNumber:number){
