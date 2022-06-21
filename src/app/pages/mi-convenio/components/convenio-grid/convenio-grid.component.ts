@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-convenio-grid',
@@ -8,9 +8,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class ConvenioGridComponent implements OnInit {
   
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
-  constructor() { }
+  @Input() public dataSource:any[] = [];
 
-  dataSource:any[] = [1,2,3,4,5,6]
+  constructor() { }
 
   ngOnInit(): void {
   }

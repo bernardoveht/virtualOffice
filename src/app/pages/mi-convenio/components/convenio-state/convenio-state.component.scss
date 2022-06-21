@@ -1,0 +1,93 @@
+@import "/src/sass/variables";
+
+.title {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 20px 20px;
+  border-bottom: 1px solid $classic-gray;
+  padding-bottom: 10px;
+  color: $violet-app;
+  h4 {
+    font-size: 1.4em;
+    margin-bottom: 0;
+  }
+  svg {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    position: relative;
+    z-index: 2;
+    p {
+      text-align: center;
+      color: $text-gray;
+      font-size: 0.8em;
+      white-space: nowrap;
+    }
+    span {
+      display: block;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      background-color: $violet-app;
+      text-align: center;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $violet-app;
+        width: 50%;
+        right: 0;
+        top: 10px;
+        z-index: -1;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: $violet-app;
+        width: 50%;
+        left: 0;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+    &:first-of-type {
+      span {
+        &::before {
+          content: none;
+        }
+      }
+    }
+    &:last-of-type {
+      span {
+        &::after {
+          content: none;
+        }
+      }
+    }
+    &.active {
+      span {
+        background-color: white;
+        border:2px solid $violet-app;
+      }
+      .inner-circle{
+        width:15px;
+        height:15px;
+        border-radius: 50%;
+        background-color: $violet-app;
+        position: absolute;
+        top: 5px;
+      }
+    }
+  }
+}

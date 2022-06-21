@@ -1,10 +1,18 @@
-
-<div class="desembolsos-btns">
-    <div class="desembolso-btn active">1º desembolso</div>
-    <div class="desembolso-btn">2º desembolso</div>
-    <div class="desembolso-btn">3º desembolso</div>
-    <div class="desembolso-btn disabled">4º desembolso</div>
-</div>
-<div class="shadow p-3 mb-5 bg-body table-container desembolso-table">
-    <app-convenio-desembolso></app-convenio-desembolso>
+<div class="convenio-detail-container row">
+    <div class="col-lg-12 col-xl-9">
+        <div class="mb-2">
+            <app-convenio-state></app-convenio-state>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xl-3">
+        <div>
+            <div class="mb-2">
+                <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+            </div>
+            <div class="mb-2">
+                <app-amount-information [title]="datesTitle" [color]="titleColor" [items]="itemsDates">
+                </app-amount-information>
+            </div>
+        </div>
+    </div>
 </div>
