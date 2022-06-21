@@ -34,7 +34,9 @@ export class WorksService {
     const header = {
       'Authorization':'Bearer '+ token,
       'x-api-key':'abcdefg',
+      'Content-Type':'application/json'
     };
+    
     return this.http.post<WorksAllPaginator>(apiUri.works + '/works/search',
       filter,
       {headers : new HttpHeaders(header)});    
