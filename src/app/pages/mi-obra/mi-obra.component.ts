@@ -5,6 +5,9 @@ import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as worksActions from 'src/app/store/actions/works/works.actions';
 import { getWorksDataResume } from 'src/app/store/selectors/works/works.selector';
+import { getUser } from 'src/app/store/selectors/auth/auth.selector';
+import { TipoUsuario } from 'src/app/constants/users/users';
+import { WorksFilter } from 'src/app/models/works.model';
 
 @Component({
   selector: 'app-mi-obra',
@@ -18,16 +21,31 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   public titleColor:string = "green";
   public detailModeId:number = 0;
   public itemsTotal: TotalRendicionItem[] = [];
+
+  public filter:WorksFilter = {
+    page: 0,
+    pageSize: 100000,
+    orderBy: 'id',
+    orderDescending: false,
+    id: '',
+    provinces: [],
+    departments: [],
+    municipalities: []
+  };
+
   private works$:Subscription | undefined;
+  private auth$:Subscription | undefined;
 
 
   constructor(private readonly store:Store<AppState>) { }
 
   ngOnInit(): void {
-    this.fetchWorks();
+      this.fetchUser();
+      this.fetchWorks();
   }
   ngOnDestroy(): void {
     this.works$?.unsubscribe();
+    this.auth$?.unsubscribe();
   }
 
   public changeDetailMode(id:number){
@@ -38,9 +56,23 @@ export class MiObraComponent implements OnInit ,OnDestroy{
     this.detailModeId = 0;
   }
 
+  private fetchUser(){
+    this.auth$ = this.store.select(getUser).subscribe((user) =>{
+      if(user?.userType === TipoUsuario.Governmental){
+        console.log('usuario Guvermental');
+      } else {
+        console.log('usuario privado');
+      }
+      if(user){
+        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
+        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+        this.store.dispatch(worksActions.getSearchWorks({filter:this.filter}));
+   
+      }
+   
+    });
+  }
   private fetchWorks(){
-    this.store.dispatch(worksActions.getAllWorks());
-
     this.works$ = this.store.select(getWorksDataResume).subscribe((value)=>{
       if(value) {
         this.itemsTotal = [

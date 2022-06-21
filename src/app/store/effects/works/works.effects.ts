@@ -25,6 +25,17 @@ export class WorksEffects {
         )   
     )
   );
+  getWorksSearch$ = createEffect(() =>
+  this.actions$.pipe(
+      ofType(worksActions.getSearchWorks),
+      exhaustMap((actions) => 
+      this.worksService.getWorksSearch(actions.filter).pipe(
+          map(works => worksActions.getSearchWorksSuccess({works})),
+          catchError(error => of(worksActions.worksError({payload:error})))   
+          )
+      )   
+  )
+);
 
   
 }
