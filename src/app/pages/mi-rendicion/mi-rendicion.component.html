@@ -6,7 +6,7 @@
         <i class="fa-solid fa-angle-left"></i>
     </button>
     <div class="rendiciones-container row mt-2">
-        <div class="col-3">
+        <div class="col-sm-12 col-lg-4">
             <button type="button" class="btn rounded-btn green-light btn-new-rendition">
                 <i class="fa-solid fa-circle-plus"></i>
                 Cargar nueva rendicíon
@@ -20,7 +20,7 @@
                 <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-sm-12 col-lg-8">
             <app-rendiciones-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)">
             </app-rendiciones-grid>
             <app-rendicion-detail *ngIf="detailModeId"></app-rendicion-detail>
