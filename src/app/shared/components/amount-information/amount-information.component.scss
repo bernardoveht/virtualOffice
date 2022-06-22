@@ -6,6 +6,33 @@
     @media (max-width: 1200px){
         margin-bottom:15px;
     }
+    .title{
+        display:flex;
+        align-items: center;
+        margin: 0 20px 20px 20px;
+        border-bottom: 1px solid $classic-gray;
+        padding-bottom: 10px;
+        h4{
+            font-size:1.4em;
+            margin-bottom: 0;
+        }
+        svg{
+            font-size:18px;
+            margin-right:5px;
+        }
+        &.green-light{
+            color:$green-light-app;
+        }
+        &.orange{
+            color:$orange-app;
+        }
+        &.violet{
+            color:$violet-app;
+        }
+        &.green{
+            color:$green-app;
+        }
+    }
     .total-data{
         display:flex;
         div{
@@ -27,12 +54,14 @@
                     font-size:1em;
                     line-height: 1;
                     font-weight: 400;
+                    margin-bottom:0;
                 }
                 p{
                     color:$blue-app;
                     font-weight: bold;
                     font-size:1.4em;
                     word-break: break-word;
+                    margin-bottom: 0;
                 }
 
             }

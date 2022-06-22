@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
+import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as worksActions from 'src/app/store/actions/works/works.actions';
 import { getWorksDataResume } from 'src/app/store/selectors/works/works.selector';
@@ -20,7 +20,7 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   public icon:string = "truck";
   public titleColor:string = "green";
   public detailModeId:number = 0;
-  public itemsTotal: TotalRendicionItem[] = [];
+  public itemsTotal: AmountInformationItem[] = [];
 
   public filter:WorksFilter = {
     page: 0,

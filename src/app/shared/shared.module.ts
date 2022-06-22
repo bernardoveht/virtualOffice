@@ -10,12 +10,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LineTitleComponent } from './components/line-title/line-title.component';
 import { DescriptionModalComponent } from './components/task/modals/description-modal/description-modal.component';
 import { CommentModalComponent } from './components/task/modals/comment-modal/comment-modal.component';
-import { TotalRendicionComponent } from "./components/total-rendicion/total-rendicion.component";
+
 import { ExpedienteComponent } from "./components/expediente/expediente.component";
 import { GraphicDataComponent } from './components/graphic-data/graphic-data.component';
 import { RouterModule } from "@angular/router";
 import { NgChartsModule } from 'ng2-charts';
 import { PaginationGridComponent } from './components/pagination-grid/pagination-grid.component';
+import { AmountInformationComponent } from "./components/amount-information/amount-information.component";
 /**
  * List of modules to export
  */
@@ -39,7 +40,7 @@ import { PaginationGridComponent } from './components/pagination-grid/pagination
   CommentModalComponent,
   DescriptionModalComponent,
   LineTitleComponent,
-  TotalRendicionComponent,
+  AmountInformationComponent,
   ExpedienteComponent,
   GraphicDataComponent,
   PaginationGridComponent

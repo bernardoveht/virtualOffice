@@ -13,7 +13,7 @@
         <div class="searcher-body">
             <div class="form-group">
                 <label>SIPPE</label>
-                <input class="form-control simple-control green-light" formControlName="sippe" type="text" />
+                <input class="form-control simple-control orange" formControlName="sippe" type="text" />
 
             </div>
             <div class="form-group">
@@ -28,21 +28,21 @@
             </div>
             <div class="form-group">
                 <label>Nombre del Proyecto</label>
-                <input class="form-control simple-control green-light" formControlName="name" type="text" />
+                <input class="form-control simple-control orange" formControlName="name" type="text" />
             </div>
             <div class="form-group">
                 <label>Plan</label>
-                <input class="form-control simple-control green-light" formControlName="plan" type="text" />
+                <input class="form-control simple-control orange" formControlName="plan" type="text" />
             </div>
             <div class="form-group date-picker-group" (click)="datePicker.toggle()">
                 <label>Fecha (Desde/hasta)</label>
                 <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker"
-                    class="form-control simple-control green-light" formControlName="fechaPresentacion" type="text" />
+                    class="form-control simple-control orange" formControlName="fechaPresentacion" type="text" />
             </div>
         </div>
         <div class="searcher-footer">
-            <button type="button" class="clean-btn btn rounded-btn green-light">Limpiar</button>
-            <button type="submit" class="search-btn btn rounded-btn green-light">Buscar</button>
+            <button type="button" class="clean-btn btn rounded-btn orange">Limpiar</button>
+            <button type="submit" class="search-btn btn rounded-btn orange">Buscar</button>
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Mantener filtros</label>

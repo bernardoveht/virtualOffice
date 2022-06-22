@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
+import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 
 @Component({
   selector: 'app-mi-convenio',
@@ -8,11 +8,11 @@ import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
 })
 export class MiConvenioComponent implements OnInit {
 
-  public title:string = "Mis Convenios";
-  public icon:string = "file-contract";
-  public titleColor:string = "violet";
+  public title:string = 'Mis Convenios';
+  public icon:string = 'file-contract';
+  public titleColor:string = 'violet';
   public detailModeId:number = 0;
-  public itemsTotal:TotalRendicionItem[] = [
+  public itemsTotal:AmountInformationItem[] = [
     {
       icon:'sack-dollar',
       title:'Monto Total',
@@ -31,10 +31,16 @@ export class MiConvenioComponent implements OnInit {
 
   public changeDetailMode(id:number){
     this.detailModeId = id;
+    this.title = 'Puesta en valor de las areas centales del casco urbano Lanús'
   }
 
   public backStep(){
     this.detailModeId = 0;
+    this.titleReset();
+  }
+
+  public titleReset(){
+    this.title = 'Mis Convenios';
   }
 
 }

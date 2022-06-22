@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartData } from 'chart.js';
-import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
+import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 
 @Component({
   selector: 'app-mi-rendicion',
@@ -39,7 +39,7 @@ export class MiRendicionComponent implements OnInit {
 
 
   };
-  public itemsTotal:TotalRendicionItem[] = [
+  public itemsTotal:AmountInformationItem[] = [
     {
       icon:'sack-dollar',
       title:'Monto Total',

@@ -1,21 +1,24 @@
 <div id="mi-convenio">
     <app-convenio-search></app-convenio-search>
-    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
+    <button type="button" class="btn rounded-btn btn-back violet" (click)="backStep()" *ngIf="detailModeId">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20" [backButton]="detailModeId ? true : false"></app-line-title>
 
     <div class="convenio-container row mt-2">
-        <div class="col-3" *ngIf="(dataSourceTotal && dataSourceTotal.length > 6) || detailModeId">
-            <div class="d-flex">
-                <button type="button" class="btn rounded-btn btn-back violet" (click)="backStep()" *ngIf="detailModeId">
-                    <i class="fa-solid fa-angle-left"></i>
-                </button>
-            </div>
-            <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <div><app-total-rendicion [color]="titleColor" [items]="itemsTotal"></app-total-rendicion></div>
+        <div class="col-lg-12 col-xl-3" *ngIf="(dataSourceTotal && dataSourceTotal.length > 6) || detailModeId">
+            <ng-container *ngIf="!detailModeId">
+                <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
+                <div>
+                    <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+                </div>
+            </ng-container>
         </div>
-        <div [class]="(dataSourceTotal && dataSourceTotal.length > 6) || detailModeId ? 'col-9' : 'col-12'">
-            <app-convenio-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
+        <div
+            [class]="(dataSourceTotal && dataSourceTotal.length > 6) && !detailModeId ? 'col-lg-12 col-xl-9' : 'col-12'">
+            <app-convenio-grid *ngIf="!detailModeId" [dataSource]="dataSourceTotal"
+                (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
             <app-convenio-detail *ngIf="detailModeId"></app-convenio-detail>
         </div>
-
     </div>
 </div>

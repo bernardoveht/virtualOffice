@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
-import { TotalRendicionItem } from 'src/app/models/total-rendicion.model';
+import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 import { ChartData } from 'chart.js';
 import { Observable, Subscription, take } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
@@ -24,7 +24,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   public titleColor: string = "orange";
   public doughnutChartLabels: string[] = ['Borrador','Observado','En gestion','Aprobado'];
   public doughnutChartData: ChartData<'doughnut'> | undefined;
-  public itemsTotal: TotalRendicionItem[] = [];
+  public itemsTotal: AmountInformationItem[] = [];
   public totalProjects = 0;
   public filter:ProjectsFilter = {
     provinces: [],

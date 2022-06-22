@@ -13,7 +13,10 @@
     border-bottom: 1px solid $green-light-app;
   }
   &.orange {
-    border-bottom: 1px solid $orange;
+    border-bottom: 1px solid $orange-app;
+  }
+  &.violet {
+    border-bottom: 1px solid $violet-app;
   }
 }
 
@@ -37,7 +40,10 @@
     border: 1px solid $green-light-app;
   }
   &.orange {
-    border: 1px solid $orange;
+    border: 1px solid $orange-app;
+  }
+  &.violet {
+    border: 1px solid $violet-app;
   }
 }
 
