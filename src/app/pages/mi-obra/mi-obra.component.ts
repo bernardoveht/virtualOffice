@@ -24,9 +24,9 @@ export class MiObraComponent implements OnInit ,OnDestroy{
 
   public filter:WorksFilter = {
     page: 0,
-    pageSize: 100000,
+    pageSize: 50,
     orderBy: 'id',
-    orderDescending: false,
+    orderDescending: true,
     id: '',
     provinces: [],
     departments: [],
