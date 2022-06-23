@@ -1,19 +1,19 @@
 
 @import "/src/sass/variables";
 
-.card-box{
+.convenio-card-box{
     overflow: hidden;
-    .card-box-title{
+    .title{
         color:$violet-app;
         padding: 10px 5px;
         margin:0 10px;
         border-bottom:1px solid $classic-gray;
     }
-    .card-box-body{
+    .body{
         display:flex;
         justify-content: space-between;
         align-items: stretch;
-        .card-box-content{
+        .content{
             padding:5px 15px;
             .item{
                 margin-bottom:5px;
@@ -29,7 +29,7 @@
                 }
             }
         }
-        .card-box-detail{
+        .detail{
             display:flex;
             align-items: center;
             justify-content: center;
