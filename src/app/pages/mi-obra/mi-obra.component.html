@@ -1,6 +1,7 @@
 <div id="mi-convenio">
     <app-obra-search></app-obra-search>
-    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20" [backButton]="detailModeId ? true : false"></app-line-title>
+    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"
+        [backButton]="detailModeId ? true : false"></app-line-title>
     <button type="button" class="btn rounded-btn btn-back green" (click)="backStep()" *ngIf="detailModeId">
         <i class="fa-solid fa-angle-left"></i>
     </button>
@@ -8,10 +9,12 @@
     <div class="convenio-container row mt-2">
         <div class="col-lg-12 col-xl-4">
             <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <div><app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information></div>
+            <div class="mb-2">
+                <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+            </div>
         </div>
         <div class="col-lg-12 col-xl-8">
-            <app-obra-grid  *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)"></app-obra-grid>
+            <app-obra-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)"></app-obra-grid>
             <app-obra-detail *ngIf="detailModeId"></app-obra-detail>
         </div>
     </div>

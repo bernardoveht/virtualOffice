@@ -1,0 +1,44 @@
+
+
+.card-box{
+    .card-box-title {
+        display: flex;
+        align-items: center;
+        margin: 0 20px 20px 20px;
+        border-bottom: 1px solid $classic-gray;
+        padding-bottom: 10px;
+        padding: 10px 0px;
+        h4 {
+        font-size: 1.4em;
+        margin-bottom: 0;
+        }
+        svg {
+        font-size: 18px;
+        margin-right: 5px;
+        }
+    }
+    .card-box-body{
+        padding:0 20px 10px 20px;
+        .card-box-content{
+            .card-box-item{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 12px;
+                h5{
+                    font-size:1em;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    margin-bottom:0;
+                }
+                p{
+                    font-weight: bold;
+                    font-size:1em;
+                    word-break: break-word;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+  
