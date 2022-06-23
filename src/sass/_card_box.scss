@@ -1,44 +1,69 @@
-
-
-.card-box{
-    .card-box-title {
+.card-box {
+  min-height: 80px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .card-box-title {
+    display: flex;
+    align-items: center;
+    margin: 0 20px 20px 20px;
+    border-bottom: 1px solid $classic-gray;
+    padding-bottom: 10px;
+    padding: 10px 0px;
+    h4 {
+      font-size: 1.4em;
+      margin-bottom: 0;
+    }
+    svg {
+      font-size: 24px;
+      margin-right: 5px;
+    }
+  }
+  .card-box-body {
+    padding: 0 20px 10px 20px;
+    color:$text-gray;
+    .card-box-item {
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      .item {
+        display: flex;
+        flex-direction: column;
+        h5 {
+          font-size: 1em;
+          line-height: 1.5;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+        p {
+          font-weight: bold;
+          font-size: 1em;
+          word-break: break-word;
+          margin-bottom: 0;
+        }
+      }
+      &.with-icon {
         display: flex;
         align-items: center;
-        margin: 0 20px 20px 20px;
-        border-bottom: 1px solid $classic-gray;
-        padding-bottom: 10px;
-        padding: 10px 0px;
-        h4 {
-        font-size: 1.4em;
-        margin-bottom: 0;
-        }
+        flex-direction: initial;
         svg {
-        font-size: 18px;
-        margin-right: 5px;
+          font-size: 24px;
+          margin-right: 20px;
+        }
+      }
+    }
+    .email{
+        a{
+            font-size:0.8em;
+            text-decoration: none;
+            color:$text-gray;
+        }
+        svg{
+            font-size:12px !important;
+            color:$text-gray !important;
         }
     }
-    .card-box-body{
-        padding:0 20px 10px 20px;
-        .card-box-content{
-            .card-box-item{
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-bottom: 12px;
-                h5{
-                    font-size:1em;
-                    line-height: 1.5;
-                    font-weight: 400;
-                    margin-bottom:0;
-                }
-                p{
-                    font-weight: bold;
-                    font-size:1em;
-                    word-break: break-word;
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
+  }
 }
-  

@@ -2,7 +2,8 @@
 
 
 .total-amount-container{
-    padding:15px 0;
+    padding: 20px 0;
+    min-height: 80px;
     .title{
         display:flex;
         align-items: center;
@@ -14,7 +15,7 @@
             margin-bottom: 0;
         }
         svg{
-            font-size:18px;
+            font-size:24px;
             margin-right:5px;
         }
         &.green-light{
@@ -43,6 +44,9 @@
                 margin-right:5px;
                 min-width:50px;
                 font-size:10px;
+                svg{
+                    font-size:24px;
+                }
             }
             &:last-of-type{
                 display:flex;
