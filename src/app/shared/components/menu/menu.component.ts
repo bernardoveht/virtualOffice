@@ -53,7 +53,7 @@ export class MenuComponent implements OnInit {
         url: '/pages/mis-rendiciones',
       },
       {
-        name: 'Ordenes de pago',
+        name: 'Mis Ordenes de pago',
         classColor: 'menu-pink',
         icon: 'hand-holding-dollar',
         url: '',
