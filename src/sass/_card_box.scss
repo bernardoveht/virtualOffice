@@ -25,23 +25,26 @@
     color:$text-gray;
     .card-box-item {
       margin-bottom: 12px;
-      &:last-of-type {
-        margin-bottom: 0px;
+      hr{
+        margin:10px 0 10px 0;
       }
       .item {
         display: flex;
         flex-direction: column;
         h5 {
-          font-size: 1em;
+          font-size: 0.9em;
           line-height: 1.5;
           font-weight: 400;
           margin-bottom: 0;
         }
         p {
           font-weight: bold;
-          font-size: 1em;
+          font-size: 0.9em;
           word-break: break-word;
           margin-bottom: 0;
+        }
+        span{
+          font-size: 0.9em;
         }
       }
       &.with-icon {
@@ -52,6 +55,12 @@
           font-size: 24px;
           margin-right: 20px;
         }
+      }
+      &:last-of-type {
+        margin-bottom: 0px;
+          hr{
+            margin:10px 0 0px 0;
+          }
       }
     }
     .email{

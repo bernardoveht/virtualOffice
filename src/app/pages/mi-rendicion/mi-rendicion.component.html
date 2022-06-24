@@ -12,11 +12,11 @@
                 Cargar nueva rendicíon
             </button>
             <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
-            <div class="mb-2">
+            <div class="mb-3">
                 <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
                     [totalAmount]="36"></app-graphic-data>
             </div>
-            <div class="mb-2">
+            <div class="mb-3">
                 <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
             </div>
         </div>

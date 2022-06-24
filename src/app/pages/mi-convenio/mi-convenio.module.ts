@@ -10,6 +10,7 @@ import { MiConvenioComponent } from './mi-convenio.component';
 import { ConvenioCardComponent } from './components/convenio-card/convenio-card.component';
 import { ConvenioStateComponent } from './components/convenio-state/convenio-state.component';
 import { ConvenioDatosGeneralesComponent } from './components/convenio-datos-generales/convenio-datos-generales.component';
+import { ConvenioDatosGeneralesAlternativeComponent } from './components/convenio-datos-generales-alternative/convenio-datos-generales-alternative.component';
 
 
 
@@ -23,7 +24,8 @@ import { ConvenioDatosGeneralesComponent } from './components/convenio-datos-gen
     ConvenioSearchComponent,
     ConvenioCardComponent,
     ConvenioStateComponent,
-    ConvenioDatosGeneralesComponent
+    ConvenioDatosGeneralesComponent,
+    ConvenioDatosGeneralesAlternativeComponent
   ],
   imports: [
     CommonModule,
