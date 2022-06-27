@@ -26,6 +26,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: AmountInformationItem[] = [];
   public totalProjects = 0;
+  public totalAlerts: AmountInformationItem[] = [];
   public filter:ProjectsFilter = {
     provinces: [],
     page: 0,
@@ -132,6 +133,14 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
           type:'money'
         },
       ];
+      this.totalAlerts = [
+        {
+          icon: 'eye',
+          title: 'Alertas',
+          amount: 2,
+          type:'text'
+        }
+      ]
 
     });
   }
@@ -144,9 +153,18 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     modalRef.componentInstance.data = {
       id
     };
-   
   }
 
+  public cardModalTwo(id:number){
+    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
+      windowClass: 'modal-orange with-border', 
+      centered:true,
+      size:'lg',
+    });
+    modalRef.componentInstance.data = {
+      id
+    };
+  }
 
 
 }

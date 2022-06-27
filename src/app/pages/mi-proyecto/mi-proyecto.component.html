@@ -7,12 +7,15 @@
                 <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Proyectos'"
                     [totalAmount]="totalProjects"></app-graphic-data>
             </div>
-            <div>
+            <div class="mb-3">
                 <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+            </div>
+            <div class="mb-3">
+                <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>
             </div>
         </div>
         <div class="col-sm-12 col-lg-8">
-            <app-proyecto-grid (changeCardDetailMode)="cardModal($event)">
+            <app-proyecto-grid (changeCardDetailMode)="cardModalTwo($event)">
             </app-proyecto-grid>
         </div>
 

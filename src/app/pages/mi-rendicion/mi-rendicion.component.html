@@ -19,6 +19,9 @@
             <div class="mb-3">
                 <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
             </div>
+            <div class="mb-3">
+                <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>
+            </div>
         </div>
         <div class="col-sm-12 col-lg-8">
             <app-rendiciones-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)">

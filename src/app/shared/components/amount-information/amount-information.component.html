@@ -13,6 +13,7 @@
             <p *ngIf="item.type === 'money'">{{ item.amount | currency:'$':'symbol' }}</p>
             <p *ngIf="item.type === 'percentage'">{{ item.amount + '%' }}</p>
             <p *ngIf="item.type === 'date'">{{ item.amount }}</p>
+            <p *ngIf="item.type === 'text'">{{ item.amount }}</p>
         </div>
     </div>
 </div>

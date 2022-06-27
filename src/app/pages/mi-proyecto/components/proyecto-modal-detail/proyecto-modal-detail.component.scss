@@ -28,6 +28,13 @@
     p{
         padding:10px 0;
         margin-bottom:0;
+        &.alert{
+            color:$red-app;
+            svg{
+                color:$red-app;
+                margin-right:5px;
+            }
+        }
     }
 }
 

@@ -21,6 +21,7 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   public titleColor:string = "green";
   public detailModeId:number = 0;
   public itemsTotal: AmountInformationItem[] = [];
+  public totalAlerts:AmountInformationItem[] = []
 
   public filter:WorksFilter = {
     page: 0,

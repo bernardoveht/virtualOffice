@@ -20,6 +20,14 @@ export class MiConvenioComponent implements OnInit {
       type:'money'
     },
   ]
+  public totalAlerts:AmountInformationItem[] = [
+    {
+      icon: 'eye',
+      title: 'Alertas',
+      amount: 2,
+      type:'text'
+    }
+  ]
 
   // hay que recibir informacion del endpoint correspondiente para saber si mostrar o no la parte de la izquierda de la grilla
   dataSourceTotal:any[] = [1,2,3,4,5,6];

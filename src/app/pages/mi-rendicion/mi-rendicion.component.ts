@@ -13,7 +13,6 @@ export class MiRendicionComponent implements OnInit {
   public icon:string = "file-invoice-dollar";
   public titleColor:string = "green-light";
   public detailModeId:number = 0;
-  
   public doughnutChartLabels: string[] = ['Iniciadas', 'En Observación', 'Adjudicada', 'Rechazadas', 'Contratadas'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -46,6 +45,14 @@ export class MiRendicionComponent implements OnInit {
       amount:7500,
       type:'money'
     },
+  ]
+  public totalAlerts:AmountInformationItem[] = [
+    {
+      icon: 'eye',
+      title: 'Alertas',
+      amount: 2,
+      type:'text'
+    }
   ]
 
 
