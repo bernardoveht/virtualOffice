@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { StoreModule } from '@ngrx/store';
+import { ActionReducer, MetaReducer, StoreModule } from '@ngrx/store';
 import { environment } from 'src/environments/environment';
 import { appReducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
@@ -17,8 +17,15 @@ import { LoginInterceptor } from './core/login/login.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderInterceptor } from './core/interceptors/loader/loader.interceptor';
 import { LoaderComponent } from './core/loader/loader.component';
+import { localStorageSync } from 'ngrx-store-localstorage';
 
-
+export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionReducer<any> {
+  return localStorageSync({
+    keys: ['auth'],
+    rehydrate:true
+  })(reducer);
+}
+const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer];
 
 
 @NgModule({
@@ -33,7 +40,7 @@ import { LoaderComponent } from './core/loader/loader.component';
     NgbModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    StoreModule.forRoot(appReducers),
+    StoreModule.forRoot(appReducers,{metaReducers}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production,
