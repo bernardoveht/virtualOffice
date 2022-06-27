@@ -28,6 +28,9 @@
     p{
         padding:10px 0;
         margin-bottom:0;
+        span{
+            font-weight: 500;
+        }
         &.alert{
             color:$red-app;
             svg{
