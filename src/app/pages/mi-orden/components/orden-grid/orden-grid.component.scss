@@ -1,0 +1,18 @@
+@import "/src/sass/variables";
+
+.table-container{
+    position:relative;
+}
+
+.table-scroll {
+    overflow-y: scroll;
+    max-height:425px;
+}
+
+.pagination{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:10px;
+}
