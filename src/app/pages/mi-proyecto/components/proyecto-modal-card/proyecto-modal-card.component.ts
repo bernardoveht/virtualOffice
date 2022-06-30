@@ -15,18 +15,16 @@ export class ProyectoModalCardComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal,private modalService: NgbModal) { }
 
   ngOnInit(): void {
-
-    if(this.data.id == 3){
-      this.showObservations =true;
-    }
-    
+    // if(this.data.id == 3){
+    //   this.showObservations =true;
+    // }
   }
-  public detailModal(id:number){
-    this.activeModal.close('Close click');
-    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
-      windowClass: 'modal-orange with-border', 
-      centered:true,
-    });
-    modalRef.componentInstance.data = "aca le pasas data";
-  }
+  // public detailModal(id:number){
+  //   this.activeModal.close('Close click');
+  //   const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
+  //     windowClass: 'modal-orange with-border', 
+  //     centered:true,
+  //   });
+  //   modalRef.componentInstance.data = "aca le pasas data";
+  // }
 }

@@ -13,6 +13,7 @@ import { ProyectoModalCardComponent } from './components/proyecto-modal-card/pro
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
 import { ModalDetailComponent } from '../../shared/components/modals/modal-detail/modal-detail.component';
+import { ProjectWorkflowStatuses } from 'src/app/constants/emuns/project.enums';
 
 @Component({
   selector: 'app-mi-proyecto',
@@ -138,7 +139,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
         {
           icon: 'eye',
           title: 'Alertas',
-          amount: 2,
+          amount: result.totalObserver,
           type:'text'
         }
       ]
@@ -146,30 +147,33 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     });
   }
 
-  public cardModal(id:number){
-    const modalRef = this.modalService.open(ModalDetailComponent,{
-      windowClass: 'modal-orange', 
-      size:'lg',
-      centered:true
-    });
-    modalRef.componentInstance.color = 'orange';
-    modalRef.componentInstance.title = 'Proyecto';
-    modalRef.componentInstance.icon = this.icon;
-    modalRef.componentInstance.data = {
-      id
-    };
-  }
+  public cardModal(project:any){
 
-  public cardModalTwo(id:number){
-    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
-      windowClass: 'modal-orange with-border', 
-      centered:true,
-      size:'lg',
-    });
-    modalRef.componentInstance.data = {
-      id
-    };
-  }
+    const {workflowStep} = project;
+    if( workflowStep === ProjectWorkflowStatuses.Observado) {
+      console.log('enco');
+      const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
+        windowClass: 'modal-orange', 
+        size:'lg',
+        centered:true
+      });
+      modalRef.componentInstance.color = 'orange';
+      modalRef.componentInstance.title = 'Proyecto';
+      modalRef.componentInstance.icon = this.icon;
+      modalRef.componentInstance.data = {
+        project
+      };
+    } else {
+      const modalRef = this.modalService.open(ProyectoModalCardComponent,{
+        windowClass: 'modal-orange with-border', 
+        centered:true,
+        size:'lg',
+      });
+      modalRef.componentInstance.data = {
+        project
+      };
+    }
 
+  }
 
 }

@@ -41,9 +41,8 @@ export class ProyectoGridComponent implements OnInit {
     });
   }
 
-  public setDetail(id:number){
-    const value = id == 3 ? id : 4;
-    this.changeCardDetailMode.emit(id);  
+  public setDetail(event:any){
+    this.changeCardDetailMode.emit(event);
   }
 
   public changeGridPage(pageNumber:number){
