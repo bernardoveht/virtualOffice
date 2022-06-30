@@ -9,6 +9,7 @@ export const getProjectDataResume = createSelector(getProjectState, (state: proj
     let levels:number[]=[0,0,0,0];
     let totalAmount = 0 ;   
     let totalProject = 0;
+    let totalObserver = 0;
     
     state.projects.forEach(element=>{
         const steps = element.workflowStep;
@@ -24,18 +25,20 @@ export const getProjectDataResume = createSelector(getProjectState, (state: proj
                 break;    
         }   
         if(element.workflowStepStatus === ProjectWorkflowStatuses.Observado){
-            levels[1]++;
+            levels[1]++;           
         }
         
-        totalAmount += element.totalCost;
+        totalAmount += element.totalCost;    
     });
 
+    totalObserver = levels[1];
     totalProject = state.projects.length;
 
     const result = {
         totalAmount,
         totalProject,
-        levels
+        levels,
+        totalObserver
     }
     return result;
 });

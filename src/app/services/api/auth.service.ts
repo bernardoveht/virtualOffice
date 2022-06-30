@@ -18,7 +18,7 @@ export class AuthService {
         body.set('grant_type', String('password'));
         body.set('username', String(username));
         body.set('password', String(password));
-        body.set('resource', String('sippe_api'));
+        body.set('resource', String('sippe_api snop_sippe_go_api'));
 
     return this.http.post<UserAuth>(apiUri.login + '/token',
       body,

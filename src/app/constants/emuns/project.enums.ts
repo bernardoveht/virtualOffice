@@ -14,3 +14,10 @@ export enum ProjectWorkflowStatuses {
     "Análisis Finalizado" = 4,
     "En Banco de Proyectos"= 5
 }
+
+export enum ProjectBlockReasons{
+ "Otros"=0,
+ "Sin documentos adjuntos"=1,
+ "Se solicita documentación adicional"=2,
+ "En reformulación por parte del municipio"=3
+}

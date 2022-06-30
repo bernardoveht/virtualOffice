@@ -13,16 +13,12 @@
             <div class="left-data">
                 <div class="form-group">
                     <label>Fecha de inicio</label>
-                    <input class="form-control line-control" type="text" readonly value="15/10/2020" />
+                    <input class="form-control line-control" type="text" readonly value="{{ data.project.creationDate | date: 'dd/MM/yyyy'}} " />
                 </div>
                 <div class="form-group">
                     <label>Descripción</label>
                     <textarea rows="2" resize class="form-control line-control"
-                        readonly>Cargar rendición al Desembolso Nº1 de la obra Nº123456</textarea>
-                </div>
-                <div class="form-group">
-                    <label>Estado</label>
-                    <input class="form-control line-control" type="text" readonly value="Iniciado" />
+                        readonly>{{data.project.description}}</textarea>
                 </div>
             </div>
             <div class="right-data">
@@ -30,9 +26,9 @@
                 <div class="comments">
                     <p class="alert">
                         <i class="fa-solid fa-eye"></i>
-                        <span>17/10/2020:</span> Lorem ipsum dolor.
+                        <span>{{data.project.blockMessage}}</span> 
                     </p>
-                    <p><span>16/10/2020:</span> Agregar ticket Nº134</p>
+                    <p><span>{{data.project.blockReason}}</span></p>
                 </div>
             </div>
         </div>

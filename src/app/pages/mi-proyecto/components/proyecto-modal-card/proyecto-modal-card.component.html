@@ -13,27 +13,23 @@
             <div class="container-block">
                 <div class="data-block">
                     <span>Código SIPPE</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
+                    <p>{{data.project.id}}</p>
                 </div>
                 <div class="data-block">
                     <span>Código BAPIN</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
-                </div>
-                <div class="data-block">
-                    <span>Tipo de intervención</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
+                    <p>{{data.project.bapinCode ===null ? 0:data.project.bapinCode}}</p>
                 </div>
                 <div class="data-block">
                     <span>Grupo</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
+                    <p>{{data.project.workTypeGroupId}}</p>
                 </div>
                 <div class="data-block">
                     <span>Subgrupo</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
+                    <p>{{data.project.workTypeSubGroupId}}</p>
                 </div>
                 <div class="data-block">
                     <span>Tipo de Obra</span>
-                    <p>{{'Lorem ipsum dolor sit.' ?? '-'}}</p>
+                    <p>{{data.project.workTypeSubGroupId}}</p>
                 </div>
             </div>
         </div>
@@ -41,5 +37,5 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-cancel" (click)="activeModal.close('Close click')">Cerrar</button>
-    <button  *ngIf="showObservations" type="button" class="btn btn-success" (click)="detailModal(1)">Ir a Observaciones</button>
+    <!-- <button  *ngIf="showObservations" type="button" class="btn btn-success" (click)="detailModal(1)">Ir a Observaciones</button> -->
 </div>
