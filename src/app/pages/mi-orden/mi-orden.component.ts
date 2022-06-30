@@ -13,7 +13,7 @@ import { AppState } from 'src/app/store/app.reducers';
 export class MiOrdenComponent implements OnInit {
 
   public title:string = "Mis Ordenes de Pago";
-  public icon:string = "truck";
+  public icon:string = "hand-holding-dollar";
   public titleColor:string = "pink";
   public detailModeId:number = 0;
   public itemsTotal: AmountInformationItem[] = [];

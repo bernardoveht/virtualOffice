@@ -87,4 +87,33 @@
             border-bottom: 1px solid $green-app;
         }
     }
+    &.green-light{
+        .form-group{
+            .form-control.line-control{
+                border-bottom:1px solid $green-light-app;
+            }
+            label{
+                color:$green-light-app;
+            }
+        }
+        .title-item{
+            color:$green-light-app;
+            border-bottom: 1px solid $green-light-app;
+        }
+    }
+
+    &.pink{
+        .form-group{
+            .form-control.line-control{
+                border-bottom:1px solid $pink-app;
+            }
+            label{
+                color:$pink-app;
+            }
+        }
+        .title-item{
+            color:$pink-app;
+            border-bottom: 1px solid $pink-app;
+        }
+    }
 }

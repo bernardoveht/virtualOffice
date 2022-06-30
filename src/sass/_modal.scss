@@ -186,3 +186,32 @@
     }
   }
 
+  ::ng-deep .modal-pink {
+    &.with-border {
+      .modal-content {
+        border: 2px solid $pink-app;
+      }
+    }
+    .modal-header {
+      border-bottom: 1px solid $pink-app;
+      color: $pink-app;
+      .close {
+        color: $pink-app;
+      }
+    }
+    .modal-footer {
+      .btn-success {
+        background-color: $pink-app;
+        border: 2px solid $pink-app;
+      }
+      .btn-cancel {
+        border: 2px solid $pink-app;
+        color: $pink-app;
+        &:hover {
+          background-color: $pink-app;
+          color: white;
+        }
+      }
+    }
+  }
+
