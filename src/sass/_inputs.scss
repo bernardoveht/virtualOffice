@@ -18,6 +18,9 @@
   &.violet {
     border-bottom: 1px solid $violet-app;
   }
+  &.pink {
+    border-bottom: 1px solid $pink-app;
+  }
 }
 
 .form-control.simple-control,
@@ -44,6 +47,9 @@
   }
   &.violet {
     border: 1px solid $violet-app;
+  }
+  &.pink {
+    border: 1px solid $pink-app;
   }
 }
 

@@ -12,6 +12,7 @@ import { getProjectDataResume } from 'src/app/store/selectors/project/project.se
 import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
+import { ModalDetailComponent } from '../../shared/components/modals/modal-detail/modal-detail.component';
 
 @Component({
   selector: 'app-mi-proyecto',
@@ -146,10 +147,14 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   }
 
   public cardModal(id:number){
-    const modalRef = this.modalService.open(ProyectoModalCardComponent,{
-      windowClass: 'modal-orange with-border', 
-      centered:true,
+    const modalRef = this.modalService.open(ModalDetailComponent,{
+      windowClass: 'modal-orange', 
+      size:'lg',
+      centered:true
     });
+    modalRef.componentInstance.color = 'orange';
+    modalRef.componentInstance.title = 'Proyecto';
+    modalRef.componentInstance.icon = this.icon;
     modalRef.componentInstance.data = {
       id
     };

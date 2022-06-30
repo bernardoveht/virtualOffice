@@ -3,14 +3,16 @@
     <button type="button" class="btn rounded-btn btn-back violet" (click)="backStep()" *ngIf="detailModeId">
         <i class="fa-solid fa-angle-left"></i>
     </button>
-    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20" [backButton]="detailModeId ? true : false"></app-line-title>
+    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"
+        [backButton]="detailModeId ? true : false"></app-line-title>
 
     <div class="convenio-container row mt-2">
         <div class="col-lg-12 col-xl-4" *ngIf="(dataSourceTotal && dataSourceTotal.length > 6) || detailModeId">
             <ng-container *ngIf="!detailModeId">
                 <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
                 <div class="mb-3">
-                    <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+                    <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
+                        [totalAmount]="36"></app-graphic-data>
                 </div>
                 <div class="mb-3">
                     <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>

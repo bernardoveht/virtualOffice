@@ -89,5 +89,13 @@
         }
     }
    }
+   &.pink{
+    background-color: $pink-app;
+    .searcher-footer{
+        button{
+         color:$pink-app;
+        }
+    }
+   }
 
 }

@@ -48,4 +48,14 @@
         }
 
     }
+
+    &.pink{
+        th{
+            color:$pink-app;
+        }
+        .view-icon{
+            color:$pink-app;
+        }
+
+    }
 }

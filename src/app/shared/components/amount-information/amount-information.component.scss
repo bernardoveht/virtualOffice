@@ -136,6 +136,21 @@
             }
           
         }
+        &.pink{
+            div{   
+                &:first-of-type{
+                    color:$pink-app;   
+                    border-right: 1px solid $pink-app;
+                } 
+                &:last-of-type{
+                    p{
+                        color:$pink-app;
+                    }
+                } 
+             
+            }
+          
+        }
         &.red{
             div{   
                 &:first-of-type{

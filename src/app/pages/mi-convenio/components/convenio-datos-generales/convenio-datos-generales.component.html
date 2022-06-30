@@ -3,14 +3,13 @@
         <div class="card-box shadow">
             <div class="card-box-title">
                 <i class="fa-solid fa-file-contract"></i>
-                <h4>Estado del convenio</h4>
+                <h4>Datos generales</h4>
             </div>
             <div class="card-box-body">
-
                 <div class="card-box-item">
                     <div class="item">
                         <h5>Tipo de convenio</h5>
-                        <p>Específico | Base</p>
+                        <p>Marco</p>
                     </div>
                 </div>
                 <div class="card-box-item">
@@ -74,26 +73,7 @@
             </div>
         </div>
         <div class="shadow mb-3">
-            <div class="card-box">
-                <div class="card-box-body">
-                    <div class="card-box-item with-icon">
-                        <div class="icon">
-                            <i class="fa-solid fa-building-columns"></i>
-                        </div>
-                        <div class="item">
-                            <h5>Dependencia con la que suscribe</h5>
-                            <p>Dirección Nacional de Gestión de Obras</p>
-                            <div class="email d-flex align-items-center">
-                                <i class="fa-solid fa-envelope-open-text"></i>
-                                <a href="loremipsu@obraspublicas.gob.ar" title="loremipsu@obraspublicas.gob.ar">
-                                    loremipsu@obraspublicas.gob.ar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <app-amount-information [color]="'violet'" [items]="itemsTotal"></app-amount-information>
         </div>
     </div>
 </div>

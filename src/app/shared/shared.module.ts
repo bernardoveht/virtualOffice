@@ -8,8 +8,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LineTitleComponent } from './components/line-title/line-title.component';
-import { DescriptionModalComponent } from './components/task/modals/description-modal/description-modal.component';
-import { CommentModalComponent } from './components/task/modals/comment-modal/comment-modal.component';
+import { DescriptionModalComponent } from './components/modals/description-modal/description-modal.component';
+import { CommentModalComponent } from './components/modals/comment-modal/comment-modal.component';
 
 import { ExpedienteComponent } from "./components/expediente/expediente.component";
 import { GraphicDataComponent } from './components/graphic-data/graphic-data.component';
@@ -17,6 +17,7 @@ import { RouterModule } from "@angular/router";
 import { NgChartsModule } from 'ng2-charts';
 import { PaginationGridComponent } from './components/pagination-grid/pagination-grid.component';
 import { AmountInformationComponent } from "./components/amount-information/amount-information.component";
+import { ModalDetailComponent } from "./components/modals/modal-detail/modal-detail.component";
 /**
  * List of modules to export
  */
@@ -43,7 +44,8 @@ import { AmountInformationComponent } from "./components/amount-information/amou
   AmountInformationComponent,
   ExpedienteComponent,
   GraphicDataComponent,
-  PaginationGridComponent
+  PaginationGridComponent,
+  ModalDetailComponent
  ];
 
  @NgModule({

@@ -45,6 +45,15 @@
         }
 
     }
+    &.pink{
+        border:2px solid $pink-app;
+        background-color: $pink-app;
+        &:hover{
+            color:$pink-app;
+            background-color: white;
+        }
+
+    }
 }
 
 .btn-back{

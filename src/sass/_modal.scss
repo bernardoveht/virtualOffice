@@ -45,6 +45,7 @@
       border-radius: 25px;
       background-color: $blue-app;
       border: 2px solid $blue-app;
+      min-width:100px;
       &:hover {
         opacity: 0.8;
       }
@@ -53,6 +54,7 @@
       border-radius: 25px;
       border: 2px solid $blue-app;
       color: $blue-app;
+      min-width:100px;
       &:hover {
         background-color: $blue-app;
         color: white;
@@ -111,11 +113,6 @@
       }
     }
     .modal-footer {
-      .btn {
-        &:focus {
-          outline: none !important;
-        }
-      }
       .btn-success {
         background-color: $orange-app;
         border: 2px solid $orange-app;
@@ -131,4 +128,61 @@
     }
   }
 
+  ::ng-deep .modal-violet {
+    &.with-border {
+      .modal-content {
+        border: 2px solid $violet-app;
+      }
+    }
+    .modal-header {
+      border-bottom: 1px solid $violet-app;
+      color: $violet-app;
+      .close {
+        color: $violet-app;
+      }
+    }
+    .modal-footer {
+      .btn-success {
+        background-color: $violet-app;
+        border: 2px solid $violet-app;
+      }
+      .btn-cancel {
+        border: 2px solid $violet-app;
+        color: $violet-app;
+        &:hover {
+          background-color: $violet-app;
+          color: white;
+        }
+      }
+    }
+  }
+
+  ::ng-deep .modal-green {
+    &.with-border {
+      .modal-content {
+        border: 2px solid $green-app;
+      }
+    }
+    .modal-header {
+      border-bottom: 1px solid $green-app;
+      color: $green-app;
+      .close {
+        color: $green-app;
+      }
+    }
+    .modal-footer {
+      .btn-success {
+        background-color: $green-app;
+        border: 2px solid $green-app;
+      }
+      .btn-cancel {
+        border: 2px solid $green-app;
+        color: $green-app;
+        &:hover {
+          background-color: $green-app;
+          color: white;
+        }
+      }
+    }
+  }
 

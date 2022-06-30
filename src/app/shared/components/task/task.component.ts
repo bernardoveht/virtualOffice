@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
-import { DescriptionModalComponent } from './modals/description-modal/description-modal.component';
-import { CommentModalComponent } from './modals/comment-modal/comment-modal.component';
+import { DescriptionModalComponent } from '../modals/description-modal/description-modal.component';
+import { CommentModalComponent } from '../modals/comment-modal/comment-modal.component';
 
 @Component({
   selector: 'app-task',
