@@ -151,29 +151,35 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
 
     const {workflowStep} = project;
     if( workflowStep === ProjectWorkflowStatuses.Observado) {
-      console.log('enco');
-      const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
-        windowClass: 'modal-orange', 
-        size:'lg',
-        centered:true
-      });
-      modalRef.componentInstance.color = 'orange';
-      modalRef.componentInstance.title = 'Proyecto';
-      modalRef.componentInstance.icon = this.icon;
-      modalRef.componentInstance.data = {
-        project
-      };
+      this.handleObservation(project);
     } else {
-      const modalRef = this.modalService.open(ProyectoModalCardComponent,{
-        windowClass: 'modal-orange with-border', 
-        centered:true,
-        size:'lg',
-      });
-      modalRef.componentInstance.data = {
-        project
-      };
+      this.handleDetails(project);
     }
 
+  }
+
+  private handleObservation(project:any){
+    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
+      windowClass: 'modal-orange', 
+      size:'lg',
+      centered:true
+    });
+    modalRef.componentInstance.color = 'orange';
+    modalRef.componentInstance.title = 'Proyecto';
+    modalRef.componentInstance.icon = this.icon;
+    modalRef.componentInstance.data = {
+      project
+    };
+  }
+  private handleDetails(project:any){
+    const modalRef = this.modalService.open(ProyectoModalCardComponent,{
+      windowClass: 'modal-orange with-border', 
+      centered:true,
+      size:'lg',
+    });
+    modalRef.componentInstance.data = {
+      project
+    };
   }
 
 }
