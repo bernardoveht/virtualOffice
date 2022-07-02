@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Works } from 'src/app/models/works.model';
 import { ModalDetailComponent } from 'src/app/shared/components/modals/modal-detail/modal-detail.component';
@@ -11,9 +11,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./obra-grid.component.scss']
 })
 export class ObraGridComponent implements OnInit {
-  
+  public datasource = [1,2,3,4,5,6];
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
-  public datasource!: Works[];
+ // public datasource!: Works[];
   public headelements:string [] = [
     'Código identific. Interna ',
     'Nombre',
@@ -27,11 +27,11 @@ export class ObraGridComponent implements OnInit {
   constructor(private readonly store:Store<AppState>,private modalService:NgbModal) { } 
 
   ngOnInit(): void {
-    this.store.select('works').subscribe(({works})=>{
+    /*this.store.select('works').subscribe(({works})=>{
       if(works){
         this.datasource = works;
       }
-    });
+    });*/
   }
 
   public setDetail(id:number){

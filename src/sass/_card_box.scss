@@ -22,11 +22,11 @@
   }
   .card-box-body {
     padding: 0 20px 10px 20px;
-    color:$text-gray;
+    color: $text-gray;
     .card-box-item {
       margin-bottom: 12px;
-      hr{
-        margin:10px 0 10px 0;
+      hr {
+        margin: 10px 0 10px 0;
       }
       .item {
         display: flex;
@@ -43,7 +43,7 @@
           word-break: break-word;
           margin-bottom: 0;
         }
-        span{
+        span {
           font-size: 0.9em;
         }
       }
@@ -58,22 +58,167 @@
       }
       &:last-of-type {
         margin-bottom: 0px;
-          hr{
-            margin:10px 0 0px 0;
-          }
+        hr {
+          margin: 10px 0 0px 0;
+        }
       }
     }
-    .email{
-        a{
-            font-size:0.8em;
-            text-decoration: none;
-            color:$text-gray;
+    .email {
+      a {
+        font-size: 0.8em;
+        text-decoration: none;
+        color: $text-gray;
+      }
+      svg {
+        margin-right: 5px !important;
+        font-size: 12px !important;
+        color: $text-gray !important;
+      }
+    }
+  }
+}
+
+.indv-card-box {
+  overflow: hidden;
+  header {
+    border-bottom: 1px solid $classic-gray;
+    padding: 10px 5px;
+    margin: 0 10px;
+    .title {
+      .icon-alert {
+        font-size: 24px;
+        color: $red-app;
+      }
+    }
+  }
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    &.active {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+    .content {
+      padding: 5px 15px;
+      width:100%;
+      .item {
+        margin-bottom: 5px;
+        .data-box {
+          color: $text-gray;
+          display: block;
+          font-size: 0.8em;
         }
-        svg{
-            margin-right: 5px !important;
-            font-size:12px !important;
-            color:$text-gray !important;
+        .content-box {
+          display: block;
+          font-weight: 500;
         }
+        &.with-icon {
+          display: flex;
+          align-items: center;
+          svg {
+            font-size: 18px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .action-item {
+        border-bottom:1px solid $blue-app;
+        display:flex;
+        justify-content: space-between;
+        padding:3px 5px;
+        cursor: pointer;
+        &:hover{
+          color:$white;
+          background:$blue-app;
+          svg{
+            color:$white;
+          }
+          background-color:$light-gray;
+        }
+        svg {
+          font-size: 18px;
+        }
+      }
+    }
+    .detail {
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      color: $white;
+      position: relative;
+      &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        height: 96%;
+        top: 2%;
+        width: 1px;
+        background-color: $white;
+        left: 10px;
+      }
+    }
+  }
+
+  &.violet {
+    .title {
+      color: $violet-app;
+    }
+    .body {
+      .action-item {
+        &:hover{
+          color:$white;
+          background:$violet-app;
+        }
+        border-bottom:1px solid $violet-app;
+        svg {
+          color: $violet-app;
+        }
+      }
+      .with-icon {
+        svg {
+          color: $violet-app;
+        }
+      }
+      .content-box {
+        color: $violet-app;
+      }
+    }
+    .detail {
+      background-color: $violet-app;
+    }
+  }
+  &.green {
+    .title {
+      color: $green-app;
+    }
+    .body {
+      .action-item {
+        border-bottom:1px solid $green-app;
+        &:hover{
+          color:$white;
+          background:$green-app;
+        }
+        svg {
+          color: $green-app;
+        }
+      }
+      .with-icon {
+        svg {
+          color: $green-app;
+        }
+      }
+      .content-box {
+        color: $green-app;
+      }
+    }
+    .detail {
+      background-color: $green-app;
     }
   }
 }

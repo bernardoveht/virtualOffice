@@ -1,5 +1,5 @@
 
-<div class="shadow p-3 mb-5 bg-body table-container" >
+<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource.length > 6; else cards">
   <div id="table-proyect" class="table-scroll">
     <table class="table table-responsive table-bordered table-striped custom-table green">
       <thead>
@@ -9,11 +9,16 @@
       </thead>
       <tbody>
         <tr *ngFor="let el of datasource">
-          <td scope="row">{{el.internalWorkCode}}</td>
+          <!-- <td scope="row">{{el.internalWorkCode}}</td>
           <td scope="row">{{el.name}}</td>
           <td scope="row">{{el.step}}</td>
           <td scope="row">{{el.state}}</td>
-          <td scope="row">{{el.updatedAmount}}</td>
+          <td scope="row">{{el.updatedAmount}}</td> -->
+          <td scope="row">0</td>
+          <td scope="row">0</td>
+          <td scope="row">0</td>
+          <td scope="row">0</td>
+          <td scope="row">0</td>
           <td scope="row">0</td>
           <td scope="row">0</td>
           <td scope="row">0</td>
@@ -38,3 +43,10 @@
   </div>
 </div>
 
+<ng-template #cards>
+  <div class="d-flex justify-content-between flex-wrap align-items-center obra-cards-container">
+    <div *ngFor="let data of datasource">
+      <app-obra-card (changeDetailMode)="setDetail($event)"></app-obra-card>
+   </div>
+  </div>
+</ng-template>

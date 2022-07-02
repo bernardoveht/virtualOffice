@@ -16,3 +16,14 @@
     align-items: center;
     padding-top:10px;
 }
+
+.obra-cards-container{
+    & > div{
+        width:30%;
+        margin-bottom:30px;
+        @media (max-width: 1200px){
+            width:100%;
+        }
+    }
+}
+

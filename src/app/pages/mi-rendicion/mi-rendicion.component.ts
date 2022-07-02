@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartData } from 'chart.js';
 import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 
@@ -12,7 +13,6 @@ export class MiRendicionComponent implements OnInit {
   public title:string = "Mis rendiciones";
   public icon:string = "file-invoice-dollar";
   public titleColor:string = "green-light";
-  public detailModeId:number = 0;
   public doughnutChartLabels: string[] = ['Iniciadas', 'En Observación', 'Adjudicada', 'Rechazadas', 'Contratadas'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -35,8 +35,6 @@ export class MiRendicionComponent implements OnInit {
         ]
       },
     ],
-
-
   };
   public itemsTotal:AmountInformationItem[] = [
     {
@@ -56,17 +54,13 @@ export class MiRendicionComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public changeDetailMode(id:number){
-    this.detailModeId = id;
-  }
-
-  public backStep(){
-    this.detailModeId = 0;
+    this.router.navigate([`/pages/mis-rendiciones/detalle/${id}`]);
   }
 
 }

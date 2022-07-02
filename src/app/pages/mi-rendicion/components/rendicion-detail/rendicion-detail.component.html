@@ -1,10 +1,42 @@
 
-<div class="desembolsos-btns">
-    <div class="desembolso-btn active">1º desembolso</div>
-    <div class="desembolso-btn">2º desembolso</div>
-    <div class="desembolso-btn">3º desembolso</div>
-    <div class="desembolso-btn disabled">4º desembolso</div>
-</div>
-<div class="shadow p-3 mb-5 bg-body table-container desembolso-table">
-    <app-rendicion-desembolso></app-rendicion-desembolso>
+<div id="rendicion-detail">
+    <app-line-title [backButton]="true" [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
+    <button type="button" class="btn rounded-btn btn-back green-light" (click)="backStep()">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <div class="rendiciones-container row mt-2">
+        <div class="col-sm-12 col-lg-4">
+            <button type="button" class="btn rounded-btn green-light btn-new-rendition">
+                <i class="fa-solid fa-circle-plus"></i>
+                Cargar nueva rendición
+            </button>
+            <button type="button" class="btn rounded-btn green-light btn-new-rendition">
+                <i class="fa-solid fa-circle-plus"></i>
+                Cargar nuevo certificado
+            </button>
+            <app-expediente [color]="titleColor"></app-expediente>
+            <div class="mb-3">
+                <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
+                    [totalAmount]="36"></app-graphic-data>
+            </div>
+            <div class="mb-3">
+                <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+            </div>
+            <div class="mb-3">
+                <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-8">
+            <div class="desembolsos-btns">
+                <div class="desembolso-btn active">1º desembolso</div>
+                <div class="desembolso-btn">2º desembolso</div>
+                <div class="desembolso-btn">3º desembolso</div>
+                <div class="desembolso-btn disabled">4º desembolso</div>
+            </div>
+            <div class="shadow p-3 mb-5 bg-body table-container desembolso-table">
+                <app-rendicion-desembolso></app-rendicion-desembolso>
+            </div>
+        </div>
+
+    </div>
 </div>

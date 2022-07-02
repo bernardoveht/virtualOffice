@@ -1,10 +1,26 @@
-
-<div class="desembolsos-btns">
-    <div class="desembolso-btn active">1º desembolso</div>
-    <div class="desembolso-btn">2º desembolso</div>
-    <div class="desembolso-btn">3º desembolso</div>
-    <div class="desembolso-btn disabled">4º desembolso</div>
-</div>
-<div class="shadow p-3 mb-5 bg-body table-container desembolso-table">
-    <app-obra-desembolso></app-obra-desembolso>
+<div id="convenio-detail">
+    <button type="button" class="btn rounded-btn btn-back green" (click)="backStep()">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <app-line-title [backButton]="true" [title]="title" [icon]="icon" [color]="titleColor" [margin]="20" ></app-line-title>
+    <div class="convenio-detail-container row">
+        <div class="col-lg-12 col-xl-8 mb-3">
+            <div class="mb-3">
+               bloque 1
+            </div>
+            <div>
+                bloque 2
+            </div>
+        </div>
+        <div class="col-lg-12 col-xl-4">
+            <div class="mb-3">
+                <div class="mb-3">
+                    bloque 3
+                </div>
+                <div class="mb-3">
+                    bloque 4
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

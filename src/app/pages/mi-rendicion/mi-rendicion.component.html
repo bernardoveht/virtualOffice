@@ -1,17 +1,17 @@
 <div id="mi-rendicion">
     <app-rendiciones-search></app-rendiciones-search>
-    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"
-        [backButton]="detailModeId ? true : false"></app-line-title>
-    <button type="button" class="btn rounded-btn btn-back green-light" (click)="backStep()" *ngIf="detailModeId">
-        <i class="fa-solid fa-angle-left"></i>
-    </button>
+    <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
     <div class="rendiciones-container row mt-2">
         <div class="col-sm-12 col-lg-4">
             <button type="button" class="btn rounded-btn green-light btn-new-rendition">
                 <i class="fa-solid fa-circle-plus"></i>
-                Cargar nueva rendicíon
+                Cargar nueva rendición
             </button>
-            <app-expediente [color]="titleColor" *ngIf="detailModeId"></app-expediente>
+            <button type="button" class="btn rounded-btn green-light btn-new-rendition">
+                <i class="fa-solid fa-circle-plus"></i>
+                Cargar nuevo certificado
+            </button>
+            <app-expediente [color]="titleColor"></app-expediente>
             <div class="mb-3">
                 <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
                     [totalAmount]="36"></app-graphic-data>
@@ -24,10 +24,8 @@
             </div>
         </div>
         <div class="col-sm-12 col-lg-8">
-            <app-rendiciones-grid *ngIf="!detailModeId" (changeDetailMode)="changeDetailMode($event)">
+            <app-rendiciones-grid (changeDetailMode)="changeDetailMode($event)">
             </app-rendiciones-grid>
-            <app-rendicion-detail *ngIf="detailModeId"></app-rendicion-detail>
         </div>
-
     </div>
 </div>

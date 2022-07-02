@@ -1,5 +1,21 @@
 
 @import "/src/sass/variables";
+@import "/src/sass/buttons";
+
+.rendiciones-container{
+    padding:20px;
+}
+
+#rendicion-detail{
+    position:relative;
+    .btn-new-rendition{
+        background-color:$green-light-app;
+        color:white;
+        margin-bottom:20px;
+        width:100%;
+        border-radius:20px;
+    }
+}
 
 .desembolsos-btns{
     display:flex;

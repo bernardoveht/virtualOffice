@@ -8,6 +8,7 @@ import { ObraDetailComponent } from './components/obra-detail/obra-detail.compon
 import { ObraGridComponent } from './components/obra-grid/obra-grid.component';
 import { ObraSearchComponent } from './components/obra-search/obra-search.component';
 import { MiObraRoutingModule } from './mi-obra.routing.module';
+import { ObraCardComponent } from './components/obra-card/obra-card.component';
 
 
 
@@ -18,6 +19,7 @@ import { MiObraRoutingModule } from './mi-obra.routing.module';
     ObraDetailComponent,
     ObraGridComponent,
     ObraSearchComponent,
+    ObraCardComponent
   ],
   imports: [
     CommonModule,

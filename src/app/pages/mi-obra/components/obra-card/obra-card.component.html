@@ -1,0 +1,52 @@
+<div class="indv-card-box shadow green">
+    <header>
+        <div class="title d-flex justify-content-between">
+            <h5>Puesta en valor de las áreas centrales
+                del casco urbano Lanús</h5>
+            <i class="fa-solid fa-eye icon-alert view-icon"></i>
+        </div>
+        <div class="subtitle d-flex justify-content-between">
+            <h6>Código 109848 ID | de obra 124329</h6>
+        </div>
+    </header>
+    <div class="body" [class.active]="active">
+        <div class="content" *ngIf="!active">
+            <div class="item with-icon">
+                <div>
+                    <i class="fa-solid fa-sack-dollar icon-alert view-icon"></i>
+                </div>
+                <div>
+                    <span class="data-box">Monto total vigente de la obra</span>
+                    <span class="content-box">$300.000</span>
+                </div>
+            </div>
+            <div class="item with-icon">
+                <div>
+                    <i class="fa-solid fa-file-invoice icon-alert view-icon"></i>
+                </div>
+                <div>
+                    <span class="data-box">Etapa</span>
+                    <span class="content-box">A Iniciar</span>
+                </div>
+            </div>
+        </div>
+        <div class="content" *ngIf="active">
+            <div class="action-item" (click)="setDetail(1)">
+                <span>Ver Obra</span>
+                <i  class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="action-item">
+                <span>Mis rendiciones</span>
+                <i  class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="action-item">
+                <span>Mis órdenes de pago y transferencia</span>
+                <i  class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        <span class="detail" (click)="active = !active">
+            <div *ngIf="!active"><i class="fa-solid fa-angle-right"></i></div>
+            <div *ngIf="active"><i class="fa-solid fa-angle-left"></i></div>
+        </span>
+    </div>
+</div>

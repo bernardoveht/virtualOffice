@@ -1,22 +1,28 @@
-<div class="convenio-detail-container row">
-    <div class="col-lg-12 col-xl-8 mb-3">
-        <div class="mb-3">
-            <app-convenio-state></app-convenio-state>
-        </div>
-        <div>
-            <app-convenio-datos-generales></app-convenio-datos-generales>
-        <!-- Opcion 1    <app-convenio-datos-generales></app-convenio-datos-generales>  -->
-        <!-- Opcion 2  <app-convenio-datos-generales-alternative></app-convenio-datos-generales-alternative> -->
-        </div>
-    </div>
-    <div class="col-lg-12 col-xl-4">
-        <div class="mb-3">
+<div id="convenio-detail">
+    <button type="button" class="btn rounded-btn btn-back violet" (click)="backStep()">
+        <i class="fa-solid fa-angle-left"></i>
+    </button>
+    <app-line-title [backButton]="true" [title]="title" [icon]="icon" [color]="titleColor" [margin]="20" ></app-line-title>
+    <div class="convenio-detail-container row">
+        <div class="col-lg-12 col-xl-8 mb-3">
             <div class="mb-3">
-                <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+                <app-convenio-state></app-convenio-state>
             </div>
+            <div>
+                <app-convenio-datos-generales></app-convenio-datos-generales>
+            <!-- Opcion 1    <app-convenio-datos-generales></app-convenio-datos-generales>  -->
+            <!-- Opcion 2  <app-convenio-datos-generales-alternative></app-convenio-datos-generales-alternative> -->
+            </div>
+        </div>
+        <div class="col-lg-12 col-xl-4">
             <div class="mb-3">
-                <app-amount-information [title]="datesTitle" [color]="titleColor" [items]="itemsDates">
-                </app-amount-information>
+                <div class="mb-3">
+                    <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+                </div>
+                <div class="mb-3">
+                    <app-amount-information [title]="datesTitle" [color]="titleColor" [items]="itemsDates">
+                    </app-amount-information>
+                </div>
             </div>
         </div>
     </div>

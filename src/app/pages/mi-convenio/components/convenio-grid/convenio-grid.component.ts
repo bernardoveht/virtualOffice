@@ -10,7 +10,7 @@ import { ModalDetailComponent } from 'src/app/shared/components/modals/modal-det
 export class ConvenioGridComponent implements OnInit {
   
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
-  @Input() public dataSource:any[] = [];
+  @Input() public datasource:any[] = [];
 
   constructor(private modalService:NgbModal) { }
 

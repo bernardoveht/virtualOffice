@@ -1,4 +1,4 @@
-<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="dataSource.length > 6; else cards">
+<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource.length > 6; else cards">
   <div id="table-proyect" class="table-scroll">
     <table class="table table-responsive table-bordered table-striped custom-table violet">
       <thead>
@@ -214,7 +214,7 @@
 
 <ng-template #cards>
   <div class="d-flex justify-content-between flex-wrap align-items-center convenio-cards-container">
-    <div *ngFor="let data of dataSource">
+    <div *ngFor="let data of datasource">
       <app-convenio-card (changeDetailMode)="setDetail($event)"></app-convenio-card>
    </div>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartData } from 'chart.js';
 import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 
@@ -12,7 +13,6 @@ export class MiConvenioComponent implements OnInit {
   public title:string = 'Mis Convenios';
   public icon:string = 'file-contract';
   public titleColor:string = 'violet';
-  public detailModeId:number = 0;
   public doughnutChartLabels: string[] = ['En trámite','A la firma de organismo','A la firma de MOP','Protocolizado'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -45,25 +45,15 @@ export class MiConvenioComponent implements OnInit {
   
 
   // hay que recibir informacion del endpoint correspondiente para saber si mostrar o no la parte de la izquierda de la grilla
-  dataSourceTotal:any[] = [1,2,3,4,5,6];
+  datasourceTotal:any[] = [1,2,3,4,5,6];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   public changeDetailMode(id:number){
-    this.detailModeId = id;
-    this.title = 'Puesta en valor de las areas centales del casco urbano Lanús'
-  }
-
-  public backStep(){
-    this.detailModeId = 0;
-    this.titleReset();
-  }
-
-  public titleReset(){
-    this.title = 'Mis Convenios';
+    this.router.navigate([`/pages/mis-convenios/detalle/${id}`]);
   }
 
 }
