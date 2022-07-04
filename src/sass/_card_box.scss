@@ -53,7 +53,10 @@
         flex-direction: initial;
         svg {
           font-size: 24px;
-          margin-right: 20px;
+          padding-right: 10px;
+        }
+        .item{
+          padding-left: 10px;
         }
       }
       &:last-of-type {

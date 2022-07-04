@@ -10,6 +10,14 @@
     h3{
         font-size:1.5em;
     }
+    &.subtitle{
+        h3{
+            font-size:1.2em; 
+        }
+        svg{
+            font-size:1.5em;
+        }
+    }
     svg{
         margin-right:10px;
         font-size:1.8em;
@@ -34,6 +42,9 @@
     &.color-pink{
         color:$pink-app;
         border-bottom:1px solid $pink-app;
+    }
+    &.neutralline{
+        border-bottom:1px solid $strong-gray;
     }
 }
 

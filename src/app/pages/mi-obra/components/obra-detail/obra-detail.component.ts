@@ -2,16 +2,24 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
+export enum ObraOption {
+  detail = 1,
+  document = 2
+}
+
 @Component({
   selector: 'app-obra-detail',
   templateUrl: './obra-detail.component.html',
   styleUrls: ['./obra-detail.component.scss']
 })
+
 export class ObraDetailComponent implements OnInit, OnDestroy {
   public title: string = "Remodelacíon Lanús Boleterias Tren Roca | 12345";
   public icon: string = "truck";
   public titleColor: string = "green";
   public id!: number;
+  public options = ObraOption;
+  public obraOption: ObraOption = ObraOption.detail;
   private routeSb = new Subscription();
 
   constructor(private router: Router, private route: ActivatedRoute) { }

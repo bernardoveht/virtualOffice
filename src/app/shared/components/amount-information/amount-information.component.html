@@ -1,5 +1,5 @@
 
-<div class="shadow total-amount-container">
+<div class="shadow total-amount-container" *ngIf="haveCard else noCard">
     <div [class]="'title ' + color" *ngIf="title">
         <i [class]="'fa-solid fa-' + title.icon"></i>
         <h4>{{title.text}}</h4>
@@ -17,3 +17,22 @@
         </div>
     </div>
 </div>
+
+<ng-template #noCard>
+    <div [class]="'title ' + color" *ngIf="title">
+        <i [class]="'fa-solid fa-' + title.icon"></i>
+        <h4>{{title.text}}</h4>
+    </div>
+    <div [class]="'total-data ' + color" *ngFor="let item of items">
+        <div>
+            <i [class]="'fa-solid fa-' + item.icon + ' fa-2x'"></i>
+        </div>
+        <div>
+            <h5>{{item.title}}</h5>
+            <p *ngIf="item.type === 'money'">{{ item.amount | currency:'$':'symbol' }}</p>
+            <p *ngIf="item.type === 'percentage'">{{ item.amount + '%' }}</p>
+            <p *ngIf="item.type === 'date'">{{ item.amount }}</p>
+            <p *ngIf="item.type === 'text'">{{ item.amount }}</p>
+        </div>
+    </div>
+</ng-template>

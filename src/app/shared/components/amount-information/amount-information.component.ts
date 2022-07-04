@@ -11,6 +11,7 @@ export class AmountInformationComponent implements OnInit {
   @Input() color:string = '';
   @Input() title!:AmountInformationTitle;
   @Input() items:AmountInformationItem[] = [];
+  @Input() haveCard:boolean = true;
   
   constructor() { }
 

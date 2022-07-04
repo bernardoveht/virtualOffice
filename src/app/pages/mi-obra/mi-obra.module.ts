@@ -9,6 +9,7 @@ import { ObraGridComponent } from './components/obra-grid/obra-grid.component';
 import { ObraSearchComponent } from './components/obra-search/obra-search.component';
 import { MiObraRoutingModule } from './mi-obra.routing.module';
 import { ObraCardComponent } from './components/obra-card/obra-card.component';
+import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -19,7 +20,7 @@ import { ObraCardComponent } from './components/obra-card/obra-card.component';
     ObraDetailComponent,
     ObraGridComponent,
     ObraSearchComponent,
-    ObraCardComponent
+    ObraCardComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +28,7 @@ import { ObraCardComponent } from './components/obra-card/obra-card.component';
     ReactiveFormsModule, 
     FormsModule,
     MiObraRoutingModule,
+    NgbProgressbarModule
   ]
 })
 export class MiObraModule { }

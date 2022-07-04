@@ -12,6 +12,8 @@ export class LineTitleComponent implements OnInit {
   @Input() color:string = 'blue';
   @Input() margin:number = 0;
   @Input() backButton:boolean = false;
+  @Input() subtitle:boolean = false;
+  @Input() neutralLine:boolean = true;
 
   constructor() { }
 

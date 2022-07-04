@@ -1,14 +1,99 @@
-
 @import "/src/sass/variables";
 @import "/src/sass/buttons";
 
-
-.convenio-detail-container{
-    padding:20px;
-    height: 55vh;
+.obra-detail-container {
+  padding: 20px;
+  height: 55vh;
+  .section {
+    border-bottom: 1px solid $strong-gray;
+    margin: 0 20px;
+    padding: 10px 0;
+  }
 }
 
-#convenio-detail{
-    position:relative;
+#obra-detail {
+  position: relative;
 }
 
+.buttons-steps {
+  text-align: center;
+
+  button {
+    min-width: 280px;
+    position: relative;
+    z-index: 2;
+    &:not(.active) {
+      background-color: $strong-gray;
+      border: 2px solid $strong-gray;
+      z-index: 1;
+    }
+    &:first-of-type {
+      left: 20px;
+    }
+    &:last-of-type {
+      right: 20px;
+    }
+  }
+}
+.card-box {
+    padding: 0;
+  .card-box-body {
+    padding: 0;
+  }
+  .card-box-title {
+    color: $green-app;
+  }
+  .card-box-item {
+    p {
+      color: $green-app;
+    }
+    svg {
+      color: $green-app;
+    }
+  }
+}
+
+.amount{
+  .with-icon {
+    .item {
+      border-left: 1px solid $green-app;
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+.amount-bar-progress{
+    margin-bottom:10px;
+    padding:10px;
+    .with-icon {
+        .item {
+            width: 100%;
+          border-left: 1px solid $green-app;
+          p {
+            font-size: 1.6em;
+          }
+        }
+      }
+}
+
+
+.tri-items {
+  .card-box {
+    .card-box-body {
+      display: flex;
+      justify-content: center;
+    }
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid $strong-gray;
+    padding-left: 10px;
+    &:first-of-type {
+      padding-left: 0;
+    }
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
