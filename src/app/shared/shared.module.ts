@@ -18,6 +18,7 @@ import { NgChartsModule } from 'ng2-charts';
 import { PaginationGridComponent } from './components/pagination-grid/pagination-grid.component';
 import { AmountInformationComponent } from "./components/amount-information/amount-information.component";
 import { ModalDetailComponent } from "./components/modals/modal-detail/modal-detail.component";
+import { LineChartsDataComponent } from './components/line-charts-data/line-charts-data.component';
 /**
  * List of modules to export
  */
@@ -45,7 +46,8 @@ import { ModalDetailComponent } from "./components/modals/modal-detail/modal-det
   ExpedienteComponent,
   GraphicDataComponent,
   PaginationGridComponent,
-  ModalDetailComponent
+  ModalDetailComponent,
+  LineChartsDataComponent
  ];
 
  @NgModule({

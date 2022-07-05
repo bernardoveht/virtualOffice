@@ -1,0 +1,69 @@
+<app-line-title [neutralLine]="true" [subtitle]="true" [title]="title" [icon]="icon" [color]="'green'" [margin]="20">
+</app-line-title>
+<div class="d-flex section justify-content-between row">
+    <div class="col-5">
+        <div class="card-box">
+            <div class="card-box-body">
+                <div class="card-box-item with-icon">
+                    <div class="icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="item">
+                        <h5>Fecha acta de inicio</h5>
+                        <p>01/01/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-box">
+            <div class="card-box-body">
+                <div class="card-box-item with-icon">
+                    <div class="icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="item">
+                        <h5>Fecha de recepción provisoria</h5>
+                        <p>30/11/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-box">
+            <div class="card-box-body">
+                <div class="card-box-item with-icon">
+                    <div class="icon">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="item">
+                        <h5>Fecha de finalización prevista</h5>
+                        <p>30/12/2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-box amount-bar-progress">
+            <div class="card-box-body">
+                <div class="card-box-item with-icon">
+                    <div class="icon">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <div class="item">
+                        <h5>Avance físico</h5>
+                        <p>10%</p>
+                        <p>
+                            <ngb-progressbar class="color-green" [value]="10"></ngb-progressbar>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-7">
+        <div class="flex">
+            <div class="flex-item">
+                <div style="display: block;">
+                    <app-line-charts-data [graphicItems]="lineChartData" [options]="lineChartOptions" ></app-line-charts-data>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -10,6 +10,8 @@ import { ObraSearchComponent } from './components/obra-search/obra-search.compon
 import { MiObraRoutingModule } from './mi-obra.routing.module';
 import { ObraCardComponent } from './components/obra-card/obra-card.component';
 import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
+import { FinancialAdvancesComponent } from './components/obra-detail/components/financial-advances/financial-advances.component';
+import { PhysicalAdvancesComponent } from './components/obra-detail/components/physical-advances/physical-advances.component';
 
 
 
@@ -21,6 +23,8 @@ import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
     ObraGridComponent,
     ObraSearchComponent,
     ObraCardComponent,
+    FinancialAdvancesComponent,
+    PhysicalAdvancesComponent
   ],
   imports: [
     CommonModule,
