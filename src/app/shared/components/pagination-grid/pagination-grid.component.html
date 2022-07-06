@@ -1,5 +1,5 @@
 <div [class]="'pagination-container ' + color">
-    <div (click)="changePage(currentPage - 1)" [class]="'back-btn rounded-btn ' + color" *ngIf="currentPage !== pagesArray[0]">
+    <div (click)="changePage(currentPage - 1)" [class]="'back-btn rounded-btn ' + color" *ngIf="currentPage !== pagesArray[0] && pagesArray.length > 0">
         <i class="fa-solid fa-angle-left"></i>
     </div>
     <ul>
