@@ -1,0 +1,77 @@
+[
+    {
+        "id": 261,
+        "name": "AMBIENTE",
+        "description": "AMBIENTE"
+    },
+    {
+        "id": 1,
+        "name": "ARQUITECTURA",
+        "description": "ARQUITECTURA"
+    },
+    {
+        "id": 2,
+        "name": "COMUNICACIONES",
+        "description": "COMUNICACIONES"
+    },
+    {
+        "id": 3,
+        "name": "ENERGIA",
+        "description": "ENERGIA"
+    },
+    {
+        "id": 4,
+        "name": "EQUIPAMIENTO URBANO",
+        "description": "EQUIPAMIENTO URBANO"
+    },
+    {
+        "id": 199,
+        "name": "EQUIPAMIENTOS PARA LA PRESTACIÓN DE SERVICIOS PÚBLICOS",
+        "description": "EQUIPAMIENTOS PARA LA PRESTACIÓN DE SERVICIOS PÚBLICOS"
+    },
+    {
+        "id": 258,
+        "name": "FOFESO",
+        "description": "FOFESO"
+    },
+    {
+        "id": 5,
+        "name": "MINERIA",
+        "description": "MINERIA"
+    },
+    {
+        "id": 219,
+        "name": "PROGRAMAS/PROYECTOS SIN INVERSIÓN FÍSICA",
+        "description": "PROGRAMAS/PROYECTOS SIN INVERSIÓN FÍSICA"
+    },
+    {
+        "id": 6,
+        "name": "RECURSOS HIDRICOS",
+        "description": "RECURSOS HIDRICOS"
+    },
+    {
+        "id": 7,
+        "name": "SANEAMIENTO",
+        "description": "SANEAMIENTO"
+    },
+    {
+        "id": 8,
+        "name": "TRANSPORTE",
+        "description": "TRANSPORTE"
+    },
+    {
+        "id": 259,
+        "name": "TURISMO",
+        "description": "TURISMO"
+    },
+    {
+        "id": 9,
+        "name": "VIALIDAD",
+        "description": "VIALIDAD"
+    },
+    {
+        "id": 10,
+        "name": "VIVIENDA / HÁBITAT",
+        "description": "VIVIENDA / HÁBITAT"
+    }
+]

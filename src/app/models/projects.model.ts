@@ -133,3 +133,8 @@ export interface ProjectsFilter{
     geoJsonFeatureCollection: string;
 
 }
+export interface ProjectDetails {
+    workSubGroupId: number;
+    workTypeGroupId:number;
+    workTypeId:number;
+}

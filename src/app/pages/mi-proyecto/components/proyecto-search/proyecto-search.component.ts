@@ -7,7 +7,8 @@ import * as projectActions from 'src/app/store/actions/projects/projects.actions
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Subscription } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
-
+import *  as organismos from 'src/data/organismos.json';
+import *  as planes from 'src/data/planes.json';
 @Component({
   selector: 'app-proyecto-search',
   templateUrl: './proyecto-search.component.html',
@@ -51,11 +52,12 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
     lastUpdateFrom: ''
   };
 
-  dropdownList:any = [];
-  dropdownSettings:IDropdownSettings={};
+  public selectSettings:IDropdownSettings={};
   private auth$:Subscription | undefined;
-
-
+ 
+  public keepFilters = false;
+  public planesList:any=[]
+  public organismoList:any=[];
   public openSearch = false;
   public searchForm: FormGroup;
 
@@ -65,7 +67,8 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
     ) {
       this.searchForm = this.fb.group({
         sippe:[''],
-        // organismo:[''],
+        // organismos:[this.planesList],
+        // planes:[this.planesList],
         name:[''],
         plan:[''],
         fechaPresentacion:[''],
@@ -81,22 +84,21 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
       if(user){
         this.filter.provinces = user.provinceId ?[user.provinceId]: [];
         this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+        this.filter.beneficiaryOrganismId = user.organismId ? '':user.organismId;
       }
     });
 
-    this.dropdownList = [
-      { item_id: 1, item_text: 'Item1' },
-      { item_id: 2, item_text: 'Item2' },
-      { item_id: 3, item_text: 'Item3' },
-      { item_id: 4, item_text: 'Item4' },
-      { item_id: 5, item_text: 'Item5' }
-    ];
-    this.dropdownSettings = {
-      idField: 'item_id',
-      textField: 'item_text',
+
+    this.organismoList = (organismos as any).default
+    this.planesList = (planes as any).default
+
+    this.selectSettings = {
+      idField: 'id',
+      textField: 'name',
       enableCheckAll: false,
       allowSearchFilter: true,
-      searchPlaceholderText:'Buscar'
+      searchPlaceholderText:'Buscar',
+      limitSelection:1      
   };
   }
 
@@ -104,11 +106,22 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
     this.openSearch = !this.openSearch;
   }
   handleSearch(){
+
     const {sippe,name} = this.searchForm.value;
-    this.filter.name = name ? name:'';
-    this.filter.id = sippe ? sippe:'';
-    this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
+    const filters = {...this.filter};
+
+    filters.name = name ? name: '';
+    filters.id   =sippe? sippe :'';
+
+    this.store.dispatch(projectActions.getSearchProjects({filters}));
     this.openSearcher();
+    if(!this.keepFilters) {
+      this.searchForm.reset();
+    }
+  }
+  clearFilters(){
     this.searchForm.reset();
+    const filters = {...this.filter}
+    this.store.dispatch(projectActions.getSearchProjects({filters}));
   }
 }

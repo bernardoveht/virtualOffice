@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { filter, map, Observable, tap } from 'rxjs';
 import { apiUri } from 'src/app/constants/urls/api-url';
 import { ProjectAllPaginator, Projects, ProjectsFilter } from 'src/app/models/projects.model';
 
@@ -59,7 +59,7 @@ export class ProjectsService {
       tagValues: [],
       managerUserId: '',
       organismInChargeId: '',
-      beneficiaryOrganismId: '',
+      beneficiaryOrganismId: filter.beneficiaryOrganismId,
       externalCreditOrganisms: [],
       loanId: '',
       developmentState: null,
@@ -81,5 +81,32 @@ export class ProjectsService {
     return this.http.post<ProjectAllPaginator>(apiUri.projects + '/projects/search',
       filterAll,
       {headers : new HttpHeaders(header)});    
-  } 
+  }
+  public getDetailsSubGroup(id:number): Observable<any> {
+    const token = sessionStorage.getItem('token');
+    const header = {
+      'Authorization':'Bearer '+ token,
+      'x-api-key':'abcdefg',
+    };
+
+    return this.http.get(`${apiUri.projects}/worktype/SubGroup/${id}`,{headers:header});
+  }
+  public getDetailsWorkType(): Observable<any> {
+    const token = sessionStorage.getItem('token');
+    const header = {
+      'Authorization':'Bearer '+ token,
+      'x-api-key':'abcdefg',
+    };
+
+    return this.http.get(`${apiUri.projects}/worktype`,{headers:header});
+  }
+  public getDetailsWorkTypeGroup(): Observable<any> {
+    const token = sessionStorage.getItem('token');
+    const header = {
+      'Authorization':'Bearer '+ token,
+      'x-api-key':'abcdefg',
+    };
+
+    return this.http.get(`${apiUri.projects}/worktypegroup`,{headers:header});
+  }
 }

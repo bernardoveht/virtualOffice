@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actions, ofType, createEffect } from '@ngrx/effects';
-import { of } from 'rxjs';
+import { Actions, ofType, createEffect, act } from '@ngrx/effects';
+import { forkJoin, of } from 'rxjs';
 import { catchError, map,exhaustMap, switchMap, concatMap, mergeMap} from 'rxjs/operators';
 import { ProjectAllPaginator, ProjectsFilter } from 'src/app/models/projects.model';
 import { ProjectsService } from 'src/app/services/api/projects.service';
@@ -45,5 +45,16 @@ export class ProjectsEffects {
         })
     )
   );
+  getDetailsProjects$ = createEffect(() =>
+  this.actions$.pipe(
+      ofType(projectsActions.getDetailsProjects),
+      switchMap((actions) => 
+      this.projectsService.getDetailsSubGroup(actions.ids.workSubGroupId).pipe(
+          map(details => projectsActions.getDetailsProjectsSuccess({details})),
+          catchError(error => of(projectsActions.projectsError({payload:error})))   
+          )
+      )   
+  )
+);
   
 }

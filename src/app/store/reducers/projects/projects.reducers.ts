@@ -8,13 +8,15 @@ export interface ProjectsState {
   projectPaginator: ProjectAllPaginator | null
   error: any;
   filters:ProjectsFilter | null;
+  details:any
 }
 
 export const projectsInitialState: ProjectsState = {
   projects: [],
   error: null,
   projectPaginator:null,
-  filters:null
+  filters:null,
+  details:null
 };
 
 const _projectsReducer = createReducer(
@@ -34,6 +36,14 @@ const _projectsReducer = createReducer(
     ...state,
     projectPaginator:projects,
     projects:projectAll.result
+  })),
+  on(actions.getDetailsProjects, (state, { ids }) => ({
+    ...state,
+    ids
+  })),
+  on(actions.getDetailsProjectsSuccess, (state, { details }) => ({
+    ...state,
+    details
   })),
   on(actions.projectsError, (state, { payload }) => ({
     ...state,
