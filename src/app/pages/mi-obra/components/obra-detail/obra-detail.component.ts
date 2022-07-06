@@ -19,7 +19,7 @@ export class ObraDetailComponent implements OnInit, OnDestroy {
   public titleColor: string = "green";
   public id!: number;
   public options = ObraOption;
-  public obraOption: ObraOption = ObraOption.document;
+  public obraOption: ObraOption = ObraOption.detail;
   private routeSb = new Subscription();
 
   constructor(private router: Router, private route: ActivatedRoute) { }
