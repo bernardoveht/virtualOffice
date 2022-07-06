@@ -1,0 +1,65 @@
+@import "/src/sass/variables";
+
+.document-detail-container {
+  padding: 20px;
+  &::-webkit-scrollbar {
+    background-color: $classic-gray!important;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $green-app;
+    border-radius: 10px;
+  }
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 55vh;
+}
+
+::ng-deep .accordion {
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid $strong-gray;
+
+    .accordion-body {
+        padding-top:0;
+        padding-bottom:0;
+    }
+    .accordion-button {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      font-weight: 500;
+      color: $text-gray;
+      svg{
+        margin-right:10px;
+        font-size:24px;
+        color:$green-app;
+      }
+      &::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300b9b1'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+      }
+    }
+    .inside-items {
+        padding-left:20px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 500;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        list-style: none;
+        background-color: $light-gray;
+        &:last-of-type{
+            margin-bottom:0;
+        }
+        .action {
+          cursor: pointer;
+          svg {
+            color: $green-app;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<div class="document-detail-container">
+    <div class="mb-3">
+        <app-line-title [noLine]="true" [title]="title" [icon]="icon" [color]="titleColor" [subtitle]="true">
+        </app-line-title>
+    </div>
+    <ngb-accordion [animation]="false" [closeOthers]="true" #acc="ngbAccordion" activeIds="ngb-panel-0">
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <i class="fa-solid fa-folder-open"></i>
+                <span class="title">Rendiciones</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <ul class="inside-items">
+                    <li>
+                        <span>ComprobanteFirmado_1.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>NotaElevacion.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <i class="fa-solid fa-folder-open"></i>
+                <span class="title">Acta de recepcíon de la obra</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <ul class="inside-items">
+                    <li>
+                        <span>ComprobanteFirmado_1.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>NotaElevacion.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <i class="fa-solid fa-folder-open"></i>
+                <span class="title">Cartel de obra</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <ul class="inside-items">
+                    <li>
+                        <span>ComprobanteFirmado_1.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>NotaElevacion.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <i class="fa-solid fa-folder-open"></i>
+                <span class="title">Acta de inicio</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <ul class="inside-items">
+                    <li>
+                        <span>ComprobanteFirmado_1.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>NotaElevacion.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+        </ngb-panel>
+        <ngb-panel>
+            <ng-template ngbPanelTitle>
+                <i class="fa-solid fa-folder-open"></i>
+                <span class="title">Convenios</span>
+            </ng-template>
+            <ng-template ngbPanelContent>
+                <ul class="inside-items">
+                    <li>
+                        <span>ComprobanteFirmado_1.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <span>NotaElevacion.pdf</span>
+                        <div class="action">
+                            <a (click)="openFile('assets/pdf/factura.pdf')"><i
+                                    class="fa-solid fa-eye icon-action view-icon"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+</div>
