@@ -9,9 +9,10 @@ import { ObraGridComponent } from './components/obra-grid/obra-grid.component';
 import { ObraSearchComponent } from './components/obra-search/obra-search.component';
 import { MiObraRoutingModule } from './mi-obra.routing.module';
 import { ObraCardComponent } from './components/obra-card/obra-card.component';
-import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule, NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { FinancialAdvancesComponent } from './components/obra-detail/components/financial-advances/financial-advances.component';
 import { PhysicalAdvancesComponent } from './components/obra-detail/components/physical-advances/physical-advances.component';
+import { DocumentsDetailComponent } from './components/obra-detail/components/documents-detail/documents-detail.component';
 
 
 
@@ -24,7 +25,8 @@ import { PhysicalAdvancesComponent } from './components/obra-detail/components/p
     ObraSearchComponent,
     ObraCardComponent,
     FinancialAdvancesComponent,
-    PhysicalAdvancesComponent
+    PhysicalAdvancesComponent,
+    DocumentsDetailComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { PhysicalAdvancesComponent } from './components/obra-detail/components/p
     ReactiveFormsModule, 
     FormsModule,
     MiObraRoutingModule,
-    NgbProgressbarModule
+    NgbProgressbarModule,
+    NgbAccordionModule
   ]
 })
 export class MiObraModule { }

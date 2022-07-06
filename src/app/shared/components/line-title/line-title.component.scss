@@ -47,5 +47,8 @@
     &.neutralline{
         border-bottom:1px solid $strong-gray;
     }
+    &.noLine{
+        border-bottom:none;
+    }
 }
 

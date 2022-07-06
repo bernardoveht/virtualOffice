@@ -14,6 +14,7 @@ export class LineTitleComponent implements OnInit {
   @Input() backButton:boolean = false;
   @Input() subtitle:boolean = false;
   @Input() neutralLine:boolean = true;
+  @Input() noLine:boolean = false;
 
   constructor() { }
 

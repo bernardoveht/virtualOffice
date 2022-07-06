@@ -1,4 +1,4 @@
-<div *ngIf="title" [class.neutralline]="neutralLine" [class.subtitle]="subtitle" [style.margin]="margin+'px'" [style.padding-left]="backButton ? '60px' : '0px'" [class]="'line-title color-' + color">
+<div *ngIf="title" [class.noLine]="noLine" [class.neutralline]="neutralLine" [class.subtitle]="subtitle" [style.margin]="margin+'px'" [style.padding-left]="backButton ? '60px' : '0px'" [class]="'line-title color-' + color">
     <i *ngIf="icon" [class]="'fa-solid fa-' + icon"></i>
     <h3>{{title}}</h3>
 </div>
