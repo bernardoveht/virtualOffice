@@ -84,6 +84,7 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
       if(user){
         this.filter.provinces = user.provinceId ?[user.provinceId]: [];
         this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+        this.filter.beneficiaryOrganismId = user.organismId ? '':user.organismId;
       }
     });
 

@@ -95,6 +95,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
       if(user){
         this.filter.provinces = user.provinceId ?[user.provinceId]: [];
         this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+        this.filter.beneficiaryOrganismId =user.organismId ?user.organismId:'';
         this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
         // this.store.dispatch(projectActions.getAllProjects());      
       }

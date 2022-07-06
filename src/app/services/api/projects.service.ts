@@ -59,7 +59,7 @@ export class ProjectsService {
       tagValues: [],
       managerUserId: '',
       organismInChargeId: '',
-      beneficiaryOrganismId: '',
+      beneficiaryOrganismId: filter.beneficiaryOrganismId,
       externalCreditOrganisms: [],
       loanId: '',
       developmentState: null,
