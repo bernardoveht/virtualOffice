@@ -1,0 +1,1910 @@
+[
+    {
+        "id": 326,
+        "name": "Acciones interinstitucionales",
+        "description": "Acciones interinstitucionales",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 251,
+        "name": "Actualización de la estructura administrativa",
+        "description": "Actualización de la estructura administrativa",
+        "workTypeSubGroupId": 250
+    },
+    {
+        "id": 142,
+        "name": "Acueductos para la provisión de agua potable",
+        "description": "Acueductos para la provisión de agua potable",
+        "workTypeSubGroupId": 39
+    },
+    {
+        "id": 148,
+        "name": "Aeropuertos",
+        "description": "Aeropuertos",
+        "workTypeSubGroupId": 41
+    },
+    {
+        "id": 66,
+        "name": "Albergues estudiantiles",
+        "description": "Albergues estudiantiles",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 356,
+        "name": "Ampliación/refuncionalización de zonas/instalaciones portuarias",
+        "description": "Ampliación/refuncionalización de zonas/instalaciones portuarias",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 56,
+        "name": "Antenas",
+        "description": "Antenas",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 123,
+        "name": "Aprovechamiento múltiples hídricos",
+        "description": "Aprovechamiento múltiples hídricos",
+        "workTypeSubGroupId": 33
+    },
+    {
+        "id": 315,
+        "name": "Arbolado urbano",
+        "description": "Arbolado urbano",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 198,
+        "name": "Areas naturales protegidas",
+        "description": "Areas naturales protegidas",
+        "workTypeSubGroupId": 197
+    },
+    {
+        "id": 213,
+        "name": "Armamento",
+        "description": "Armamento",
+        "workTypeSubGroupId": 210
+    },
+    {
+        "id": 227,
+        "name": "Bancos de tierras fiscales",
+        "description": "Bancos de tierras fiscales",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 51,
+        "name": "Barcos regasificadores",
+        "description": "Barcos regasificadores",
+        "workTypeSubGroupId": 12
+    },
+    {
+        "id": 339,
+        "name": "Campañas de información sobre energías renovables",
+        "description": "Campañas de información sobre energías renovables",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 337,
+        "name": "Campañas de información sobre seguridad vial",
+        "description": "Campañas de información sobre seguridad vial",
+        "workTypeSubGroupId": 283
+    },
+    {
+        "id": 338,
+        "name": "Campañas de información sobre transporte sustentable",
+        "description": "Campañas de información sobre transporte sustentable",
+        "workTypeSubGroupId": 283
+    },
+    {
+        "id": 340,
+        "name": "Campañas de información sobre uso racional de la energía",
+        "description": "Campañas de información sobre uso racional de la energía",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 341,
+        "name": "Campañas de promoción del uso adecuado del agua",
+        "description": "Campañas de promoción del uso adecuado del agua",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 185,
+        "name": "Camping",
+        "description": "Camping",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 345,
+        "name": "Capacitación en oficios",
+        "description": "Capacitación en oficios",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 230,
+        "name": "Capacitación en oficios",
+        "description": "Capacitación en oficios",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 365,
+        "name": "Carriles exclusivos para buses/Metrobus",
+        "description": "Carriles exclusivos para buses/Metrobus",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 85,
+        "name": "Centrales  ciclo combinado",
+        "description": "Centrales  ciclo combinado",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 310,
+        "name": "Centrales  ciclo combinado",
+        "description": "Centrales  ciclo combinado",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 86,
+        "name": "Centrales atómicas",
+        "description": "Centrales atómicas",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 84,
+        "name": "Centrales térmicas",
+        "description": "Centrales térmicas",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 402,
+        "name": "Centro Ambiental",
+        "description": "Centro Ambiental",
+        "workTypeSubGroupId": 293
+    },
+    {
+        "id": 400,
+        "name": "Centro de clasificación de residuos",
+        "description": "Centro de clasificación de residuos",
+        "workTypeSubGroupId": 293
+    },
+    {
+        "id": 403,
+        "name": "Centro de producción agroecológica de Alimentos/ Cinturones Verdes",
+        "description": "Centro de producción agroecológica de Alimentos/ Cinturones Verdes",
+        "workTypeSubGroupId": 294
+    },
+    {
+        "id": 386,
+        "name": "Centro se atención primaria de la salud",
+        "description": null,
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 284,
+        "name": "Centros Culturales",
+        "description": "Centros Culturales",
+        "workTypeSubGroupId": 276
+    },
+    {
+        "id": 388,
+        "name": "Centros de apoyo a los adultos mayores",
+        "description": null,
+        "workTypeSubGroupId": 285
+    },
+    {
+        "id": 411,
+        "name": "Centros de Desarrollo Infantil",
+        "description": "Centros de Desarrollo Infantil",
+        "workTypeSubGroupId": 300
+    },
+    {
+        "id": 62,
+        "name": "Centros de formacion docente",
+        "description": "Centros de formacion docente",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 406,
+        "name": "Centros de producción de energía renovable",
+        "description": "Centros de producción de energía renovable",
+        "workTypeSubGroupId": 296
+    },
+    {
+        "id": 156,
+        "name": "Centros de trasbordo y estaciones ferroviarias",
+        "description": "Centros de trasbordo y estaciones ferroviarias",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 387,
+        "name": "Centros Integrales de Atención a la Mujer",
+        "description": null,
+        "workTypeSubGroupId": 285
+    },
+    {
+        "id": 285,
+        "name": "Cine",
+        "description": "Cine",
+        "workTypeSubGroupId": 276
+    },
+    {
+        "id": 371,
+        "name": "Circunvalación de áreas urbanas",
+        "description": "Circunvalación de áreas urbanas",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 385,
+        "name": "Clubes Barriales",
+        "description": null,
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 48,
+        "name": "Colectores de desagües cloacales",
+        "description": "Colectores de desagües cloacales",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 73,
+        "name": "Comisarías ",
+        "description": "Comisarías ",
+        "workTypeSubGroupId": 18
+    },
+    {
+        "id": 126,
+        "name": "Construcción de Pasarelas Peatonales",
+        "description": "Construcción de Pasarelas Peatonales",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 174,
+        "name": "Construccion de viviendas nuevas",
+        "description": "Construccion de viviendas nuevas",
+        "workTypeSubGroupId": 47
+    },
+    {
+        "id": 127,
+        "name": "Construcción en autopistas / autovías/ 3ra trochas",
+        "description": "Construcción en autopistas / autovías/ 3ra trochas",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 128,
+        "name": "Construcción en caminos de accesos",
+        "description": "Construcción en caminos de accesos",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 129,
+        "name": "Construcción en desagües pluviales / alcantarillas / canales",
+        "description": "Construcción en desagües pluviales / alcantarillas / canales",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 130,
+        "name": "Construcción en empalmes / rotondas / intersecciones / cruces / conexiónes",
+        "description": "Construcción en empalmes / rotondas / intersecciones / cruces / conexiónes",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 131,
+        "name": "Construcción en puentes viales",
+        "description": "Construcción en puentes viales",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 132,
+        "name": "Construcción en rutas nacionales",
+        "description": "Construcción en rutas nacionales",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 133,
+        "name": "Construcción en rutas provinciales",
+        "description": "Construcción en rutas provinciales",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 80,
+        "name": "Cordón cuneta",
+        "description": "Cordón cuneta",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 357,
+        "name": "Creación de rutas fluviales",
+        "description": "Creación de rutas fluviales",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 290,
+        "name": "Cuarteles de Bomberos",
+        "description": "Cuarteles de Bomberos",
+        "workTypeSubGroupId": 18
+    },
+    {
+        "id": 231,
+        "name": "Cursos de alfabetización",
+        "description": "Cursos de alfabetización",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 104,
+        "name": "Defensas hídricas",
+        "description": "Defensas hídricas",
+        "workTypeSubGroupId": 28
+    },
+    {
+        "id": 384,
+        "name": "Definición de circuitos comerciales",
+        "description": null,
+        "workTypeSubGroupId": 195
+    },
+    {
+        "id": 140,
+        "name": "Desagües pluviales",
+        "description": "Desagües pluviales",
+        "workTypeSubGroupId": 38
+    },
+    {
+        "id": 226,
+        "name": "Desarrollo de centros alternativos",
+        "description": "Desarrollo de centros alternativos",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 106,
+        "name": "Desarrollo de nexos comunitarios",
+        "description": "Desarrollo de nexos comunitarios",
+        "workTypeSubGroupId": 29
+    },
+    {
+        "id": 327,
+        "name": "Determinación de áreas de expansión y crecimiento/ Identificación de tierra urbanizada apta para la vivienda y suelo social",
+        "description": "Determinación de áreas de expansión y crecimiento/ Identificación de tierra urbanizada apta para la vivienda y suelo social",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 332,
+        "name": "Difusión de las actividades culturales",
+        "description": "Difusión de las actividades culturales",
+        "workTypeSubGroupId": 281
+    },
+    {
+        "id": 256,
+        "name": "Difusión de las actividades turísticas",
+        "description": "Difusión de las actividades turísticas",
+        "workTypeSubGroupId": 255
+    },
+    {
+        "id": 177,
+        "name": "Distribución rural de gas",
+        "description": "Distribución rural de gas",
+        "workTypeSubGroupId": 42
+    },
+    {
+        "id": 358,
+        "name": "Dragado de vías navegables",
+        "description": "Dragado de vías navegables",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 401,
+        "name": "Ecoparque",
+        "description": "Ecoparque",
+        "workTypeSubGroupId": 293
+    },
+    {
+        "id": 78,
+        "name": "Edificios del Estado Municipal",
+        "description": "Edificios del Estado Municipal",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 76,
+        "name": "Edificios del Estado Nacional",
+        "description": "Edificios del Estado Nacional",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 77,
+        "name": "Edificios del Estado Provincial",
+        "description": "Edificios del Estado Provincial",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 79,
+        "name": "Edificios religiosos",
+        "description": "Edificios religiosos",
+        "workTypeSubGroupId": 20
+    },
+    {
+        "id": 64,
+        "name": "Educación General Básica (EGB)",
+        "description": "Educación General Básica (EGB)",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 63,
+        "name": "Educación polimodal",
+        "description": "Educación polimodal",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 65,
+        "name": "Educación terciaria",
+        "description": "Educación terciaria",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 157,
+        "name": "Electrificación",
+        "description": "Electrificación",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 105,
+        "name": "Entubamientos",
+        "description": "Entubamientos",
+        "workTypeSubGroupId": 28
+    },
+    {
+        "id": 217,
+        "name": "Equipamiento informático",
+        "description": "Equipamiento informático",
+        "workTypeSubGroupId": 215
+    },
+    {
+        "id": 201,
+        "name": "Equipamiento informático",
+        "description": "Equipamiento informático",
+        "workTypeSubGroupId": 200
+    },
+    {
+        "id": 208,
+        "name": "Equipamiento informático",
+        "description": "Equipamiento informático",
+        "workTypeSubGroupId": 205
+    },
+    {
+        "id": 211,
+        "name": "Equipamiento informático",
+        "description": "Equipamiento informático",
+        "workTypeSubGroupId": 210
+    },
+    {
+        "id": 203,
+        "name": "Equipamiento para las aulas",
+        "description": "Equipamiento para las aulas",
+        "workTypeSubGroupId": 200
+    },
+    {
+        "id": 405,
+        "name": "Equipamiento para tratamiento de residuos",
+        "description": "Equipamiento para tratamiento de residuos",
+        "workTypeSubGroupId": 295
+    },
+    {
+        "id": 207,
+        "name": "Equipos de alta complejidad",
+        "description": "Equipos de alta complejidad",
+        "workTypeSubGroupId": 205
+    },
+    {
+        "id": 381,
+        "name": "Escuela agrotécnica",
+        "description": "Escuela agrotécnica",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 379,
+        "name": "Escuela de capacitación laboral",
+        "description": "Escuela de capacitación laboral",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 382,
+        "name": "Escuela de educación especial (E.E.E.)",
+        "description": "Escuela de educación especial (E.E.E.)",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 378,
+        "name": "Escuela de nivel inicial (E.N.I.)",
+        "description": "Escuela de nivel inicial (E.N.I.)",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 377,
+        "name": "Escuela primaria y nivel inicial (combinada)",
+        "description": "Escuela primaria y nivel inicial (combinada)",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 380,
+        "name": "Escuela técnica",
+        "description": "Escuela técnica",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 60,
+        "name": "Escuelas primarias",
+        "description": "Escuelas primarias",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 61,
+        "name": "Escuelas secundarias",
+        "description": "Escuelas secundarias",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 155,
+        "name": "Estaciones transformadoras",
+        "description": "Estaciones transformadoras",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 189,
+        "name": "Estadios, Microestadios",
+        "description": "Estadios, Microestadios",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 244,
+        "name": "Estudios ambientales",
+        "description": "Estudios ambientales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 83,
+        "name": "Estudios técnicos para obras hídricas",
+        "description": "Estudios técnicos para obras hídricas",
+        "workTypeSubGroupId": 22
+    },
+    {
+        "id": 305,
+        "name": "Exploración/Explotación de nuevas zonas hidrocarburíferas",
+        "description": "Exploración/Explotación de nuevas zonas hidrocarburíferas",
+        "workTypeSubGroupId": 12
+    },
+    {
+        "id": 319,
+        "name": "Fomento a operadores del transporte ferroviario/automotor/aéreo/fluvial/marítimo",
+        "description": "Fomento a operadores del transporte ferroviario/automotor/aéreo/fluvial/marítimo",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 333,
+        "name": "Fomento de las actividades culturales",
+        "description": "Fomento de las actividades culturales",
+        "workTypeSubGroupId": 281
+    },
+    {
+        "id": 257,
+        "name": "Fomento de las actividades turísticas",
+        "description": "Fomento de las actividades turísticas",
+        "workTypeSubGroupId": 255
+    },
+    {
+        "id": 336,
+        "name": "Fomento de organizaciones comunitarias/ONG",
+        "description": "Fomento de organizaciones comunitarias/ONG",
+        "workTypeSubGroupId": 282
+    },
+    {
+        "id": 320,
+        "name": "Fomento del transporte ferroviario",
+        "description": "Fomento del transporte ferroviario",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 254,
+        "name": "Fomento del uso de energías renovables y alternativas",
+        "description": "Fomento del uso de energías renovables y alternativas",
+        "workTypeSubGroupId": 253
+    },
+    {
+        "id": 325,
+        "name": "Fortalecimiento Institucional de organismos estatales",
+        "description": "Fortalecimiento Institucional de organismos estatales",
+        "workTypeSubGroupId": 250
+    },
+    {
+        "id": 229,
+        "name": "Fortalecimiento y promoción de la escuela secundaria para adultos",
+        "description": "Fortalecimiento y promoción de la escuela secundaria para adultos",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 294,
+        "name": "Frigorífico",
+        "description": "Frigorífico",
+        "workTypeSubGroupId": 278
+    },
+    {
+        "id": 150,
+        "name": "Gasoductos",
+        "description": "Gasoductos",
+        "workTypeSubGroupId": 42
+    },
+    {
+        "id": 232,
+        "name": "Generación de oferta educativa terciaria",
+        "description": "Generación de oferta educativa terciaria",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 288,
+        "name": "Geriátrico",
+        "description": "Geriátrico",
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 236,
+        "name": "Gestión de Residuos Sólidos Urbanos",
+        "description": "Gestión de Residuos Sólidos Urbanos",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 97,
+        "name": "Gimnasios",
+        "description": "Gimnasios",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 292,
+        "name": "Hogares de niños, adolescentes o ancianos",
+        "description": "Hogares de niños, adolescentes o ancianos",
+        "workTypeSubGroupId": 277
+    },
+    {
+        "id": 69,
+        "name": "Hospitales",
+        "description": "Hospitales",
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 300,
+        "name": "Hotel/Complejo de Cabañas",
+        "description": "Hotel/Complejo de Cabañas",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 93,
+        "name": "Huellas mineras",
+        "description": "Huellas mineras",
+        "workTypeSubGroupId": 24
+    },
+    {
+        "id": 404,
+        "name": "Huerta y/o Vivero",
+        "description": "Huerta y/o Vivero",
+        "workTypeSubGroupId": 294
+    },
+    {
+        "id": 81,
+        "name": "Iluminación",
+        "description": "Iluminación",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 321,
+        "name": "Incubadoras de Empresas",
+        "description": "Incubadoras de Empresas",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 107,
+        "name": "Infraestructura de urbanización",
+        "description": "Infraestructura de urbanización",
+        "workTypeSubGroupId": 29
+    },
+    {
+        "id": 270,
+        "name": "Infraestructura educativa",
+        "description": "Infraestructura educativa",
+        "workTypeSubGroupId": 267
+    },
+    {
+        "id": 272,
+        "name": "Infraestructura en vivienda",
+        "description": "Infraestructura en vivienda",
+        "workTypeSubGroupId": 267
+    },
+    {
+        "id": 262,
+        "name": "Infraestructura productiva",
+        "description": "Infraestructura productiva",
+        "workTypeSubGroupId": 261
+    },
+    {
+        "id": 268,
+        "name": "Infraestructura sanitaria y hospitalaria",
+        "description": "Infraestructura sanitaria y hospitalaria",
+        "workTypeSubGroupId": 267
+    },
+    {
+        "id": 67,
+        "name": "Infraestructura Universitaria",
+        "description": "Infraestructura Universitaria",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 274,
+        "name": "Infraestructura vial",
+        "description": "Infraestructura vial",
+        "workTypeSubGroupId": 267
+    },
+    {
+        "id": 183,
+        "name": "Instalaciones militares",
+        "description": "Instalaciones militares",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 265,
+        "name": "Inversión productiva",
+        "description": "Inversión productiva",
+        "workTypeSubGroupId": 264
+    },
+    {
+        "id": 59,
+        "name": "Jardines de infantes",
+        "description": "Jardines de infantes",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 153,
+        "name": "Lineas de transmisión de  33 kv",
+        "description": "Lineas de transmisión de  33 kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 313,
+        "name": "Lineas de transmisión de  33 kv",
+        "description": "Lineas de transmisión de  33 kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 178,
+        "name": "Lineas de transmisión de 13.2kv",
+        "description": "Lineas de transmisión de 13.2kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 154,
+        "name": "Lineas de transmisión de 132kv",
+        "description": "Lineas de transmisión de 132kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 152,
+        "name": "Lineas de transmisión de 220kv",
+        "description": "Lineas de transmisión de 220kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 151,
+        "name": "Lineas de transmisión de alta tensión 500kv",
+        "description": "Lineas de transmisión de alta tensión 500kv",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 158,
+        "name": "Locomotoras y vagones",
+        "description": "Locomotoras y vagones",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 159,
+        "name": "Material rodante remolcado",
+        "description": "Material rodante remolcado",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 160,
+        "name": "Material rodante tractivo",
+        "description": "Material rodante tractivo",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 202,
+        "name": "Materiales didácticos",
+        "description": "Materiales didácticos",
+        "workTypeSubGroupId": 200
+    },
+    {
+        "id": 260,
+        "name": "Mejora de la infraestructura edilicia de distintas reparticiones y/o organismos públicos",
+        "description": "Mejora de la infraestructura edilicia de distintas reparticiones y/o organismos públicos",
+        "workTypeSubGroupId": 259
+    },
+    {
+        "id": 100,
+        "name": "Mejoramiento de barrios",
+        "description": "Mejoramiento de barrios",
+        "workTypeSubGroupId": 26
+    },
+    {
+        "id": 102,
+        "name": "Mejoramiento de viviendas",
+        "description": "Mejoramiento de viviendas",
+        "workTypeSubGroupId": 26
+    },
+    {
+        "id": 295,
+        "name": "Mercados Concentradores",
+        "description": "Mercados Concentradores",
+        "workTypeSubGroupId": 278
+    },
+    {
+        "id": 240,
+        "name": "Mitigación de amenazas ambientales",
+        "description": "Mitigación de amenazas ambientales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 342,
+        "name": "Monitoreo y vigilancia ambiental",
+        "description": "Monitoreo y vigilancia ambiental",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 103,
+        "name": "Monumentos",
+        "description": "Monumentos",
+        "workTypeSubGroupId": 27
+    },
+    {
+        "id": 75,
+        "name": "Museos",
+        "description": "Museos",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 362,
+        "name": "Nodo multimodal",
+        "description": "Nodo multimodal",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 180,
+        "name": "Nodos multimodales",
+        "description": "Nodos multimodales",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 221,
+        "name": "Normativas urbanísticas",
+        "description": "Normativas urbanísticas",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 101,
+        "name": "Núcleo sanitario",
+        "description": "Núcleo sanitario",
+        "workTypeSubGroupId": 26
+    },
+    {
+        "id": 53,
+        "name": "Núcleos de acceso al conocimiento (NAC)",
+        "description": "Núcleos de acceso al conocimiento (NAC)",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 359,
+        "name": "Nuevo puerto",
+        "description": "Nuevo puerto",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 161,
+        "name": "Obra civil",
+        "description": "Obra civil",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 162,
+        "name": "Obra integral",
+        "description": "Obra integral",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 350,
+        "name": "Obra integral de cloacas",
+        "description": "Obra integral de cloacas",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 351,
+        "name": "Obras de captación y tratamiento de líquidos cloacales",
+        "description": "Obras de captación y tratamiento de líquidos cloacales",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 119,
+        "name": "Obras de captacion y/o transporte de agua para la producción",
+        "description": "Obras de captacion y/o transporte de agua para la producción",
+        "workTypeSubGroupId": 31
+    },
+    {
+        "id": 121,
+        "name": "Obras de captacion y/o transporte de agua para la producción y agua potable",
+        "description": "Obras de captacion y/o transporte de agua para la producción y agua potable",
+        "workTypeSubGroupId": 31
+    },
+    {
+        "id": 120,
+        "name": "Obras de captacion y/o transporte de agua potable",
+        "description": "Obras de captacion y/o transporte de agua potable",
+        "workTypeSubGroupId": 31
+    },
+    {
+        "id": 108,
+        "name": "Obras de mejora vial en autopistas / autovías",
+        "description": "Obras de mejora vial en autopistas / autovías",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 109,
+        "name": "Obras de mejora vial en caminos de acceso",
+        "description": "Obras de mejora vial en caminos de acceso",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 110,
+        "name": "Obras de mejora vial en caminos provinciales",
+        "description": "Obras de mejora vial en caminos provinciales",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 111,
+        "name": "Obras de mejora vial en desagües pluviales / alcantarillas / canales",
+        "description": "Obras de mejora vial en desagües pluviales / alcantarillas / canales",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 112,
+        "name": "Obras de mejora vial en empalmes / rotondas / intersecciónes / cruces / conexiónes",
+        "description": "Obras de mejora vial en empalmes / rotondas / intersecciónes / cruces / conexiónes",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 113,
+        "name": "Obras de mejora vial en puentes",
+        "description": "Obras de mejora vial en puentes",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 114,
+        "name": "Obras de mejora vial en rutas nacionales",
+        "description": "Obras de mejora vial en rutas nacionales",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 115,
+        "name": "Obras de mejora vial en rutas provinciales",
+        "description": "Obras de mejora vial en rutas provinciales",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 116,
+        "name": "Obras de mejora vial en travesías urbanas",
+        "description": "Obras de mejora vial en travesías urbanas",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 117,
+        "name": "Obras de mejora vial para circulación nocturna / iluminación",
+        "description": "Obras de mejora vial para circulación nocturna / iluminación",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 118,
+        "name": "Obras de mejora vial para semaforización",
+        "description": "Obras de mejora vial para semaforización",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 144,
+        "name": "Obras en astilleros",
+        "description": "Obras en astilleros",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 68,
+        "name": "Obras en edificios para investigación",
+        "description": "Obras en edificios para investigación",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 145,
+        "name": "Obras en puertos accesos",
+        "description": "Obras en puertos accesos",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 146,
+        "name": "Obras en puertos balizamiento",
+        "description": "Obras en puertos balizamiento",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 147,
+        "name": "Obras en puertos dragado",
+        "description": "Obras en puertos dragado",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 169,
+        "name": "Obras para el tratamiento de residuos de alta actividad",
+        "description": "Obras para el tratamiento de residuos de alta actividad",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 171,
+        "name": "Obras para el tratamiento de residuos de baja actividad",
+        "description": "Obras para el tratamiento de residuos de baja actividad",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 170,
+        "name": "Obras para el tratamiento de residuos de media actividad",
+        "description": "Obras para el tratamiento de residuos de media actividad",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 94,
+        "name": "Obras para la explotación de carbón",
+        "description": "Obras para la explotación de carbón",
+        "workTypeSubGroupId": 24
+    },
+    {
+        "id": 95,
+        "name": "Obras para la explotación de otros minerales",
+        "description": "Obras para la explotación de otros minerales",
+        "workTypeSubGroupId": 24
+    },
+    {
+        "id": 96,
+        "name": "Obras para la explotación de uranio",
+        "description": "Obras para la explotación de uranio",
+        "workTypeSubGroupId": 24
+    },
+    {
+        "id": 135,
+        "name": "Obras viales de señalamiento en autopistas / autovías",
+        "description": "Obras viales de señalamiento en autopistas / autovías",
+        "workTypeSubGroupId": 36
+    },
+    {
+        "id": 136,
+        "name": "Obras viales de señalamiento en rutas nacionales",
+        "description": "Obras viales de señalamiento en rutas nacionales",
+        "workTypeSubGroupId": 36
+    },
+    {
+        "id": 137,
+        "name": "Obras viales de señalamiento en rutas provinciales",
+        "description": "Obras viales de señalamiento en rutas provinciales",
+        "workTypeSubGroupId": 36
+    },
+    {
+        "id": 138,
+        "name": "Obras viales por emergencia en caminos provinciales",
+        "description": "Obras viales por emergencia en caminos provinciales",
+        "workTypeSubGroupId": 37
+    },
+    {
+        "id": 139,
+        "name": "Obras viales por emergencia en rutas provinciales",
+        "description": "Obras viales por emergencia en rutas provinciales",
+        "workTypeSubGroupId": 37
+    },
+    {
+        "id": 224,
+        "name": "Ordenamiento del tránsito y el transporte urbano",
+        "description": "Ordenamiento del tránsito y el transporte urbano",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 317,
+        "name": "Otras campañas",
+        "description": "Otras campañas",
+        "workTypeSubGroupId": 279
+    },
+    {
+        "id": 352,
+        "name": "Otras obras de cloacas",
+        "description": "Otras obras de cloacas",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 306,
+        "name": "Otras obras de Combustibles Hidrocarburíferos",
+        "description": "Otras obras de Combustibles Hidrocarburíferos",
+        "workTypeSubGroupId": 12
+    },
+    {
+        "id": 303,
+        "name": "Otras obras de Comunicaciones",
+        "description": "Otras obras de Comunicaciones",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 348,
+        "name": "Otras obras de defensa hídrica",
+        "description": "Otras obras de defensa hídrica",
+        "workTypeSubGroupId": 28
+    },
+    {
+        "id": 308,
+        "name": "Otras obras de distribución de gas",
+        "description": "Otras obras de distribución de gas",
+        "workTypeSubGroupId": 14
+    },
+    {
+        "id": 309,
+        "name": "Otras obras de distribución eléctrica",
+        "description": "Otras obras de distribución eléctrica",
+        "workTypeSubGroupId": 15
+    },
+    {
+        "id": 289,
+        "name": "Otras obras de edificios para la salud",
+        "description": "Otras obras de edificios para la salud",
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 82,
+        "name": "Otras obras de equipamiento urbano",
+        "description": "Otras obras de equipamiento urbano",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 311,
+        "name": "Otras obras de generación de energía eléctrica",
+        "description": "Otras obras de generación de energía eléctrica",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 316,
+        "name": "Otras obras de infraestructura minera",
+        "description": "Otras obras de infraestructura minera",
+        "workTypeSubGroupId": 24
+    },
+    {
+        "id": 301,
+        "name": "Otras obras de infraestructura recreativa y cultural",
+        "description": "Otras obras de infraestructura recreativa y cultural",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 375,
+        "name": "Otras obras de infraestructura y complementarias",
+        "description": "Otras obras de infraestructura y complementarias",
+        "workTypeSubGroupId": 29
+    },
+    {
+        "id": 370,
+        "name": "Otras obras de mejora vial",
+        "description": "Otras obras de mejora vial",
+        "workTypeSubGroupId": 30
+    },
+    {
+        "id": 374,
+        "name": "Otras obras de mejoramiento de viviendas",
+        "description": "Otras obras de mejoramiento de viviendas",
+        "workTypeSubGroupId": 26
+    },
+    {
+        "id": 353,
+        "name": "Otras obras de pluviales",
+        "description": "Otras obras de pluviales",
+        "workTypeSubGroupId": 38
+    },
+    {
+        "id": 354,
+        "name": "Otras obras de provisión de agua potable",
+        "description": "Otras obras de provisión de agua potable",
+        "workTypeSubGroupId": 39
+    },
+    {
+        "id": 360,
+        "name": "Otras obras de puertos y vías navegables",
+        "description": "Otras obras de puertos y vías navegables",
+        "workTypeSubGroupId": 40
+    },
+    {
+        "id": 312,
+        "name": "Otras obras de transporte de gas",
+        "description": "Otras obras de transporte de gas",
+        "workTypeSubGroupId": 42
+    },
+    {
+        "id": 314,
+        "name": "Otras obras de transporte eléctrico",
+        "description": "Otras obras de transporte eléctrico",
+        "workTypeSubGroupId": 43
+    },
+    {
+        "id": 355,
+        "name": "Otras obras de tratamiento de residuos",
+        "description": "Otras obras de tratamiento de residuos",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 349,
+        "name": "Otras obras en cursos de agua",
+        "description": "Otras obras en cursos de agua",
+        "workTypeSubGroupId": 31
+    },
+    {
+        "id": 361,
+        "name": "Otras obras para el transporte aéreo",
+        "description": "Otras obras para el transporte aéreo",
+        "workTypeSubGroupId": 41
+    },
+    {
+        "id": 363,
+        "name": "Otras obras para el transporte ferroviario",
+        "description": "Otras obras para el transporte ferroviario",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 366,
+        "name": "Otras obras para el transporte terrestre",
+        "description": "Otras obras para el transporte terrestre",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 92,
+        "name": "Otras obras para generación de energía eléctrica",
+        "description": "Otras obras para generación de energía eléctrica",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 125,
+        "name": "Otras Obras Viales de Construcción",
+        "description": "Otras Obras Viales de Construcción",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 373,
+        "name": "Otras obras viales de emergencia",
+        "description": "Otras obras viales de emergencia",
+        "workTypeSubGroupId": 37
+    },
+    {
+        "id": 372,
+        "name": "Otras obras viales de señalamiento",
+        "description": "Otras obras viales de señalamiento",
+        "workTypeSubGroupId": 36
+    },
+    {
+        "id": 287,
+        "name": "Otros edificios educativos",
+        "description": "Otros edificios educativos",
+        "workTypeSubGroupId": 16
+    },
+    {
+        "id": 291,
+        "name": "Otros edificios para la seguridad",
+        "description": "Otros edificios para la seguridad",
+        "workTypeSubGroupId": 18
+    },
+    {
+        "id": 293,
+        "name": "Otros edificios públicos",
+        "description": "Otros edificios públicos",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 296,
+        "name": "Otros edificios vinculados a actividades productivas o logísticas",
+        "description": "Otros edificios vinculados a actividades productivas o logísticas",
+        "workTypeSubGroupId": 278
+    },
+    {
+        "id": 218,
+        "name": "Otros equipamientos",
+        "description": "Otros equipamientos",
+        "workTypeSubGroupId": 215
+    },
+    {
+        "id": 214,
+        "name": "Otros equipamientos",
+        "description": "Otros equipamientos",
+        "workTypeSubGroupId": 210
+    },
+    {
+        "id": 204,
+        "name": "Otros equipamientos",
+        "description": "Otros equipamientos",
+        "workTypeSubGroupId": 200
+    },
+    {
+        "id": 209,
+        "name": "Otros equipamientos",
+        "description": "Otros equipamientos",
+        "workTypeSubGroupId": 205
+    },
+    {
+        "id": 297,
+        "name": "Otros espacios de protección/conservación ambiental",
+        "description": "Otros espacios de protección/conservación ambiental",
+        "workTypeSubGroupId": 197
+    },
+    {
+        "id": 298,
+        "name": "Otros espacios de renovación urbana",
+        "description": "Otros espacios de renovación urbana",
+        "workTypeSubGroupId": 195
+    },
+    {
+        "id": 322,
+        "name": "Otros programas de fomento de las actividades productivas/logísticas",
+        "description": "Otros programas de fomento de las actividades productivas/logísticas",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 334,
+        "name": "Otros programas/proyectos culturales",
+        "description": "Otros programas/proyectos culturales",
+        "workTypeSubGroupId": 281
+    },
+    {
+        "id": 335,
+        "name": "Otros programas/proyectos de Energía",
+        "description": "Otros programas/proyectos de Energía",
+        "workTypeSubGroupId": 253
+    },
+    {
+        "id": 343,
+        "name": "Otros programas/proyectos ecológicos o ambientales",
+        "description": "Otros programas/proyectos ecológicos o ambientales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 346,
+        "name": "Otros programas/proyectos educativos",
+        "description": "Otros programas/proyectos educativos",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 318,
+        "name": "Otros programas/proyectos sin inversión física",
+        "description": "Otros programas/proyectos sin inversión física",
+        "workTypeSubGroupId": 280
+    },
+    {
+        "id": 347,
+        "name": "Otros programas/proyectos turísticos",
+        "description": "Otros programas/proyectos turísticos",
+        "workTypeSubGroupId": 255
+    },
+    {
+        "id": 328,
+        "name": "Otros programas/proyectos urbanísticos",
+        "description": "Otros programas/proyectos urbanísticos",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 252,
+        "name": "Otros proyectos de reforma de la estructura/procedimientos administrativos gubernamentales",
+        "description": "Otros proyectos de reforma de la estructura/procedimientos administrativos gubernamentales",
+        "workTypeSubGroupId": 250
+    },
+    {
+        "id": 307,
+        "name": "Parque de Servicios para la industria petrolera",
+        "description": "Parque de Servicios para la industria petrolera",
+        "workTypeSubGroupId": 12
+    },
+    {
+        "id": 184,
+        "name": "Parque Industrial",
+        "description": "Parque Industrial",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 187,
+        "name": "Parques termales",
+        "description": "Parques termales",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 186,
+        "name": "Parques Urbanos",
+        "description": "Parques Urbanos",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 163,
+        "name": "Pasos a diferente nivel",
+        "description": "Pasos a diferente nivel",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 193,
+        "name": "Pasos a nivel",
+        "description": "Pasos a nivel",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 134,
+        "name": "Pavimentacion de calles",
+        "description": "Pavimentacion de calles",
+        "workTypeSubGroupId": 35
+    },
+    {
+        "id": 409,
+        "name": "Perforaciones de Agua",
+        "description": "Perforaciones de Agua",
+        "workTypeSubGroupId": 299
+    },
+    {
+        "id": 238,
+        "name": "Planes de Contingencia ante desastres ambientales",
+        "description": "Planes de Contingencia ante desastres ambientales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 50,
+        "name": "Plantas de tratamiento cloacales",
+        "description": "Plantas de tratamiento cloacales",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 172,
+        "name": "Plantas de tratamiento de residuos sólidos urbanos",
+        "description": "Plantas de tratamiento de residuos sólidos urbanos",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 168,
+        "name": "Plantas potabilizadoras",
+        "description": "Plantas potabilizadoras",
+        "workTypeSubGroupId": 45
+    },
+    {
+        "id": 52,
+        "name": "Plantas propano - aire",
+        "description": "Plantas propano - aire",
+        "workTypeSubGroupId": 12
+    },
+    {
+        "id": 364,
+        "name": "Playas de maniobras",
+        "description": "Playas de maniobras",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 181,
+        "name": "Playas de transferencia",
+        "description": "Playas de transferencia",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 188,
+        "name": "Playones Deportivos",
+        "description": "Playones Deportivos",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 408,
+        "name": "Plazas sustentables",
+        "description": "Plazas sustentables",
+        "workTypeSubGroupId": 298
+    },
+    {
+        "id": 99,
+        "name": "Plazas, plazoletas, balnearios, bicisendas",
+        "description": "Plazas, plazoletas, balnearios, bicisendas",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 242,
+        "name": "Programas de forestación",
+        "description": "Programas de forestación",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 241,
+        "name": "Programas de sensibilización ambiental",
+        "description": "Programas de sensibilización ambiental",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 233,
+        "name": "Programas educativos multiculturales",
+        "description": "Programas educativos multiculturales",
+        "workTypeSubGroupId": 228
+    },
+    {
+        "id": 246,
+        "name": "Promoción de la agricultura",
+        "description": "Promoción de la agricultura",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 247,
+        "name": "Promoción de la agricultura para autoconsumo",
+        "description": "Promoción de la agricultura para autoconsumo",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 323,
+        "name": "Promoción de la explotación de minerales",
+        "description": "Promoción de la explotación de minerales",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 249,
+        "name": "Promoción de la ganadería sustentable",
+        "description": "Promoción de la ganadería sustentable",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 248,
+        "name": "Promoción de la horticultura",
+        "description": "Promoción de la horticultura",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 344,
+        "name": "Promoción del uso de energías renovables y alternativas",
+        "description": "Promoción del uso de energías renovables y alternativas",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 324,
+        "name": "Promoción Industrial",
+        "description": "Promoción Industrial",
+        "workTypeSubGroupId": 245
+    },
+    {
+        "id": 237,
+        "name": "Protección de especies animales o vegetales",
+        "description": "Protección de especies animales o vegetales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 223,
+        "name": "Protección de inmuebles/ámbitos con valor patrimonial",
+        "description": "Protección de inmuebles/ámbitos con valor patrimonial",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 239,
+        "name": "Protección de recursos naturales",
+        "description": "Protección de recursos naturales",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 407,
+        "name": "Proyectos de fomento a la biodiversidad",
+        "description": "Proyectos de fomento a la biodiversidad",
+        "workTypeSubGroupId": 297
+    },
+    {
+        "id": 122,
+        "name": "Puentes",
+        "description": "Puentes",
+        "workTypeSubGroupId": 32
+    },
+    {
+        "id": 74,
+        "name": "Puestos Fronterizos",
+        "description": "Puestos Fronterizos",
+        "workTypeSubGroupId": 19
+    },
+    {
+        "id": 149,
+        "name": "Radares u otro equipamiento",
+        "description": "Radares u otro equipamiento",
+        "workTypeSubGroupId": 41
+    },
+    {
+        "id": 410,
+        "name": "Recolección de Agua de lluvia",
+        "description": "Recolección de Agua de lluvia",
+        "workTypeSubGroupId": 299
+    },
+    {
+        "id": 367,
+        "name": "Red de ciclovías",
+        "description": "Red de ciclovías",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 304,
+        "name": "Red de telefonía",
+        "description": "Red de telefonía",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 54,
+        "name": "Red nacional de fibra óptica",
+        "description": "Red nacional de fibra óptica",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 55,
+        "name": "Red provincial de fibra óptica",
+        "description": "Red provincial de fibra óptica",
+        "workTypeSubGroupId": 13
+    },
+    {
+        "id": 49,
+        "name": "Redes de desagües cloacales",
+        "description": "Redes de desagües cloacales",
+        "workTypeSubGroupId": 11
+    },
+    {
+        "id": 58,
+        "name": "Redes de Distribución de Electricidad",
+        "description": "Redes de Distribución de Electricidad",
+        "workTypeSubGroupId": 15
+    },
+    {
+        "id": 143,
+        "name": "Redes de provisión de agua potable",
+        "description": "Redes de provisión de agua potable",
+        "workTypeSubGroupId": 39
+    },
+    {
+        "id": 124,
+        "name": "Redes mixtas de desagües cloacales, agua potable y/o pluviales",
+        "description": "Redes mixtas de desagües cloacales, agua potable y/o pluviales",
+        "workTypeSubGroupId": 34
+    },
+    {
+        "id": 57,
+        "name": "Redes urbanas de distribución de gas ",
+        "description": "Redes urbanas de distribución de gas ",
+        "workTypeSubGroupId": 14
+    },
+    {
+        "id": 225,
+        "name": "Reforma de los tributos urbanos",
+        "description": "Reforma de los tributos urbanos",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 194,
+        "name": "Refugios",
+        "description": "Refugios",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 196,
+        "name": "Refuncionalización de grandes equipamientos urbanos",
+        "description": "Refuncionalización de grandes equipamientos urbanos",
+        "workTypeSubGroupId": 195
+    },
+    {
+        "id": 243,
+        "name": "Regulación de actividades contaminantes",
+        "description": "Regulación de actividades contaminantes",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 191,
+        "name": "Regulación/reemplazo de Redes aéreas",
+        "description": "Regulación/reemplazo de Redes aéreas",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 222,
+        "name": "Regularización dominial de terrenos",
+        "description": "Regularización dominial de terrenos",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 173,
+        "name": "Rellenos sanitarios",
+        "description": "Rellenos sanitarios",
+        "workTypeSubGroupId": 46
+    },
+    {
+        "id": 176,
+        "name": "Renovables - Biogas",
+        "description": "Renovables - Biogas",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 175,
+        "name": "Renovables - Biomasa",
+        "description": "Renovables - Biomasa",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 88,
+        "name": "Renovables - Fuente Eólica",
+        "description": "Renovables - Fuente Eólica",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 89,
+        "name": "Renovables - Fuente Hídrica",
+        "description": "Renovables - Fuente Hídrica",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 90,
+        "name": "Renovables - Fuente Solar",
+        "description": "Renovables - Fuente Solar",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 91,
+        "name": "Renovables - Fuente Térmica",
+        "description": "Renovables - Fuente Térmica",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 299,
+        "name": "Renovación de Areas Centrales",
+        "description": "Renovación de Areas Centrales",
+        "workTypeSubGroupId": 195
+    },
+    {
+        "id": 329,
+        "name": "Renovación Urbana/Cambio de usos",
+        "description": "Renovación Urbana/Cambio de usos",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 330,
+        "name": "Reordenamiento del transporte público de pasajeros",
+        "description": "Reordenamiento del transporte público de pasajeros",
+        "workTypeSubGroupId": 220
+    },
+    {
+        "id": 87,
+        "name": "Represas hidráulicas",
+        "description": "Represas hidráulicas",
+        "workTypeSubGroupId": 23
+    },
+    {
+        "id": 141,
+        "name": "Reservorios",
+        "description": "Reservorios",
+        "workTypeSubGroupId": 38
+    },
+    {
+        "id": 70,
+        "name": "Salas de primeros auxilios",
+        "description": "Salas de primeros auxilios",
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 98,
+        "name": "Salones de usos múltiples (SUM)",
+        "description": "Salones de usos múltiples (SUM)",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 190,
+        "name": "Semáforos",
+        "description": "Semáforos",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 192,
+        "name": "Señalización de la infraestructura vial urbana",
+        "description": "Señalización de la infraestructura vial urbana",
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 164,
+        "name": "Señalización ferroviaria",
+        "description": "Señalización ferroviaria",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 302,
+        "name": "Senderos peatonales",
+        "description": "Senderos peatonales",
+        "workTypeSubGroupId": 25
+    },
+    {
+        "id": 235,
+        "name": "Separación de residuos en orígen",
+        "description": "Separación de residuos en orígen",
+        "workTypeSubGroupId": 234
+    },
+    {
+        "id": 165,
+        "name": "Sistemas de alimentación eléctrica ferroviaria",
+        "description": "Sistemas de alimentación eléctrica ferroviaria",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 368,
+        "name": "Subterráneo",
+        "description": "Subterráneo",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 286,
+        "name": "Teatro",
+        "description": "Teatro",
+        "workTypeSubGroupId": 276
+    },
+    {
+        "id": 166,
+        "name": "Telecomunicaciones",
+        "description": "Telecomunicaciones",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 182,
+        "name": "Terminales de omnibus",
+        "description": "Terminales de omnibus",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 369,
+        "name": "Tranvía/LRT/Teleférico",
+        "description": "Tranvía/LRT/Teleférico",
+        "workTypeSubGroupId": 179
+    },
+    {
+        "id": 376,
+        "name": "Turismo",
+        "description": "Turismo",
+        "workTypeSubGroupId": 284
+    },
+    {
+        "id": 72,
+        "name": "Unidades penitenciarias",
+        "description": "Unidades penitenciarias",
+        "workTypeSubGroupId": 18
+    },
+    {
+        "id": 71,
+        "name": "Unidades sanitarias",
+        "description": "Unidades sanitarias",
+        "workTypeSubGroupId": 17
+    },
+    {
+        "id": 216,
+        "name": "Vehículos",
+        "description": "Vehículos",
+        "workTypeSubGroupId": 215
+    },
+    {
+        "id": 212,
+        "name": "Vehículos",
+        "description": "Vehículos",
+        "workTypeSubGroupId": 210
+    },
+    {
+        "id": 206,
+        "name": "Vehículos",
+        "description": "Vehículos",
+        "workTypeSubGroupId": 205
+    },
+    {
+        "id": 383,
+        "name": "Veredas",
+        "description": null,
+        "workTypeSubGroupId": 21
+    },
+    {
+        "id": 167,
+        "name": "Vías ferroviarias",
+        "description": "Vías ferroviarias",
+        "workTypeSubGroupId": 44
+    },
+    {
+        "id": 331,
+        "name": "Zonas Industriales",
+        "description": "Zonas Industriales",
+        "workTypeSubGroupId": 220
+    }
+]

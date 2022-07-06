@@ -1,0 +1,582 @@
+[
+    {
+     "id": 581,
+     "name": "Plan Federal de Agua y Saneamiento",
+     "value": "Plan Federal de Agua y Saneamiento"
+    },
+    {
+     "id": 582,
+     "name": "MIF Programa de Mejoramiento de Infraestructura Federal",
+     "value": "MIF Programa de Mejoramiento de Infraestructura Federal"
+    },
+    {
+     "id": 584,
+     "name": "Centros de Desarrollo Infantil",
+     "value": "Centros de Desarrollo Infantil"
+    },
+    {
+     "id": 585,
+     "name": "Plan Casa Común para Gobiernos Locales",
+     "value": "Plan Casa Común para Gobiernos Locales"
+    },
+    {
+     "id": 586,
+     "name": "Programa Parques Argentinos",
+     "value": "Programa Parques Argentinos"
+    },
+    {
+     "id": 588,
+     "name": "Plan Nacional de Restauración de Bosques Nativos",
+     "value": "Plan Nacional de Restauración de Bosques Nativos"
+    },
+    {
+     "id": 589,
+     "name": "Plan Federal de Erradicación de Basurales a Cielo Abierto (BCA)",
+     "value": "Plan Federal de Erradicación de Basurales a Cielo Abierto (BCA)"
+    },
+    {
+     "id": 590,
+     "name": "Plan Integral de Saneamiento Ambiental",
+     "value": "Plan Integral de Saneamiento Ambiental"
+    },
+    {
+     "id": 591,
+     "name": "PLAN DE OBRAS DE REHABILITACION DE CALZADA EN CORREDORES VIALES SA",
+     "value": "PLAN DE OBRAS DE REHABILITACION DE CALZADA EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 592,
+     "name": "PLAN DE OBRAS DE SEGURIDAD VIAL EN CORREDORES VIALES SA",
+     "value": "PLAN DE OBRAS DE SEGURIDAD VIAL EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 593,
+     "name": "PLAN DE TAREAS DE CONSERVACION Y MANTENIMIENTO EN CORREDORES VIALES SA",
+     "value": "PLAN DE TAREAS DE CONSERVACION Y MANTENIMIENTO EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 594,
+     "name": "PLAN DE PUESTA EN VALOR DEL PATRIMONIO VIAL Y ESTACIONES DE PEAJE EN CORREDORES VIALES SA",
+     "value": "PLAN DE PUESTA EN VALOR DEL PATRIMONIO VIAL Y ESTACIONES DE PEAJE EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 595,
+     "name": "PLAN DE CONTROL DE VIAS EN CORREDORES VIALES SA",
+     "value": "PLAN DE CONTROL DE VIAS EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 597,
+     "name": "Adaptación a los extremos climáticos",
+     "value": "Adaptación a los extremos climáticos"
+    },
+    {
+     "id": 598,
+     "name": "Agua para el desarrollo",
+     "value": "Agua para el desarrollo"
+    },
+    {
+     "id": 599,
+     "name": "Plan de agua y saneamiento",
+     "value": "Plan de agua y saneamiento"
+    },
+    {
+     "id": 600,
+     "name": "Argentina Hace ENOHSA",
+     "value": "Argentina Hace ENOHSA"
+    },
+    {
+     "id": 601,
+     "name": "Desarrollo de la Infraestructura Urbana en Municipios",
+     "value": "Desarrollo de la Infraestructura Urbana en Municipios"
+    },
+    {
+     "id": 602,
+     "name": "Infraestructura del Transporte - Accesibilidad",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 603,
+     "name": "Infraestructura del Transporte - MAS",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 604,
+     "name": "Infraestructura del Transporte - Resolución de cruces ferroviarios",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 605,
+     "name": "INFRAESTRUCTURA DEL TRANSPORTE - VAP III",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 606,
+     "name": "Infraestructura Patrimonial",
+     "value": "Infraestructura Patrimonial"
+    },
+    {
+     "id": 607,
+     "name": "Infraestructura Penitenciaria",
+     "value": "Infraestructura Penitenciaria"
+    },
+    {
+     "id": 608,
+     "name": "Infraestructura Sanitaria - Hospitales y Centros de Salud",
+     "value": "Infraestructura Sanitaria"
+    },
+    {
+     "id": 609,
+     "name": "Infraestructura Sanitaria - Red de Emergencia Sanitaria Federal: Hospitales Modulares",
+     "value": "Infraestructura Sanitaria"
+    },
+    {
+     "id": 610,
+     "name": "Infraestructura Sanitaria - Red de Emergencia Sanitaria Federal: Hospitales y Centros de Salud",
+     "value": "Infraestructura Sanitaria"
+    },
+    {
+     "id": 611,
+     "name": "Infraestructura Sanitaria - Red de Emergencia Sanitaria Federal: Unidades Penitenciarias",
+     "value": "Infraestructura Sanitaria"
+    },
+    {
+     "id": 612,
+     "name": "Infraestructura Sanitaria: CAS Turistico",
+     "value": "Infraestructura Sanitaria"
+    },
+    {
+     "id": 613,
+     "name": "Mejora y Desarrollo de la Infraestructura Municipal - BID 2929",
+     "value": "Mejora y Desarrollo de la Infraestructura Municipal (BID\/CAF)"
+    },
+    {
+     "id": 614,
+     "name": "Argentina Hace 2 - Federal",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 615,
+     "name": "Argentina Hace 2 - GBA+GLP",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 616,
+     "name": "Argentina Hace 2 - PBA",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 619,
+     "name": "Plan Nacional de Escuelas - BID 2940",
+     "value": "Plan de Infraestructura Educativa"
+    },
+    {
+     "id": 621,
+     "name": "Plan Nacional de Infraestructura Universitaria",
+     "value": "Plan de Infraestructura Educativa"
+    },
+    {
+     "id": 622,
+     "name": "PROARSA",
+     "value": "PROARSA"
+    },
+    {
+     "id": 623,
+     "name": "PROESA",
+     "value": "PROESA"
+    },
+    {
+     "id": 624,
+     "name": "PROFESA",
+     "value": "PROFESA"
+    },
+    {
+     "id": 625,
+     "name": "Argentina Hace 1",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 626,
+     "name": "Plan Nacional de Agua Potable y Saneamiento II (PAyS II)",
+     "value": "Plan Nacional de Agua Potable y Saneamiento II (PAyS II)"
+    },
+    {
+     "id": 627,
+     "name": "Programa de Agua y Saneamiento para Comunidades Menores II (PROAS II)",
+     "value": "Programa de Agua y Saneamiento para Comunidades Menores II (PROAS II)"
+    },
+    {
+     "id": 628,
+     "name": "Plan de Preinversión - Dirección Nacional de Preinversión",
+     "value": "Plan de Preinversión - Dirección Nacional de Preinversión"
+    },
+    {
+     "id": 629,
+     "name": "Infraestructura del Transporte - Paseo del Bajo",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 630,
+     "name": "Plan Argentina Hace 2021 - 40 Municipios de PBA",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 631,
+     "name": "PLAN ARGENTINA HACE 2021-FEDERAL",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 632,
+     "name": "PUEBLOS Y CENTROS HISTORICOS",
+     "value": "Pueblos y Centros Históricos"
+    },
+    {
+     "id": 633,
+     "name": "Programa de obras menores - PROMES",
+     "value": "Programa de obras menores - PROMES"
+    },
+    {
+     "id": 634,
+     "name": "Plan de Desarrollo Federal",
+     "value": "Plan de Desarrollo Federal"
+    },
+    {
+     "id": 635,
+     "name": "Plan Federal de Obras de Arquitectura",
+     "value": "Plan Federal de Obras de Arquitectura"
+    },
+    {
+     "id": 636,
+     "name": "INFRAESTRUCTURA DEL TRANSPORTE - TRAMITES ADMINISTRATIVOS MTR",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 637,
+     "name": "Plan Argentina Hace 2021 - PBA",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 638,
+     "name": "Plan Nacional de Infraestructura Universitaria - Fase IV",
+     "value": "Plan de Infraestructura Educativa"
+    },
+    {
+     "id": 639,
+     "name": "Plan Belgrano - Norte Grande. DNAPYS",
+     "value": "Plan Belgrano - Norte Grande. DNAPYS"
+    },
+    {
+     "id": 640,
+     "name": "Mejora y Desarrollo del la Infraestructura Municipal CAF",
+     "value": "Mejora y Desarrollo de la Infraestructura Municipal (BID\/CAF)"
+    },
+    {
+     "id": 641,
+     "name": "Infraestructura Patrimonial - Salamone",
+     "value": "Infraestructura Patrimonial"
+    },
+    {
+     "id": 643,
+     "name": "Plan de Emergencia para dar respuesta los efectos de “El Niño” FNP 27\/16",
+     "value": "Plan de Emergencia para dar respuesta los efectos de “El Niño” FNP 27\/16"
+    },
+    {
+     "id": 644,
+     "name": "Plan de Preinversión - Fuente Externa",
+     "value": "Plan de Preinversión - Fuente Externa"
+    },
+    {
+     "id": 645,
+     "name": "Centros Territoriales de Políticas de Género y Diversidad",
+     "value": "Centros Territoriales de Políticas de Género y Diversidad"
+    },
+    {
+     "id": 646,
+     "name": "PLAN DE OBRAS DE RECONVERSIÓN LUMINICA EN CORREDORES VIALES SA",
+     "value": "PLAN DE OBRAS DE RECONVERSIÓN LUMINICA EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 647,
+     "name": "Infraestructura del Transporte - Jerarquización de las arterias urbanas",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 648,
+     "name": "AH LOTE + SERVICIOS",
+     "value": "AH LOTE + SERVICIOS"
+    },
+    {
+     "id": 649,
+     "name": "PROFESA 2",
+     "value": "PROFESA"
+    },
+    {
+     "id": 650,
+     "name": "Plan de Infraestructura para Urbanizaciones Sociales - Lotes + Servicios",
+     "value": "Plan de Infraestructura para Urbanizaciones Sociales - Lotes + Servicios"
+    },
+    {
+     "id": 651,
+     "name": "Infraestructura del Transporte - Movilidad Activa y No Motorizada",
+     "value": "Infraestructura del Transporte"
+    },
+    {
+     "id": 652,
+     "name": "Aprovechamientos Multipropositos",
+     "value": "Aprovechamientos Multipropositos"
+    },
+    {
+     "id": 653,
+     "name": "AH - ENOHSA - Recambio de Redes",
+     "value": "Argentina Hace ENOHSA"
+    },
+    {
+     "id": 655,
+     "name": "AH ENOHSA - Unidades Sanitarias Basicas",
+     "value": "Argentina Hace ENOHSA"
+    },
+    {
+     "id": 656,
+     "name": "Argentina Hace - Plan de Obras Municipal 2021",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 658,
+     "name": "Intervención con Rutas Provinciales (Vialidad Nacional)",
+     "value": "Intervención con Rutas Provinciales (Vialidad Nacional)"
+    },
+    {
+     "id": 659,
+     "name": "Redes Conexas (Vialidad Nacional)",
+     "value": "Redes Conexas (Vialidad Nacional)"
+    },
+    {
+     "id": 660,
+     "name": "PROGRAMA DE APOYO AL FORTALECIMIENTO DE LA INFRAESTRUCTURA COMUNITARIA",
+     "value": "PROGRAMA DE APOYO AL FORTALECIMIENTO DE LA INFRAESTRUCTURA COMUNITARIA"
+    },
+    {
+     "id": 662,
+     "name": "Centros de Desarrollo Infantil",
+     "value": "Centros de Desarrollo Infantil"
+    },
+    {
+     "id": 663,
+     "name": "Argentina Hace 2021 - País",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 664,
+     "name": "Plan de Desarrollo de la Cuenca del Rio Bermejo",
+     "value": "Plan de Desarrollo de la Cuenca del Rio Bermejo"
+    },
+    {
+     "id": 665,
+     "name": "Centros de día Sedronar",
+     "value": "Centros de día Sedronar"
+    },
+    {
+     "id": 666,
+     "name": "Construcción de Autopistas y Autovías (Vialidad Nacional)",
+     "value": "Construcción de Autopistas y Autovías (Vialidad Nacional)"
+    },
+    {
+     "id": 667,
+     "name": "Construcción de Rutas Nuevas y Obras de Pavimentación (Vialidad Nacional)",
+     "value": "Construcción de Rutas Nuevas y Obras de Pavimentación (Vialidad Nacional)"
+    },
+    {
+     "id": 668,
+     "name": "Repavimentación de Rutas Nacionales (Vialidad Nacional)",
+     "value": "Repavimentación de Rutas Nacionales (Vialidad Nacional)"
+    },
+    {
+     "id": 669,
+     "name": "1-Mejoramientos y Viviendas MCH MIF",
+     "value": "UNOPS"
+    },
+    {
+     "id": 670,
+     "name": "2-Mejoramientos y Viviendas ACUMAR",
+     "value": "UNOPS"
+    },
+    {
+     "id": 671,
+     "name": "3-Apoyo a la gestión de Municipios",
+     "value": "UNOPS"
+    },
+    {
+     "id": 672,
+     "name": "4-Reconstrucción ante Desastres Naturales-Humanitarias",
+     "value": "UNOPS"
+    },
+    {
+     "id": 673,
+     "name": "5-Urbanizaciones Sostenibles",
+     "value": "UNOPS"
+    },
+    {
+     "id": 674,
+     "name": "6-Fortalecimiento Institucional",
+     "value": "UNOPS"
+    },
+    {
+     "id": 675,
+     "name": "7-Emergencia Sanitaria Covid-19",
+     "value": "UNOPS"
+    },
+    {
+     "id": 676,
+     "name": "Conservación mejorativa (Vialidad Nacional)",
+     "value": "Conservación mejorativa (Vialidad Nacional)"
+    },
+    {
+     "id": 677,
+     "name": "Mallas CREMA (Vialidad Nacional)",
+     "value": "Mallas CREMA (Vialidad Nacional)"
+    },
+    {
+     "id": 678,
+     "name": "Centros de Desarrollo Infantil II",
+     "value": "Centros de Desarrollo Infantil"
+    },
+    {
+     "id": 679,
+     "name": "Argentina Hace 2022 - País",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 680,
+     "name": "Argentina Hace - Plan de Obras Municipal 2022",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 681,
+     "name": "Argentina Hace 2022 \/ 2023 - GBA",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 682,
+     "name": "Programa Acueductos provinciales - BID AR-L 1346",
+     "value": "Programa Acueductos provinciales - BID AR-L 1346"
+    },
+    {
+     "id": 683,
+     "name": "Programa para el Desarrollo Productivo - Caminos Rurales (Vialidad Nacional)",
+     "value": "Programa para el Desarrollo Productivo - Caminos Rurales (Vialidad Nacional)"
+    },
+    {
+     "id": 684,
+     "name": "Construcción de Puentes y Alcantarillas (Vialidad Nacional)",
+     "value": "Construcción de Puentes y Alcantarillas (Vialidad Nacional)"
+    },
+    {
+     "id": 685,
+     "name": "2-Conexiones intradomiciliarias de agua y saneamiento (ENOHSA - UNOPS)",
+     "value": "2-Conexiones intradomiciliarias de agua y saneamiento (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 686,
+     "name": "1-Programa de erradicación de letrinas (ENOHSA - UNOPS)",
+     "value": "1-Programa de erradicación de letrinas (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 687,
+     "name": "3-Obras menores de saneamiento (ENOHSA - UNOPS)",
+     "value": "3-Obras menores de saneamiento (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 688,
+     "name": "4-Adquisiciones para saneamiento sostenible (ENOHSA - UNOPS)",
+     "value": "4-Adquisiciones para saneamiento sostenible (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 689,
+     "name": "5-Concientización sobre el uso racional del recurso hídrico (ENOHSA - UNOPS)",
+     "value": "5-Concientización sobre el uso racional del recurso hídrico (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 690,
+     "name": "6-Fortalecimiento institucional (ENOHSA - UNOPS)",
+     "value": "6-Fortalecimiento institucional (ENOHSA - UNOPS)"
+    },
+    {
+     "id": 691,
+     "name": "Argentina Hace País BP",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 692,
+     "name": "Argentina Hace SIPH",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 693,
+     "name": "Escuelas Técnicas Profesionales (E1)",
+     "value": "Escuelas Técnicas"
+    },
+    {
+     "id": 694,
+     "name": "PLAN DE CONSULTORIA DE PROYECTOS EJECUTIVOS EN CORREDORES VIALES SA",
+     "value": "PLAN DE CONSULTORIA DE PROYECTOS EJECUTIVOS EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 695,
+     "name": "Argentina Hace 2022 - PBA",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": 696,
+     "name": "Infraestructura Municipal y Comunal",
+     "value": "Infraestructura Municipal y Comunal"
+    },
+    {
+     "id": 697,
+     "name": "Plan de Infraestructura para Entramados Productivos Regionales",
+     "value": "Plan de Infraestructura para Entramados Productivos Regionales"
+    },
+    {
+     "id": 698,
+     "name": "PLAN DE OBRAS DE LUMINARIAS NUEVAS EN CORREDORES VIALES SA",
+     "value": "PLAN DE OBRAS DE LUMINARIAS NUEVAS EN CORREDORES VIALES SA"
+    },
+    {
+     "id": 699,
+     "name": "OBRAS MENORES - CORREDORES VIALES S.A.",
+     "value": "OBRAS MENORES - CORREDORES VIALES S.A."
+    },
+    {
+     "id": 700,
+     "name": "Agua, Saneamiento e Higiene en zonas rurales dispersas",
+     "value": "Agua, Saneamiento e Higiene en zonas rurales dispersas"
+    },
+    {
+     "id": 701,
+     "name": "Plan de Manejo de Cuencas Interjuridisccionales",
+     "value": "Plan de Manejo de Cuencas Interjuridisccionales"
+    },
+    {
+     "id": 702,
+     "name": "Plan Director de Drenajes Urbanos",
+     "value": "Plan Director de Drenajes Urbanos"
+    },
+    {
+     "id": 703,
+     "name": "Argentina Hace 2022 \/ 2023 - GBA BP",
+     "value": "Argentina Hace"
+    },
+    {
+     "id": null,
+     "name": "6-Fortalecimiento Institucional",
+     "value": "UNOPS"
+    },
+    {
+     "id": null,
+     "name": "Vialidad (Convenios con municipios)",
+     "value": "Vialidad (Convenios con municipios)"
+    },
+    {
+     "id": null,
+     "name": "Vialidad (Convenios con provincias - Direcciones Provinciales de vialidad)",
+     "value": "Vialidad (Convenios con provincias - Direcciones Provinciales de vialidad)"
+    }
+   ]

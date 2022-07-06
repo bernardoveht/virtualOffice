@@ -4,16 +4,16 @@ import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
 import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 import { ChartData } from 'chart.js';
-import { Observable, Subscription, take } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
-import { ProjectsFilter } from 'src/app/models/projects.model';
+import { ProjectDetails, ProjectsFilter } from 'src/app/models/projects.model';
 import { TipoUsuario } from 'src/app/constants/users/users';
 import { getProjectDataResume } from 'src/app/store/selectors/project/project.selector';
 import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
-import { ModalDetailComponent } from '../../shared/components/modals/modal-detail/modal-detail.component';
 import { ProjectWorkflowStatuses } from 'src/app/constants/emuns/project.enums';
+
 
 @Component({
   selector: 'app-mi-proyecto',
@@ -71,14 +71,13 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
 
   constructor(
     private readonly store: Store<AppState>,
-    private modalService: NgbModal
+    private modalService: NgbModal,
   ) { }
 
   ngOnInit(): void {    
 
     this.FetchUsers();
-    this.FetchProjects();
-    
+    this.FetchProjects();    
   }
   ngOnDestroy(): void {
     this.auth$?.unsubscribe();
@@ -172,13 +171,25 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     };
   }
   private handleDetails(project:any){
+
+    const {workTypeSubGroupId,workTypeGroupId,workTypeId} = project;
+
+    const param:ProjectDetails ={
+      workSubGroupId: workTypeSubGroupId,
+      workTypeGroupId: workTypeGroupId,
+      workTypeId: workTypeId
+    }
+
+    this.store.dispatch(projectActions.getDetailsProjects({ids:param}));
+
     const modalRef = this.modalService.open(ProyectoModalCardComponent,{
       windowClass: 'modal-orange with-border', 
       centered:true,
       size:'lg',
     });
     modalRef.componentInstance.data = {
-      project
+      project,
+      details:param
     };
   }
 
