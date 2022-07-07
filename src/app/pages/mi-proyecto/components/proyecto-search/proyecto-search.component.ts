@@ -82,8 +82,6 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
   ngOnInit(): void {
     this.auth$ = this.store.select(getUser).subscribe(user =>{
       if(user){
-        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
         this.filter.beneficiaryOrganismId = user.organismId ? '':user.organismId;
       }
     });

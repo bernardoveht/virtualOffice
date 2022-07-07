@@ -18,17 +18,26 @@
             <td *ngSwitchCase=4>Nivel 4</td>
             <td *ngSwitchCase=5>Nivel 5</td>
             <td *ngSwitchCase=255>Aprobado</td>
-          </ng-container>          
-          <td> $ {{el.totalCost}}</td>
-          <td>{{el.creationDate | date: 'dd/MM/yyyy'}}</td>
+          </ng-container> 
+          <td>{{el.creationDate | date: 'dd/MM/yyyy'}}</td>         
+          <td> $ {{el.totalCost}}</td>          
           <td>
             <div class="container px-2 text-center">
               <div class="row gx-2">
                 <div class="col">
-                  <span (click)="setDetail(el)">
+                  <span (click)="setDetail(el)" *ngIf="el.workflowStepStatus !== 3">
                     <div [ngClass]="{
-                      'no-observation' : el.workflowStep !== 3,
-                      'observation' : el.workflowStep == 3                      
+                      'borrador' : el.workflowStep === 0,
+                      'engestion' : el.workflowStep ===  1 || el.workflowStep === 2 || 
+                                    el.workflowStep === 3 || el.workflowStep === 4 || el.workflowStep === 5,
+                      'aprobado' : el.workflowStep === 255
+                   }">                      
+                     <i class="fa-solid fa-eye fa-2x"></i>
+                  </div>
+                  </span>
+                  <span (click)="setDetail(el)" *ngIf="el.workflowStepStatus === 3">
+                    <div [ngClass]="{
+                      'observado' : el.workflowStepStatus === 3
                    }">                      
                      <i class="fa-solid fa-eye fa-2x"></i>
                   </div>

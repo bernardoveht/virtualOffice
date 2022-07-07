@@ -37,7 +37,7 @@ export class ProjectsService {
 
     const token = sessionStorage.getItem('token');
     const filterAll:ProjectsFilter = {
-      provinces: filter.provinces,
+      provinces: [],
       page: 0,
       pageSize: 100000,
       orderBy: '',
@@ -47,7 +47,7 @@ export class ProjectsService {
       name: '',
       portfolioId: null,
       departments: [],
-      municipalities: filter.municipalities,
+      municipalities: [],
       localities: [],
       workTypeGroupId: null,
       workTypeSubgroupId: null,

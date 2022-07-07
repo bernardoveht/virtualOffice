@@ -18,7 +18,6 @@ export class PaginationGridComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger
     this.totalPages = this.totalCount / this.itemPerPage;
     this.pagesArray = Array.from({length: this.totalPages}, (_, i) => i);
     

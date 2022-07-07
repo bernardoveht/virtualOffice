@@ -22,8 +22,8 @@ export class ProyectoGridComponent implements OnInit {
     'Código SIPPE ',
     'Nombre',
     'Estado',
-    'Monto',
-    'Ultimo estado',
+    'Desde',
+    'Monto total vigente',
     'Accion'
   ];
   constructor(private readonly store:Store<AppState>,) { }
