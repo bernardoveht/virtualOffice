@@ -16,11 +16,19 @@
     align-items: center;
     padding-top:10px;
 }
-.observation{
+.observado{
    color: $red-app;
    cursor: pointer;
 }
-.no-observation{
+.borrador{
+   color:  $orange-ligth-app;
+   cursor: pointer;
+}
+.engestion{
+   color:   $orange-ligth-app;
+   cursor: pointer;
+}
+.aprobado{
    color: $orange-app;
    cursor: pointer;
 }

@@ -93,8 +93,6 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
         console.log('usuario privado');
       }
       if(user){
-        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
         this.filter.beneficiaryOrganismId =user.organismId ?user.organismId:'';
         this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
         // this.store.dispatch(projectActions.getAllProjects());      
@@ -147,18 +145,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     });
   }
 
-  public cardModal(project:any){
-
-    const {workflowStep} = project;
-    if( workflowStep === ProjectWorkflowStatuses.Observado) {
-      this.handleObservation(project);
-    } else {
-      this.handleDetails(project);
-    }
-
-  }
-
-  private handleObservation(project:any){
+  public handleDetails(project:any){
     const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
       windowClass: 'modal-orange', 
       size:'lg',
@@ -171,27 +158,4 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
       project
     };
   }
-  private handleDetails(project:any){
-
-    const {workTypeSubGroupId,workTypeGroupId,workTypeId} = project;
-
-    const param:ProjectDetails ={
-      workSubGroupId: workTypeSubGroupId,
-      workTypeGroupId: workTypeGroupId,
-      workTypeId: workTypeId
-    }
-
-    this.store.dispatch(projectActions.getDetailsProjects({ids:param}));
-
-    const modalRef = this.modalService.open(ProyectoModalCardComponent,{
-      windowClass: 'modal-orange with-border', 
-      centered:true,
-      size:'lg',
-    });
-    modalRef.componentInstance.data = {
-      project,
-      details:param
-    };
-  }
-
 }
