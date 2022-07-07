@@ -22,7 +22,8 @@ export class ObraGridComponent implements OnInit {
     'Monto Actualizado',
     'Avance Financiero ',
     'Avance Fisico',
-    'Fuente Financiamiento'
+    'Fuente Financiamiento',
+    'Acciones'
   ];
   constructor(private readonly store:Store<AppState>,private modalService:NgbModal) { } 
 

@@ -1,61 +1,87 @@
-
-.custom-table{
-    font-size: 0.8em;
-    th,td{
-        text-align: center;
-        vertical-align: middle;
-        padding:0.3rem 0.3rem;
+.custom-table {
+  font-size: 0.8em;
+  border-collapse:collapse;
+  thead {
+    background-color:$white;
+    th {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background-color:$white;
     }
-    .icon-action{
-        color:$strong-gray;
-        margin:0 10px;
-        cursor:pointer;
-    }
-    &.green-light{
-        th{
-            color:$green-light-app;
-        }
-        .view-icon{
-            color:$green-light-app;
-        }
-
-    }
-    &.orange{
-        th{
-            color:$orange-app;
-        }
-        .view-icon{
-            color:$orange-app;
-        }
-
+    th:after,
+    th:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
     }
 
-    &.violet{
-        th{
-            color:$violet-app;
-        }
-        .view-icon{
-            color:$violet-app;
-        }
-
-    }
-    &.green{
-        th{
-            color:$green-app;
-        }
-        .view-icon{
-            color:$green-app;
-        }
-
+    th:before {
+      top: -1px;
+      border-top: 1px solid $strong-gray;
     }
 
-    &.pink{
-        th{
-            color:$pink-app;
-        }
-        .view-icon{
-            color:$pink-app;
-        }
-
+    th:after {
+      bottom: -1px;
+      border-bottom: 2px solid black;
     }
+  }
+  tbody {
+    border-top:none !important;
+  }
+  th,
+  td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.3rem 0.3rem;
+  }
+  .icon-action {
+    color: $strong-gray;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  &.green-light {
+    th {
+      color: $green-light-app;
+    }
+    .view-icon {
+      color: $green-light-app;
+    }
+  }
+  &.orange {
+    th {
+      color: $orange-app;
+    }
+    .view-icon {
+      color: $orange-app;
+    }
+  }
+
+  &.violet {
+    th {
+      color: $violet-app;
+    }
+    .view-icon {
+      color: $violet-app;
+    }
+  }
+  &.green {
+    th {
+      color: $green-app;
+    }
+    .view-icon {
+      color: $green-app;
+    }
+  }
+
+  &.pink {
+    th {
+      color: $pink-app;
+    }
+    .view-icon {
+      color: $pink-app;
+    }
+  }
 }
