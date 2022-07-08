@@ -1,0 +1,46 @@
+@import"/src/sass/variables";
+
+.progress-total{
+    .amount-bar-progress{
+        min-height:auto;
+        padding:0;
+        margin-bottom: 5px;
+    }
+    padding:20px;
+    h3{
+        color:$blue-app;
+        font-size:1.5em;
+    }
+    .total-amount{
+        strong{
+            color:$blue-app;
+            font-size:1.5em;
+            text-align: right;
+            line-height: 1;
+            max-width: 100px;
+            display: block;
+            overflow-x: auto;
+            height: 30px;
+        }
+    }
+    &.green-light{
+        h3,.total-amount strong{
+            color:$green-light-app;
+        }
+
+    }
+    &.orange{
+        h3,.total-amount strong{
+            color:$orange-app;
+        }
+    }
+    &.violet{
+        h3,.total-amount strong{
+            color:$violet-app;
+        }
+    }
+ 
+}
+
+
+
