@@ -17,12 +17,26 @@
           <span class="badge rounded-pill badge-notification bg-po-fucsia">1</span>
         </a>
         <div class="username">
+          <li class="nav-item dropdown">
+            <a class="nav-link"   href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span>{{userName ? 'Hola ' + userName : ''}}</span>
+              <i class="fa-solid fa-user"></i>
+              <div class="org">
+                <span>{{orgName}}</span>
+              </div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><span  class="menu-item" (click)="logout()">Cerrar Sesion</span></li>
+            </ul>
+          </li>
+        </div>
+        <!-- <div class="username">
           <span>{{userName ? 'Hola ' + userName : ''}}</span>
           <i class="fa-solid fa-user"></i>
           <div class="org">
             <span>{{orgName}}</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

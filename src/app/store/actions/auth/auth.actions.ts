@@ -5,6 +5,7 @@ import { User } from 'src/app/models/users.model';
 enum AuthType {
     login = '[Auth] Login User',
     loginSuccess = '[Auth] Login User Success',
+    logout = '[Auth] Logout',
     loginError = '[Auth] Login User Error',
 }
 
@@ -15,6 +16,9 @@ export const login = createAction(
 export const loginSuccess = createAction(
     AuthType.loginSuccess,
     props<{ user:User,organisms:Organisms[]}>()
+);
+export const logout = createAction(
+    AuthType.logout,
 );
 export const loginError = createAction(
     AuthType.loginError, 

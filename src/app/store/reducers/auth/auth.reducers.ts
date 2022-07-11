@@ -28,6 +28,14 @@ const _authReducer = createReducer(
     user,
     organisms
   })),
+  on(actions.logout, (state) => ({
+    ...state ,
+    user: null,
+    organisms: [],
+    error: null,
+    username:null,
+    password:null
+  })),
   on(actions.loginError, (state, { payload }) => ({
     ...state,
     error: payload,

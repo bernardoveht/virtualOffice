@@ -19,8 +19,20 @@
     color:$blue-app;
     font-size:1.1em;
     padding-left:10px;
-    span{
+    span,a{
       padding-right:10px;
+    }
+    a,button{
+      color: inherit;
+    }
+    li{
+      list-style: none;
+    }
+    .menu-item{
+      padding-left: 13px;
+      font-size: 14px;
+      color: $blue-app;
+      cursor: pointer;
     }
   }
   .org{
