@@ -4,9 +4,19 @@
     border-radius: 1rem;
     height: 30px;
 
-    &.color-green{
+    &.react{
+        border-radius: 0;
+    }
+
+    &.green{
         .progress-bar{
             background-color:$green-app;
         }
     }
+    &.green-light{
+        .progress-bar{
+            background-color:$green-light-app;
+        }
+    }
 }
+

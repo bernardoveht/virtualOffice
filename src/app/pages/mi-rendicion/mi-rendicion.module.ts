@@ -8,6 +8,7 @@ import { RendicionesGridComponent } from './components/rendiciones-grid/rendicio
 import { RendicionesSearchComponent } from './components/rendiciones-search/rendiciones-search.component';
 import { RendicionDetailComponent } from './components/rendicion-detail/rendicion-detail.component';
 import { RendicionDesembolsoComponent } from './components/rendicion-desembolso/rendicion-desembolso.component';
+import { RendicionCertificadosComponent } from './components/rendicion-certificados/rendicion-certificados.component';
 
 
 
@@ -17,7 +18,8 @@ import { RendicionDesembolsoComponent } from './components/rendicion-desembolso/
     RendicionesGridComponent,
     RendicionesSearchComponent,
     RendicionDetailComponent,
-    RendicionDesembolsoComponent
+    RendicionDesembolsoComponent,
+    RendicionCertificadosComponent
   ],
   imports: [
     CommonModule,

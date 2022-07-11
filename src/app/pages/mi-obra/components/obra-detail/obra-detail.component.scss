@@ -53,6 +53,7 @@
   }
 }
 
+
 .amount{
   .with-icon {
     .item {
@@ -62,19 +63,6 @@
       }
     }
   }
-}
-
-.amount-bar-progress{
-    margin-bottom:20px;
-    .with-icon {
-        .item {
-            width: 100%;
-          border-left: 1px solid $green-app;
-          p {
-            font-size: 1.6em;
-          }
-        }
-      }
 }
 
 

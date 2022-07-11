@@ -55,7 +55,7 @@
           font-size: 24px;
           padding-right: 10px;
         }
-        .item{
+        .item {
           padding-left: 10px;
         }
       }
@@ -76,6 +76,51 @@
         margin-right: 5px !important;
         font-size: 12px !important;
         color: $text-gray !important;
+      }
+    }
+  }
+}
+
+.amount-bar-progress {
+  margin-bottom: 20px;
+  .with-icon {
+    .item {
+      width: 100%;
+      border-left: 1px solid $blue-app;
+      h5{
+        width:30%;
+      }
+      p {
+        font-size: 1.6em;
+      }
+    }
+  }
+  .with-text {
+    .item {
+      width: 100%;
+      display: flex;
+      flex-direction: row !important;
+      align-items: center;
+      h5{
+        min-width:80px;
+      }
+      p{
+        flex: 1;
+        margin-left:10px;
+      }
+    }
+  }
+  &.green {
+    .with-icon {
+      .item {
+        border-left: 1px solid $green-app;
+      }
+    }
+  }
+  &.green-light {
+    .with-icon {
+      .item {
+        border-left: 1px solid $green-light-app;
       }
     }
   }
@@ -104,7 +149,7 @@
     }
     .content {
       padding: 5px 15px;
-      width:100%;
+      width: 100%;
       .item {
         margin-bottom: 5px;
         .data-box {
@@ -126,18 +171,18 @@
         }
       }
       .action-item {
-        border-bottom:1px solid $blue-app;
-        display:flex;
+        border-bottom: 1px solid $blue-app;
+        display: flex;
         justify-content: space-between;
-        padding:3px 5px;
+        padding: 3px 5px;
         cursor: pointer;
-        &:hover{
-          color:$white;
-          background:$blue-app;
-          svg{
-            color:$white;
+        &:hover {
+          color: $white;
+          background: $blue-app;
+          svg {
+            color: $white;
           }
-          background-color:$light-gray;
+          background-color: $light-gray;
         }
         svg {
           font-size: 18px;
@@ -174,11 +219,11 @@
     }
     .body {
       .action-item {
-        &:hover{
-          color:$white;
-          background:$violet-app;
+        &:hover {
+          color: $white;
+          background: $violet-app;
         }
-        border-bottom:1px solid $violet-app;
+        border-bottom: 1px solid $violet-app;
         svg {
           color: $violet-app;
         }
@@ -202,10 +247,10 @@
     }
     .body {
       .action-item {
-        border-bottom:1px solid $green-app;
-        &:hover{
-          color:$white;
-          background:$green-app;
+        border-bottom: 1px solid $green-app;
+        &:hover {
+          color: $white;
+          background: $green-app;
         }
         svg {
           color: $green-app;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChartData } from 'chart.js';
 import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
+import { ProgressData } from 'src/app/shared/components/progress-data/progress-data.component';
 
 @Component({
   selector: 'app-mi-rendicion',
@@ -10,9 +11,9 @@ import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
 })
 export class MiRendicionComponent implements OnInit {
 
-  public title:string = "Mis rendiciones";
-  public icon:string = "file-invoice-dollar";
-  public titleColor:string = "green-light";
+  public title: string = "Mis rendiciones";
+  public icon: string = "file-invoice-dollar";
+  public titleColor: string = "green-light";
   public doughnutChartLabels: string[] = ['Iniciadas', 'En Observación', 'Adjudicada', 'Rechazadas', 'Contratadas'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -36,21 +37,27 @@ export class MiRendicionComponent implements OnInit {
       },
     ],
   };
-  public itemsTotal:AmountInformationItem[] = [
+  public itemsTotal: AmountInformationItem[] = [
     {
-      icon:'sack-dollar',
-      title:'Monto Total',
-      amount:7500,
-      type:'money'
+      icon: 'sack-dollar',
+      title: 'Monto Total',
+      amount: 7500,
+      type: 'money'
     },
   ]
-  public totalAlerts:AmountInformationItem[] = [
+  public totalAlerts: AmountInformationItem[] = [
     {
       icon: 'eye',
       title: 'Alertas',
       amount: 2,
-      type:'text'
+      type: 'text'
     }
+  ]
+
+  public progressData: ProgressData[] = [
+    { text: 'Iniciados', value: 30 },
+    { text: 'En gestión', value: 80 },
+    { text: 'Aprobados', value: 60 }
   ]
 
 
@@ -59,7 +66,7 @@ export class MiRendicionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public changeDetailMode(id:number){
+  public changeDetailMode(id: number) {
     this.router.navigate([`/pages/mis-rendiciones/detalle/${id}`]);
   }
 

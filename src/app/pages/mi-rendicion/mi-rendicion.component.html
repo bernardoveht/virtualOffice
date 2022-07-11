@@ -11,13 +11,15 @@
                 <i class="fa-solid fa-circle-plus"></i>
                 Cargar nuevo certificado
             </button>
-            <app-expediente [color]="titleColor"></app-expediente>
             <div class="mb-3">
                 <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
                     [totalAmount]="36"></app-graphic-data>
             </div>
             <div class="mb-3">
-                <app-amount-information [color]="titleColor" [items]="itemsTotal"></app-amount-information>
+                <div class="shadow">
+                    <app-progress-data [datasource]="progressData" [color]="titleColor"  [title]="'Certificados'"
+                    [totalAmount]="40"></app-progress-data>
+                </div>
             </div>
             <div class="mb-3">
                 <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>

@@ -1,11 +1,11 @@
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
+import { CommonModule, registerLocaleData } from "@angular/common";
+import { LOCALE_ID, NgModule } from "@angular/core";
 import { BreadcrumbComponent } from "./components/breadcrumb/breadcrumb.component";
 import { MenuComponent } from "./components/menu/menu.component";
 import { TaskComponent } from './components/task/task.component';
 import { NewsComponent } from './components/news/news.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbDatepickerI18n, NgbDatepickerModule, NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LineTitleComponent } from './components/line-title/line-title.component';
 import { DescriptionModalComponent } from './components/modals/description-modal/description-modal.component';
@@ -19,6 +19,10 @@ import { PaginationGridComponent } from './components/pagination-grid/pagination
 import { AmountInformationComponent } from "./components/amount-information/amount-information.component";
 import { ModalDetailComponent } from "./components/modals/modal-detail/modal-detail.component";
 import { LineChartsDataComponent } from './components/line-charts-data/line-charts-data.component';
+import { ProgressDataComponent } from './components/progress-data/progress-data.component';
+import localeEs from '@angular/common/locales/es';
+import { CustomDatepickerI18n } from "../services/datepicker/datepicker.service";
+registerLocaleData(localeEs, 'es');
 /**
  * List of modules to export
  */
@@ -47,13 +51,16 @@ import { LineChartsDataComponent } from './components/line-charts-data/line-char
   GraphicDataComponent,
   PaginationGridComponent,
   ModalDetailComponent,
-  LineChartsDataComponent
+  LineChartsDataComponent,
+  ProgressDataComponent
  ];
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [CommonModule,NgbDatepickerModule,RouterModule,NgChartsModule],
+   imports: [CommonModule,NgbDatepickerModule,RouterModule,NgChartsModule,NgbProgressbarModule],
    exports: [COMPONENTS_EXPORTED],
-   providers: []
+   providers:[
+    { provide: NgbDatepickerI18n, useClass: CustomDatepickerI18n }
+  ]
  })
  export class SharedModule {}
