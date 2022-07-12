@@ -20,14 +20,21 @@ export class AuthEffects {
     this.actions$.pipe(
       ofType(authActions.login),
       switchMap(actions => this.authService.login(actions.username,actions.password)),
-      switchMap(user => {
-        sessionStorage.setItem('token',user.access_token);
-        return this.authService.userInfo(user.access_token);
+      switchMap(userAuth => {
+        sessionStorage.setItem('token',userAuth.access_token);
+        return this.authService.userInfo(userAuth.access_token).pipe(
+          map(user =>{
+            return {
+              user,
+              userAuth
+            }
+          })
+        )
       }),
       switchMap(result => {
-        const filter:OrganismsFilter = { id:result.organismId};
+        const filter:OrganismsFilter = { id:result.user.organismId};
           return this.organismsService.getOrganismsSearch(filter).pipe(
-          map(org => authActions.loginSuccess({user:result,organisms:org})),
+          map(org => authActions.loginSuccess({user:result.user,organisms:org,credentials:result.userAuth})),
           catchError(error => of(authActions.loginError({payload:error})))
           )
       }),
