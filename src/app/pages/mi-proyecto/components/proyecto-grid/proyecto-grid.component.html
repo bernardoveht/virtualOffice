@@ -12,11 +12,11 @@
           <td>{{el.name}}</td>
           <ng-container [ngSwitch]="el.workflowStep">
             <td *ngSwitchCase=0>Borrador</td>
-            <td *ngSwitchCase=1>Nivel 1</td>
-            <td *ngSwitchCase=2>Nivel 2</td>
-            <td *ngSwitchCase=3>Nivel 3</td>
-            <td *ngSwitchCase=4>Nivel 4</td>
-            <td *ngSwitchCase=5>Nivel 5</td>
+            <td *ngSwitchCase=1>En Gestion</td>
+            <td *ngSwitchCase=2>En Gestion</td>
+            <td *ngSwitchCase=3>En Gestion</td>
+            <td *ngSwitchCase=4>En Gestion</td>
+            <td *ngSwitchCase=5>En Gestion</td>
             <td *ngSwitchCase=255>Aprobado</td>
           </ng-container> 
           <td>{{el.creationDate | date: 'dd/MM/yyyy'}}</td>         
