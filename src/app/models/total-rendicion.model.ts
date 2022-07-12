@@ -1,7 +1,7 @@
 export interface AmountInformationItem {
     icon:string;
     title:string;
-    amount:number | string;
+    amount:any;
     type:'percentage' | 'money' | 'date' | 'text';
 }
 

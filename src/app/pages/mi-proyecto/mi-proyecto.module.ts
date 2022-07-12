@@ -12,8 +12,7 @@ import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
 import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
-
-
+import {MatSortModule} from '@angular/material/sort';
 
 
 @NgModule({
@@ -34,6 +33,7 @@ import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail
     MiProyectoRoutingModule,
     NgbDatepickerModule,
     NgMultiSelectDropDownModule.forRoot(),
+    MatSortModule
   ]
 })
 export class MiProyectoModule { }

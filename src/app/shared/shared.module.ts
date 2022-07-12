@@ -22,6 +22,7 @@ import { LineChartsDataComponent } from './components/line-charts-data/line-char
 import { ProgressDataComponent } from './components/progress-data/progress-data.component';
 import localeEs from '@angular/common/locales/es';
 import { CustomDatepickerI18n } from "../services/datepicker/datepicker.service";
+import { PipeModule } from "../pipes/pipes.module";
 registerLocaleData(localeEs, 'es');
 /**
  * List of modules to export
@@ -52,13 +53,14 @@ registerLocaleData(localeEs, 'es');
   PaginationGridComponent,
   ModalDetailComponent,
   LineChartsDataComponent,
-  ProgressDataComponent
+  ProgressDataComponent,
+  
  ];
 
  @NgModule({
    declarations: [COMPONENTS_EXPORTED],
-   imports: [CommonModule,NgbDatepickerModule,RouterModule,NgChartsModule,NgbProgressbarModule],
-   exports: [COMPONENTS_EXPORTED],
+   imports: [CommonModule,NgbDatepickerModule,RouterModule,NgChartsModule,NgbProgressbarModule,PipeModule],
+   exports: [COMPONENTS_EXPORTED,PipeModule],
    providers:[
     { provide: NgbDatepickerI18n, useClass: CustomDatepickerI18n }
   ]
