@@ -1,6 +1,9 @@
-export enum apiUri {
-    login = 'https://test-ppo.obraspublicas.gob.ar/UM/connect',
-    projects ='https://test-ppo.obraspublicas.gob.ar/REST/api',
-    works ='https://test-obras-ppo.obraspublicas.gob.ar/REST/api',
-    organisms='https://test-unidades-territoriales.obraspublicas.gob.ar/REST/api'
+import urls from 'src/assets/config/config.json';
+
+
+export const apiUri = {
+    login : urls.login,
+    projects :urls.projects,
+    works :urls.works,
+    organisms:urls.organisms
   }
