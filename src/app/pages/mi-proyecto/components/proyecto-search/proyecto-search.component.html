@@ -41,8 +41,8 @@
                 </div>
             </div>
             <div class="form-group date-picker-group" (click)="datePicker.toggle()">
-                <label>Fecha (Desde/hasta)</label>
-                <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker"
+                <label>Fecha</label>
+                <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker" placeholder="Desde/Hasta..."
                     class="form-control simple-control orange" formControlName="fechaPresentacion" type="text" />
             </div>
         </div>

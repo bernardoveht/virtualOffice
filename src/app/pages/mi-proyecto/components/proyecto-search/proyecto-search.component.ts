@@ -82,7 +82,7 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
   ngOnInit(): void {
     this.auth$ = this.store.select(getUser).subscribe(user =>{
       if(user){
-        this.filter.beneficiaryOrganismId = user.organismId ? '':user.organismId;
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId:'';
       }
     });
 
