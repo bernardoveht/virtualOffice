@@ -13,11 +13,12 @@ import { appReducers } from './store/app.reducers';
 import { EffectsModule } from '@ngrx/effects';
 import { effectsArray } from './store/effects/index';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { LoginInterceptor } from './core/login/login.interceptor';
+import { LoginInterceptor } from './core/interceptors/login/login.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderInterceptor } from './core/interceptors/loader/loader.interceptor';
 import { LoaderComponent } from './core/loader/loader.component';
 import { localStorageSync } from 'ngrx-store-localstorage';
+import { AuthInterceptor } from './core/interceptors/auth/auth.interceptor';
 
 export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionReducer<any> {
   return localStorageSync({
@@ -50,6 +51,7 @@ const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer];
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoginInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]

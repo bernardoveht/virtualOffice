@@ -11,31 +11,17 @@ export class ProjectsService {
 
   constructor(private readonly http: HttpClient) { }
 
-
   public getProjectsAll() :  Observable<Projects[]>{
-    const token = sessionStorage.getItem('token');
-
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
-    return this.http.get<Projects[]>( apiUri.projects + '/projects/all',{headers: new HttpHeaders(header)});
+    return this.http.get<Projects[]>( apiUri.projects + '/projects/all');
   } 
   public getProjectsSearch(filter:ProjectsFilter) :  Observable<ProjectAllPaginator>{
 
-    const token = sessionStorage.getItem('token');
-
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
     return this.http.post<ProjectAllPaginator>(apiUri.projects + '/projects/search',
-      filter,
-      {headers : new HttpHeaders(header)});    
+      filter);  
   } 
   public getProjectsSearchAll(filter:ProjectsFilter) :  Observable<ProjectAllPaginator>{
 
-    const token = sessionStorage.getItem('token');
+
     const filterAll:ProjectsFilter = {
       provinces: [],
       page: 0,
@@ -73,40 +59,16 @@ export class ProjectsService {
       lastUpdateFrom: ''
     };
 
-
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
     return this.http.post<ProjectAllPaginator>(apiUri.projects + '/projects/search',
-      filterAll,
-      {headers : new HttpHeaders(header)});    
+      filterAll);    
   }
   public getDetailsSubGroup(id:number): Observable<any> {
-    const token = sessionStorage.getItem('token');
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
-
-    return this.http.get(`${apiUri.projects}/worktype/SubGroup/${id}`,{headers:header});
+    return this.http.get(`${apiUri.projects}/worktype/SubGroup/${id}`);
   }
   public getDetailsWorkType(): Observable<any> {
-    const token = sessionStorage.getItem('token');
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
-
-    return this.http.get(`${apiUri.projects}/worktype`,{headers:header});
+    return this.http.get(`${apiUri.projects}/worktype`);
   }
   public getDetailsWorkTypeGroup(): Observable<any> {
-    const token = sessionStorage.getItem('token');
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
-
-    return this.http.get(`${apiUri.projects}/worktypegroup`,{headers:header});
+    return this.http.get(`${apiUri.projects}/worktypegroup`);
   }
 }
