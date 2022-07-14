@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 import { Organisms } from 'src/app/models/organisms';
-import { User } from 'src/app/models/users.model';
+import { User, UserAuth } from 'src/app/models/users.model';
 
 enum AuthType {
     login = '[Auth] Login User',
@@ -15,7 +15,7 @@ export const login = createAction(
 );
 export const loginSuccess = createAction(
     AuthType.loginSuccess,
-    props<{ user:User,organisms:Organisms[]}>()
+    props<{ user:User,organisms:Organisms[],credentials:UserAuth}>()
 );
 export const logout = createAction(
     AuthType.logout,

@@ -1,12 +1,11 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import * as authReducer from '../../reducers/auth/auth.reducers';
+import {AuthState} from '../../reducers/auth/auth.reducers';
 
-export const getUserState = createFeatureSelector<authReducer.AuthState>('auth');
-export const getUserNameState = createFeatureSelector<authReducer.AuthState>('auth');
+const AUTH ='auth';
 
-export const getUser = createSelector(getUserState,(state:authReducer.AuthState) => state.user);
-
-export const getUserName = createSelector(getUserNameState, (state: authReducer.AuthState) => {
+export const getUserState = createFeatureSelector<AuthState>(AUTH);
+export const getUser = createSelector(getUserState,(state) => state.user);
+export const getUserName = createSelector(getUserState, (state) => {
     let name = 'Admin';
     let organisms ='';
     if(state?.user?.firstName){
@@ -20,5 +19,19 @@ export const getUserName = createSelector(getUserNameState, (state: authReducer.
     return {
         name,
         orgname:org
+    }
+});
+export const isAuthenticated = createSelector(getUserState,(state) => {
+ return state.user ? true : false;
+});
+export const getToken = createSelector(getUserState,(state)=>{
+    let expiration = true;
+    if(state.expirationToken){
+        expiration = (Math.floor((new Date).getTime() / 1000)) >= state.expirationToken;
+    }
+    return  {
+        expiration,
+        toke: state.credentials?.access_token ?? null,
+        refreshToken:state.credentials?.refresh_token ?? null
     }
 });
