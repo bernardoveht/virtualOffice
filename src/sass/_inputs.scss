@@ -24,6 +24,7 @@
 }
 
 .form-control.simple-control,
+.form-control.simple-control-select,
 .multiselect-dropdown {
   position: relative;
   margin-top: 10px;
@@ -53,6 +54,10 @@
   }
 }
 
+.form-control.simple-control-select {
+  padding-right: 35px;
+}
+
 .multiselect-dropdown {
   padding-right: 25px;
   .dropdown-list {
@@ -64,23 +69,23 @@
     border: none !important;
     padding: 0 !important;
   }
-
 }
- .multiselect-custom{
+.multiselect-custom {
   font-size: 11px;
-  position:relative;
-  .selected-item-container{
-    display:none !important; 
-
-   }
-   .multiselect-dropdown-count{
-      position:absolute;
-      bottom: 5px;
-      left: 13px;
-      z-index:1;
-      color: black;
-   }
- }
+  position: relative;
+  .selected-item-container {
+    display: none !important;
+  }
+  .multiselect-dropdown-count {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    position: absolute;
+    bottom: 8px;
+    left: 13px;
+    z-index: 1;
+    color: black;
+    font-size:12px;
+  }
+}
 
 .form-control.simple-area-control {
   margin-top: 10px;

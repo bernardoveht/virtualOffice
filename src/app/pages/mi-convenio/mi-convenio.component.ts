@@ -94,6 +94,7 @@ export class MiConvenioComponent implements OnInit, OnDestroy {
     this.router.navigate([`/pages/mis-convenios/detalle/${id}`]);
   }
 
+
   private FetchUsers() {
     this.auth$ = this.store.select(getUser).subscribe((user) => {
       if (user?.userType === TipoUsuario.Governmental) {
@@ -109,5 +110,6 @@ export class MiConvenioComponent implements OnInit, OnDestroy {
       }
     });
   }
+
 
 }

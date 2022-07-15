@@ -4,7 +4,6 @@ import { Store } from '@ngrx/store';
 import { ProjectsFilter } from 'src/app/models/projects.model';
 import { AppState } from 'src/app/store/app.reducers';
 import * as projectActions from 'src/app/store/actions/projects/projects.actions'
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { Subscription } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 import *  as organismos from 'src/data/organismos.json';
@@ -14,8 +13,8 @@ import *  as planes from 'src/data/planes.json';
   templateUrl: './proyecto-search.component.html',
   styleUrls: ['./proyecto-search.component.scss']
 })
-export class ProyectoSearchComponent implements OnInit ,OnDestroy{
-  public filter:ProjectsFilter = {
+export class ProyectoSearchComponent implements OnInit, OnDestroy {
+  public filter: ProjectsFilter = {
     provinces: [],
     page: 0,
     pageSize: 50,
@@ -52,74 +51,64 @@ export class ProyectoSearchComponent implements OnInit ,OnDestroy{
     lastUpdateFrom: ''
   };
 
-  public selectSettings:IDropdownSettings={};
-  private auth$:Subscription | undefined;
- 
+  private auth$: Subscription | undefined;
+
   public keepFilters = false;
-  public planesList:any=[]
-  public organismoList:any=[];
+  public planesList: any = [];
+  public organismoList: any = [];
   public openSearch = false;
   public searchForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private readonly store: Store<AppState>,
-    ) {
-      this.searchForm = this.fb.group({
-        sippe:[''],
-        // organismos:[this.planesList],
-        // planes:[this.planesList],
-        name:[''],
-        plan:[''],
-        fechaPresentacion:[''],
-  
-      })
-     }
+  ) {
+    this.searchForm = this.fb.group({
+      sippe: [''],
+      organismos:[''],
+      planes:[''],
+      name: [''],
+      plan: [''],
+      fechaPresentacion: [''],
+
+    })
+  }
   ngOnDestroy(): void {
-   this.auth$?.unsubscribe();
+    this.auth$?.unsubscribe();
   }
 
+
   ngOnInit(): void {
-    this.auth$ = this.store.select(getUser).subscribe(user =>{
-      if(user){
-        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId:'';
+    this.auth$ = this.store.select(getUser).subscribe(user => {
+      if (user) {
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
       }
     });
 
 
     this.organismoList = (organismos as any).default
     this.planesList = (planes as any).default
-
-    this.selectSettings = {
-      idField: 'id',
-      textField: 'name',
-      enableCheckAll: false,
-      allowSearchFilter: true,
-      searchPlaceholderText:'Buscar',
-      limitSelection:1      
-  };
   }
 
-  openSearcher(){
+  openSearcher() {
     this.openSearch = !this.openSearch;
   }
-  handleSearch(){
+  handleSearch() {
+    const { sippe, name } = this.searchForm.value;
+    const filters = { ...this.filter };
 
-    const {sippe,name} = this.searchForm.value;
-    const filters = {...this.filter};
+    filters.name = name ? name : '';
+    filters.id = sippe ? sippe : '';
 
-    filters.name = name ? name: '';
-    filters.id   =sippe? sippe :'';
-
-    this.store.dispatch(projectActions.getSearchProjects({filters}));
+    this.store.dispatch(projectActions.getSearchProjects({ filters }));
     this.openSearcher();
-    if(!this.keepFilters) {
+    if (!this.keepFilters) {
       this.searchForm.reset();
     }
   }
-  clearFilters(){
+  clearFilters() {
     this.searchForm.reset();
-    const filters = {...this.filter}
-    this.store.dispatch(projectActions.getSearchProjects({filters}));
+    const filters = { ...this.filter }
+    this.store.dispatch(projectActions.getSearchProjects({ filters }));
   }
 }

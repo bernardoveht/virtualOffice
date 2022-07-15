@@ -5,3 +5,9 @@ export enum ProjectWorkflowTypes {
     Protocolizado = 'Protocolizado',
 }
   
+export enum AgreementType {
+    Marco = 'Marco',
+    Financiamiento = 'Mayor Financiamiento',
+    Especifico = 'Especifico',
+}
+  

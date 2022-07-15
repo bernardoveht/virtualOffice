@@ -1,3 +1,5 @@
+import { AgreementType, ProjectWorkflowTypes } from "../constants/enums/agreements.enum";
+
 export interface Agreements {
   id: number;
   state:string;
@@ -42,4 +44,18 @@ export interface AgreementsAllPaginator{
   result:Agreements[];
   totalCount:number;
 }
+
+export const StateSelect = [
+  ProjectWorkflowTypes.Gestion,
+  ProjectWorkflowTypes.Mop,
+  ProjectWorkflowTypes.Organismo,
+  ProjectWorkflowTypes.Protocolizado
+]
+
+export const TypeSelect = [
+  AgreementType.Especifico,
+  AgreementType.Financiamiento,
+  AgreementType.Marco,
+]
+
 

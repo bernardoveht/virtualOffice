@@ -1,7 +1,7 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import * as actions from '../../actions/index';
 import { Agreements, AgreementsAllPaginator, AgreementsFilter } from '../../../models/agreements.model';
-import { ProjectWorkflowTypes } from 'src/app/constants/enums/agreements.enum';
+import { AgreementType, ProjectWorkflowTypes } from 'src/app/constants/enums/agreements.enum';
 
 
 export interface AgreementsState {
@@ -103,13 +103,13 @@ const checkState = (agreement: Agreements): string => {
 const checkType = (agreement: Agreements): string => {
   let response = '';
   if(agreement.agreementType === 1){
-    response = 'Marco'
+    response = AgreementType.Marco
   }
   if (agreement.agreementType === 2) {
     if (agreement.category.id === 62 || agreement.category.id === 63) {
-      response = 'Mayor Financiamiento'
+      response = AgreementType.Financiamiento
     } else {
-      response = 'Especifico'
+      response = AgreementType.Especifico
     }
   }
   return response;

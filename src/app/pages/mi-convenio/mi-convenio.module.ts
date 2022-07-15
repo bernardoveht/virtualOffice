@@ -12,6 +12,8 @@ import { ConvenioStateComponent } from './components/convenio-state/convenio-sta
 import { ConvenioDatosGeneralesComponent } from './components/convenio-datos-generales/convenio-datos-generales.component';
 import { ConvenioDatosGeneralesAlternativeComponent } from './components/convenio-datos-generales-alternative/convenio-datos-generales-alternative.component';
 import { MatSortModule } from '@angular/material/sort';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 
@@ -34,6 +36,8 @@ import { MatSortModule } from '@angular/material/sort';
     ReactiveFormsModule, 
     FormsModule,
     MiConvenioRoutingModule,
+    NgbDatepickerModule,
+    NgMultiSelectDropDownModule.forRoot(),
     MatSortModule
   ]
 })

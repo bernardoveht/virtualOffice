@@ -18,13 +18,12 @@
             </div>
             <div class="form-group">
                 <label>Organismo</label>
-                <div class="multiselect-custom">
-                    <span class="multiselect-dropdown-count" *ngIf="searchForm.get('organismo')?.value.length">
-                        Seleccionado: {{searchForm.get('organismo')?.value.length}}
-                    </span>
-                    <ng-multiselect-dropdown [settings]="selectSettings" [data]="organismoList">
-                    </ng-multiselect-dropdown>
-                </div>
+                <select formControlName="organismos" class="form-control form-select simple-control-select orange">
+                    <option [value]="orgs.value" *ngFor="let orgs of organismoList">
+                        {{orgs.name}}
+                    </option>
+                </select>
+
             </div>
             <div class="form-group">
                 <label>Nombre del Proyecto</label>
@@ -32,13 +31,11 @@
             </div>
             <div class="form-group">
                 <label>Planes</label>
-                <div class="multiselect-custom">
-                    <span class="multiselect-dropdown-count" *ngIf="searchForm.get('planes')?.value.length">
-                        Seleccionado: {{searchForm.get('planes')?.value.length}}
-                    </span>
-                    <ng-multiselect-dropdown [settings]="selectSettings" [data]="planesList" >
-                    </ng-multiselect-dropdown>
-                </div>
+                <select formControlName="planes" class="form-control form-select simple-control-select orange">
+                    <option [value]="plan.value" *ngFor="let plan of planesList">
+                        {{plan.name}}
+                    </option>
+                </select>
             </div>
             <div class="form-group date-picker-group" (click)="datePicker.toggle()">
                 <label>Fecha</label>
@@ -50,7 +47,8 @@
             <button type="button" class="clean-btn btn rounded-btn orange" (click)="clearFilters()">Limpiar</button>
             <button type="submit" class="search-btn btn rounded-btn orange">Buscar</button>
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [value]="keepFilters" (change)="keepFilters=!keepFilters">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                    [value]="keepFilters" (change)="keepFilters=!keepFilters">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Mantener filtros</label>
             </div>
         </div>
