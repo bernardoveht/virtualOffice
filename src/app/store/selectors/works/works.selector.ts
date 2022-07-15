@@ -1,26 +1,27 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import * as worksReducer from '../../reducers/works/works.reducers';
+import {WorksState} from '../../reducers/works/works.reducers';
 
-export const getWorksState = createFeatureSelector<worksReducer.WorksState>('works');
+const WORKS ='works';
 
-export const getWorks = createSelector(getWorksState,(state:worksReducer.WorksState) => state.works);
-export const getWorksDataResume = createSelector(getWorksState, (state: worksReducer.WorksState) => {
+export const getWorksState = createFeatureSelector<WorksState>(WORKS);
+
+export const getWorks = createSelector(getWorksState,(state) => state.works);
+export const getWorksDataResume = createSelector(getWorksState, (state) => {
 
     let totalCost = 0 ;   
-    let updatedAmount = 0 ; 
-    let totalWorks = 0 ;
-   
-    // state.works.forEach(element=>{
-    //     totalCost += element.totalCost;
-    //     updatedAmount +=element.updatedAmount;
-    // });
-
-    // const totalWorks = state.works.length; 
     
-    const result = {
+    const totalCount = state.workPaginator?.totalCount;
+
+
+    state.workPaginator?.result.forEach(element=>{
+        totalCost += element.updatedAmount;
+    });
+
+
+    
+
+    return {
         totalCost,
-        totalWorks,
-        updatedAmount
+        totalWorks:totalCount
     }
-    return result;
 });

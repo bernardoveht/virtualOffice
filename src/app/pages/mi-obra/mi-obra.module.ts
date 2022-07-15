@@ -13,6 +13,7 @@ import { NgbAccordionModule, NgbProgressbarModule } from '@ng-bootstrap/ng-boots
 import { FinancialAdvancesComponent } from './components/obra-detail/components/financial-advances/financial-advances.component';
 import { PhysicalAdvancesComponent } from './components/obra-detail/components/physical-advances/physical-advances.component';
 import { DocumentsDetailComponent } from './components/obra-detail/components/documents-detail/documents-detail.component';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -35,7 +36,8 @@ import { DocumentsDetailComponent } from './components/obra-detail/components/do
     FormsModule,
     MiObraRoutingModule,
     NgbProgressbarModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    MatSortModule
   ]
 })
 export class MiObraModule { }

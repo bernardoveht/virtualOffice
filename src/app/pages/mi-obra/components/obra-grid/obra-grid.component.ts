@@ -11,28 +11,26 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./obra-grid.component.scss']
 })
 export class ObraGridComponent implements OnInit {
-  public datasource = [1,2,3,4,5,6];
+
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
- // public datasource!: Works[];
-  public headelements:string [] = [
-    'Código identific. Interna ',
-    'Nombre',
-    'Etapa',
-    'Estado',
-    'Monto Actualizado',
-    'Avance Financiero ',
-    'Avance Fisico',
-    'Fuente Financiamiento',
-    'Acciones'
+  public datasource!: Works[];
+  public headelements:any = [
+    { name: 'Código SIPPE', sort: '' },
+    { name: 'ID Obra', sort: '' },
+    { name: 'Nombre', sort: '' },
+    { name: 'Estados', sort: '' },
+    { name: 'Desde', sort: '' },
+    { name: 'Monto total vigente', sort: '' },
+    { name: 'Acciones', sort: '' },
   ];
   constructor(private readonly store:Store<AppState>,private modalService:NgbModal) { } 
 
   ngOnInit(): void {
-    /*this.store.select('works').subscribe(({works})=>{
-      if(works){
-        this.datasource = works;
+    this.store.select('works').subscribe(({workPaginator})=>{
+      if(workPaginator){
+        this.datasource = workPaginator.result;
       }
-    });*/
+    });
   }
 
   public setDetail(id:number){

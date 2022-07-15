@@ -28,7 +28,8 @@ export class MiOrdenComponent implements OnInit {
     id: '',
     provinces: [],
     departments: [],
-    municipalities: []
+    municipalities: [],
+    beneficiaryOrganismId:''
   };
 
   private works$:Subscription | undefined;
