@@ -2,13 +2,13 @@
     <app-convenio-search></app-convenio-search>
     <app-line-title [title]="title" [icon]="icon" [color]="titleColor" [margin]="20"></app-line-title>
 
-    <div class="convenio-container row mt-2">
-        <div class="col-lg-12 col-xl-4" *ngIf="(datasourceTotal && datasourceTotal.length > 6)">
+    <div class="convenio-container row mt-2" *ngIf="datasourceTotal">
+        <div class="col-lg-12 col-xl-4" *ngIf="datasourceTotal > 6">
             <ng-container>
                 <app-expediente [color]="titleColor"></app-expediente>
                 <div class="mb-3">
                     <app-graphic-data [color]="titleColor" [graphicItems]="doughnutChartData" [title]="'Rendiciones'"
-                        [totalAmount]="36"></app-graphic-data>
+                        [totalAmount]="datasourceTotal"></app-graphic-data>
                 </div>
                 <div class="mb-3">
                     <app-amount-information [color]="'red'" [items]="totalAlerts"></app-amount-information>
@@ -16,8 +16,8 @@
             </ng-container>
         </div>
         <div
-            [class]="(datasourceTotal && datasourceTotal.length > 6) ? 'col-lg-12 col-xl-8' : 'col-12'">
-            <app-convenio-grid [datasource]="datasourceTotal" (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
+            [class]="datasourceTotal > 6 ? 'col-lg-12 col-xl-8' : 'col-12'">
+            <app-convenio-grid (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
         </div>
     </div>
 </div>

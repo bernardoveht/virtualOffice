@@ -11,6 +11,7 @@ import { ConvenioCardComponent } from './components/convenio-card/convenio-card.
 import { ConvenioStateComponent } from './components/convenio-state/convenio-state.component';
 import { ConvenioDatosGeneralesComponent } from './components/convenio-datos-generales/convenio-datos-generales.component';
 import { ConvenioDatosGeneralesAlternativeComponent } from './components/convenio-datos-generales-alternative/convenio-datos-generales-alternative.component';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -33,6 +34,7 @@ import { ConvenioDatosGeneralesAlternativeComponent } from './components/conveni
     ReactiveFormsModule, 
     FormsModule,
     MiConvenioRoutingModule,
+    MatSortModule
   ]
 })
 export class MiConvenioModule { }

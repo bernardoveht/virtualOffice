@@ -12,7 +12,7 @@ import { getProjectDataResume } from 'src/app/store/selectors/project/project.se
 import { ProyectoModalCardComponent } from './components/proyecto-modal-card/proyecto-modal-card.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProyectoModalDetailComponent } from './components/proyecto-modal-detail/proyecto-modal-detail.component';
-import { ProjectWorkflowStatuses } from 'src/app/constants/emuns/project.enums';
+import { ProjectWorkflowStatuses } from 'src/app/constants/enums/project.enum';
 
 
 @Component({
@@ -20,16 +20,16 @@ import { ProjectWorkflowStatuses } from 'src/app/constants/emuns/project.enums';
   templateUrl: './mi-proyecto.component.html',
   styleUrls: ['./mi-proyecto.component.scss']
 })
-export class MiProyectoComponent implements OnInit,OnDestroy {
+export class MiProyectoComponent implements OnInit, OnDestroy {
   public title: string = "Mis Proyectos";
   public icon: string = "file-invoice-dollar";
   public titleColor: string = "orange";
-  public doughnutChartLabels: string[] = ['Borrador','Observado','En gestion','Aprobado'];
+  public doughnutChartLabels: string[] = ['Borrador', 'Observado', 'En gestion', 'Aprobado'];
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: AmountInformationItem[] = [];
   public totalProjects = 0;
   public totalAlerts: AmountInformationItem[] = [];
-  public filter:ProjectsFilter = {
+  public filter: ProjectsFilter = {
     provinces: [],
     page: 0,
     pageSize: 50,
@@ -65,19 +65,18 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
     includeArchived: false,
     lastUpdateFrom: ''
   };
-  
-  private auth$:Subscription | undefined;
-  private projects$:Subscription | undefined;
+
+  private auth$: Subscription | undefined;
+  private projects$: Subscription | undefined;
 
   constructor(
     private readonly store: Store<AppState>,
     private modalService: NgbModal,
   ) { }
 
-  ngOnInit(): void {    
-
+  ngOnInit(): void {
     this.FetchUsers();
-    this.FetchProjects();    
+    this.FetchProjects();
   }
   ngOnDestroy(): void {
     this.auth$?.unsubscribe();
@@ -85,23 +84,22 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
   }
 
 
-  private FetchUsers(){
-    this.auth$ = this.store.select(getUser).subscribe((user) =>{
-      if(user?.userType === TipoUsuario.Governmental){
+  private FetchUsers() {
+    this.auth$ = this.store.select(getUser).subscribe((user) => {
+      if (user?.userType === TipoUsuario.Governmental) {
         console.log('usuario Guvermental');
       } else {
         console.log('usuario privado');
       }
-      if(user){
-        this.filter.beneficiaryOrganismId =user.organismId ?user.organismId:'';
-        this.store.dispatch(projectActions.getSearchProjects({filters:this.filter}));
+      if (user) {
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
+        this.store.dispatch(projectActions.getSearchProjects({ filters: this.filter }));
         // this.store.dispatch(projectActions.getAllProjects());      
       }
-   
     });
   }
-  private FetchProjects(){
-    this.projects$ = this.store.select(getProjectDataResume).subscribe((result)=>{ 
+  private FetchProjects() {
+    this.projects$ = this.store.select(getProjectDataResume).subscribe((result) => {
       this.doughnutChartData = {
         labels: this.doughnutChartLabels,
         datasets: [
@@ -130,7 +128,7 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
           icon: 'sack-dollar',
           title: 'Monto Total',
           amount: result.totalAmount,
-          type:'money'
+          type: 'money'
         },
       ];
       this.totalAlerts = [
@@ -138,18 +136,18 @@ export class MiProyectoComponent implements OnInit,OnDestroy {
           icon: 'eye',
           title: 'Alertas',
           amount: result.totalObserver,
-          type:'text'
+          type: 'text'
         }
       ]
 
     });
   }
 
-  public handleDetails(project:any){
-    const modalRef = this.modalService.open(ProyectoModalDetailComponent,{
-      windowClass: 'modal-orange', 
-      size:'lg',
-      centered:true
+  public handleDetails(project: any) {
+    const modalRef = this.modalService.open(ProyectoModalDetailComponent, {
+      windowClass: 'modal-orange',
+      size: 'lg',
+      centered: true
     });
     modalRef.componentInstance.color = 'orange';
     modalRef.componentInstance.title = 'Proyecto';

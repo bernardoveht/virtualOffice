@@ -5,10 +5,12 @@ export interface AppState {
   auth: reducers.AuthState;
   projects:reducers.ProjectsState;
   works:reducers.WorksState;
+  agreements:reducers.AgreementsState;
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
   auth: reducers.authReducer,
   projects:reducers.projectsReducer,
-  works:reducers.worksReducer
+  works:reducers.worksReducer,
+  agreements:reducers.agreementsReducer
 };

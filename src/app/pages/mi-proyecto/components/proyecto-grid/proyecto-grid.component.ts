@@ -28,17 +28,19 @@ export class ProyectoGridComponent implements OnInit {
     { name: 'Monto total vigente', sort: 'totalCost' },
     { name: 'Accion', sort: '' }
   ];
-  constructor(private readonly store: Store<AppState>,) { }
+  constructor(private readonly store: Store<AppState>) { }
 
 
   ngOnInit(): void {
     this.store.select('projects').subscribe((state) => {
       if (state.projectPaginator?.result && state.projectPaginator?.result.length) {
-        this.filters = { ...state.filters };;
+        this.filters = { ...state.filters };
         this.datasource = state.projectPaginator?.result;
         this.totalCount = state.projectPaginator?.totalCount;
         var table: any = document.getElementById('table-proyect');
-        // table.scrollTop = 0;
+        if (table) {
+          table.scrollTop = 0;
+        }
       }
     });
   }

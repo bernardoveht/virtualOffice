@@ -1,4 +1,4 @@
 export enum TipoUsuario {
-    Governmental = "Governmental",
-    Private="Private"
-  }
+  Governmental = "Governmental",
+  Private = "Private"
+}

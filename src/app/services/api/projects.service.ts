@@ -20,8 +20,6 @@ export class ProjectsService {
       filter);  
   } 
   public getProjectsSearchAll(filter:ProjectsFilter) :  Observable<ProjectAllPaginator>{
-
-
     const filterAll:ProjectsFilter = {
       provinces: [],
       page: 0,

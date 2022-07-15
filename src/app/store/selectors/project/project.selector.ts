@@ -1,5 +1,5 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { ProjectWorkflowStatuses, ProjectWorkflowSteps } from 'src/app/constants/emuns/project.enums';
+import { ProjectWorkflowStatuses, ProjectWorkflowSteps } from 'src/app/constants/enums/project.enum';
 import * as projectReducer from '../../reducers/projects/projects.reducers';
 
 export const getProjectState = createFeatureSelector<projectReducer.ProjectsState>('projects');
