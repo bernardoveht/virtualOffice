@@ -1,27 +1,23 @@
 
-<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource.length > 6; else cards">
+<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource && datasource.length > 6; else cards">
   <div id="table-proyect" class="table-scroll">
     <table class="table table-responsive table-bordered table-striped custom-table green">
       <thead>
         <tr class="theader">
-          <th scope="col" *ngFor="let head of headelements;">{{head}}</th>
+          <ng-container *ngFor="let head of headelements;">
+            <th *ngIf="head.sort" [mat-sort-header]="head.sort" scope="col">{{head.name}}</th>
+            <th *ngIf="!head.sort" scope="col">{{head.name}}</th>
+          </ng-container>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let el of datasource">
-          <!-- <td scope="row">{{el.internalWorkCode}}</td>
-          <td scope="row">{{el.name}}</td>
-          <td scope="row">{{el.step}}</td>
-          <td scope="row">{{el.state}}</td>
-          <td scope="row">{{el.updatedAmount}}</td> -->
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
-          <td scope="row">0</td>
+          <td scope="row">{{el.projectId}}</td>
+          <td>{{el.id}}</td>
+          <td>{{el.name}}</td>
+          <td>{{el.step}}</td>
+          <td>{{el.creationDate}}</td>
+          <td>{{el.updatedAmount}}</td>
           <td>
             <div class="container px-2 text-center">
               <div class="row gx-2">

@@ -122,4 +122,5 @@ export interface WorksFilter {
     provinces:       string[];
     departments:     any[];
     municipalities:  string[];
+    beneficiaryOrganismId:string;
 }

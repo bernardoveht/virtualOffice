@@ -21,7 +21,8 @@ export class ObraSearchComponent implements OnInit,OnDestroy {
     id: '',
     provinces: [],
     departments: [],
-    municipalities: []
+    municipalities: [],
+    beneficiaryOrganismId:''
   };
   public searchForm: FormGroup;
   public openSearch = false;

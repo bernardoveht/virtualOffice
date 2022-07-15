@@ -22,7 +22,7 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   public icon:string = "truck";
   public titleColor:string = "green";
   public detailModeId:number = 0;
-  public datasource = [1,2,3,4,5,6];
+  public datasourceTotal:number = 0;
   public itemsTotal: AmountInformationItem[] = [];
   public totalAlerts:AmountInformationItem[] = []
   public doughnutChartLabels: string[] = ['Al iniciar','En ejecución','Finalizadas','Rescindidas'];
@@ -55,7 +55,8 @@ export class MiObraComponent implements OnInit ,OnDestroy{
     id: '',
     provinces: [],
     departments: [],
-    municipalities: []
+    municipalities: [],
+    beneficiaryOrganismId:''
   };
 
   private works$:Subscription | undefined;
@@ -65,8 +66,8 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   constructor(private readonly store:Store<AppState>,private router:Router) { }
 
   ngOnInit(): void {
-      //this.fetchUser();
-      //this.fetchWorks();
+      this.fetchUser();
+      this.fetchWorks();
   }
   ngOnDestroy(): void {
     this.works$?.unsubscribe();
@@ -89,10 +90,8 @@ export class MiObraComponent implements OnInit ,OnDestroy{
         console.log('usuario privado');
       }
       if(user){
-        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
-        this.store.dispatch(worksActions.getSearchWorks({filter:this.filter}));
-   
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
+        this.store.dispatch(worksActions.getSearchWorks({filter:this.filter}));   
       }
    
     });
@@ -100,26 +99,35 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   private fetchWorks(){
     this.works$ = this.store.select(getWorksDataResume).subscribe((value)=>{
       if(value) {
+        this.datasourceTotal = value.totalWorks ?? 0;
         this.itemsTotal = [
           {
             icon:'sack-dollar',
-            title:'Monto Total',
+            title:'Monto Total Vigente',
             amount:value.totalCost,
             type:'money',
           },
-          {
-            icon:'file-invoice-dollar',
-            title:'Monto rendido acumulado',
-            amount:value.totalWorks,
-            type:'money'
-          },
-          {
-            icon:'file-lines',
-            title:'Porcentaje rendido acumulado',
-            amount:value.updatedAmount,
-            type:'percentage'
-          },
+          // {
+          //   icon:'file-invoice-dollar',
+          //   title:'Monto rendido acumulado',
+          //   amount:value.totalWorks,
+          //   type:'money'
+          // },
+          // {
+          //   icon:'file-lines',
+          //   title:'Porcentaje rendido acumulado',
+          //   amount:value.updatedAmount,
+          //   type:'percentage'
+          // },
         ];
+        this.totalAlerts = [
+          {
+            icon: 'eye',
+            title: 'Alertas',
+            amount: 3,
+            type: 'text'
+          }
+        ]
       }
     });
   }
