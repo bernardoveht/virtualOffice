@@ -11,35 +11,17 @@ export class WorksService {
 
   constructor(private readonly http: HttpClient) { }
 
-
-
   public getWorksAll() :  Observable<Works[]>{
-    const token = sessionStorage.getItem('token');
-
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-    };
     const params = new HttpParams()
       .set('page', 0)
       .set('pageSize', 50);
 
-    return this.http.get<Works[]>( apiUri.works + '/works/all',{headers: new HttpHeaders(header),params: params});
+    return this.http.get<Works[]>( apiUri.works + '/works/all');
   } 
 
-  public getWorksSearch(filter:WorksFilter) :  Observable<WorksAllPaginator>{
-
-    const token = sessionStorage.getItem('token');
-
-    const header = {
-      'Authorization':'Bearer '+ token,
-      'x-api-key':'abcdefg',
-      'Content-Type':'application/json'
-    };
-    
+  public getWorksSearch(filter:WorksFilter) :  Observable<WorksAllPaginator>{    
     return this.http.post<WorksAllPaginator>(apiUri.works + '/works/search',
-      filter,
-      {headers : new HttpHeaders(header)});    
+      filter);    
   } 
 
 
