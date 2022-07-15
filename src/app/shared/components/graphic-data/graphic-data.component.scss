@@ -27,6 +27,12 @@
         }
 
     }
+    &.green{
+        h3,.total-amount strong{
+            color:$green-app;
+        }
+
+    }
     &.orange{
         h3,.total-amount strong{
             color:$orange-app;

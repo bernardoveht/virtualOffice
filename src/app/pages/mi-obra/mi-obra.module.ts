@@ -14,6 +14,7 @@ import { FinancialAdvancesComponent } from './components/obra-detail/components/
 import { PhysicalAdvancesComponent } from './components/obra-detail/components/physical-advances/physical-advances.component';
 import { DocumentsDetailComponent } from './components/obra-detail/components/documents-detail/documents-detail.component';
 import { MatSortModule } from '@angular/material/sort';
+import { ObraModalDetailComponent } from './components/obra-modal-detail/obra-modal-detail.component';
 
 
 
@@ -24,6 +25,7 @@ import { MatSortModule } from '@angular/material/sort';
     ObraDetailComponent,
     ObraGridComponent,
     ObraSearchComponent,
+    ObraModalDetailComponent,
     ObraCardComponent,
     FinancialAdvancesComponent,
     PhysicalAdvancesComponent,

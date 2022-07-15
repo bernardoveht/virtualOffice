@@ -10,6 +10,7 @@ import { TipoUsuario } from 'src/app/constants/users/users';
 import { WorksFilter } from 'src/app/models/works.model';
 import { ChartData } from 'chart.js';
 import { Router } from '@angular/router';
+import { WorkSteps } from 'src/app/constants/enums/work.enum';
 
 @Component({
   selector: 'app-mi-obra',
@@ -20,32 +21,13 @@ export class MiObraComponent implements OnInit ,OnDestroy{
 
   public title:string = "Mis Obras";
   public icon:string = "truck";
-  public titleColor:string = "green";
+  public titleColor:string = 'green';
   public detailModeId:number = 0;
   public datasourceTotal:number = 0;
   public itemsTotal: AmountInformationItem[] = [];
   public totalAlerts:AmountInformationItem[] = []
-  public doughnutChartLabels: string[] = ['Al iniciar','En ejecución','Finalizadas','Rescindidas'];
-  public doughnutChartData: ChartData<'doughnut'> = {
-    labels: this.doughnutChartLabels,
-    datasets: [
-      {
-        data: [5, 8, 7, 10],
-        backgroundColor: [
-          'rgb(220, 241, 239)',
-          'rgb(185, 226, 224)',
-          'rgb(132, 205, 200)',
-          'rgb(80, 184, 177)'
-        ],
-        hoverBackgroundColor: [
-          'rgba(220, 241, 239,0.8)',
-          'rgba(185, 226, 224,0.8)',
-          'rgba(132, 205, 200,0.8)',
-          'rgba(80, 184, 177,0.8)'
-        ]
-      },
-    ],
-  };
+  public doughnutChartLabels: string[] = [WorkSteps[3],WorkSteps[1],WorkSteps[2]];
+  public doughnutChartData!: ChartData<'doughnut'>;
 
   public filter:WorksFilter = {
     page: 0,
@@ -99,6 +81,26 @@ export class MiObraComponent implements OnInit ,OnDestroy{
   private fetchWorks(){
     this.works$ = this.store.select(getWorksDataResume).subscribe((value)=>{
       if(value) {
+        this.doughnutChartData ={
+          labels: this.doughnutChartLabels,
+          datasets: [
+            {
+              data: value.levels,
+              backgroundColor: [
+                'rgb(220, 241, 239)',
+                'rgb(185, 226, 224)',
+                'rgb(132, 205, 200)',
+                'rgb(80, 184, 177)'
+              ],
+              hoverBackgroundColor: [
+                'rgba(220, 241, 239,0.8)',
+                'rgba(185, 226, 224,0.8)',
+                'rgba(132, 205, 200,0.8)',
+                'rgba(80, 184, 177,0.8)'
+              ]
+            },
+          ],
+        };
         this.datasourceTotal = value.totalWorks ?? 0;
         this.itemsTotal = [
           {
@@ -107,18 +109,6 @@ export class MiObraComponent implements OnInit ,OnDestroy{
             amount:value.totalCost,
             type:'money',
           },
-          // {
-          //   icon:'file-invoice-dollar',
-          //   title:'Monto rendido acumulado',
-          //   amount:value.totalWorks,
-          //   type:'money'
-          // },
-          // {
-          //   icon:'file-lines',
-          //   title:'Porcentaje rendido acumulado',
-          //   amount:value.updatedAmount,
-          //   type:'percentage'
-          // },
         ];
         this.totalAlerts = [
           {

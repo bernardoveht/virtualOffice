@@ -1,4 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
+import { WorkSteps } from 'src/app/constants/enums/work.enum';
 import { Works, WorksAllPaginator, WorksFilter } from "src/app/models/works.model";
 import * as actions from '../../actions/index';
 
@@ -30,10 +31,18 @@ export interface WorksState {
       ...state,
       filters:filter
     })),
-    on(actions.getSearchWorksSuccess, (state, { works }) => ({
-      ...state,
-      workPaginator:works
-    })),
+    on(actions.getSearchWorksSuccess, (state, { works }) => {
+        const totalCount = works.totalCount;
+        const result = works.result.filter(x=> x.step != WorkSteps.Rescindida);
+
+      return {
+        ...state,
+        workPaginator:{
+          result,
+          totalCount
+        }    
+      }; 
+    }),
     on(actions.projectsError, (state, { payload }) => ({
       ...state,
       error: payload,

@@ -1,0 +1,45 @@
+<div class="modal-header">
+    <div class="title-icon">
+        <i [class]="'fa-solid fa-' + icon"></i>
+        <h4 class="modal-title">{{title}}</h4>
+    </div>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div [class]="'modal-body ' + color">
+    <form>
+        <div class="form-container d-flex">
+            <div class="left-data">
+                <div class="form-group">
+                    <label>Código SIPPE</label>
+                    <input class="form-control line-control" type="text" readonly [value]="work.projectId" />
+                </div>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <textarea rows="1" resize class="form-control line-control"
+                        readonly>{{work.name}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label>Estado</label>
+                    <input class="form-control line-control" type="text" readonly [value]="workSteps[work.step]" />
+                </div>
+            </div>
+            <div class="right-data">
+                <label class="title-item">Observaciones</label>
+                <div class="comments">
+                    <p class="alert">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>17/10/2020:</span> Lorem ipsum dolor.
+                    </p>
+                    <p><span>16/10/2020:</span> Agregar ticket Nº134</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-cancel" (click)="activeModal.close('Close click')">{{cancelBtnText}}</button>
+    <button *ngIf="actionButton" class="btn btn-success" type="button"
+        (click)="itemActionButton()">{{successBtnText}}</button>
+</div>

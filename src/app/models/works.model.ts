@@ -114,13 +114,13 @@ export interface Observation {
 }
 
 export interface WorksFilter {
-    page:            number;
-    pageSize:        number;
-    orderBy:         string;
-    orderDescending: boolean;
-    id:              string;
-    provinces:       string[];
-    departments:     any[];
-    municipalities:  string[];
-    beneficiaryOrganismId:string;
+    page?:            number;
+    pageSize?:        number;
+    orderBy?:         string;
+    orderDescending?: boolean;
+    id?:              string;
+    provinces?:       string[];
+    departments?:     any[];
+    municipalities?:  string[];
+    beneficiaryOrganismId?:string;
 }
