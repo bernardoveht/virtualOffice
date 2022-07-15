@@ -55,7 +55,8 @@ export class MiObraComponent implements OnInit ,OnDestroy{
     id: '',
     provinces: [],
     departments: [],
-    municipalities: []
+    municipalities: [],
+    beneficiaryOrganismId:''
   };
 
   private works$:Subscription | undefined;
@@ -89,10 +90,8 @@ export class MiObraComponent implements OnInit ,OnDestroy{
         console.log('usuario privado');
       }
       if(user){
-        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
-        this.store.dispatch(worksActions.getSearchWorks({filter:this.filter}));
-   
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
+        this.store.dispatch(worksActions.getSearchWorks({filter:this.filter}));   
       }
    
     });

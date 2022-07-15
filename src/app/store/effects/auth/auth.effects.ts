@@ -21,7 +21,6 @@ export class AuthEffects {
       ofType(authActions.login),
       switchMap(actions => this.authService.login(actions.username,actions.password)),
       switchMap(userAuth => {
-        sessionStorage.setItem('token',userAuth.access_token);
         return this.authService.userInfo(userAuth.access_token).pipe(
           map(user =>{
             return {
