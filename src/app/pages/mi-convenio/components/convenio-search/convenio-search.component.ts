@@ -7,6 +7,8 @@ import { AppState } from 'src/app/store/app.reducers';
 import *  as planes from 'src/data/planes-convenios.json';
 import { StateSelect, TypeSelect } from '../../../../models/agreements.model';
 import * as agreementsActions from 'src/app/store/actions/agreements/agreements.actions'
+import { SelectSettings } from 'src/app/constants/selects';
+import { SelectSettingsMultiple } from '../../../../constants/selects';
 
 @Component({
   selector: 'app-convenio-search',
@@ -15,7 +17,8 @@ import * as agreementsActions from 'src/app/store/actions/agreements/agreements.
 })
 export class ConvenioSearchComponent implements OnInit {
   public keepFilters = false;
-  public selectSettings: IDropdownSettings = {};
+  public selectSettings: IDropdownSettings = SelectSettings;
+  public selectSettingMultiple: IDropdownSettings = SelectSettingsMultiple;
   private auth$: Subscription | undefined;
   public openSearch = false;
   public searchForm!: FormGroup;
@@ -39,16 +42,7 @@ export class ConvenioSearchComponent implements OnInit {
     this.initSearchForm();
   }
 
-  ngOnInit(): void {
-    this.selectSettings = {
-      idField: 'id',
-      textField: 'name',
-      enableCheckAll: false,
-      searchPlaceholderText: 'Buscar',
-      showSelectedItemsAtTop:true,
-      allowSearchFilter: true,
-    };
-  }
+  ngOnInit(): void {}
 
   public openSearcher() {
     this.openSearch = !this.openSearch;
