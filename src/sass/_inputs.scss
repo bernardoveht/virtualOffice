@@ -76,6 +76,14 @@
   .selected-item-container {
     display: none !important;
   }
+  .dropdown-list {
+    overflow: hidden;
+    .filter-textbox {
+      input {
+        padding-left: 0 !important;
+      }
+    }
+  }
   .multiselect-dropdown-count {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     position: absolute;
@@ -83,7 +91,7 @@
     left: 13px;
     z-index: 1;
     color: black;
-    font-size:12px;
+    font-size: 12px;
   }
 }
 

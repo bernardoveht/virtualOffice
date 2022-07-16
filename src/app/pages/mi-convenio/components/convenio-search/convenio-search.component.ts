@@ -45,6 +45,8 @@ export class ConvenioSearchComponent implements OnInit {
       textField: 'name',
       enableCheckAll: false,
       searchPlaceholderText: 'Buscar',
+      showSelectedItemsAtTop:true,
+      allowSearchFilter: true,
     };
   }
 

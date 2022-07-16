@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 import *  as organismos from 'src/data/organismos.json';
 import *  as planes from 'src/data/planes.json';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 @Component({
   selector: 'app-proyecto-search',
   templateUrl: './proyecto-search.component.html',
@@ -58,6 +59,7 @@ export class ProyectoSearchComponent implements OnInit, OnDestroy {
   public organismoList: any = [];
   public openSearch = false;
   public searchForm: FormGroup;
+  public selectSettings: IDropdownSettings = {};
 
   constructor(
     private fb: FormBuilder,
@@ -84,8 +86,16 @@ export class ProyectoSearchComponent implements OnInit, OnDestroy {
         this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
       }
     });
+    this.selectSettings = {
+      idField: 'id',
+      textField: 'name',
+      enableCheckAll: false,
+      searchPlaceholderText: 'Buscar',
+      showSelectedItemsAtTop:true,
+      allowSearchFilter: true,
+      limitSelection:1,
 
-
+    };
     this.organismoList = (organismos as any).default
     this.planesList = (planes as any).default
   }

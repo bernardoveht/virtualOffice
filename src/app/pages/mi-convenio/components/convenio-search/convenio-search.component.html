@@ -21,9 +21,14 @@
             </div>
             <div class="form-group">
                 <label>Tipo</label>
-                <div class="multiselect-custom">
+                 <div class="multiselect-custom">
                     <span class="multiselect-dropdown-count" *ngIf="searchForm.get('tipo')?.value">
-                        Seleccionado: {{searchForm.get('tipo')?.value.length}}
+                        <ng-container *ngIf="searchForm.get('tipo')?.value.length === 1">
+                            {{searchForm.get('tipo')?.value | slice:0:20}} {{searchForm.get('tipo')?.value.length > 20 ? '...' : ''}}
+                        </ng-container>
+                        <ng-container *ngIf="searchForm.get('tipo')?.value.length > 1">
+                            Seleccionado: {{searchForm.get('tipo')?.value.length}}
+                        </ng-container>
                     </span>
                     <ng-multiselect-dropdown formControlName="tipo" [settings]="selectSettings" [data]="tipoList">
                     </ng-multiselect-dropdown>
@@ -33,7 +38,12 @@
                 <label>Estado</label>
                 <div class="multiselect-custom">
                     <span class="multiselect-dropdown-count" *ngIf="searchForm.get('estado')?.value">
-                        Seleccionado: {{searchForm.get('estado')?.value.length}}
+                        <ng-container *ngIf="searchForm.get('estado')?.value.length === 1">
+                            {{searchForm.get('estado')?.value | slice:0:20}} {{searchForm.get('estado')?.value.length > 20 ? '...' : ''}}
+                        </ng-container>
+                        <ng-container *ngIf="searchForm.get('estado')?.value.length > 1">
+                            Seleccionado: {{searchForm.get('estado')?.value.length}}
+                        </ng-container>
                     </span>
                     <ng-multiselect-dropdown formControlName="estado" [settings]="selectSettings" [data]="estadoList">
                     </ng-multiselect-dropdown>
@@ -41,16 +51,23 @@
             </div>
             <div class="form-group">
                 <label>Planes</label>
-                <select formControlName="planes" class="form-control form-select simple-control-select violet">
-                    <option [value]="plan.value" *ngFor="let plan of planesList">
-                        {{plan.name}}
-                    </option>
-                </select>
+                <div class="multiselect-custom">
+                    <span class="multiselect-dropdown-count" *ngIf="searchForm.get('planes')?.value">
+                        <ng-container *ngIf="searchForm.get('planes')?.value.length === 1">
+                            {{searchForm.get('planes')?.value[0].name | slice:0:20}} {{searchForm.get('planes')?.value[0].name.length > 20 ? '...' : ''}}
+                        </ng-container>
+                        <ng-container *ngIf="searchForm.get('planes')?.value.length > 1">
+                            Seleccionado: {{searchForm.get('planes')?.value.length}}
+                        </ng-container>
+                    </span>
+                    <ng-multiselect-dropdown formControlName="planes" [settings]="selectSettings" [data]="planesList">
+                    </ng-multiselect-dropdown>
+                </div>
             </div>
             <div class="form-group date-picker-group" (click)="datePicker.toggle()">
                 <label>Fecha</label>
                 <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker" placeholder="Desde/Hasta..."
-                    class="form-control simple-control orange" formControlName="fechaPresentacion" type="text" />
+                    class="form-control simple-control violet" formControlName="fechaPresentacion" type="text" />
             </div>
         </div>
         <div class="searcher-footer">
