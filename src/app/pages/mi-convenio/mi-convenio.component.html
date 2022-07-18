@@ -17,7 +17,8 @@
         </div>
         <div
             [class]="datasourceTotal > 6 ? 'col-lg-12 col-xl-8' : 'col-12'">
-            <app-convenio-grid (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
+            <app-convenio-grid *ngIf="datasourceTotal > 6" (changeDetailMode)="changeDetailMode($event)"></app-convenio-grid>
+            <app-convenio-card *ngIf="datasourceTotal <= 6"></app-convenio-card>
         </div>
     </div>
 </div>

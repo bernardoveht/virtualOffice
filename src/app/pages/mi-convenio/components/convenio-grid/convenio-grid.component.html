@@ -1,4 +1,4 @@
-<div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource && datasource.length > 6; else cards">
+<div class="shadow p-3 mb-5 bg-body table-container">
   <div id="table-convenio" class="table-scroll">
     <table matSort (matSortChange)="sortData($event)" class="table table-responsive table-bordered table-striped custom-table violet">
       <thead>
@@ -40,11 +40,3 @@
     </app-pagination-grid>
   </div>
 </div>
-
-<ng-template #cards>
-  <div class="d-flex justify-content-between flex-wrap align-items-center convenio-cards-container">
-    <div *ngFor="let data of datasource">
-      <app-convenio-card (changeDetailMode)="setDetail($event)"></app-convenio-card>
-   </div>
-  </div>
-</ng-template>

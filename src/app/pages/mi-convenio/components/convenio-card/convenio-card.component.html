@@ -1,25 +1,30 @@
-<div class="indv-card-box shadow violet">
-    <header>
-        <div class="title">
-            <h5>Puesta en valor de las áreas centrales
-                del casco urbano Lanús</h5>
+
+
+<div class="d-flex justify-content-between flex-wrap align-items-center convenio-cards-container">
+    <div *ngFor="let agreement of datasource | slice:0:6">
+        <div class="indv-card-box shadow violet">
+            <header>
+                <div class="title">
+                    <h5>{{agreement.category.name}}</h5>
+                </div>
+            </header>
+            <div class="body">
+                <div class="content">
+                    <div class="item">
+                        <span class="data-box">Tipo</span>
+                        <span class="content-box">{{agreement.type}}</span>
+                    </div>
+                    <div class="item">
+                        <span class="data-box">Nº GDE expediente</span>
+                        <span class="content-box">-</span>
+                    </div>
+                    <div class="item">
+                        <span class="data-box">Estado</span>
+                        <span class="content-box">{{agreement.state}}</span>
+                    </div>
+                </div>
+                <span class="detail" (click)="viewModal()"><i class="fa-solid fa-angle-right"></i></span>
+            </div>
         </div>
-    </header>
-    <div class="body">
-        <div class="content">
-            <div class="item">
-                <span class="data-box">Tipo</span>
-                <span class="content-box">Específico</span>
-            </div>
-            <div class="item">
-                <span class="data-box">Nº GDE expediente</span>
-                <span class="content-box">EX-2020-27339997-APN-SGA#MOP</span>
-            </div>
-            <div class="item">
-                <span class="data-box">Estado</span>
-                <span class="content-box">A la firma MOP</span>
-            </div>
-        </div>
-        <span class="detail" (click)="viewModal()"><i class="fa-solid fa-angle-right"></i></span>
-    </div>
-</div>
+   </div>
+  </div>

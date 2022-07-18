@@ -46,9 +46,6 @@ export class MiConvenioComponent implements OnInit, OnDestroy {
   private agreements$: Subscription | undefined;
   private renditions$: Subscription | undefined;
 
-
-  // hay que recibir informacion del endpoint correspondiente para saber si mostrar o no la parte de la izquierda de la grilla
-
   constructor(private router: Router, private readonly store: Store<AppState>) { }
 
   ngOnInit(): void {

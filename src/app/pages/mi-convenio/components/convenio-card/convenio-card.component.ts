@@ -1,5 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Store } from '@ngrx/store';
+import { Agreements, AgreementsFilter } from 'src/app/models/agreements.model';
+import { AppState } from 'src/app/store/app.reducers';
 import { ModalDetailComponent } from '../../../../shared/components/modals/modal-detail/modal-detail.component';
 
 @Component({
@@ -8,16 +11,32 @@ import { ModalDetailComponent } from '../../../../shared/components/modals/modal
   styleUrls: ['./convenio-card.component.scss']
 })
 export class ConvenioCardComponent implements OnInit {
-
+  public filters: AgreementsFilter | any;
+  public datasource!: Agreements[];
+  public totalCount: number = 0;
+  
   @Output() public readonly changeDetailMode = new EventEmitter<number>();
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private readonly store: Store<AppState>) { }
 
   public setDetail(id:number){
     this.changeDetailMode.emit(id);
   }
 
   ngOnInit(): void {
+    this.store.select('agreements').subscribe((state) => {
+      if (state.agreements && state.agreements.length) {
+        this.filters = { ...state.filters };
+        if(state.agreements){
+          this.datasource = state.agreements;
+        }
+        this.totalCount = state.totalCounts || 0;
+        var table: any = document.getElementById('table-convenio');
+        if (table) {
+          table.scrollTop = 0;
+        }
+      }
+    });
   }
 
   viewModal() {
