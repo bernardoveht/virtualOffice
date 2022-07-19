@@ -6,6 +6,10 @@ import { WorksFilter } from 'src/app/models/works.model';
 import { AppState } from 'src/app/store/app.reducers';
 import { getUser } from 'src/app/store/selectors/auth/auth.selector';
 import * as workActions from 'src/app/store/actions/works/works.actions'
+import *  as organismos from 'src/data/organismos-obras.json';
+import *  as planes from 'src/data/planes.json';
+import { SelectSettings } from 'src/app/constants/selects';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 @Component({
   selector: 'app-obra-search',
@@ -13,21 +17,15 @@ import * as workActions from 'src/app/store/actions/works/works.actions'
   styleUrls: ['./obra-search.component.scss']
 })
 export class ObraSearchComponent implements OnInit,OnDestroy {
-  public filter:WorksFilter = {
-    page: 0,
-    pageSize: 50,
-    orderBy: '',
-    orderDescending: false,
-    id: '',
-    provinces: [],
-    departments: [],
-    municipalities: [],
-    beneficiaryOrganismId:''
-  };
+  public filter!:WorksFilter;
   public searchForm: FormGroup;
   public openSearch = false;
+  public selectSettings: IDropdownSettings = SelectSettings;
+  public organismoList:any =[];
+  public planesList:any =[];
+  public keepFilters = false;
 
-  private auth$:Subscription | undefined;
+  private works$:Subscription | undefined;
 
   constructor(
     private fb: FormBuilder,
@@ -35,33 +33,48 @@ export class ObraSearchComponent implements OnInit,OnDestroy {
   ) { 
     this.searchForm = this.fb.group({
       sippe:[''],
-      // organismo:[''],
+      obraid:[''],
+      organismos:[''],
       name:[''],
-      plan:[''],
+      planes:[''],
+      fechaPresentacion:['']
     })
   }
   ngOnDestroy(): void {
-    this.auth$?.unsubscribe();
+    this.works$?.unsubscribe();
   }
 
   ngOnInit(): void {
-    this.auth$ = this.store.select(getUser).subscribe(user =>{
-      if(user){
-        this.filter.provinces = user.provinceId ?[user.provinceId]: [];
-        this.filter.municipalities = user.municipalityId ?[user.municipalityId] : [];
+    this.works$ = this.store.select('works').subscribe(state =>{
+      if(state.filters){
+        this.filter ={...state.filters};      
       }
     });
+    this.organismoList = (organismos as any).default
+    this.planesList = (planes as any).default
   }
 
   openSearcher(){
     this.openSearch = !this.openSearch;
   }
-  handleSearch(){
-    const {sippe,name} = this.searchForm.value;
-    this.filter.id = sippe ? sippe:'';
-    this.store.dispatch(workActions.getSearchWorks({filter:this.filter}));
+  handleSearch() {
+    const { sippe, name,obraid } = this.searchForm.value;
+    const filter = { ...this.filter };
+
+    filter.name = name ? name : '';
+    filter.projectId = sippe ? sippe : '';
+    filter.id = obraid ? obraid : '';
+
+    this.store.dispatch(workActions.getSearchWorks({ filter }));
     this.openSearcher();
+    if (!this.keepFilters) {
+      this.searchForm.reset();
+    }
+  }
+  clearFilters() {
     this.searchForm.reset();
+    const filter = { ...this.filter }
+    this.store.dispatch(workActions.getSearchWorks({ filter }));
   }
 
 }

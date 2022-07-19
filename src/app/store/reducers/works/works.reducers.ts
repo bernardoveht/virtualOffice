@@ -5,6 +5,7 @@ import * as actions from '../../actions/index';
 
 
 export interface WorksState {
+    work:Works | null;
     works: Works[];
     error: any;
     filters: WorksFilter | null;
@@ -15,7 +16,8 @@ export interface WorksState {
     works: [],
     error: null,
     filters: null,
-    workPaginator:null
+    workPaginator:null,
+    work: null
   };
   
   const _worksReducer = createReducer(
@@ -43,6 +45,14 @@ export interface WorksState {
         }    
       }; 
     }),
+    on(actions.getCurrentWorks, (state,{currentWork}) => ({ 
+      ...state,
+      work:currentWork
+    })),
+    on(actions.getCurrentWorksSuccess, (state, { payload }) => ({
+      ...state,
+      payload
+    })),
     on(actions.projectsError, (state, { payload }) => ({
       ...state,
       error: payload,

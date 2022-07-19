@@ -123,4 +123,7 @@ export interface WorksFilter {
     departments?:     any[];
     municipalities?:  string[];
     beneficiaryOrganismId?:string;
+    name?:            string;
+    projectId?:       string;
+
 }

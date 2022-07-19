@@ -66,6 +66,7 @@ export class ObraGridComponent implements OnInit {
     modalRef.componentInstance.data = {
      ...work
     };
+    
   }
   sortData(sort: Sort) {
     const data = this.datasource.slice();

@@ -16,20 +16,47 @@
             <input class="form-control simple-control green"  formControlName="sippe" type="text" />
         </div>
         <div class="form-group">
+            <label>ID Obra</label>
+            <input class="form-control simple-control green"  formControlName="obraid" type="text" />
+        </div>
+        <div class="form-group">
             <label>Organismo</label>
-            <input class="form-control simple-control green" type="text" />
+            <div class="multiselect-custom">
+                <span class="multiselect-dropdown-count" *ngIf="searchForm.get('organismos')?.value">
+                    <ng-container *ngIf="searchForm.get('organismos')?.value.length === 1">
+                        {{searchForm.get('organismos')?.value[0].name | slice:0:20}} {{searchForm.get('organismos')?.value[0].name.length > 20 ? '...' : ''}}
+                    </ng-container>
+                    <ng-container *ngIf="searchForm.get('organismos')?.value.length > 1">
+                        Seleccionado: {{searchForm.get('organismos')?.value.length}}
+                    </ng-container>
+                </span>
+                <ng-multiselect-dropdown formControlName="organismos" [settings]="selectSettings" [data]="organismoList">
+                </ng-multiselect-dropdown>
+            </div>
         </div>
         <div class="form-group">
             <label>Nombre de la obra</label>
             <input class="form-control simple-control green" formControlName="name" type="text" />
         </div>
         <div class="form-group">
-            <label>Plan</label>
-            <input class="form-control simple-control green" ormControlName="plan" type="text" />
+            <label>Planes</label>
+            <div class="multiselect-custom">
+                <span class="multiselect-dropdown-count" *ngIf="searchForm.get('planes')?.value">
+                    <ng-container *ngIf="searchForm.get('planes')?.value.length === 1">
+                        {{searchForm.get('planes')?.value[0].name | slice:0:20}} {{searchForm.get('planes')?.value[0].name.length > 20 ? '...' : ''}}
+                    </ng-container>
+                    <ng-container *ngIf="searchForm.get('planes')?.value.length > 1">
+                        Seleccionado: {{searchForm.get('planes')?.value.length}}
+                    </ng-container>
+                </span>
+                <ng-multiselect-dropdown formControlName="planes" [settings]="selectSettings" [data]="planesList">
+                </ng-multiselect-dropdown>
+            </div>
         </div>
-        <div class="form-group">
-            <label>Fecha (Desde/Hasta)</label>
-            <input class="form-control simple-control green" type="text" />
+        <div class="form-group date-picker-group" (click)="datePicker.toggle()">
+            <label>Fecha</label>
+            <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker" placeholder="Desde/Hasta..."
+                class="form-control simple-control orange" formControlName="fechaPresentacion" type="text" />
         </div>
     </div>
     <div class="searcher-footer">

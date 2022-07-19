@@ -1,7 +1,10 @@
 import { Component, Input, OnInit  } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Store } from '@ngrx/store';
 import { WorkSteps } from 'src/app/constants/enums/work.enum';
 import { Works } from 'src/app/models/works.model';
+import { AppState } from 'src/app/store/app.reducers';
+import * as worksActions from 'src/app/store/actions/works/works.actions';
 
 
 @Component({
@@ -22,7 +25,10 @@ export class ObraModalDetailComponent implements OnInit {
   public workSteps = WorkSteps;
 
 
-  constructor(public activeModal: NgbActiveModal) { }
+  constructor(
+    public activeModal: NgbActiveModal,
+    private readonly store:Store<AppState>
+    ) { }
 
   ngOnInit(): void {
     this.work = this.data;
@@ -31,6 +37,8 @@ export class ObraModalDetailComponent implements OnInit {
   public itemActionButton() {
     this.activeModal.close();
     this.actionButton();
+    const work = {...this.work};
+    this.store.dispatch(worksActions.getCurrentWorks({currentWork:work}));
   }
 
 }

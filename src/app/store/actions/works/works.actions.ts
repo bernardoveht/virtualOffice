@@ -7,6 +7,8 @@ enum WorksType {
     getAllWorksSuccess = '[Works] Get all Works Success',
     getSearchWorks = '[Works] Get Search Works',
     getSearchWorksSuccess = '[Works] Get Search Works Success',
+    getCurrentWorks = '[Works] Get Current Works',
+    getCurrentWorksSuccess = '[Works] Get Current Works Success',
     worksError = '[Works] Works Error',
 }
 export const getAllWorks = createAction(
@@ -23,6 +25,14 @@ export const getSearchWorks = createAction(
 export const getSearchWorksSuccess = createAction(
     WorksType.getSearchWorksSuccess,
     props<{ works:WorksAllPaginator}>()
+);
+export const getCurrentWorks = createAction(
+    WorksType.getAllWorks,
+    props<{ currentWork:Works}>()
+);
+export const getCurrentWorksSuccess = createAction(
+    WorksType.getCurrentWorksSuccess,
+    props<{ payload:any}>()
 );
 export const worksError = createAction(
     WorksType.worksError, 

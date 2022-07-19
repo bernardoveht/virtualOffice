@@ -38,7 +38,7 @@ export class ConvenioSearchComponent implements OnInit {
   }
 
   constructor(private fb: FormBuilder, private readonly store: Store<AppState>) {
-    this.openSearcher();
+    this.planesList = (planes as any).default
     this.initSearchForm();
   }
 
@@ -46,7 +46,6 @@ export class ConvenioSearchComponent implements OnInit {
 
   public openSearcher() {
     this.openSearch = !this.openSearch;
-    this.planesList = (planes as any).default
   }
 
   public handleSearch() {
