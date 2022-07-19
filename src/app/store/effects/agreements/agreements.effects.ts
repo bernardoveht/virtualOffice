@@ -31,7 +31,7 @@ export class AgreementsEffects {
       })
     )
   );
-  getProjectsSearch$ = createEffect(() =>
+  getAgreementsSearch$ = createEffect(() =>
     this.actions$.pipe(
       ofType(agreementsActions.getSearchAgreements),
       concatMap(actions => {
@@ -41,22 +41,27 @@ export class AgreementsEffects {
           }
           ),
           catchError(error =>
-            of(agreementsActions.projectsError({ payload: error }))
+            of(agreementsActions.agreementsError({ payload: error }))
           )
         );
       })
     )
   );
-  /*getDetailsProjects$ = createEffect(() =>
+  getDetailsAgreement$ = createEffect(() =>
   this.actions$.pipe(
-      ofType(projectsActions.getDetailsProjects),
-      switchMap((actions) => 
-      this.projectsService.getDetailsSubGroup(actions.ids.workSubGroupId).pipe(
-          map(details => projectsActions.getDetailsProjectsSuccess({details})),
-          catchError(error => of(projectsActions.projectsError({payload:error})))   
-          )
-      )   
+    ofType(agreementsActions.getAgreementDetail),
+    concatMap(actions => {
+      return this.agreementsService.getAgreementsSearch(actions.filters).pipe(
+        map(results => {
+          return agreementsActions.getAgreementDetailSuccess({ agreement: results.result[0] })
+        }
+        ),
+        catchError(error =>
+          of(agreementsActions.agreementsError({ payload: error }))
+        )
+      );
+    })
   )
-);*/
+);
 
 }

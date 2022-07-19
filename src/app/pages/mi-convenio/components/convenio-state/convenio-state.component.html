@@ -1,25 +1,25 @@
-<div class="shadow">
+<div class="shadow" *ngIf="agreementState">
     <div class="title">
         <i class="fa-solid fa-spinner"></i>
         <h4>Estado del convenio</h4>
     </div>
     <div class="steps">
-        <div class="step">
+        <div class="step" [class.active]="allStates.Gestion === agreementState">
             <div class="inner-circle"></div>
             <span></span>
-            <p>1. En trámite</p>
+            <p>1. En Gestión</p>
         </div>
-        <div class="step">
+        <div class="step" [class.active]="allStates.Organismo === agreementState">
             <div class="inner-circle"></div>
             <span></span>
             <p>2. A la firma organismo/ente</p>
         </div>
-        <div class="step">
+        <div class="step" [class.active]="allStates.Mop === agreementState">
             <div class="inner-circle"></div>
             <span></span>
             <p>3. A la firma MOP</p>
         </div>
-        <div class="step active">
+        <div class="step" [class.active]="allStates.Protocolizado === agreementState">
             <div class="inner-circle"></div>
             <span></span>
             <p>4. Protocolizado</p>

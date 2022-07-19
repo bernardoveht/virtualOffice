@@ -1,8 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
+import { AgreementsFilter } from 'src/app/models/agreements.model';
 import { AmountInformationItem } from 'src/app/models/total-rendicion.model';
+import { AppState } from 'src/app/store/app.reducers';
 import { AmountInformationTitle } from '../../../../models/total-rendicion.model';
+import { Agreements } from '../../../../models/agreements.model';
+import * as agreementsActions from 'src/app/store/actions/agreements/agreements.actions'
 
 @Component({
   selector: 'app-convenio-detail',
@@ -10,7 +15,18 @@ import { AmountInformationTitle } from '../../../../models/total-rendicion.model
   styleUrls: ['./convenio-detail.component.scss']
 })
 export class ConvenioDetailComponent implements OnInit, OnDestroy {
-
+  public filter: AgreementsFilter = {
+    page: 0,
+    pageSize: 1,
+    orderBy: '',
+    orderDescending: false,
+    id: '',
+    provinces: [],
+    departments: [],
+    municipalities: [],
+    beneficiaryOrganismId: ''
+  }
+  public agreement!: Agreements;
   public title: string = 'Mis Convenios';
   public icon: string = 'file-contract';
   public titleColor: string = 'violet';
@@ -55,11 +71,13 @@ export class ConvenioDetailComponent implements OnInit, OnDestroy {
     },
   ]
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private readonly store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.routeSb = this.route.params.subscribe((params) => {
       this.id = parseInt(params['id'], 10);
+      this.filter.id = String(this.id);
+      this.store.dispatch(agreementsActions.getAgreementDetail({ filters: this.filter }));
     });
   }
 

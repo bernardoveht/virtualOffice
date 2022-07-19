@@ -2,8 +2,6 @@ import { AgreementType, ProjectWorkflowTypes } from "../constants/enums/agreemen
 
 export interface Agreements {
   id: number;
-  state:string;
-  type:string;
   provinceId: string;
   municipalityId: string;
   agreementStatus: number;
@@ -18,15 +16,29 @@ export interface Agreements {
   territorialUnitType: number;
   frameworkAgreementId?: any;
   htmlContent?: any;
-  tracking?: any;
+  tracking: Tracking;
   frameworkAgreement?: any;
   signs: any[];
+  projects: any[];
+  type:string;
+  state:string;
 }
 
 export interface AgreementsCategory {
   id: number;
   name: string;
 }
+
+interface Tracking {
+  id: number;
+  provinceId: string;
+  municipalityId: string;
+  type: number;
+  gdeRecordNumber: string;
+  gedoAgreementNumber?: any;
+  documents: any[];
+}
+
 
 export interface AgreementsFilter {
   page?: number;
@@ -57,5 +69,3 @@ export const TypeSelect = [
   AgreementType.Financiamiento,
   AgreementType.Marco,
 ]
-
-

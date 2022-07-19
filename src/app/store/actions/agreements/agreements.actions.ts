@@ -7,8 +7,8 @@ enum AgreementsType {
     getSearchAgreements='[Agreements] Get search by filter agreements',
     getSearchAgreementsSuccess='[Agreements] Get search by filter agreements Success',
     agreementsPageChange = '[Agreements] Get new currentPage',
-    getDetailsAgreements ='[Agreements] Get deails agreements',
-    getDetailsAgreementsSuccess ='[Agreements] Get deails agreements Success',
+    getDetailsAgreement ='[Agreements] Get detail agreement',
+    getDetailsAgreementSuccess ='[Agreements] Get detail agreement Success',
     agreementsError = '[Agreements] Agreements Error',
 }
 
@@ -27,6 +27,14 @@ export const getSearchAgreements = createAction(
 export const getSearchAgreementsSuccess = createAction(
     AgreementsType.getSearchAgreementsSuccess,
     props<{ agreements:Agreements[];}>()
+);
+export const getAgreementDetail = createAction(
+    AgreementsType.getDetailsAgreement,
+    props<{ filters:AgreementsFilter}>()
+);
+export const getAgreementDetailSuccess = createAction(
+    AgreementsType.getDetailsAgreementSuccess,
+    props<{ agreement:Agreements;}>()
 );
 export const agreementsError = createAction(
     AgreementsType.agreementsError, 

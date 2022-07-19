@@ -1,4 +1,4 @@
-<div class="row convenio-datos">
+<div class="row convenio-datos" *ngIf="agreement">
     <div class="col-6">
         <div class="card-box shadow">
             <div class="card-box-title">
@@ -9,31 +9,31 @@
                 <div class="card-box-item">
                     <div class="item">
                         <h5>Tipo de convenio</h5>
-                        <p>Marco</p>
+                        <p>{{agreement.type || '-'}}</p>
                     </div>
                 </div>
                 <div class="card-box-item">
                     <div class="item">
                         <h5>N° GDE convenio</h5>
-                        <p>CONVE-2020-31535573-APN-MOP</p>
+                        <p>{{agreement.tracking?.gedoAgreementNumber || '-'}}</p>
                     </div>
                 </div>
                 <div class="card-box-item">
                     <div class="item">
                         <h5>N° GDE expediente</h5>
-                        <p>EX-2020-27339997- -APN-SGA#MOP</p>
+                        <p>{{agreement.tracking?.gdeRecordNumber || '-'}}</p>
                     </div>
                 </div>
                 <div class="card-box-item">
                     <div class="item">
                         <h5>Código SIPPE</h5>
-                        <p>120771</p>
+                        <p>{{agreement.id}}</p>
                     </div>
                 </div>
                 <div class="card-box-item">
                     <div class="item">
                         <h5>Código de la obra</h5>
-                        <p>123456</p>
+                        <p>-</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="item">
                             <h5>Convenio marco</h5>
-                            <p>EX-2020-27336574- -APN-SGA#MOP</p>
+                            <p>{{agreement.tracking?.gdeRecordNumber || '-'}}</p>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@
                         </div>
                         <div class="item">
                             <h5>Plan</h5>
-                            <p>Argentina Hace II</p>
+                            <p>{{agreement.category.name}}</p>
                         </div>
                     </div>
 

@@ -54,7 +54,7 @@ export class ConvenioGridComponent implements OnInit {
     this.changeDetailMode.emit(id);
   }
 
-  public viewModal() {
+  public viewModal(id:number) {
     const modalRef = this.modalService.open(ModalDetailComponent, {
       windowClass: 'modal-violet',
       size: 'lg',
@@ -63,7 +63,7 @@ export class ConvenioGridComponent implements OnInit {
     modalRef.componentInstance.color = 'violet';
     modalRef.componentInstance.title = 'Convenio';
     modalRef.componentInstance.icon = 'file-contract';
-    modalRef.componentInstance.actionButton = () => this.setDetail(1);
+    modalRef.componentInstance.actionButton = () => this.setDetail(id);
     modalRef.componentInstance.data = {
       // data aca
     };

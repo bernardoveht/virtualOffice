@@ -32,3 +32,4 @@ export const getAgreementDataRenditions = createSelector(getAgreementState, (sta
     }
     return result;
 });
+export const getAgreementsDetail = createSelector(getAgreementState, (state: agreementReducer.AgreementsState) => state.agreementDetail);
