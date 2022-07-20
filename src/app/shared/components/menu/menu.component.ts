@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
       },
       {
         name: 'Mis Proyectos',
-        classColor: 'menu-orange',
+        classColor: 'menu-green-medium',
         icon: 'people-group',
         url: '/pages/mis-proyectos',
       },

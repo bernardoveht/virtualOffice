@@ -186,6 +186,35 @@
     }
   }
 
+  ::ng-deep .modal-green-medium {
+    &.with-border {
+      .modal-content {
+        border: 2px solid $green-medium-app;
+      }
+    }
+    .modal-header {
+      border-bottom: 1px solid $green-medium-app;
+      color: $green-medium-app;
+      .close {
+        color: $green-medium-app;
+      }
+    }
+    .modal-footer {
+      .btn-success {
+        background-color: $green-medium-app;
+        border: 2px solid $green-medium-app;
+      }
+      .btn-cancel {
+        border: 2px solid $green-medium-app;
+        color: $green-medium-app;
+        &:hover {
+          background-color: $green-medium-app;
+          color: white;
+        }
+      }
+    }
+  }
+
   ::ng-deep .modal-pink {
     &.with-border {
       .modal-content {

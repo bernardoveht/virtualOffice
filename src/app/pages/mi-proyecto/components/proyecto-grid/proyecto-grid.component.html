@@ -1,7 +1,7 @@
 <div class="shadow p-3 mb-5 bg-body table-container" *ngIf="datasource && datasource.length">
   <div id="table-proyect" class="table-scroll">
     <table matSort (matSortChange)="sortData($event)"
-      class="table table-responsive table-bordered table-striped custom-table orange" *ngIf="datasource">
+      class="table table-responsive table-bordered table-striped custom-table green-medium" *ngIf="datasource">
       <thead>
         <tr class="theader">
           <ng-container *ngFor="let head of headelements;">
@@ -51,7 +51,7 @@
     </table>
   </div>
   <div class="pagination">
-    <app-pagination-grid (changePageEvent)="changeGridPage($event)" [color]="'orange'" [totalCount]="totalCount">
+    <app-pagination-grid (changePageEvent)="changeGridPage($event)" [color]="'green-medium'" [totalCount]="totalCount">
     </app-pagination-grid>
   </div>
 </div>

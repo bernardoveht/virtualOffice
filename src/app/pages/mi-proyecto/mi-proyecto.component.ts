@@ -23,7 +23,7 @@ import { ProjectWorkflowStatuses } from 'src/app/constants/enums/project.enum';
 export class MiProyectoComponent implements OnInit, OnDestroy {
   public title: string = "Mis Proyectos";
   public icon: string = "file-invoice-dollar";
-  public titleColor: string = "orange";
+  public titleColor: string = "green-medium";
   public doughnutChartLabels: string[] = ['Borrador', 'Observado', 'En gestion', 'Aprobado'];
   public doughnutChartData: ChartData<'doughnut'> | undefined;
   public itemsTotal: AmountInformationItem[] = [];
@@ -106,18 +106,16 @@ export class MiProyectoComponent implements OnInit, OnDestroy {
           {
             data: result.levels,
             backgroundColor: [
-              'rgb(253, 234, 211)',
-              'rgb(255, 211, 159)',
-              'rgb(248, 190, 122)',
-              'rgb(250, 180, 99)',
-              'rgb(248, 161, 59)'
+              'rgb(174, 194, 181)',
+              'rgb(160, 206, 176)',
+              'rgb(140, 209, 164)',
+              'rgb(79, 187, 115)',
             ],
             hoverBackgroundColor: [
-              'rgba(253, 234, 211,0.8)',
-              'rgba(255, 211, 159,0.8)',
-              'rgba(248, 190, 122,0.8)',
-              'rgba(250, 180, 99,0.8)',
-              'rgba(248, 161, 59,0.8)'
+              'rgba(174, 194, 181,0.8)',
+              'rgba(160, 206, 176,0.8)',
+              'rgba(140, 209, 164,0.8)',
+              'rgba(79, 187, 115,0.8)',
             ]
           },
         ],
@@ -145,11 +143,11 @@ export class MiProyectoComponent implements OnInit, OnDestroy {
 
   public handleDetails(project: any) {
     const modalRef = this.modalService.open(ProyectoModalDetailComponent, {
-      windowClass: 'modal-orange',
+      windowClass: 'modal-green-medium',
       size: 'lg',
       centered: true
     });
-    modalRef.componentInstance.color = 'orange';
+    modalRef.componentInstance.color = 'green-medium';
     modalRef.componentInstance.title = 'Proyecto';
     modalRef.componentInstance.icon = this.icon;
     modalRef.componentInstance.data = {

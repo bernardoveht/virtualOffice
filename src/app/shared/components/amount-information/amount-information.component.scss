@@ -33,6 +33,9 @@
         &.red{
             color:$red-app;
         }
+        &.green-medium{
+            color:$green-medium-app;
+        }
     }
     .total-data{
         display:flex;
@@ -165,6 +168,20 @@
              
             }
           
+        }
+        &.green-medium{
+            div{   
+                &:first-of-type{
+                    color:$green-medium-app;   
+                    border-right: 1px solid $green-medium-app;
+                } 
+                &:last-of-type{
+                    p{
+                        color:$green-medium-app;
+                    }
+                } 
+             
+            }
         }
     }
 }

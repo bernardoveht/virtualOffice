@@ -50,6 +50,14 @@
       color: $green-light-app;
     }
   }
+  &.green-medium {
+    th {
+      color: $green-medium-app;
+    }
+    .view-icon {
+      color: $green-medium-app;
+    }
+  }
   &.orange {
     th {
       color: $orange-app;

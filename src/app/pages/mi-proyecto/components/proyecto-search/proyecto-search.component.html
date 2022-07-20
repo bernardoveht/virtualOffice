@@ -1,4 +1,4 @@
-<div class="shadow searcher orange" [ngClass]="{'closed':!openSearch,'opened':openSearch}">
+<div class="shadow searcher green-medium" [ngClass]="{'closed':!openSearch,'opened':openSearch}">
     <div class="searcher-header" (click)="openSearcher()">
         <div>
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -13,7 +13,7 @@
         <div class="searcher-body">
             <div class="form-group">
                 <label>SIPPE</label>
-                <input class="form-control simple-control orange" formControlName="sippe" type="text" />
+                <input class="form-control simple-control green-medium" formControlName="sippe" type="text" />
             </div>
             <div class="form-group">
                 <label>Organismo</label>
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label>Nombre del Proyecto</label>
-                <input class="form-control simple-control orange" formControlName="name" type="text" />
+                <input class="form-control simple-control green-medium" formControlName="name" type="text" />
             </div>
             <div class="form-group">
                 <label>Planes</label>
@@ -52,12 +52,12 @@
             <div class="form-group date-picker-group" (click)="datePicker.toggle()">
                 <label>Fecha</label>
                 <input [weekdays]="true" ngbDatepicker #datePicker="ngbDatepicker" placeholder="Desde/Hasta..."
-                    class="form-control simple-control orange" formControlName="fechaPresentacion" type="text" />
+                    class="form-control simple-control green-medium" formControlName="fechaPresentacion" type="text" />
             </div>
         </div>
         <div class="searcher-footer">
-            <button type="button" class="clean-btn btn rounded-btn orange" (click)="clearFilters()">Limpiar</button>
-            <button type="submit" class="search-btn btn rounded-btn orange">Buscar</button>
+            <button type="button" class="clean-btn btn rounded-btn green-medium" (click)="clearFilters()">Limpiar</button>
+            <button type="submit" class="search-btn btn rounded-btn green-medium">Buscar</button>
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
                     [value]="keepFilters" (change)="keepFilters=!keepFilters">

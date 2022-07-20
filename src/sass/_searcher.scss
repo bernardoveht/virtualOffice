@@ -89,6 +89,14 @@
         }
     }
    }
+   &.green-medium{
+    background-color: $green-medium-app;
+    .searcher-footer{
+        button{
+         color:$green-medium-app;
+        }
+    }
+   }
    &.pink{
     background-color: $pink-app;
     .searcher-footer{

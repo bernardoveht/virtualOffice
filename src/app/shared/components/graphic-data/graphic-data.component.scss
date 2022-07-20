@@ -1,50 +1,54 @@
-@import"/src/sass/variables";
+@import "/src/sass/variables";
 
-.graphic-total{
-    padding:20px;
-    canvas{
-        max-height:180px;
+.graphic-total {
+  padding: 20px;
+  canvas {
+    max-height: 180px;
+  }
+  h3 {
+    color: $blue-app;
+    font-size: 1.5em;
+  }
+  .total-amount {
+    strong {
+      color: $blue-app;
+      font-size: 1.5em;
+      text-align: right;
+      line-height: 1;
+      max-width: 100px;
+      display: block;
+      overflow-x: auto;
+      height: 30px;
     }
-    h3{
-        color:$blue-app;
-        font-size:1.5em;
+  }
+  &.green-light {
+    h3,
+    .total-amount strong {
+      color: $green-light-app;
     }
-    .total-amount{
-        strong{
-            color:$blue-app;
-            font-size:1.5em;
-            text-align: right;
-            line-height: 1;
-            max-width: 100px;
-            display: block;
-            overflow-x: auto;
-            height: 30px;
-        }
+  }
+  &.green-medium {
+    h3,
+    .total-amount strong {
+      color: $green-medium-app;
     }
-    &.green-light{
-        h3,.total-amount strong{
-            color:$green-light-app;
-        }
-
+  }
+  &.green {
+    h3,
+    .total-amount strong {
+      color: $green-app;
     }
-    &.green{
-        h3,.total-amount strong{
-            color:$green-app;
-        }
-
+  }
+  &.orange {
+    h3,
+    .total-amount strong {
+      color: $orange-app;
     }
-    &.orange{
-        h3,.total-amount strong{
-            color:$orange-app;
-        }
+  }
+  &.violet {
+    h3,
+    .total-amount strong {
+      color: $violet-app;
     }
-    &.violet{
-        h3,.total-amount strong{
-            color:$violet-app;
-        }
-    }
-
-
- 
+  }
 }
-
