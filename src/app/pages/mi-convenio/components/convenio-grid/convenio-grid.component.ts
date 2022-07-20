@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, OnDestroy } from '@angular/core';
 import { Sort } from '@angular/material/sort';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Store } from '@ngrx/store';
@@ -8,18 +8,20 @@ import { ModalDetailComponent } from 'src/app/shared/components/modals/modal-det
 import { AppState } from 'src/app/store/app.reducers';
 import { AgreementsFilter, Agreements } from '../../../../models/agreements.model';
 import * as agreementsActions from 'src/app/store/actions/agreements/agreements.actions';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-convenio-grid',
   templateUrl: './convenio-grid.component.html',
   styleUrls: ['./convenio-grid.component.scss']
 })
-export class ConvenioGridComponent implements OnInit {
+export class ConvenioGridComponent implements OnInit, OnDestroy {
 
   @Output() public readonly changeDetailMode = new EventEmitter<any>();
   public filters: AgreementsFilter | any;
   public datasource!: Agreements[];
   public totalCount: number = 0;
+  public agreementSubscription$!:Subscription;
 
   public headelements: any = [
     { name: 'Código SIPPE', sort: 'id' },
@@ -35,7 +37,7 @@ export class ConvenioGridComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.store.select('agreements').subscribe((state) => {
+    this.agreementSubscription$ = this.store.select('agreements').subscribe((state) => {
       if (state.agreements && state.agreements.length) {
         this.filters = { ...state.filters };
         if(state.agreements){
@@ -48,6 +50,10 @@ export class ConvenioGridComponent implements OnInit {
         }
       }
     });
+  }
+
+  ngOnDestroy():void{
+    this.agreementSubscription$.unsubscribe();
   }
 
   public setDetail(id: number) {
@@ -66,7 +72,7 @@ export class ConvenioGridComponent implements OnInit {
     modalRef.componentInstance.actionButton = () => this.setDetail(agreement.id);
     modalRef.componentInstance.data = {
       sippeCode:agreement.id,
-      name:agreement.category.name,
+      name:agreement.name,
       state:agreement.state,
     };
   }

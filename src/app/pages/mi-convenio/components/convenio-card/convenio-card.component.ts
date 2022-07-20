@@ -39,19 +39,22 @@ export class ConvenioCardComponent implements OnInit {
     });
   }
 
-  viewModal() {
-    const modalRef = this.modalService.open(ModalDetailComponent,{
-      windowClass: 'modal-violet', 
-      size:'lg',
-      centered:true
+  public viewModal(agreement:Agreements) {
+    const modalRef = this.modalService.open(ModalDetailComponent, {
+      windowClass: 'modal-violet',
+      size: 'lg',
+      centered: true
     });
     modalRef.componentInstance.color = 'violet';
     modalRef.componentInstance.title = 'Convenio';
     modalRef.componentInstance.icon = 'file-contract';
-    modalRef.componentInstance.actionButton = () => this.setDetail(1);
+    modalRef.componentInstance.actionButton = () => this.setDetail(agreement.id);
     modalRef.componentInstance.data = {
-      // data aca
+      sippeCode:agreement.id,
+      name:agreement.name,
+      state:agreement.state,
     };
   }
+
 
 }

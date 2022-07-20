@@ -34,7 +34,9 @@ const _agreementsReducer = createReducer(
     agreementsAll: agreementsAll.map(item => ({
       ...item,
       state: checkState(item),
-      type: checkType(item)
+      type: checkType(item),
+      sippeCode: checkSippe(item),
+      name:checkName(item)
     })),
     totalCounts: totalCount
   })),
@@ -47,7 +49,9 @@ const _agreementsReducer = createReducer(
     agreements: agreements.map(item => ({
       ...item,
       state: checkState(item),
-      type: checkType(item)
+      type: checkType(item),
+      sippeCode: checkSippe(item),
+      name:checkName(item)
     })),
     agreementDetail: agreements[0],
   })),
@@ -60,7 +64,9 @@ const _agreementsReducer = createReducer(
     agreementDetail: {
       ...agreement,
       state: checkState(agreement),
-      type: checkType(agreement)
+      type: checkType(agreement),
+      sippeCode: checkSippe(agreement),
+      name:checkName(agreement)
     },
   })),
   on(actions.agreementsError, (state, { payload }) => ({
@@ -131,3 +137,20 @@ const checkType = (agreement: Agreements): string => {
   }
   return response;
 }
+
+const checkSippe = (agreement: Agreements): string => {
+  let response = '';
+  if(agreement.projects.length){
+    response = agreement.projects[0].projectId;
+  }
+  return response;
+}
+
+const checkName = (agreement: Agreements): string => {
+  let response = agreement.category.name;
+  if (agreement.agreementType === 1) {
+    response = 'Convenio Marco ' + agreement.category.name;
+  }
+  return response;
+}
+

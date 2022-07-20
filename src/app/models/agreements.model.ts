@@ -1,6 +1,8 @@
 import { AgreementType, ProjectWorkflowTypes } from "../constants/enums/agreements.enum";
 
 export interface Agreements {
+  name:string;
+  sippeCode:string;
   id: number;
   provinceId: string;
   municipalityId: string;
@@ -22,6 +24,7 @@ export interface Agreements {
   projects: any[];
   type:string;
   state:string;
+
 }
 
 export interface AgreementsCategory {

@@ -5,7 +5,7 @@
         <div class="indv-card-box shadow violet">
             <header>
                 <div class="title">
-                    <h5>{{agreement.category.name}}</h5>
+                    <h5>{{agreement.name}}</h5>
                 </div>
             </header>
             <div class="body">
@@ -23,7 +23,7 @@
                         <span class="content-box">{{agreement.state}}</span>
                     </div>
                 </div>
-                <span class="detail" (click)="viewModal()"><i class="fa-solid fa-angle-right"></i></span>
+                <span class="detail" (click)="viewModal(agreement)"><i class="fa-solid fa-angle-right"></i></span>
             </div>
         </div>
    </div>

@@ -56,9 +56,6 @@ export class ConvenioSearchComponent implements OnInit {
 
     this.store.dispatch(agreementsActions.getSearchAgreements({ filters }));
     this.openSearcher();
-    if (!this.keepFilters) {
-      this.searchForm.reset();
-    }
   }
 
   clearFilters() {

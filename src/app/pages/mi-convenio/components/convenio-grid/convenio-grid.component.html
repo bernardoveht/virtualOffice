@@ -11,8 +11,8 @@
       </thead>
       <tbody>
         <tr *ngFor="let el of datasource">
-          <td scope="row">{{el.id}}</td>
-          <td>{{el.category.name}}</td>
+          <td scope="row">{{el.sippeCode || '-'}}</td>
+          <td>{{el.name}}</td>
           <td>
             {{el.type}}
          </td>
