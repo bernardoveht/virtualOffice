@@ -127,3 +127,9 @@ export interface WorksFilter {
     projectId?:       string;
 
 }
+export interface FinancialAdvancesFilter {
+    page?: number;
+    pageSize?: number,
+    workId?: number
+
+}

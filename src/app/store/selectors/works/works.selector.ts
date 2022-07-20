@@ -44,3 +44,4 @@ export const getWorksDataResume = createSelector(getWorksState, (state) => {
         totalWorks:totalCount
     }
 });
+

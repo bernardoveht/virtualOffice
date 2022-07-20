@@ -41,8 +41,7 @@ export class FinancialAdvancesComponent implements OnInit ,OnDestroy{
           const org = this.organismoList.filter((x: { id: string; })=> x.id == this.work.ownerOrganismId).value;
           this.organismo = org ?? 'No encontrado';
           const pla = this.planesList.filter((x: { id: string; })=> x.id == this.work.ownerOrganismId).value;
-          this.planes = org ?? 'No encontrado';
-     
+          this.planes = org ?? 'No encontrado';     
         }
       })
   }

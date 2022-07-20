@@ -1,16 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
+import { Subscription } from 'rxjs';
+import { Works } from 'src/app/models/works.model';
+import { AppState } from 'src/app/store/app.reducers';
 
 @Component({
   selector: 'app-physical-advances',
   templateUrl: './physical-advances.component.html',
   styleUrls: ['../../obra-detail.component.scss','./physical-advances.component.scss']
 })
-export class PhysicalAdvancesComponent implements OnInit {
+export class PhysicalAdvancesComponent implements OnInit,OnDestroy {
   public title: string = "Avance físico";
   public icon: string = "chart-column";
   public titleColor: string = "green";
-  constructor() { }
+  public work!:Works;
+
+  private obra$!:Subscription;
+
+
+  constructor(private readonly store:Store<AppState>) { }
+  
+  ngOnDestroy(): void {
+    this.obra$.unsubscribe();
+  }
   
   public lineChartData:ChartData<'line'>  = {
     
@@ -64,6 +77,12 @@ export class PhysicalAdvancesComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.obra$ = this.store.select('works').subscribe(({work})=>{
+      if(work){
+        this.work = work;
+        console.log('what no fun',work);
+      }
+    })
   }
 
 }
