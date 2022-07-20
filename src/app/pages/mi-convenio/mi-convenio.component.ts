@@ -101,6 +101,7 @@ export class MiConvenioComponent implements OnInit, OnDestroy {
       }
       if (user) {
         // Llamo los convenios de todos para armar el grafico de "Rendiciones"
+        this.filter.beneficiaryOrganismId = user.organismId ? user.organismId : '';
         this.store.dispatch(agreementsActions.getAllAgreements({ filters: this.filter }));
         // Llamo los convenios por pagina
         this.store.dispatch(agreementsActions.getSearchAgreements({ filters: this.filter }));

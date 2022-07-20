@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { apiUri } from 'src/app/constants/urls/api-url';
-import { Works, WorksAllPaginator, WorksFilter } from 'src/app/models/works.model';
+import { FinancialAdvancesFilter, Works, WorksAllPaginator, WorksFilter } from 'src/app/models/works.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,15 @@ export class WorksService {
     return this.http.post<WorksAllPaginator>(apiUri.works + '/works/search',
       filter);    
   } 
+  public getFinancialAdvancesSearch(filter:FinancialAdvancesFilter) :  Observable<any>{
+    return this.http.post<any>(`${apiUri.works}/works/expenses/search`,
+      filter);    
+  } 
+  public getExpensesSearch(filter:FinancialAdvancesFilter) :  Observable<any>{
+    return this.http.post<any>(`${apiUri.works}/works/expenses/search`,
+      filter);    
+  } 
+  
 
 
 

@@ -10,7 +10,7 @@
                     </div>
                     <div class="item">
                         <h5>Fecha acta de inicio</h5>
-                        <p>01/01/2022</p>
+                        <p>{{work.initialActDate | date: 'dd/MM/yyyy'}}</p>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="item">
                         <h5>Fecha de recepción provisoria</h5>
-                        <p>30/11/2022</p>
+                        <p>{{work.provitionalReceptionDate | date: 'dd/MM/yyyy'}}</p>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="item">
                         <h5>Fecha de finalización prevista</h5>
-                        <p>30/12/2022</p>
+                        <p>-</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="item">
                         <h5>Avance físico</h5>
-                        <p>10%</p>
+                        <p>0%</p>
                         <p>
                             <ngb-progressbar class="green" [value]="10"></ngb-progressbar>
                         </p>

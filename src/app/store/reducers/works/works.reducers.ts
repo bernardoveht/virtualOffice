@@ -49,10 +49,13 @@ export interface WorksState {
       ...state,
       work:currentWork
     })),
-    on(actions.getCurrentWorksSuccess, (state, { payload }) => ({
-      ...state,
-      payload
-    })),
+    on(actions.getCurrentWorksSuccess, (state, { payload }) => {
+      console.log('este es el playload de reducer',payload);
+      return {
+        ...state,
+        payload
+      }
+    }),
     on(actions.projectsError, (state, { payload }) => ({
       ...state,
       error: payload,
