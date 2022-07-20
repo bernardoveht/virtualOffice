@@ -30,7 +30,7 @@
                             Seleccionado: {{searchForm.get('tipo')?.value.length}}
                         </ng-container>
                     </span>
-                    <ng-multiselect-dropdown formControlName="tipo" [settings]="selectSettings" [data]="tipoList">
+                    <ng-multiselect-dropdown formControlName="tipo" [settings]="selectSettingMultiple" [data]="tipoList">
                     </ng-multiselect-dropdown>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                             Seleccionado: {{searchForm.get('estado')?.value.length}}
                         </ng-container>
                     </span>
-                    <ng-multiselect-dropdown formControlName="estado" [settings]="selectSettings" [data]="estadoList">
+                    <ng-multiselect-dropdown formControlName="estado" [settings]="selectSettingMultiple" [data]="estadoList">
                     </ng-multiselect-dropdown>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                             Seleccionado: {{searchForm.get('planes')?.value.length}}
                         </ng-container>
                     </span>
-                    <ng-multiselect-dropdown formControlName="planes" [settings]="selectSettingMultiple" [data]="planesList">
+                    <ng-multiselect-dropdown formControlName="planes" [settings]="selectSettings" [data]="planesList">
                     </ng-multiselect-dropdown>
                 </div>
             </div>
