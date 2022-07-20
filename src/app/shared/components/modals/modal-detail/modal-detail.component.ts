@@ -1,14 +1,22 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
+export interface modalDetalData {
+  sippeCode:any,
+  name:string,
+  state:string,
+}
+
+
 @Component({
   selector: 'app-modal-detail',
   templateUrl: './modal-detail.component.html',
   styleUrls: ['./modal-detail.component.scss']
 })
+
 export class ModalDetailComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data!: modalDetalData;
   @Input() color!: string;
   @Input() title!: string;
   @Input() icon: string = 'file-lines';

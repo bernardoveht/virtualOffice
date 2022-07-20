@@ -13,16 +13,16 @@
             <div class="left-data">
                 <div class="form-group">
                     <label>Código SIPPE</label>
-                    <input class="form-control line-control" type="text" readonly [value]="'109484'" />
+                    <input class="form-control line-control" type="text" readonly [value]="data?.sippeCode || '-'" />
                 </div>
                 <div class="form-group">
                     <label>Nombre</label>
                     <textarea rows="1" resize class="form-control line-control"
-                        readonly>Lorem ipsum dolor sit amet lorem ipsum</textarea>
+                        readonly>{{data?.name || '-'}}</textarea>
                 </div>
                 <div class="form-group">
                     <label>Estado</label>
-                    <input class="form-control line-control" type="text" readonly [value]="'Lorem ipsum'" />
+                    <input class="form-control line-control" type="text" readonly [value]="data?.state || '-'" />
                 </div>
             </div>
             <div class="right-data">
