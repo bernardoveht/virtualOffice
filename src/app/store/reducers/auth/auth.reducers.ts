@@ -8,7 +8,7 @@ import jwt_decode,{JwtPayload} from "jwt-decode";
 
 export interface AuthState {
   user: User | null;
-  organisms:Organisms[];
+  organisms:Organisms | null;
   error: any;
   credentials:UserAuth | null;
   expirationToken: number | null;
@@ -16,7 +16,7 @@ export interface AuthState {
 
 export const authInitialState: AuthState = {
   user: null,
-  organisms: [],
+  organisms: null,
   error: null,
   credentials:null,
   expirationToken:null
@@ -43,7 +43,7 @@ const _authReducer = createReducer(
   on(actions.logout, (state) => ({
     ...state ,
     user: null,
-    organisms: [],
+    organisms: null,
     error: null,
     username:null,
     password:null,

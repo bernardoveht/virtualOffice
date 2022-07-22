@@ -13,18 +13,14 @@ export class OrganismsService {
 
 
 
-  public getOrganismsSearch(filter:OrganismsFilter) :  Observable<Organisms[]>{
-
-    const token = sessionStorage.getItem('token');
-
+  public getOrganismsSearch(filter:OrganismsFilter) :  Observable<Organisms>{
+    
     const header = {
-      'Authorization':'Bearer '+ token,
       'x-api-key':'abcdefg',
       'Content-Type':'application/json'
     };
-    return this.http.post<Organisms[]>(apiUri.organisms + '/organisms/list',
-      [filter.id],
-      {headers : new HttpHeaders(header)});    
+    return this.http.get<Organisms>(`${apiUri.organisms}/organisms/${filter.id}`,{headers : new HttpHeaders(header)});
+ 
   } 
 
 

@@ -14,7 +14,7 @@ export const getUserName = createSelector(getUserState, (state) => {
             name = name + ' ' + state?.user?.lastName
         }
     }
-    const org = state?.organisms[0]?.name;
+    const org = state?.organisms?.name;
     
     return {
         name,

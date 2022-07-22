@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
     this.store.pipe(select(getUserName)).subscribe(user => {
       if (user) {
         this.userName = user.name;
-        this.orgName = user.orgname;
+        this.orgName = user.orgname!;
       }
     })
   }
