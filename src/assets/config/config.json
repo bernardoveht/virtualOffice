@@ -3,5 +3,9 @@
     "projects": "https://test-ppo.obraspublicas.gob.ar/REST/api",
     "works": "https://test-obras-ppo.obraspublicas.gob.ar/REST/api",
     "organisms": "https://test-unidades-territoriales.obraspublicas.gob.ar/REST/api",
-    "agreements": "https://test-convenios-ppo.obraspublicas.gob.ar/REST/api"
+    "agreements": "https://test-convenios-ppo.obraspublicas.gob.ar/REST/api",
+    "credencialesApi":{
+        "user":"Test_OficinaVirtual_API",
+        "psw":"Oficina1"
+    }
 }

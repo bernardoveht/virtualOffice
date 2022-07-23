@@ -11,6 +11,7 @@ export interface AuthState {
   organisms:Organisms | null;
   error: any;
   credentials:UserAuth | null;
+  credentialsAPI:UserAuth | null;
   expirationToken: number | null;
 }
 
@@ -19,6 +20,7 @@ export const authInitialState: AuthState = {
   organisms: null,
   error: null,
   credentials:null,
+  credentialsAPI:null,
   expirationToken:null
 };
 
@@ -29,7 +31,7 @@ const _authReducer = createReducer(
     username,
     password
   })),
-  on(actions.loginSuccess, (state, { user ,organisms,credentials}) => {
+  on(actions.loginSuccess, (state, { user ,organisms,credentials,credentialsAPI}) => {
     const decoded:JwtPayload = jwt_decode(credentials.access_token);
     const expiration = decoded.exp ? decoded.exp: null ;
     return {
@@ -37,6 +39,7 @@ const _authReducer = createReducer(
       user,
       organisms,
       credentials,
+      credentialsAPI,
       expirationToken: expiration
     };
   }),
@@ -48,6 +51,7 @@ const _authReducer = createReducer(
     username:null,
     password:null,
     credentials:null,
+    credentialsAPI:null,
     expirationToken:null
   })),
   on(actions.loginError, (state, { payload }) => ({

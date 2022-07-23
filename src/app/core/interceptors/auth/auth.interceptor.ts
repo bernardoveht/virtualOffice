@@ -24,11 +24,11 @@ export class AuthInterceptor implements HttpInterceptor {
     return this.store.select(getToken).pipe(
       take(1),
       exhaustMap((auth)  => {
-          let token = '';
-        if (!auth.toke) {          
+        if (!auth.token) {          
           return next.handle(request);
         }
-        token = auth.toke;
+
+        const {tokenAPI,token} = auth;
         if(auth.expiration) {
           this.store.dispatch(authActions.logout());
           this.router.navigate(['']);
@@ -36,7 +36,7 @@ export class AuthInterceptor implements HttpInterceptor {
         } else { 
           request = request.clone({
             setHeaders: {
-              Authorization: `Bearer ${token}`,
+              Authorization: `Bearer ${tokenAPI}`,
               'x-api-key':'abcdefg',
             },
           });

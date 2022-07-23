@@ -31,7 +31,8 @@ export const getToken = createSelector(getUserState,(state)=>{
     }
     return  {
         expiration,
-        toke: state.credentials?.access_token ?? null,
+        token: state.credentials?.access_token ?? null,
+        tokenAPI: state.credentialsAPI?.access_token ?? null,
         refreshToken:state.credentials?.refresh_token ?? null
     }
 });

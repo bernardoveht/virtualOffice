@@ -15,7 +15,7 @@ export const login = createAction(
 );
 export const loginSuccess = createAction(
     AuthType.loginSuccess,
-    props<{ user:User,organisms:Organisms,credentials:UserAuth}>()
+    props<{ user:User,organisms:Organisms,credentials:UserAuth,credentialsAPI:UserAuth}>()
 );
 export const logout = createAction(
     AuthType.logout,
