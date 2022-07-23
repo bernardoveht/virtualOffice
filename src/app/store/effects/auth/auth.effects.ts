@@ -42,7 +42,6 @@ export class AuthEffects {
         )
       }),
       switchMap(result => {
-        console.log('este es el resultado de todo',result)
         const filter:OrganismsFilter = { id:result.user.organismId};
           return this.organismsService.getOrganismsSearch(filter).pipe(
           map(org => authActions.loginSuccess({user:result.user,organisms:org,credentials:result.userAuth.user,credentialsAPI:result.userAuth.apiAuth})),
