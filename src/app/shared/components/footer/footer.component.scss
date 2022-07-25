@@ -1,0 +1,77 @@
+@import "src/sass/variables";
+:host {
+  #main-footer,
+  #terms {
+    display: flex;
+  }
+  #terms {
+    padding: 20px 0;
+    flex-direction: column;
+    background-color: $light-gray;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      margin-bottom: 10px;
+      background-color: $background-gray;
+      color: $white;
+      min-width: 500px;
+      display: block;
+      font-weight: 600;
+      border: 2px solid transparent;
+      font-size: 0.8em;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+    p {
+      color: $text-gray;
+      font-size: 0.9em;
+      margin: 0;
+    }
+  }
+  #main-footer {
+    padding: 40px 20px;
+    background-color: $celeste-argentina;
+    align-items: center;
+    justify-content: space-between;
+    .autor {
+      display: flex;
+      align-items: center;
+      .primero-gente {
+        margin-right:40px;
+        img {
+          width: 120px;
+        }
+      }
+      .ministerio {
+        img {
+          width: 150px;
+        }
+      }
+    }
+    .social{
+        address{
+            a{
+                color:$white;
+                text-decoration: none;
+            }
+        }
+        ul{
+            padding:0;
+            display:flex;
+            justify-content: flex-start;
+            margin:0;
+            li{
+                margin-right:5px;
+                list-style: none;
+                img{
+                    width:30px;
+                    a{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
