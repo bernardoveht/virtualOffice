@@ -23,6 +23,7 @@ import { ProgressDataComponent } from './components/progress-data/progress-data.
 import localeEs from '@angular/common/locales/es';
 import { CustomDatepickerI18n } from "../services/datepicker/datepicker.service";
 import { PipeModule } from "../pipes/pipes.module";
+import { FooterComponent } from './components/footer/footer.component';
 registerLocaleData(localeEs, 'es');
 /**
  * List of modules to export
@@ -54,7 +55,7 @@ registerLocaleData(localeEs, 'es');
   ModalDetailComponent,
   LineChartsDataComponent,
   ProgressDataComponent,
-  
+  FooterComponent
  ];
 
  @NgModule({

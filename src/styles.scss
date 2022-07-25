@@ -10,21 +10,26 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "sass/progress_bar";
 
-
-body{
-  font-size:16px;
-  @media (max-width: 1280px){
-    font-size:13px;
+body {
+  font-size: 16px;
+  @media (max-width: 1280px) {
+    font-size: 13px;
+  }
+  background: url('assets/images/trama2.png') $light-gray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $text-gray;
 }
-  background:$light-gray;
-  color:$text-gray;
-}
-.shadow{
+.shadow {
   border-radius: 25px;
-  background:white;
+  background: white;
 }
 
-
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: auto;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
